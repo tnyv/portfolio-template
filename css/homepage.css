@@ -1,0 +1,438 @@
+/*******************************/
+/* Workspace - Delete these afterwards*/
+/******************************/
+.logo-container {
+	display: block;
+	height: 8vw;
+	background: rgb(255, 255, 255); /* light-grey */
+	margin: 20px;
+  }
+  
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.nav-container {
+	display:block;
+	width: 100%;
+	margin: auto;
+	height: 40vw;
+}
+
+
+.nav-container-one {
+	width: 70%;
+	height: auto;
+
+	height: auto;
+    float: left;
+}
+
+
+
+
+
+
+.nav-container-two {
+	width: 30%;
+	height: 40vw;
+    float: left;
+}
+
+
+
+
+
+.nav-block {
+	width: 13vw;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	
+	
+
+	margin-top: 2vw;
+	margin-left: auto;
+  	margin-right: auto;
+  
+  }
+  
+.nav-link {
+	padding: 2.5vw 0 2.5vw 0;
+	
+	background: black;
+	width: 15vw;
+	text-align: center;
+  }
+
+
+.nav-link a {
+	font-size: 2.2vw;
+	font-family: Helvetica;
+	font-weight:700;
+	color: #ffffff;
+	text-decoration: none;
+	max-height: inherit;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*******************************/
+/* LOGO */
+/******************************/
+.logo {
+	margin: 0;
+	white-space: nowrap;
+	padding: 0 10px 0 10px;
+
+	font-size: 6vw;
+	font-weight: 900;
+	font-family: Helvetica;
+	font-style: none;
+	color: rgb(255, 255, 255); 
+	background:rgb(199, 31, 31);
+}
+
+
+/***********************/
+/* Animate In Logo */
+/***********************/
+.logo-block {
+	animation-name: logo-in-animation;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes logo-in-animation {
+  from {
+	margin-left: 8000px;
+  }
+
+  to {
+	margin-left: 60px;
+  }
+}
+
+/***********************/
+/* LOGO HOVER ANIMATION */
+/***********************/
+.logo-section :hover {
+	animation-name: logo-hover-animation-in;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes logo-hover-animation-in {
+  from {
+	background:rgb(199, 31, 31);
+  }
+
+  to {
+	background:rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
+  }
+}
+
+.logo {
+	animation-name: logo-hover-animation-out;
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes logo-hover-animation-out {
+  from {
+	background:rgb(255, 255, 255);
+	color: rgb(0, 0, 0);
+  }
+
+  to {
+	background:rgb(199, 31, 31);
+	color: rgb(255, 255, 255);
+  }
+}
+
+
+
+/*******************************/
+/* All */
+/******************************/
+li {
+	list-style-type: none;
+}
+
+body {
+	margin: 0;
+}
+
+
+
+
+/*******************************/
+/* NAV LINKS */
+/******************************/
+nav a { 
+	font-family: Helvetica;
+	font-weight:700;
+    text-decoration: none;
+}
+
+/***********************/
+/* NAV BAR ANIMATIONS */
+/***********************/
+#nav-skills {
+	animation-name: nav-skills-animation;
+	animation-duration: 1.4s;
+	animation-fill-mode: forwards;
+	background: rgb(255, 255, 255);
+}
+
+@keyframes nav-skills-animation {
+  from {
+	margin-left: -7000px;
+	background: rgb(0, 0, 0);
+  }
+
+  to {
+	margin-left: 0;
+	background: rgb(0, 0, 0);
+  }
+}
+
+
+#nav-projects {
+	animation-name: nav-projects-animation;
+	animation-duration: 2s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes nav-projects-animation {
+  from {
+	margin-left: -7000px;
+  }
+
+  to {
+	margin-left: 0;
+  }
+}
+
+
+
+#nav-about {
+	animation-name: nav-about-animation;
+	animation-duration: 2.3s;
+	animation-fill-mode: forwards;
+	background: rgb(255, 255, 255);
+}
+
+@keyframes nav-about-animation {
+  from {
+	margin-left: -13000px;
+	background: rgb(0, 0, 0);
+  }
+
+  to {
+	margin-left: 0;
+	background: rgb(0, 0, 0);
+  }
+}
+
+
+
+
+#nav-contact {
+	animation-name: nav-contact-animation;
+	animation-duration: 2.5s;
+	animation-fill-mode: forwards;
+	background: rgb(0, 0, 0);
+}
+
+@keyframes nav-contact-animation {
+  from {
+	margin-left: -21000px;
+	
+  }
+
+  to {
+	margin-top: 0;
+	
+  }
+}
+
+
+/***********************/
+/* NAV HOVER ANIMATION */
+/***********************/
+.nav-link :hover {
+	animation-name: nav-shake;
+	animation-duration: 0.1s;
+	animation-fill-mode: forwards;
+	text-decoration: line-through;
+}
+
+@keyframes nav-hover-animation-in {
+  from {
+	margin-right: 0vw;
+  }
+
+  to {
+	margin-right: 1vw;
+  }
+}
+
+.nav-link a{
+
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes nav-hover-animation-out {
+  from {
+	margin-right: 1vw;
+  }
+
+  to {
+	margin-right: 0vw;
+  }
+}
+
+/***********************/
+/* BODY */
+/***********************/
+body { 
+	background: white;
+}
+
+.main-picture {
+	float: right;
+	width: 60%;
+
+	animation-name: main-picture-animation;
+	animation-duration: 4s;
+	animation-delay: 0.7s;
+	animation-fill-mode: forwards;
+	opacity: 0;
+}
+
+/***********************/
+/* Animate Main Picture */
+/***********************/
+
+@keyframes main-picture-animation {
+  to {
+	opacity: 1;
+  }
+}
+
+.main-picture:hover {
+	/* Start the shake animation and make the animation last for 0.5 seconds */
+    animation: shake 0.1s;
+    /* When the animation is finished, start again */
+	animation-iteration-count: 1;
+	
+} 
+
+@keyframes shake {
+	0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(0deg); }
+  }
+
+
+@keyframes nav-shake {
+	0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-3deg); }
+    20% { transform: translate(-3px, 0px) rotate(3deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(3deg); }
+    50% { transform: translate(-1px, 2px) rotate(-3deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-3deg); }
+    80% { transform: translate(-1px, -1px) rotate(3deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(0deg); }
+  }
+
+
+
+
+.skills-container {
+	height: 55vw;
+	background: lightgrey;
+}
+
+
+.projects-container {
+	height: 50vw;
+	background: rgb(255, 155, 155);
+}
+
+.about-container {
+	height: 50vw;
+	background: rgb(87, 173, 133);
+}
+
+.contact-container {
+	height: 50vw;
+	background: rgb(211, 165, 96);
+}
+
+
+
+
+
+
+
+
+/***********************/
+/* MEDIA QUERIES */
+/***********************/
+@media (width <= 1400px) {
+	#burger {
+		visibility: hidden;
+	}
+}
