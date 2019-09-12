@@ -36,7 +36,22 @@ function smoothScroll(target, duration) {
 
 
 
-var smoothSkills = document.querySelector('.skills-js-trigger');
-smoothSkills.addEventListener('click', function() {
+var scrollSkills = document.querySelector('.skills-js-trigger');
+scrollSkills.addEventListener('click', function() {
 	smoothScroll('.skills-container', 1000);
+});
+
+var scrollProjects = document.querySelector('.projects-js-trigger');
+scrollProjects.addEventListener('click', function() {
+	smoothScroll('.projects-container', 1000);
+});
+
+var scrollAbout = document.querySelector('.about-js-trigger');
+scrollAbout.addEventListener('click', function() {
+	smoothScroll('.about-container', 1000);
+});
+
+var scrollContact = document.querySelector('.contact-js-trigger');
+scrollContact.addEventListener('click', function() {
+	smoothScroll('.contact-container', 1000);
 });
