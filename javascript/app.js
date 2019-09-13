@@ -56,6 +56,10 @@ scrollContact.addEventListener('click', function() {
 	smoothScroll('.contact-container', 2000);
 });
 
+var scrollHome = document.querySelector('.home-link');
+scrollHome.addEventListener('click', function() {
+	smoothScroll('.html', 2000);
+});
 
 
 
@@ -65,13 +69,18 @@ var skillsBox = document.querySelector('.skills-move');
 var projectsBox = document.querySelector('.projects-move');
 var aboutBox = document.querySelector('.about-move');
 var contactBox = document.querySelector('.contact-move');
+var logoBox = document.querySelector('.logo-block');
 var mainPicture = document.querySelector('.main-picture');
+
+
 
 window.addEventListener('scroll', function() {
   var scrollTop = window.pageYOffset || window.scrollTop;
   var scrollPercent = scrollTop/scrollArea || 0;
   var moveDistance = (scrollPercent*window.innerWidth) * 0.3;
-  
+  var quickMove = (scrollPercent*window.innerWidth) * 0.7;
+
+
   if(moveDistance > 60) {
 	var distanceTravelled = moveDistance - 60;
 	contactBox.style.transform = "translateX(" + "-" + distanceTravelled + "vw)";
@@ -97,28 +106,34 @@ window.addEventListener('scroll', function() {
 	projectsBox.style.transform = "translateX(" + "-" + 0 + "vw)";
   }
 
-  skillsBox.style.transform = "translateX(" + "-" + moveDistance + "vw)";
+  if(moveDistance < 23.19) {
+	logoBox.style.transform = "translateX(" + "+" + distanceTravelled + "vw)";
+  }
+  else if(moveDistance <= 20) {
+  }
 
+  logoBox.style.transform = "translateX(" + "+" + quickMove + "vw)";
+	skillsBox.style.transform = "translateX(" + "-" + moveDistance + "vw)";
 
-
-
-
-
-  
-  mainPicture.style.opacity = 1 - (scrollPercent*window.innerWidth * 0.01);
-
-  this.console.log(scrollPercent*window.innerWidth * 0.001);
+	this.console.log(moveDistance);
 });
 
 
+window.onscroll = function() {myFunction()};
+var navbar = document.querySelector('.body-container');
+
+
+var sticky = navbar.offsetTop;
 
 
 
-
-
-
-
-
+function myFunction() {
+	if (window.pageYOffset >= sticky) {
+	  navbar.classList.add("sticky")
+	} else {
+	  navbar.classList.remove("sticky");
+	}
+  }
 
 
 
