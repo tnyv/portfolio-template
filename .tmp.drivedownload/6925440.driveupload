@@ -97,48 +97,4 @@ window.addEventListener('scroll', function() {
 	projectsBox.style.transform = "translateX(" + "-" + 0 + "vw)";
   }
 
-  skillsBox.style.transform = "translateX(" + "-" + moveDistance + "vw)";
-
-
-
-
-
-
-  
-  mainPicture.style.opacity = 1 - (scrollPercent*window.innerWidth * 0.01);
-
-  this.console.log(scrollPercent*window.innerWidth * 0.001);
-});
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  skillsBox.st
