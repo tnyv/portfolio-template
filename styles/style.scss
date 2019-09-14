@@ -1,0 +1,384 @@
+$defaultFont: Helvetica;
+$defaultBackground: rgb(255, 255, 255);
+
+/*******************************/
+/* Defaults */
+/******************************/
+li {
+  list-style-type: none;
+}
+
+body {
+  margin: 0;
+}
+
+/***********************/
+/* Navigation Bar */
+/***********************/
+nav {
+  font-family: $defaultFont;
+}
+
+.home-bar {
+  position: fixed;
+  top: -9vw;
+  right: 0;
+
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+
+  .home-link {
+    font-size: 6vw;
+    font-weight: 900;
+    font-size: 6vw;
+    font-style: italic;
+    text-decoration: none;
+
+    padding-right: 2vw;
+
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+  }
+
+  @keyframes home-animation-out {
+    from {
+      top: -9vw;
+    }
+
+    to {
+      top: 0;
+    }
+  }
+
+  @keyframes home-animation-in {
+    from {
+      top: 0;
+    }
+
+    to {
+      top: -9vw;
+    }
+  }
+}
+
+/***********************/
+/* Homepage Container */
+/***********************/
+.homepage-container {
+  display: block;
+  width: 100%;
+  height: 50vw;
+
+  .logo-container {
+    margin: 20px;
+
+    .logo {
+      font-size: 6vw;
+      font-weight: 900;
+      font-family: $defaultFont;
+      font-style: none;
+      text-decoration: none;
+      white-space: nowrap;
+
+      color: rgb(255, 255, 255);
+      background: rgb(199, 31, 31);
+
+      margin: 0;
+      padding: 0 10px 0 10px;
+    }
+
+    /***********************/
+    /* Animate In Logo */
+    /***********************/
+    .logo-block {
+      animation-name: logo-in-animation;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes logo-in-animation {
+      from {
+        margin-left: 8000px;
+      }
+
+      to {
+        margin-left: 60px;
+      }
+    }
+
+    /***********************/
+    /* LOGO HOVER ANIMATION */
+    /***********************/
+    .logo-section :hover {
+      animation-name: logo-hover-animation-in;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes logo-hover-animation-in {
+      from {
+        background: rgb(199, 31, 31);
+      }
+
+      to {
+        background: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+      }
+    }
+
+    .logo {
+      animation-name: logo-hover-animation-out;
+      animation-duration: 1s;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes logo-hover-animation-out {
+      from {
+        background: rgb(255, 255, 255);
+        color: rgb(0, 0, 0);
+      }
+
+      to {
+        background: rgb(199, 31, 31);
+        color: rgb(255, 255, 255);
+      }
+    }
+  }
+
+  .main-picture-container {
+    width: 70%;
+    float: left;
+
+    .main-picture {
+      float: right;
+      width: 60%;
+
+      animation-name: main-picture-animation;
+      animation-duration: 4s;
+      animation-delay: 0.7s;
+      animation-fill-mode: forwards;
+
+      opacity: 0;
+    }
+
+    /***************************/
+    /* Animate Main Picture In */
+    /***************************/
+    @keyframes main-picture-animation {
+      to {
+        opacity: 1;
+      }
+    }
+
+    :hover {
+      animation: shake 0.1s;
+      animation-iteration-count: 1;
+    }
+  }
+
+  .homepage-links-container {
+    width: 30%;
+    float: left;
+    display: flex;
+    flex-direction: column;
+
+    a {
+      font-size: 2.2vw;
+      font-family: $defaultFont;
+      font-weight: 700;
+      color: #ffffff;
+      text-decoration: none;
+    }
+  }
+}
+
+.homepage-links-block {
+  align-items: center;
+
+  margin-top: 2vw;
+  margin-left: auto;
+  margin-right: auto;
+
+  .homepage-link {
+    width: 15vw;
+    padding: 2.5vw 0 2.5vw 0;
+    background: black;
+    text-align: center;
+    animation-fill-mode: forwards;
+
+    :hover {
+      animation-name: link-shake;
+      animation-duration: 0.1s;
+      animation-fill-mode: forwards;
+      text-decoration: line-through;
+    }
+  }
+}
+
+/****************************/
+/* Homepage Link Animations */
+/****************************/
+.skills-move {
+  animation-name: homepage-skills-animation;
+  animation-duration: 1.4s;
+  background: rgb(255, 255, 255);
+}
+
+@keyframes homepage-skills-animation {
+  from {
+    margin-left: -7000px;
+  }
+
+  to {
+    margin-left: 0;
+  }
+}
+
+.projects-move {
+  animation-name: homepage-projects-animation;
+  animation-duration: 2s;
+}
+
+@keyframes homepage-projects-animation {
+  from {
+    margin-left: -7000px;
+  }
+
+  to {
+    margin-left: 0;
+  }
+}
+
+.about-move {
+  animation-name: homepage-about-animation;
+  animation-duration: 2.3s;
+}
+
+@keyframes homepage-about-animation {
+  from {
+    margin-left: -13000px;
+  }
+
+  to {
+    margin-left: 0;
+  }
+}
+
+.contact-move {
+  animation-name: homepage-contact-animation;
+  animation-duration: 2.5s;
+}
+
+@keyframes homepage-contact-animation {
+  from {
+    margin-left: -21000px;
+  }
+
+  to {
+    margin-top: 0;
+  }
+}
+
+/*****************************/
+/* Shake Animation Keyframes */
+/*****************************/
+
+@keyframes shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-1deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(1deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(1deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-1deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-1deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(1deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(0deg);
+  }
+}
+
+@keyframes link-shake {
+  0% {
+    transform: translate(1px, 1px) rotate(0deg);
+  }
+  10% {
+    transform: translate(-1px, -2px) rotate(-3deg);
+  }
+  20% {
+    transform: translate(-3px, 0px) rotate(3deg);
+  }
+  30% {
+    transform: translate(3px, 2px) rotate(0deg);
+  }
+  40% {
+    transform: translate(1px, -1px) rotate(3deg);
+  }
+  50% {
+    transform: translate(-1px, 2px) rotate(-3deg);
+  }
+  60% {
+    transform: translate(-3px, 1px) rotate(0deg);
+  }
+  70% {
+    transform: translate(3px, 1px) rotate(-3deg);
+  }
+  80% {
+    transform: translate(-1px, -1px) rotate(3deg);
+  }
+  90% {
+    transform: translate(1px, 2px) rotate(0deg);
+  }
+  100% {
+    transform: translate(1px, -2px) rotate(0deg);
+  }
+}
+
+
+
+
+
+
+
+
+
+.skills-container {
+  height: 55vw;
+  background: rgb(255, 255, 255);
+}
+
+.projects-container {
+  height: 50vw;
+  background: rgb(255, 255, 255);
+}
+
+.about-container {
+  height: 50vw;
+  background: rgb(87, 173, 133);
+}
+
+.contact-container {
+  height: 50vw;
+  background: rgb(211, 165, 96);
+}
