@@ -153,28 +153,4 @@ window.addEventListener('scroll', function()  {
 		this.console.log("Below");
 
 		if((currentPosition === "Above") && homeClicked === false) {
-			document.querySelector('.home-bar').style.animationName = "home-animation-out";
-			currentPosition = "Below";
-		}
-
-	}
-	
-	if(this.window.pageYOffset === 0) {
-		homeClicked = false;
-	}
-
-		this.console.log("skills C offset: " + document.querySelector('.skills-container').offsetTop);
-		this.console.log("pageYoffset: " + window.pageYOffset);
-
-	});
-
-
-// END HOME BUTTON
-
-
-
-
-
-
-
-
+			document.querySelector('.home-

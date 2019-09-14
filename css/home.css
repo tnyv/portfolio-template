@@ -473,29 +473,44 @@ body {
 /***********************/
 .home-bar {
 	position: fixed;
-	top: 0;
+	top: -9vw;
 	right: 0;
 	background-color: transparent;
-	z-index: 0;
+	z-index: 1;
 
 
 	animation-duration: 1s;
 	animation-fill-mode: forwards;
 
-	opacity: 0;
+	
 }
 
 
-@keyframes home-animation {
-  from {
-	top: -9vw;
-	opacity: 1;
+@keyframes home-animation-out {
+  	from {
+		top: -9vw;
+	
   }
 
-  to {
-	top: 0;
-	opacity: 1;
+  	to {
+		top: 0;
+	
   }
 }
 
 
+@keyframes home-animation-in {
+	from {
+		top: 0;
+		
+	}
+  
+	to {
+		top: -9vw;
+	}
+  }
+
+
+  .body-container {
+	  height: 300vw;
+  }
