@@ -447,14 +447,12 @@ body {
   
   
 
+
 /***********************/
 /* home-bar */
 /***********************/
-
-
-
 .home-bar a {
-	position: fixed;
+	
 	padding-right: 2vw;
 	font-size: 6vw;
 	font-weight: 900;
@@ -464,12 +462,40 @@ body {
 
 	
 	overflow: auto;
-	background:rgb(255, 255, 255);
+	background-color: transparent;
 	color: rgb(0, 0, 0);
-	top: 0;
-	right: 0;
-	float: left;
-	z-index: 0;
+
 	
 }
+
+/***********************/
+/* HOME BAR ANIMATIONS */
+/***********************/
+.home-bar {
+	position: fixed;
+	top: 0;
+	right: 0;
+	background-color: transparent;
+	z-index: 0;
+
+
+	animation-duration: 1s;
+	animation-fill-mode: forwards;
+
+	opacity: 0;
+}
+
+
+@keyframes home-animation {
+  from {
+	top: -9vw;
+	opacity: 1;
+  }
+
+  to {
+	top: 0;
+	opacity: 1;
+  }
+}
+
 

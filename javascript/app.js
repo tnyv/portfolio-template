@@ -115,37 +115,33 @@ window.addEventListener('scroll', function() {
   logoBox.style.transform = "translateX(" + "+" + quickMove + "vw)";
 	skillsBox.style.transform = "translateX(" + "-" + moveDistance + "vw)";
 
-	this.console.log(moveDistance);
+	
 });
 
 
-window.onscroll = function() {myFunction()};
-var navbar = document.querySelector('.body-container');
-
-
-var sticky = navbar.offsetTop;
 
 
 
-function myFunction() {
-	if (window.pageYOffset >= sticky) {
-	  navbar.classList.add("sticky")
-	} else {
-	  navbar.classList.remove("sticky");
+
+
+window.addEventListener('scroll', function()  {
+	var skillsPos = document.querySelector('.skills-container').offsetTop;
+
+
+	if(skillsPos >= (window.pageYOffset+5)) {
+		document.querySelector('.home-bar').style.visibility = "hidden";
+		document.querySelector('.home-bar').style.animationName = "";
 	}
-  }
+		
+	else {
+		document.querySelector('.home-bar').style.visibility = "visible";
+		document.querySelector('.home-bar').style.animationName = "home-animation";
+	}
+	
+		this.console.log("skills C offset: " + document.querySelector('.skills-container').offsetTop);
+		this.console.log(window.pageYOffset);
 
-
-
-
-
-
-
-
-
-
-
-
+	});
 
 
 
