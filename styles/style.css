@@ -34,7 +34,7 @@ nav {
   text-decoration: none;
   padding-right: 2vw;
   background-color: transparent;
-  color: black;
+  color: white;
 }
 
 @-webkit-keyframes home-animation-out {
@@ -79,7 +79,7 @@ nav {
 .homepage-container {
   display: block;
   width: 100%;
-  height: 50vw;
+  height: 60vw;
 }
 
 .homepage-container .logo-container {
@@ -101,7 +101,6 @@ nav {
   white-space: nowrap;
   color: white;
   background: #c71f1f;
-  margin: 0;
   padding: 0 10px 0 10px;
 }
 
@@ -249,7 +248,7 @@ nav {
   font-size: 2.2vw;
   font-family: Helvetica;
   font-weight: 700;
-  color: #ffffff;
+  color: white;
   text-decoration: none;
 }
 
@@ -263,6 +262,7 @@ nav {
 }
 
 .homepage-links-block .homepage-link {
+  overflow: hidden;
   width: 15vw;
   padding: 2.5vw 0 2.5vw 0;
   background: black;
@@ -289,7 +289,6 @@ nav {
           animation-name: homepage-skills-animation;
   -webkit-animation-duration: 1.4s;
           animation-duration: 1.4s;
-  background: white;
 }
 
 @-webkit-keyframes homepage-skills-animation {
@@ -575,14 +574,50 @@ nav {
   }
 }
 
+/*****************************/
+/* Skills Container */
+/*****************************/
 .skills-container {
-  height: 55vw;
-  background: white;
+  height: 100vh;
+  width: 100%;
+}
+
+.parallax-main {
+  /* The image used */
+  background-image: url("../images/code.jpg");
+  /* Full height */
+  height: 100vh;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  top: 0;
+  left: 0;
+}
+
+.content {
+  margin: 0 auto;
+  padding: 50px;
+  width: 50%;
+  background: #867794;
+}
+
+.homepage-container {
+  /* The image used */
+  background-image: url("../images/main-picture.jpg");
+  /* Full height */
+  height: 100vh;
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .projects-container {
   height: 50vw;
-  background: white;
+  background: #461574;
 }
 
 .about-container {

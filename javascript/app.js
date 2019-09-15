@@ -25,41 +25,41 @@ function smoothScroll(target, duration) {
 
 	// This makes the animation smooth
 	function animation(currentTime) {
-		if(startTime === null) startTime = currentTime;
+		if (startTime === null) startTime = currentTime;
 		var timeElapsed = currentTime - startTime;
 		var run = ease(timeElapsed, startPosition, targetPosition, duration);
 		window.scrollTo(0, run);
-		if(timeElapsed < duration) requestAnimationFrame(animation);
+		if (timeElapsed < duration) requestAnimationFrame(animation);
 	}
 
 	// Math formula used for ease motion
 	function ease(t, b, c, d) {
 		t /= d / 2;
-		if(t < 1) return c / 2 * t * t + b;
+		if (t < 1) return c / 2 * t * t + b;
 		t--;
-		return -c / 2 * (t * (t-2) - 1) + b;
+		return -c / 2 * (t * (t - 2) - 1) + b;
 	}
 	requestAnimationFrame(animation);
 }
 
 // Skills link
 var scrollSkills = document.querySelector('.skills-js-trigger');
-scrollSkills.addEventListener('click', function() {
+scrollSkills.addEventListener('click', function () {
 	smoothScroll('.skills-container', 2000);
 });
 // Projects link
 var scrollProjects = document.querySelector('.projects-js-trigger');
-scrollProjects.addEventListener('click', function() {
+scrollProjects.addEventListener('click', function () {
 	smoothScroll('.projects-container', 2000);
 });
 // About link
 var scrollAbout = document.querySelector('.about-js-trigger');
-scrollAbout.addEventListener('click', function() {
+scrollAbout.addEventListener('click', function () {
 	smoothScroll('.about-container', 2000);
 });
 // Contact link
 var scrollContact = document.querySelector('.contact-js-trigger');
-scrollContact.addEventListener('click', function() {
+scrollContact.addEventListener('click', function () {
 	smoothScroll('.contact-container', 2000);
 });
 // END
@@ -77,45 +77,45 @@ var contactBox = document.querySelector('.contact-move');
 var logoBox = document.querySelector('.logo-block');
 var mainPicture = document.querySelector('.main-picture');
 
-window.addEventListener('scroll', function() {
-  var scrollTop = window.pageYOffset || window.scrollTop;
-  var scrollPercent = scrollTop/scrollArea || 0;
-  var moveDistance = (scrollPercent*window.innerWidth) * 0.3;
-  var quickMove = (scrollPercent*window.innerWidth) * 0.7;
+window.addEventListener('scroll', function () {
+	var scrollTop = window.pageYOffset || window.scrollTop;
+	var scrollPercent = scrollTop / scrollArea || 0;
+	var moveDistance = (scrollPercent * window.innerWidth) * 0.3;
+	var quickMove = (scrollPercent * window.innerWidth) * 0.7;
 
 
-  if(moveDistance > 60) {
-	var distanceTravelled = moveDistance - 60;
-	contactBox.style.transform = "translateX(" + "-" + distanceTravelled + "vw)";
-  }
-  else if(moveDistance <= 60) {
-	contactBox.style.transform = "translateX(" + "-" + 0 + "vw)";
-  }
+	if (moveDistance > 60) {
+		var distanceTravelled = moveDistance - 60;
+		contactBox.style.transform = "translateX(" + "-" + distanceTravelled + "vw)";
+	}
+	else if (moveDistance <= 60) {
+		contactBox.style.transform = "translateX(" + "-" + 0 + "vw)";
+	}
 
-  if(moveDistance > 40) {
-	var distanceTravelled = moveDistance - 40;
-	aboutBox.style.transform = "translateX(" + "-" + distanceTravelled + "vw)";
-  }
-  else if(moveDistance <= 40) {
-	aboutBox.style.transform = "translateX(" + "-" + 0 + "vw)";
-  }
- 
-  if(moveDistance > 20) {
-	var distanceTravelled = moveDistance - 20;
-	projectsBox.style.transform = "translateX(" + "-" + distanceTravelled + "vw)";
-  }
-  else if(moveDistance <= 20) {
-	projectsBox.style.transform = "translateX(" + "-" + 0 + "vw)";
-  }
+	if (moveDistance > 40) {
+		var distanceTravelled = moveDistance - 40;
+		aboutBox.style.transform = "translateX(" + "-" + distanceTravelled + "vw)";
+	}
+	else if (moveDistance <= 40) {
+		aboutBox.style.transform = "translateX(" + "-" + 0 + "vw)";
+	}
 
-  if(moveDistance < 23.19) {
-	logoBox.style.transform = "translateX(" + "+" + distanceTravelled + "vw)";
-  }
-  else if(moveDistance <= 20) {
-  }
+	if (moveDistance > 20) {
+		var distanceTravelled = moveDistance - 20;
+		projectsBox.style.transform = "translateX(" + "-" + distanceTravelled + "vw)";
+	}
+	else if (moveDistance <= 20) {
+		projectsBox.style.transform = "translateX(" + "-" + 0 + "vw)";
+	}
 
-  logoBox.style.transform = "translateX(" + "+" + quickMove + "vw)";
+	if (moveDistance < 23.19) {
+		logoBox.style.transform = "translateX(" + "+" + distanceTravelled + "vw)";
+	}
+	else if (moveDistance <= 20) {
+	}
+
 	skillsBox.style.transform = "translateX(" + "-" + moveDistance + "vw)";
+	logoBox.style.transform = "translateX(" + "-" + moveDistance + "vw)";
 });
 // END
 /************************************************************************************** */
@@ -128,22 +128,22 @@ var currentPosition = "Above";
 var homeClicked = false;
 var scrollHome = document.querySelector('.home-link');
 
-scrollHome.addEventListener('click', function() {
+scrollHome.addEventListener('click', function () {
 	smoothScroll('.html', 2000);
 
-	if(currentPosition === "Below") {
+	if (currentPosition === "Below") {
 		document.querySelector('.home-bar').style.animationName = "home-animation-in";
 		homeClicked = true;
 	}
 });
 
-window.addEventListener('scroll', function()  {
+window.addEventListener('scroll', function () {
 	var skillsPos = document.querySelector('.skills-container').offsetTop;
 
-	if(skillsPos >= (window.pageYOffset+5)) {
+	if (skillsPos >= (window.pageYOffset + 5)) {
 		// this.console.log("Above");
 
-		if((currentPosition === "Below") && homeClicked === false) {
+		if ((currentPosition === "Below") && homeClicked === false) {
 			document.querySelector('.home-bar').style.animationName = "home-animation-in";
 			currentPosition = "Above";
 		}
@@ -151,20 +151,20 @@ window.addEventListener('scroll', function()  {
 	else {
 		// this.console.log("Below");
 
-		if((currentPosition === "Above") && homeClicked === false) {
+		if ((currentPosition === "Above") && homeClicked === false) {
 			document.querySelector('.home-bar').style.animationName = "home-animation-out";
 			currentPosition = "Below";
 		}
 	}
-	
-	if(this.window.pageYOffset === 0) {
+
+	if (this.window.pageYOffset === 0) {
 		homeClicked = false;
 	}
-		// Used for debugging
-		//this.console.log("skills C offset: " + document.querySelector('.skills-container').offsetTop);
-		//this.console.log("pageYoffset: " + window.pageYOffset);
+	// Used for debugging
+	//this.console.log("skills C offset: " + document.querySelector('.skills-container').offsetTop);
+	//this.console.log("pageYoffset: " + window.pageYOffset);
 
-	});
+});
 // END
 /************************************************************************************** */
 
