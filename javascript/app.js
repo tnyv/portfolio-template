@@ -1,3 +1,4 @@
+var scrollSpeed = 500;
 /************************************************************************************** */
 // Change main-image on hover
 
@@ -22,6 +23,7 @@ function smoothScroll(target, duration) {
 	var startPosition = window.pageYOffset;
 	var distance = targetPosition - startPosition;
 	var startTime = null;
+	
 
 	// This makes the animation smooth
 	function animation(currentTime) {
@@ -45,34 +47,29 @@ function smoothScroll(target, duration) {
 // Skills link
 var scrollSkills = document.querySelector('.skills-js-trigger');
 scrollSkills.addEventListener('click', function () {
-	smoothScroll('.skills-container', 2000);
+	smoothScroll('.skills-container', scrollSpeed);
 });
 // Projects link
 var scrollProjects = document.querySelector('.projects-js-trigger');
 scrollProjects.addEventListener('click', function () {
-	smoothScroll('.projects-container', 2000);
-});
-// About link
-var scrollAbout = document.querySelector('.about-js-trigger');
-scrollAbout.addEventListener('click', function () {
-	smoothScroll('.about-container', 2000);
+	smoothScroll('.projects-container', scrollSpeed);
 });
 // Contact link
 var scrollContact = document.querySelector('.contact-js-trigger');
 scrollContact.addEventListener('click', function () {
-	smoothScroll('.contact-container', 2000);
+	smoothScroll('.contact-container', scrollSpeed);
 });
+
 // END
 /************************************************************************************** */
 
 
 
-/************************************************************************************** */
+/**************************************************************************************
 // Homepage animations
 var scrollArea = window.innerWidth;
 var skillsBox = document.querySelector('.skills-move');
 var projectsBox = document.querySelector('.projects-move');
-var aboutBox = document.querySelector('.about-move');
 var contactBox = document.querySelector('.contact-move');
 var logoBox = document.querySelector('.logo-block');
 var mainPicture = document.querySelector('.main-picture');
@@ -83,21 +80,12 @@ window.addEventListener('scroll', function () {
 	var moveDistance = (scrollPercent * window.innerWidth) * 0.3;
 	var quickMove = (scrollPercent * window.innerWidth) * 0.7;
 
-
-	if (moveDistance > 60) {
-		var distanceTravelled = moveDistance - 60;
-		contactBox.style.transform = "translateX(" + "-" + distanceTravelled + "vw)";
-	}
-	else if (moveDistance <= 60) {
-		contactBox.style.transform = "translateX(" + "-" + 0 + "vw)";
-	}
-
 	if (moveDistance > 40) {
 		var distanceTravelled = moveDistance - 40;
-		aboutBox.style.transform = "translateX(" + "-" + distanceTravelled + "vw)";
+		contactBox.style.transform = "translateX(" + "-" + distanceTravelled + "vw)";
 	}
 	else if (moveDistance <= 40) {
-		aboutBox.style.transform = "translateX(" + "-" + 0 + "vw)";
+		contactBox.style.transform = "translateX(" + "-" + 0 + "vw)";
 	}
 
 	if (moveDistance > 20) {
@@ -118,7 +106,7 @@ window.addEventListener('scroll', function () {
 	logoBox.style.transform = "translateX(" + "-" + moveDistance + "vw)";
 });
 // END
-/************************************************************************************** */
+************************************************************************************** */
 
 
 
@@ -129,7 +117,7 @@ var homeClicked = false;
 var scrollHome = document.querySelector('.home-link');
 
 scrollHome.addEventListener('click', function () {
-	smoothScroll('.html', 2000);
+	smoothScroll('.html', scrollSpeed);
 
 	if (currentPosition === "Below") {
 		document.querySelector('.home-bar').style.animationName = "home-animation-in";
