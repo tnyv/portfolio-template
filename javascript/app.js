@@ -23,7 +23,6 @@ function smoothScroll(target, duration) {
 	var target = document.querySelector(target);
 	var targetPosition = target.getBoundingClientRect().top;
 	var startPosition = window.pageYOffset;
-	var distance = targetPosition - startPosition;
 	var startTime = null;
 
 	// This makes the animation smooth
@@ -78,10 +77,10 @@ barContact.addEventListener('click', function() {
 	smoothScroll('.contact-container', scrollDash);
 });
 
-// Home Link
+/* Home Link
 var scrollHome = document.querySelector('.home-link');
 scrollHome.addEventListener('click', function() {
-	smoothScroll('.html', scrollDash);
+	smoothScroll('.top', scrollDash);
 });
 // END
 /************************************************************************************** */

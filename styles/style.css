@@ -36,13 +36,12 @@ nav {
   -webkit-transition: top 0.5s;
   transition: top 0.5s;
   background: black;
-  -webkit-animation-duration: 0.5s;
-          animation-duration: 0.5s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
 }
 
-.home-bar .home-link, .home-bar .projects-link, .home-bar .resume-link, .home-bar .contact-link {
+.home-bar .home-link,
+.home-bar .projects-link,
+.home-bar .resume-link,
+.home-bar .contact-link {
   font-size: 1rem;
   font-weight: 900;
   font-style: none;
@@ -50,51 +49,63 @@ nav {
   overflow: hidden;
   padding: 1rem;
   margin: 0rem 1rem 0rem 1rem;
-  background-color: transparent;
   color: white;
+  -webkit-animation-name: animate-nav-link-out;
+          animation-name: animate-nav-link-out;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
-@-webkit-keyframes home-animation-out {
-  from {
-    top: -9vw;
-    opacity: 1;
-  }
-  to {
-    top: 0;
-    opacity: 1;
-  }
+.home-bar a:hover {
+  -webkit-animation-name: animate-nav-link;
+          animation-name: animate-nav-link;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
-@keyframes home-animation-out {
+@-webkit-keyframes animate-nav-link {
   from {
-    top: -9vw;
-    opacity: 1;
+    background: black;
   }
   to {
-    top: 0;
-    opacity: 1;
-  }
-}
-
-@-webkit-keyframes home-animation-in {
-  from {
-    top: 0;
-    opacity: 1;
-  }
-  to {
-    top: -9vw;
-    opacity: 0;
+    background: #c7b7b7;
+    color: black;
   }
 }
 
-@keyframes home-animation-in {
+@keyframes animate-nav-link {
   from {
-    top: 0;
-    opacity: 1;
+    background: black;
   }
   to {
-    top: -9vw;
-    opacity: 0;
+    background: #c7b7b7;
+    color: black;
+  }
+}
+
+@-webkit-keyframes animate-nav-link-out {
+  from {
+    background: #c7b7b7;
+    color: black;
+  }
+  to {
+    background: black;
+    color: white;
+  }
+}
+
+@keyframes animate-nav-link-out {
+  from {
+    background: #c7b7b7;
+    color: black;
+  }
+  to {
+    background: black;
+    color: white;
   }
 }
 
@@ -133,8 +144,8 @@ nav {
 .homepage-container .logo-container .logo-block {
   -webkit-animation-name: logo-in-animation;
           animation-name: logo-in-animation;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
@@ -310,8 +321,8 @@ nav {
 .skills-move {
   -webkit-animation-name: homepage-skills-animation;
           animation-name: homepage-skills-animation;
-  -webkit-animation-duration: 1.4s;
-          animation-duration: 1.4s;
+  -webkit-animation-duration: .2s;
+          animation-duration: .2s;
   opacity: 0;
 }
 
@@ -336,8 +347,8 @@ nav {
 .projects-move {
   -webkit-animation-name: homepage-projects-animation;
           animation-name: homepage-projects-animation;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
 }
 
 @-webkit-keyframes homepage-projects-animation {
@@ -361,8 +372,8 @@ nav {
 .about-move {
   -webkit-animation-name: homepage-about-animation;
           animation-name: homepage-about-animation;
-  -webkit-animation-duration: 2.3s;
-          animation-duration: 2.3s;
+  -webkit-animation-duration: 0.7s;
+          animation-duration: 0.7s;
 }
 
 @-webkit-keyframes homepage-about-animation {
@@ -386,8 +397,8 @@ nav {
 .contact-move {
   -webkit-animation-name: homepage-contact-animation;
           animation-name: homepage-contact-animation;
-  -webkit-animation-duration: 2.5s;
-          animation-duration: 2.5s;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
 }
 
 @-webkit-keyframes homepage-contact-animation {

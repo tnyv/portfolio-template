@@ -15,6 +15,7 @@ body {
 html {
   overflow-x: hidden;
 }
+
 /***********************/
 /* Navigation Bar */
 /***********************/
@@ -33,12 +34,10 @@ nav {
 
   background: black;
 
-  animation-duration: 0.5s;
-  animation-fill-mode: forwards;
-
-
-  .home-link, .projects-link, .resume-link, .contact-link {
-    
+  .home-link,
+  .projects-link,
+  .resume-link,
+  .contact-link {
     font-size: 1rem;
     font-weight: 900;
     font-style: none;
@@ -47,33 +46,41 @@ nav {
     overflow: hidden;
     padding: 1rem;
     margin: 0rem 1rem 0rem 1rem;
-    
-    background-color: transparent;
+
     color: rgb(255, 255, 255);
+
+    animation-name: animate-nav-link-out;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+  }
+}
+
+.home-bar a:hover {
+  animation-name: animate-nav-link;
+  animation-duration: 0.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes animate-nav-link {
+  from {
+    background: rgb(0, 0, 0);
   }
 
-  @keyframes home-animation-out {
-    from {
-      top: -9vw;
-      opacity: 1;
-    }
+  to {
+    background: rgb(199, 183, 183);
+    color: black;
+  }
+}
 
-    to {
-      top: 0;
-      opacity: 1;
-    }
+@keyframes animate-nav-link-out {
+  from {
+    background: rgb(199, 183, 183);
+    color: black;
   }
 
-  @keyframes home-animation-in {
-    from {
-      top: 0;
-      opacity: 1;
-    }
-
-    to {
-      top: -9vw;
-      opacity: 0;
-    }
+  to {
+    background: rgb(0, 0, 0);
+    color: white;
   }
 }
 
@@ -84,7 +91,6 @@ nav {
   display: block;
   width: 100%;
   height: 50vw;
-  
 
   .logo-container {
     margin: 20px;
@@ -109,7 +115,7 @@ nav {
     /***********************/
     .logo-block {
       animation-name: logo-in-animation;
-      animation-duration: 1s;
+      animation-duration: 0.5s;
       animation-fill-mode: forwards;
     }
 
@@ -235,7 +241,7 @@ nav {
 /****************************/
 .skills-move {
   animation-name: homepage-skills-animation;
-  animation-duration: 1.4s;
+  animation-duration: .2s;
   opacity: 0;
 }
 
@@ -251,7 +257,7 @@ nav {
 
 .projects-move {
   animation-name: homepage-projects-animation;
-  animation-duration: 2s;
+  animation-duration: 0.5s;
 }
 
 @keyframes homepage-projects-animation {
@@ -266,7 +272,7 @@ nav {
 
 .about-move {
   animation-name: homepage-about-animation;
-  animation-duration: 2.3s;
+  animation-duration: 0.7s;
 }
 
 @keyframes homepage-about-animation {
@@ -281,7 +287,7 @@ nav {
 
 .contact-move {
   animation-name: homepage-contact-animation;
-  animation-duration: 2.5s;
+  animation-duration: 1s;
 }
 
 @keyframes homepage-contact-animation {
@@ -370,14 +376,6 @@ nav {
   }
 }
 
-
-
-
-
-
-
-
-
 .skills-container {
   height: 100vw;
   background: rgb(121, 30, 30);
@@ -397,3 +395,5 @@ nav {
   height: 50vw;
   background: rgb(211, 165, 96);
 }
+
+
