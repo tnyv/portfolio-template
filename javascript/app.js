@@ -1,4 +1,6 @@
-var scrollSpeed = 500;
+// GLOBAL
+var scrollSpeed = 1000;
+var scrollDash = 400;
 /************************************************************************************** */
 // Change main-image on hover
 
@@ -23,7 +25,6 @@ function smoothScroll(target, duration) {
 	var startPosition = window.pageYOffset;
 	var distance = targetPosition - startPosition;
 	var startTime = null;
-	
 
 	// This makes the animation smooth
 	function animation(currentTime) {
@@ -44,86 +45,59 @@ function smoothScroll(target, duration) {
 	requestAnimationFrame(animation);
 }
 
-// Skills link
-var scrollSkills = document.querySelector('.skills-js-trigger');
-<<<<<<< HEAD
-scrollSkills.addEventListener('click', function () {
-	smoothScroll('.skills-container', scrollSpeed);
-});
-// Projects link
-var scrollProjects = document.querySelector('.projects-js-trigger');
-scrollProjects.addEventListener('click', function () {
-	smoothScroll('.projects-container', scrollSpeed);
-});
-// Contact link
-var scrollContact = document.querySelector('.contact-js-trigger');
-scrollContact.addEventListener('click', function () {
-	smoothScroll('.contact-container', scrollSpeed);
-=======
-scrollSkills.addEventListener('click', function() {
-	smoothScroll('.skills-container', 2000);
-});
 // Projects link
 var scrollProjects = document.querySelector('.projects-js-trigger');
 scrollProjects.addEventListener('click', function() {
-	smoothScroll('.projects-container', 2000);
+	smoothScroll('.projects-container', scrollSpeed);
 });
+
+var barProjects = document.querySelector('.projects-link');
+barProjects.addEventListener('click', function() {
+	smoothScroll('.projects-container', scrollDash);
+});
+
 // About link
 var scrollAbout = document.querySelector('.about-js-trigger');
 scrollAbout.addEventListener('click', function() {
-	smoothScroll('.about-container', 2000);
+	smoothScroll('.about-container', scrollSpeed);
 });
+
+var barAbout = document.querySelector('.resume-link');
+barAbout.addEventListener('click', function() {
+	smoothScroll('.about-container', scrollDash);
+});
+
 // Contact link
 var scrollContact = document.querySelector('.contact-js-trigger');
 scrollContact.addEventListener('click', function() {
-	smoothScroll('.contact-container', 2000);
->>>>>>> parent of 7375be5... Experimenting with parallax scrolling
+	smoothScroll('.contact-container', scrollSpeed);
 });
 
+var barContact = document.querySelector('.contact-link');
+barContact.addEventListener('click', function() {
+	smoothScroll('.contact-container', scrollDash);
+});
+
+// Home Link
+var scrollHome = document.querySelector('.home-link');
+scrollHome.addEventListener('click', function() {
+	smoothScroll('.html', scrollDash);
+});
 // END
 /************************************************************************************** */
 
 
 
-/**************************************************************************************
+/************************************************************************************** */
 // Homepage animations
 var scrollArea = window.innerWidth;
 var skillsBox = document.querySelector('.skills-move');
 var projectsBox = document.querySelector('.projects-move');
+var aboutBox = document.querySelector('.about-move');
 var contactBox = document.querySelector('.contact-move');
 var logoBox = document.querySelector('.logo-block');
 var mainPicture = document.querySelector('.main-picture');
 
-<<<<<<< HEAD
-window.addEventListener('scroll', function () {
-	var scrollTop = window.pageYOffset || window.scrollTop;
-	var scrollPercent = scrollTop / scrollArea || 0;
-	var moveDistance = (scrollPercent * window.innerWidth) * 0.3;
-	var quickMove = (scrollPercent * window.innerWidth) * 0.7;
-
-	if (moveDistance > 40) {
-		var distanceTravelled = moveDistance - 40;
-		contactBox.style.transform = "translateX(" + "-" + distanceTravelled + "vw)";
-	}
-	else if (moveDistance <= 40) {
-		contactBox.style.transform = "translateX(" + "-" + 0 + "vw)";
-	}
-
-	if (moveDistance > 20) {
-		var distanceTravelled = moveDistance - 20;
-		projectsBox.style.transform = "translateX(" + "-" + distanceTravelled + "vw)";
-	}
-	else if (moveDistance <= 20) {
-		projectsBox.style.transform = "translateX(" + "-" + 0 + "vw)";
-	}
-
-	if (moveDistance < 23.19) {
-		logoBox.style.transform = "translateX(" + "+" + distanceTravelled + "vw)";
-	}
-	else if (moveDistance <= 20) {
-	}
-
-=======
 window.addEventListener('scroll', function() {
   var scrollTop = window.pageYOffset || window.scrollTop;
   var scrollPercent = scrollTop/scrollArea || 0;
@@ -155,34 +129,22 @@ window.addEventListener('scroll', function() {
 	projectsBox.style.transform = "translateX(" + "-" + 0 + "vw)";
   }
 
-  if(moveDistance < 23.19) {
-	logoBox.style.transform = "translateX(" + "+" + distanceTravelled + "vw)";
-  }
-  else if(moveDistance <= 20) {
-  }
-
-  logoBox.style.transform = "translateX(" + "+" + quickMove + "vw)";
->>>>>>> parent of 7375be5... Experimenting with parallax scrolling
+  logoBox.style.transform = "translateX(" + "-" + quickMove + "vw)";
 	skillsBox.style.transform = "translateX(" + "-" + moveDistance + "vw)";
 });
 // END
-************************************************************************************** */
-
-
-
 /************************************************************************************** */
-// Setting up HOME button to appear when below homepage, and disappear when at homepage. 
+
+
+
+/************************************************************************************** *
+// Setting up HOME bar to appear when below homepage, and disappear when at homepage. 
 var currentPosition = "Above";
 var homeClicked = false;
 var scrollHome = document.querySelector('.home-link');
 
-<<<<<<< HEAD
-scrollHome.addEventListener('click', function () {
-	smoothScroll('.html', scrollSpeed);
-=======
 scrollHome.addEventListener('click', function() {
-	smoothScroll('.html', 2000);
->>>>>>> parent of 7375be5... Experimenting with parallax scrolling
+	smoothScroll('.html', scrollSpeed);
 
 	if(currentPosition === "Below") {
 		document.querySelector('.home-bar').style.animationName = "home-animation-in";
@@ -219,9 +181,17 @@ window.addEventListener('scroll', function()  {
 
 	});
 // END
-/************************************************************************************** */
+************************************************************************************** */
 
+window.onscroll = function() {scrollFunction()};
 
+function scrollFunction() {
+  if (document.body.scrollTop > 700 || document.documentElement.scrollTop > 700) {
+	document.querySelector('.home-bar').style.top = "0";
+  } else {
+    document.querySelector('.home-bar').style.top = "-10vw";
+  }
+} 
 
 
 

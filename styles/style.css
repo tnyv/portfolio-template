@@ -9,6 +9,10 @@ body {
   margin: 0;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 /***********************/
 /* Navigation Bar */
 /***********************/
@@ -17,25 +21,37 @@ nav {
 }
 
 .home-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-flow: row-reverse;
+      flex-flow: row-reverse;
   position: fixed;
-  top: -9vw;
-  right: 0;
-  white-space: nowrap;
-  opacity: 0;
-  -webkit-animation-duration: 1s;
-          animation-duration: 1s;
+  top: -10vw;
+  width: 100%;
+  -webkit-transition: top 0.5s;
+  transition: top 0.5s;
+  background: black;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
 }
 
-.home-bar .home-link {
-  font-size: 3rem;
+.home-bar .home-link, .home-bar .projects-link, .home-bar .resume-link, .home-bar .contact-link {
+  font-size: 1rem;
   font-weight: 900;
-  font-style: italic;
+  font-style: none;
   text-decoration: none;
-  padding-right: 2vw;
+  overflow: hidden;
+  padding: 1rem;
+  margin: 0rem 1rem 0rem 1rem;
   background-color: transparent;
-  color: black;
+  color: white;
 }
 
 @-webkit-keyframes home-animation-out {
@@ -86,23 +102,8 @@ nav {
 /* Homepage Container */
 /***********************/
 .homepage-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  display: block;
   width: 100%;
-<<<<<<< HEAD
-  height: 100vh;
-  background-image: url("../images/main-picture.jpg");
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-=======
   height: 50vw;
 }
 
@@ -114,86 +115,180 @@ nav {
   /***********************/
   /* LOGO HOVER ANIMATION */
   /***********************/
->>>>>>> parent of 7375be5... Experimenting with parallax scrolling
 }
 
 .homepage-container .logo-container .logo {
-  font-size: 4rem;
+  font-size: 6vw;
   font-weight: 900;
   font-family: Helvetica;
   font-style: none;
   text-decoration: none;
-  font-style: italic;
   white-space: nowrap;
   color: white;
-<<<<<<< HEAD
-  background: transparent;
-=======
   background: #c71f1f;
   margin: 0;
->>>>>>> parent of 7375be5... Experimenting with parallax scrolling
   padding: 0 10px 0 10px;
-  margin-left: 2rem;
 }
 
-.sub-logo {
-  position: absolute;
-  top: 0;
-  right: 12rem;
-  white-space: nowrap;
+.homepage-container .logo-container .logo-block {
+  -webkit-animation-name: logo-in-animation;
+          animation-name: logo-in-animation;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
-.sub-logo a {
-  font-size: 4rem;
-  font-weight: 900;
-  font-style: italic;
-  font-family: Helvetica;
-  background-color: transparent;
-  color: white;
-  text-decoration: none;
-  white-space: nowrap;
-  padding-right: 2vw;
+@-webkit-keyframes logo-in-animation {
+  from {
+    margin-left: -8000px;
+  }
+  to {
+    margin-left: 60px;
+  }
 }
 
-.homepage-links-container {
-  margin: auto;
-  width: 100%;
-  text-align: center;
+@keyframes logo-in-animation {
+  from {
+    margin-left: -8000px;
+  }
+  to {
+    margin-left: 60px;
+  }
 }
 
-.homepage-links-container a {
-  font-size: 2.2rem;
-  font-family: Helvetica;
-  font-weight: 700;
-  color: #ffffff;
-  text-decoration: none;
-  background: black;
+.homepage-container .logo-container .logo-section :hover {
+  -webkit-animation-name: logo-hover-animation-in;
+          animation-name: logo-hover-animation-in;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
-.homepage-links-block {
+@-webkit-keyframes logo-hover-animation-in {
+  from {
+    background: #c71f1f;
+  }
+  to {
+    background: white;
+    color: black;
+  }
+}
+
+@keyframes logo-hover-animation-in {
+  from {
+    background: #c71f1f;
+  }
+  to {
+    background: white;
+    color: black;
+  }
+}
+
+.homepage-container .logo-container .logo {
+  -webkit-animation-name: logo-hover-animation-out;
+          animation-name: logo-hover-animation-out;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes logo-hover-animation-out {
+  from {
+    background: white;
+    color: black;
+  }
+  to {
+    background: #c71f1f;
+    color: white;
+  }
+}
+
+@keyframes logo-hover-animation-out {
+  from {
+    background: white;
+    color: black;
+  }
+  to {
+    background: #c71f1f;
+    color: white;
+  }
+}
+
+.homepage-container .main-picture-container {
+  width: 70%;
+  float: left;
+  /***************************/
+  /* Animate Main Picture In */
+  /***************************/
+}
+
+.homepage-container .main-picture-container .main-picture {
+  float: right;
+  width: 60%;
+  -webkit-animation-name: main-picture-animation;
+          animation-name: main-picture-animation;
+  -webkit-animation-duration: 4s;
+          animation-duration: 4s;
+  -webkit-animation-delay: 0.7s;
+          animation-delay: 0.7s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@-webkit-keyframes main-picture-animation {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes main-picture-animation {
+  to {
+    opacity: 1;
+  }
+}
+
+.homepage-container .main-picture-container :hover {
+  -webkit-animation: shake 0.1s;
+          animation: shake 0.1s;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+}
+
+.homepage-container .homepage-links-container {
+  width: 30%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.homepage-container .homepage-links-container a {
+  font-size: 2.2rem;
+  font-family: Helvetica;
+  font-weight: 900;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.homepage-links-block {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .homepage-links-block .homepage-link {
-<<<<<<< HEAD
-  overflow: visible;
   width: 15rem;
-  padding: 2.5rem 0 2.5rem 0;
-  margin: 0 5rem 0 5rem;
-=======
-  width: 15vw;
-  padding: 2.5vw 0 2.5vw 0;
+  padding: 2.5rem 0rem 2.5rem 0rem;
   background: black;
->>>>>>> parent of 7375be5... Experimenting with parallax scrolling
   text-align: center;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
@@ -217,20 +312,24 @@ nav {
           animation-name: homepage-skills-animation;
   -webkit-animation-duration: 1.4s;
           animation-duration: 1.4s;
-  background: white;
+  opacity: 0;
 }
 
 @-webkit-keyframes homepage-skills-animation {
   from {
+    margin-left: -7000px;
   }
   to {
+    margin-left: 0;
   }
 }
 
 @keyframes homepage-skills-animation {
   from {
+    margin-left: -7000px;
   }
   to {
+    margin-left: 0;
   }
 }
 
@@ -243,36 +342,69 @@ nav {
 
 @-webkit-keyframes homepage-projects-animation {
   from {
+    margin-left: -7000px;
   }
   to {
+    margin-left: 0;
   }
 }
 
 @keyframes homepage-projects-animation {
   from {
+    margin-left: -7000px;
   }
   to {
+    margin-left: 0;
+  }
+}
+
+.about-move {
+  -webkit-animation-name: homepage-about-animation;
+          animation-name: homepage-about-animation;
+  -webkit-animation-duration: 2.3s;
+          animation-duration: 2.3s;
+}
+
+@-webkit-keyframes homepage-about-animation {
+  from {
+    margin-left: -13000px;
+  }
+  to {
+    margin-left: 0;
+  }
+}
+
+@keyframes homepage-about-animation {
+  from {
+    margin-left: -13000px;
+  }
+  to {
+    margin-left: 0;
   }
 }
 
 .contact-move {
   -webkit-animation-name: homepage-contact-animation;
           animation-name: homepage-contact-animation;
-  -webkit-animation-duration: 2.3s;
-          animation-duration: 2.3s;
+  -webkit-animation-duration: 2.5s;
+          animation-duration: 2.5s;
 }
 
 @-webkit-keyframes homepage-contact-animation {
   from {
+    margin-left: -21000px;
   }
   to {
+    margin-top: 0;
   }
 }
 
 @keyframes homepage-contact-animation {
   from {
+    margin-left: -21000px;
   }
   to {
+    margin-top: 0;
   }
 }
 
@@ -467,43 +599,22 @@ nav {
 }
 
 .skills-container {
-<<<<<<< HEAD
-  height: 100vh;
-  width: 100%;
-}
-
-.parallax-main {
-  /* The image used */
-  background-image: url("../images/code.jpg");
-  /* Full height */
-  height: 100vh;
-  /* Create the parallax scrolling effect */
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  top: 0;
-  left: 0;
-}
-
-.content {
-  margin: 0 auto;
-  padding: 50px;
-  width: 50%;
-  background: #867794;
-=======
-  height: 55vw;
-  background: white;
->>>>>>> parent of 7375be5... Experimenting with parallax scrolling
+  height: 100vw;
+  background: #791e1e;
 }
 
 .projects-container {
   height: 50vw;
-  background: white;
+  background: #317c4e;
+}
+
+.about-container {
+  height: 50vw;
+  background: #ad57ad;
 }
 
 .contact-container {
   height: 50vw;
-  background: #57ad85;
+  background: #d3a560;
 }
 /*# sourceMappingURL=style.css.map */
