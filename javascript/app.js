@@ -55,15 +55,15 @@ barProjects.addEventListener('click', function() {
 	smoothScroll('.projects-container', scrollDash);
 });
 
-// About link
-var scrollAbout = document.querySelector('.about-js-trigger');
-scrollAbout.addEventListener('click', function() {
-	smoothScroll('.about-container', scrollSpeed);
+// Resume link
+var scrollResume = document.querySelector('.resume-js-trigger');
+scrollResume.addEventListener('click', function() {
+	smoothScroll('.resume-container', scrollSpeed);
 });
 
-var barAbout = document.querySelector('.resume-link');
-barAbout.addEventListener('click', function() {
-	smoothScroll('.about-container', scrollDash);
+var barResume = document.querySelector('.resume-link');
+barResume.addEventListener('click', function() {
+	smoothScroll('.resume-container', scrollDash);
 });
 
 // Contact link
@@ -90,12 +90,10 @@ scrollHome.addEventListener('click', function() {
 /************************************************************************************** */
 // Homepage animations
 var scrollArea = window.innerWidth;
-var skillsBox = document.querySelector('.skills-move');
-var projectsBox = document.querySelector('.projects-move');
-var aboutBox = document.querySelector('.about-move');
-var contactBox = document.querySelector('.contact-move');
-var logoBox = document.querySelector('.logo-block');
-var mainPicture = document.querySelector('.main-picture');
+var projectsBox = document.querySelector('.projects');
+var resumeBox = document.querySelector('.resume');
+var contactBox = document.querySelector('.contact');
+var logoBox = document.querySelector('.logo-container');
 
 window.addEventListener('scroll', function() {
   var scrollTop = window.pageYOffset || window.scrollTop;
@@ -114,10 +112,10 @@ window.addEventListener('scroll', function() {
 
   if(moveDistance > 40) {
 	var distanceTravelled = moveDistance - 40;
-	aboutBox.style.transform = "translateX(" + "-" + distanceTravelled + "vw)";
+	resumeBox.style.transform = "translateX(" + "-" + distanceTravelled + "vw)";
   }
   else if(moveDistance <= 40) {
-	aboutBox.style.transform = "translateX(" + "-" + 0 + "vw)";
+	resumeBox.style.transform = "translateX(" + "-" + 0 + "vw)";
   }
  
   if(moveDistance > 20) {
@@ -128,15 +126,15 @@ window.addEventListener('scroll', function() {
 	projectsBox.style.transform = "translateX(" + "-" + 0 + "vw)";
   }
 
-  logoBox.style.transform = "translateX(" + "-" + quickMove + "vw)";
-	skillsBox.style.transform = "translateX(" + "-" + moveDistance + "vw)";
+  logoBox.style.transform = "translateX(" + "+" + quickMove + "vw)";
+
 });
 // END
 /************************************************************************************** */
 
 
 
-/************************************************************************************** *
+/***************************************************************************************
 // Setting up HOME bar to appear when below homepage, and disappear when at homepage. 
 var currentPosition = "Above";
 var homeClicked = false;
@@ -182,6 +180,8 @@ window.addEventListener('scroll', function()  {
 // END
 ************************************************************************************** */
 
+/***************************************************************************************/
+// Setting up HOME bar to appear when below homepage, and disappear when at homepage. 
 window.onscroll = function() {scrollFunction()};
 
 function scrollFunction() {
@@ -191,8 +191,26 @@ function scrollFunction() {
     document.querySelector('.home-bar').style.top = "-10vw";
   }
 } 
+// END
+/************************************************************************************** */
 
 
+/***************************************************************************************/
+// Setting up type writer animation for sub-logo
+var i = 0;
+var txt = '     TONY VU';
+var speed = 100;
 
+function typeWriter() {
+  if (i < txt.length) {
+    document.querySelector('.loadme').innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+}
+
+typeWriter();
+// END
+/************************************************************************************** */
 
 
