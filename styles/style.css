@@ -80,12 +80,13 @@ nav {
   width: 100%;
   height: 100vh;
   margin: 0;
-  background: whitesmoke;
-  background-image: url("../images/wall.jpg");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  background: #1a1a1a;
+}
+
+.top {
+  width: 100%;
+  height: 5vh;
+  background: #1a1a1a;
 }
 
 .logo-container {
@@ -96,34 +97,34 @@ nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: auto;
   text-align: center;
   width: 100%;
 }
 
 .logo-container .logo {
-  font-size: 4rem;
-  font-weight: 900;
+  font-size: 1.7rem;
+  font-weight: 600;
   font-family: Helvetica;
   font-style: none;
+  letter-spacing: 0.2rem;
   text-decoration: none;
   white-space: nowrap;
-  color: black;
+  color: white;
   background: transparent;
-  margin: 0;
+  margin: 1rem;
   padding: 0;
 }
 
 .logo-container .sub-logo {
-  font-size: 2rem;
-  font-weight: 900;
+  font-size: 1rem;
+  font-weight: 500;
   font-family: Helvetica;
   font-style: none;
+  letter-spacing: 0.2rem;
   text-decoration: none;
   white-space: nowrap;
-  z-index: 2;
   height: 5vh;
-  margin-bottom: 1rem;
+  margin: 0 0 1rem 0;
   color: white;
   background: transparent;
 }
@@ -151,7 +152,7 @@ nav {
   font-family: Helvetica;
   font-weight: 900;
   font-style: italic;
-  color: #000000;
+  color: white;
   text-decoration: none;
 }
 
@@ -164,44 +165,64 @@ nav {
       -ms-flex-direction: column;
           flex-direction: column;
   width: auto;
-  margin: 2rem 3rem 0 3rem;
+  margin: 0rem 5rem 0 5rem;
   background: transparent;
   text-align: center;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+}
+
+.homepage-block P {
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: Helvetica;
+  font-style: none;
+  color: white;
+  letter-spacing: 0.2rem;
+  text-decoration: none;
+  white-space: nowrap;
 }
 
 .main-picture {
+  width: 43rem;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.main-picture:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
+.right-picture, .left-picture {
   width: 25rem;
-  -webkit-animation-name: main-picture-animation;
-          animation-name: main-picture-animation;
-  -webkit-animation-duration: 2s;
-          animation-duration: 2s;
-  -webkit-animation-delay: 0.7s;
-          animation-delay: 0.7s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
 }
 
-.home-block-img {
-  margin-top: 2rem;
+.homepage-footer {
+  position: absolute;
+  bottom: 4rem;
+  width: 100%;
+  background: transparent;
+  margin-top: 4rem;
 }
 
-/****************************/
-/* Homepage Link Animations */
-/****************************/
-.logo-container,
-.projects-move,
-.resume-move,
-.contact-move {
-  -webkit-animation-name: main-picture-animation;
-          animation-name: main-picture-animation;
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
-  -webkit-animation-delay: 0.7s;
-          animation-delay: 0.7s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+.homepage-footer p, .homepage-footer a {
+  float: left;
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: Helvetica;
+  font-style: none;
+  color: white;
+  letter-spacing: 0.2rem;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.homepage-footer p {
+  margin-left: 4rem;
+}
+
+.homepage-footer a {
+  float: right;
+  margin-right: 4rem;
 }
 
 /*****************************/
@@ -443,7 +464,6 @@ nav {
 
 .loader {
   font-family: Helvetica;
-  color: white;
   font-size: 10rem;
   font-weight: 600;
   width: 100%;
@@ -451,7 +471,7 @@ nav {
   position: absolute;
   top: 0;
   left: 0;
-  background: black;
+  background: #1a1a1a;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

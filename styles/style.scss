@@ -1,5 +1,6 @@
 $defaultFont: Helvetica;
-$defaultBackground: rgb(245, 245, 245);
+$defaultBackground: rgb(26, 26, 26);
+$defaultFontColor: rgb(255, 255, 255);
 
 /*******************************/
 /* Defaults */
@@ -57,7 +58,7 @@ nav {
     padding: 1rem;
     margin: 0rem 1rem 0rem 1rem;
 
-    color: rgb(255, 255, 255);
+    color: $defaultFontColor;
   }
 }
 
@@ -76,50 +77,50 @@ nav {
   height: 100vh;
   margin: 0;
   background: $defaultBackground;
+}
 
-  background-image: url("../images/wall.jpg");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+.top {
+  width: 100%;
+  height: 5vh;
+  background: $defaultBackground;
 }
 
 .logo-container {
   display: flex;
   flex-direction: column;
-  height: auto;
 
   text-align: center;
   width: 100%;
 
   .logo {
-    font-size: 4rem;
-    font-weight: 900;
+    font-size: 1.7rem;
+    font-weight: 600;
     font-family: $defaultFont;
     font-style: none;
+    letter-spacing: 0.2rem;
     text-decoration: none;
     white-space: nowrap;
 
-    color: rgb(0, 0, 0);
+    color: $defaultFontColor;
     background: transparent;
 
-    margin: 0;
+    margin: 1rem;
     padding: 0;
   }
 
   .sub-logo {
-    font-size: 2rem;
-    font-weight: 900;
+    font-size: 1rem;
+    font-weight: 500;
     font-family: $defaultFont;
     font-style: none;
+    letter-spacing: 0.2rem;
     text-decoration: none;
     white-space: nowrap;
-    z-index: 2;
 
     height: 5vh;
-    margin-bottom: 1rem;
+    margin: 0 0 1rem 0;
 
-    color: rgb(255, 255, 255);
+    color: $defaultFontColor;
     background: transparent;
   }
 }
@@ -138,7 +139,7 @@ nav {
     font-family: $defaultFont;
     font-weight: 900;
     font-style: italic;
-    color: #000000;
+    color: $defaultFontColor;
     text-decoration: none;
   }
 }
@@ -148,39 +149,69 @@ nav {
   flex-direction: column;
 
   width: auto;
-  margin: 2rem 3rem 0 3rem;
+  margin: 0rem 5rem 0 5rem;
 
   background: transparent;
   text-align: center;
 
-  animation-fill-mode: forwards;
+  P {
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: $defaultFont;
+    font-style: none;
+    color: $defaultFontColor;
+    letter-spacing: 0.2rem;
+    text-decoration: none;
+    white-space: nowrap;
+  }
 }
 
 .main-picture {
+  width: 43rem;
+  transition: all .4s ease-in-out;
+}
+
+.main-picture:hover {
+  transform: scale(1.1);
+}
+
+.right-picture, .left-picture {
   width: 25rem;
+}
+
+.right-picture {
   
-
-  animation-name: main-picture-animation;
-  animation-duration: 2s;
-  animation-delay: 0.7s;
-  animation-fill-mode: forwards;
 }
 
-.home-block-img {
-  margin-top: 2rem;
-}
 
-/****************************/
-/* Homepage Link Animations */
-/****************************/
-.logo-container,
-.projects-move,
-.resume-move,
-.contact-move {
-  animation-name: main-picture-animation;
-  animation-duration: 3s;
-  animation-delay: 0.7s;
-  animation-fill-mode: forwards;
+.homepage-footer {
+  position: absolute;
+  bottom: 4rem;
+  width: 100%;
+  background: transparent;
+  margin-top: 4rem;
+
+  p, a {
+    float: left;
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: $defaultFont;
+    font-style: none;
+    color: $defaultFontColor;
+
+    letter-spacing: 0.2rem;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  p {
+    margin-left: 4rem;
+  }
+
+  a {
+    float: right;
+    margin-right: 4rem;
+  }
 }
 
 /*****************************/
@@ -304,14 +335,12 @@ nav {
   background: rgb(211, 165, 96);
 }
 
-
 .loadme {
   color: white;
 }
 
 .loader {
   font-family: $defaultFont;
-  color: white;
   font-size: 10rem;
   font-weight: 600;
 
@@ -320,18 +349,14 @@ nav {
   position: absolute;
   top: 0;
   left: 0;
-  background: rgb(0, 0, 0);
-
+  background: $defaultBackground;
 
   display: flex;
   justify-content: center;
   align-items: center;
 
   animation: load 1s linear 1.5s 1 forwards, changez 1s linear 2s 1 forwards;
-  
 }
-
-
 
 @keyframes load {
   from {
