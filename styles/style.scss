@@ -27,6 +27,48 @@ html {
   overflow-x: hidden;
 }
 
+/*******************************/
+/* Loader */
+/******************************/
+.loadme {
+  color: white;
+}
+
+.loader {
+  font-family: $defaultFont;
+  font-size: 10rem;
+  font-weight: 600;
+
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: $defaultBackground;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* animation: load 1s linear 1.5s 1 forwards, changez 1s linear 2s 1 forwards;                                                                           */
+  animation: load 0.5s linear 0.5s 1 forwards, changez 1s linear 0.5s 1 forwards;
+}
+
+@keyframes load {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes changez {
+  to {
+    z-index: -1;
+  }
+}
+
 /***********************/
 /* Navigation Bar */
 /***********************/
@@ -127,6 +169,8 @@ nav {
 
 .homepage-links-container {
   width: 100%;
+  height: auto;
+
   align-items: center;
   justify-content: center;
 
@@ -144,44 +188,103 @@ nav {
   }
 }
 
-.homepage-block {
-  display: flex;
-  flex-direction: column;
-
-  width: auto;
-  margin: 0rem 5rem 0 5rem;
-
-  background: transparent;
-  text-align: center;
-
-  P {
-    font-size: 1rem;
-    font-weight: 500;
-    font-family: $defaultFont;
-    font-style: none;
-    color: $defaultFontColor;
-    letter-spacing: 0.2rem;
-    text-decoration: none;
-    white-space: nowrap;
-  }
+.homepage-container .middle p {
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: $defaultFont;
+  font-style: none;
+  color: $defaultFontColor;
+  letter-spacing: 0.2rem;
+  text-decoration: none;
+  white-space: nowrap;
 }
 
-.main-picture {
-  width: 43rem;
-  transition: all .4s ease-in-out;
+.homepage-block-middle {
+  background-image: url("../images/about1.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  width: 45rem;
+  height: 30rem;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: 1rem;
+
+  transform: translate(-50%, -50%);
+
+  transition: all 0.3s ease-in-out;
 }
 
-.main-picture:hover {
-  transform: scale(1.1);
+.homepage-block-middle:hover {
+  width: 50rem;
 }
 
-.right-picture, .left-picture {
+
+.homepage-block-left {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
   width: 25rem;
+  height: 10rem;
+
+  position: absolute;
+  top: 50%;
+  left: 0;
+
+  transform: translate(-50%, -50%);
 }
 
-.right-picture {
-  
+.homepage-block-right {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  width: 25rem;
+  height: 10rem;
+
+  position: absolute;
+  top: 50%;
+  right: -25rem;
+
+  transform: translate(-50%, -50%);
 }
+
+.block-left {
+  width: inherit;
+  height: inherit;
+
+  background-image: url("../images/resume3.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  
+  transition: all 0.3s ease-in-out;
+}
+
+.block-left:hover { 
+  transform: scale(1.1); 
+}
+
+.block-right {
+  width: inherit;
+  height: inherit;
+
+  background-image: url("../images/projects2.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  
+  transition: all 0.3s ease-in-out;
+}
+
+.block-right:hover { 
+  transform: scale(1.1); 
+}
+
 
 
 .homepage-footer {
@@ -191,7 +294,8 @@ nav {
   background: transparent;
   margin-top: 4rem;
 
-  p, a {
+  p,
+  a {
     float: left;
     font-size: 1rem;
     font-weight: 500;
@@ -333,43 +437,4 @@ nav {
 .contact-container {
   height: 50vw;
   background: rgb(211, 165, 96);
-}
-
-.loadme {
-  color: white;
-}
-
-.loader {
-  font-family: $defaultFont;
-  font-size: 10rem;
-  font-weight: 600;
-
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: $defaultBackground;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  animation: load 1s linear 1.5s 1 forwards, changez 1s linear 2s 1 forwards;
-}
-
-@keyframes load {
-  from {
-    opacity: 1;
-  }
-
-  to {
-    opacity: 0;
-  }
-}
-
-@keyframes changez {
-  to {
-    z-index: -1;
-  }
 }
