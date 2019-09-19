@@ -23,35 +23,9 @@ html {
   overflow-x: hidden;
 }
 
-/*******************************/
-/* Loader */
-/******************************/
-.loadme {
-  color: white;
-}
-
-.loader {
-  font-family: Helvetica;
-  font-size: 10rem;
-  font-weight: 600;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: #1a1a1a;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  /* animation: load 1s linear 1.5s 1 forwards, changez 1s linear 2s 1 forwards;                                                                           */
-  -webkit-animation: load 0.5s linear 0.5s 1 forwards, changez 1s linear 0.5s 1 forwards;
-          animation: load 0.5s linear 0.5s 1 forwards, changez 1s linear 0.5s 1 forwards;
+::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
 }
 
 @-webkit-keyframes load {
@@ -138,15 +112,8 @@ nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 100%;
   height: 100vh;
   margin: 0;
-  background: #1a1a1a;
-}
-
-.top {
-  width: 100%;
-  height: 5vh;
   background: #1a1a1a;
 }
 
@@ -158,11 +125,18 @@ nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  margin-top: 2rem;
   text-align: center;
-  width: 100%;
 }
 
-.logo-container .logo {
+.logo-block {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1rem;
+  background: transparent;
+}
+
+.logo {
   font-size: 1.7rem;
   font-weight: 600;
   font-family: Helvetica;
@@ -172,11 +146,10 @@ nav {
   white-space: nowrap;
   color: white;
   background: transparent;
-  margin: 1rem;
   padding: 0;
 }
 
-.logo-container .sub-logo {
+.sub-logo {
   font-size: 1rem;
   font-weight: 500;
   font-family: Helvetica;
@@ -184,7 +157,6 @@ nav {
   letter-spacing: 0.2rem;
   text-decoration: none;
   white-space: nowrap;
-  height: 5vh;
   margin: 0 0 1rem 0;
   color: white;
   background: transparent;
@@ -207,15 +179,6 @@ nav {
       -ms-flex-direction: row;
           flex-direction: row;
   background: transparent;
-}
-
-.homepage-links-container a {
-  font-size: 3rem;
-  font-family: Helvetica;
-  font-weight: 900;
-  font-style: italic;
-  color: white;
-  text-decoration: none;
 }
 
 .homepage-container .middle p {
@@ -248,32 +211,57 @@ nav {
 
 .homepage-block-middle:hover {
   width: 50rem;
+  cursor: pointer;
+}
+
+.main-header {
+  font-family: Helvetica;
+  font-size: 7rem;
+  font-weight: 600;
+  letter-spacing: 0.5rem;
+  color: transparent;
+  position: absolute;
+  bottom: -3rem;
+  right: -4rem;
+  -webkit-text-stroke-width: 0.15rem;
+  -webkit-text-stroke-color: white;
 }
 
 .homepage-block-left {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
-  width: 25rem;
-  height: 10rem;
+  width: 30rem;
+  height: 20rem;
   position: absolute;
   top: 50%;
-  left: 0;
+  left: -5rem;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  -webkit-animation-name: block-left-animate;
+          animation-name: block-left-animate;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
 }
 
-.homepage-block-right {
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 25rem;
-  height: 10rem;
-  position: absolute;
-  top: 50%;
-  right: -25rem;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+@-webkit-keyframes block-left-animate {
+  from {
+    left: -6rem;
+  }
+  to {
+    left: -5rem;
+  }
+}
+
+@keyframes block-left-animate {
+  from {
+    left: -6rem;
+  }
+  to {
+    left: -5rem;
+  }
 }
 
 .block-left {
@@ -287,9 +275,79 @@ nav {
   transition: all 0.3s ease-in-out;
 }
 
+/*******************************/
+/* Loader */
+/******************************/
+.loadme {
+  color: white;
+}
+
+.loader {
+  font-family: Helvetica;
+  font-size: 10rem;
+  font-weight: 600;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #1a1a1a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /* animation: load 0.5s linear 0.5s 1 forwards, changez 1s linear 0.5s 1 forwards; */
+  /* animation: load 1s linear 1.5s 1 forwards, changez 1s linear 2s 1 forwards; */
+  -webkit-animation: load 1s linear 0s 1 forwards, changez .5s linear 1s 1 forwards;
+          animation: load 1s linear 0s 1 forwards, changez .5s linear 1s 1 forwards;
+}
+
+.homepage-block-right {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 30rem;
+  height: 20rem;
+  position: absolute;
+  top: 50%;
+  right: -35rem;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-animation-name: block-right-animate;
+          animation-name: block-right-animate;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes block-right-animate {
+  from {
+    right: -36rem;
+  }
+  to {
+    right: -35rem;
+  }
+}
+
+@keyframes block-right-animate {
+  from {
+    right: -36rem;
+  }
+  to {
+    right: -35rem;
+  }
+}
+
 .block-left:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+  cursor: pointer;
 }
 
 .block-right {
@@ -306,6 +364,7 @@ nav {
 .block-right:hover {
   -webkit-transform: scale(1.1);
           transform: scale(1.1);
+  cursor: pointer;
 }
 
 .homepage-footer {
@@ -336,196 +395,6 @@ nav {
 .homepage-footer a {
   float: right;
   margin-right: 4rem;
-}
-
-/*****************************/
-/* Shake Animation Keyframes */
-/*****************************/
-@-webkit-keyframes shake {
-  0% {
-    -webkit-transform: translate(1px, 1px) rotate(0deg);
-            transform: translate(1px, 1px) rotate(0deg);
-  }
-  10% {
-    -webkit-transform: translate(-1px, -2px) rotate(-1deg);
-            transform: translate(-1px, -2px) rotate(-1deg);
-  }
-  20% {
-    -webkit-transform: translate(-3px, 0px) rotate(1deg);
-            transform: translate(-3px, 0px) rotate(1deg);
-  }
-  30% {
-    -webkit-transform: translate(3px, 2px) rotate(0deg);
-            transform: translate(3px, 2px) rotate(0deg);
-  }
-  40% {
-    -webkit-transform: translate(1px, -1px) rotate(1deg);
-            transform: translate(1px, -1px) rotate(1deg);
-  }
-  50% {
-    -webkit-transform: translate(-1px, 2px) rotate(-1deg);
-            transform: translate(-1px, 2px) rotate(-1deg);
-  }
-  60% {
-    -webkit-transform: translate(-3px, 1px) rotate(0deg);
-            transform: translate(-3px, 1px) rotate(0deg);
-  }
-  70% {
-    -webkit-transform: translate(3px, 1px) rotate(-1deg);
-            transform: translate(3px, 1px) rotate(-1deg);
-  }
-  80% {
-    -webkit-transform: translate(-1px, -1px) rotate(1deg);
-            transform: translate(-1px, -1px) rotate(1deg);
-  }
-  90% {
-    -webkit-transform: translate(1px, 2px) rotate(0deg);
-            transform: translate(1px, 2px) rotate(0deg);
-  }
-  100% {
-    -webkit-transform: translate(1px, -2px) rotate(0deg);
-            transform: translate(1px, -2px) rotate(0deg);
-  }
-}
-@keyframes shake {
-  0% {
-    -webkit-transform: translate(1px, 1px) rotate(0deg);
-            transform: translate(1px, 1px) rotate(0deg);
-  }
-  10% {
-    -webkit-transform: translate(-1px, -2px) rotate(-1deg);
-            transform: translate(-1px, -2px) rotate(-1deg);
-  }
-  20% {
-    -webkit-transform: translate(-3px, 0px) rotate(1deg);
-            transform: translate(-3px, 0px) rotate(1deg);
-  }
-  30% {
-    -webkit-transform: translate(3px, 2px) rotate(0deg);
-            transform: translate(3px, 2px) rotate(0deg);
-  }
-  40% {
-    -webkit-transform: translate(1px, -1px) rotate(1deg);
-            transform: translate(1px, -1px) rotate(1deg);
-  }
-  50% {
-    -webkit-transform: translate(-1px, 2px) rotate(-1deg);
-            transform: translate(-1px, 2px) rotate(-1deg);
-  }
-  60% {
-    -webkit-transform: translate(-3px, 1px) rotate(0deg);
-            transform: translate(-3px, 1px) rotate(0deg);
-  }
-  70% {
-    -webkit-transform: translate(3px, 1px) rotate(-1deg);
-            transform: translate(3px, 1px) rotate(-1deg);
-  }
-  80% {
-    -webkit-transform: translate(-1px, -1px) rotate(1deg);
-            transform: translate(-1px, -1px) rotate(1deg);
-  }
-  90% {
-    -webkit-transform: translate(1px, 2px) rotate(0deg);
-            transform: translate(1px, 2px) rotate(0deg);
-  }
-  100% {
-    -webkit-transform: translate(1px, -2px) rotate(0deg);
-            transform: translate(1px, -2px) rotate(0deg);
-  }
-}
-
-@-webkit-keyframes link-shake {
-  0% {
-    -webkit-transform: translate(1px, 1px) rotate(0deg);
-            transform: translate(1px, 1px) rotate(0deg);
-  }
-  10% {
-    -webkit-transform: translate(-1px, -2px) rotate(-3deg);
-            transform: translate(-1px, -2px) rotate(-3deg);
-  }
-  20% {
-    -webkit-transform: translate(-3px, 0px) rotate(3deg);
-            transform: translate(-3px, 0px) rotate(3deg);
-  }
-  30% {
-    -webkit-transform: translate(3px, 2px) rotate(0deg);
-            transform: translate(3px, 2px) rotate(0deg);
-  }
-  40% {
-    -webkit-transform: translate(1px, -1px) rotate(3deg);
-            transform: translate(1px, -1px) rotate(3deg);
-  }
-  50% {
-    -webkit-transform: translate(-1px, 2px) rotate(-3deg);
-            transform: translate(-1px, 2px) rotate(-3deg);
-  }
-  60% {
-    -webkit-transform: translate(-3px, 1px) rotate(0deg);
-            transform: translate(-3px, 1px) rotate(0deg);
-  }
-  70% {
-    -webkit-transform: translate(3px, 1px) rotate(-3deg);
-            transform: translate(3px, 1px) rotate(-3deg);
-  }
-  80% {
-    -webkit-transform: translate(-1px, -1px) rotate(3deg);
-            transform: translate(-1px, -1px) rotate(3deg);
-  }
-  90% {
-    -webkit-transform: translate(1px, 2px) rotate(0deg);
-            transform: translate(1px, 2px) rotate(0deg);
-  }
-  100% {
-    -webkit-transform: translate(1px, -2px) rotate(0deg);
-            transform: translate(1px, -2px) rotate(0deg);
-  }
-}
-
-@keyframes link-shake {
-  0% {
-    -webkit-transform: translate(1px, 1px) rotate(0deg);
-            transform: translate(1px, 1px) rotate(0deg);
-  }
-  10% {
-    -webkit-transform: translate(-1px, -2px) rotate(-3deg);
-            transform: translate(-1px, -2px) rotate(-3deg);
-  }
-  20% {
-    -webkit-transform: translate(-3px, 0px) rotate(3deg);
-            transform: translate(-3px, 0px) rotate(3deg);
-  }
-  30% {
-    -webkit-transform: translate(3px, 2px) rotate(0deg);
-            transform: translate(3px, 2px) rotate(0deg);
-  }
-  40% {
-    -webkit-transform: translate(1px, -1px) rotate(3deg);
-            transform: translate(1px, -1px) rotate(3deg);
-  }
-  50% {
-    -webkit-transform: translate(-1px, 2px) rotate(-3deg);
-            transform: translate(-1px, 2px) rotate(-3deg);
-  }
-  60% {
-    -webkit-transform: translate(-3px, 1px) rotate(0deg);
-            transform: translate(-3px, 1px) rotate(0deg);
-  }
-  70% {
-    -webkit-transform: translate(3px, 1px) rotate(-3deg);
-            transform: translate(3px, 1px) rotate(-3deg);
-  }
-  80% {
-    -webkit-transform: translate(-1px, -1px) rotate(3deg);
-            transform: translate(-1px, -1px) rotate(3deg);
-  }
-  90% {
-    -webkit-transform: translate(1px, 2px) rotate(0deg);
-            transform: translate(1px, 2px) rotate(0deg);
-  }
-  100% {
-    -webkit-transform: translate(1px, -2px) rotate(0deg);
-            transform: translate(1px, -2px) rotate(0deg);
-  }
 }
 
 .skills-container {

@@ -224,9 +224,22 @@ typeWriter();
 // Setting up homepage pictures to alternate on click
 var imgIndex = 1;
 var leftPicture = document.querySelector('.block-left');
+var leftPictureFrame = document.querySelector('.homepage-block-left');
+
 var mainPicture = document.querySelector('.homepage-block-middle');
 var rightPicture = document.querySelector('.block-right');
+var rightPictureFrame = document.querySelector('.homepage-block-right');
+var mainHeader = document.querySelector('.main-header');
 
+
+function reset_animation() {
+	leftPictureFrame.style.animation = 'none';
+	leftPictureFrame.offsetHeight; /* trigger reflow */
+	leftPictureFrame.style.animation = null; 
+	rightPictureFrame.style.animation = 'none';
+	rightPictureFrame.offsetHeight; 
+	rightPictureFrame.style.animation = null; 
+  }
 
 
 mainPicture.onclick = function() {
@@ -240,18 +253,24 @@ leftPicture.onclick = function() {
 		mainPicture.style.backgroundImage = 'url(images/resume3.jpg)';
 		rightPicture.style.backgroundImage = 'url(images/about1.jpg)';
 		imgIndex = 3;
+		mainHeader.innerHTML = "R&Eacute;SUM&Eacute;";
+		reset_animation();
 	}
 	else if(imgIndex === 3) {
 		leftPicture.style.backgroundImage = 'url(images/about1.jpg)';
 		mainPicture.style.backgroundImage = 'url(images/projects2.jpg)';
 		rightPicture.style.backgroundImage = 'url(images/resume3.jpg)';
 		imgIndex = 2;
+		mainHeader.innerHTML = "CONTACT";
+		reset_animation();
 	}
 	else if(imgIndex === 2) {
 		leftPicture.style.backgroundImage = 'url(images/resume3.jpg)';
 		mainPicture.style.backgroundImage = 'url(images/about1.jpg)';
 		rightPicture.style.backgroundImage = 'url(images/projects2.jpg)';
 		imgIndex = 1;
+		mainHeader.innerHTML = "PROJECTS";
+		reset_animation();
 	}
 };
 
@@ -262,18 +281,24 @@ rightPicture.onclick = function() {
 		mainPicture.style.backgroundImage = 'url(images/projects2.jpg)';
 		rightPicture.style.backgroundImage = 'url(images/resume3.jpg)';
 		imgIndex = 2;
+		mainHeader.innerHTML = "CONTACT";
+		reset_animation();
 	}
 	else if(imgIndex === 2) {
 		leftPicture.style.backgroundImage = 'url(images/projects2.jpg)';
 		mainPicture.style.backgroundImage = 'url(images/resume3.jpg)';
 		rightPicture.style.backgroundImage = 'url(images/about1.jpg)';
 		imgIndex = 3;
+		mainHeader.innerHTML = "R&Eacute;SUM&Eacute;";
+		reset_animation();
 	}
 	else if(imgIndex === 3) {
 		leftPicture.style.backgroundImage = 'url(images/resume3.jpg)';
 		mainPicture.style.backgroundImage = 'url(images/about1.jpg)';
 		rightPicture.style.backgroundImage = 'url(images/projects2.jpg)';
 		imgIndex = 1;
+		mainHeader.innerHTML = "PROJECTS";
+		reset_animation();
 	}
 };
 
