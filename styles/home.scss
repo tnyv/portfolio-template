@@ -1,0 +1,437 @@
+$defaultFont: Helvetica;
+$defaultBackground: rgb(26, 26, 26);
+$defaultFontColor: rgb(255, 255, 255);
+$imgAnimationSpeed: 0.4s;
+$midLeftAnimateWidth: 60%;
+$midRightAnimateWidth: 40%;
+
+/*******************************/
+/* Defaults */
+/******************************/
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+li {
+  list-style-type: none;
+}
+
+body {
+  margin: 0;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+@keyframes load {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes changez {
+  to {
+    z-index: -1;
+  }
+}
+
+/***********************/
+/* Navigation Bar */
+/***********************/
+nav {
+  font-family: $defaultFont;
+}
+
+.home-bar {
+  display: flex;
+  flex-direction: row;
+  flex-flow: row-reverse;
+  position: fixed;
+  top: -10rem;
+  width: 100%;
+  transition: top 0.5s;
+
+  background: $defaultBackground;
+
+  z-index: 5;
+}
+
+.home-link,
+.projects-link,
+.resume-link,
+.contact-link {
+  font-family: $defaultFont;
+  font-size: 1rem;
+  font-weight: 600;
+  font-style: none;
+  text-decoration: none;
+
+  overflow: hidden;
+  padding: 0.75rem;
+  margin: 0rem 1rem 0rem 1rem;
+
+  color: $defaultFontColor;
+}
+
+.home-bar a:hover {
+  background: rgb(122, 122, 122);
+}
+
+/***********************/
+/* Homepage Container */
+/***********************/
+.homepage-container {
+  display: flex;
+  flex-direction: column;
+
+  height: 100vh;
+  margin: 0;
+  background: $defaultBackground;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+
+  margin-top: 2rem;
+
+  text-align: center;
+}
+
+.logo-block {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1rem;
+  background: transparent;
+}
+
+.logo {
+  font-size: 1.7rem;
+  font-weight: 600;
+  font-family: $defaultFont;
+  font-style: none;
+  letter-spacing: 0.2rem;
+  text-decoration: none;
+  white-space: nowrap;
+
+  color: $defaultFontColor;
+  background: transparent;
+
+  padding: 0;
+}
+
+.sub-logo {
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: $defaultFont;
+  font-style: none;
+  letter-spacing: 0.2rem;
+  text-decoration: none;
+  white-space: nowrap;
+
+  margin: 0 0 1rem 0;
+
+  color: $defaultFontColor;
+  background: transparent;
+}
+
+.homepage-links-container {
+  width: 100%;
+  height: auto;
+
+  align-items: center;
+  justify-content: center;
+
+  display: flex;
+  flex-direction: row;
+
+  background: transparent;
+}
+
+.homepage-container .middle p {
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: $defaultFont;
+  font-style: none;
+  color: $defaultFontColor;
+  letter-spacing: 0.2rem;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.homepage-block-middle {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  width: 45rem;
+  height: 30rem;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  transition: all 0.3s ease-in-out;
+}
+
+.homepage-block-middle:hover {
+  width: 50rem;
+  height: 35rem;
+  cursor: pointer;
+}
+
+.main-picture {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  
+
+  animation-name: enlarge;
+  animation-duration: $imgAnimationSpeed;
+  animation-fill-mode: forwards;
+}
+
+@keyframes enlarge {
+  from {
+    opacity: 0;
+    width: 110%;
+    height: 110%;
+  }
+  to {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
+  }
+}
+
+.middle-frame {
+  background: transparent;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  animation-duration: $imgAnimationSpeed;
+  animation-fill-mode: forwards;
+}
+
+@keyframes middle-animate-left {
+  from {
+    left: $midLeftAnimateWidth;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+@keyframes middle-animate-right {
+  from {
+    left: $midRightAnimateWidth;
+  }
+  to {
+    left: 50%;
+  }
+}
+
+.main-header {
+  font-family: $defaultFont;
+  font-size: 7rem;
+  font-weight: 600;
+  letter-spacing: 0.5rem;
+
+  color: transparent;
+
+  position: absolute;
+  bottom: -3rem;
+  right: -4rem;
+  -webkit-text-stroke-width: 0.15rem;
+  -webkit-text-stroke-color: rgb(255, 255, 255);
+}
+
+.homepage-block-left {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  width: 30rem;
+  height: 20rem;
+
+  position: absolute;
+  top: 50%;
+  left: -5rem;
+
+  transform: translate(-50%, -50%);
+
+  animation-name: block-left-animate;
+  animation-duration: $imgAnimationSpeed;
+  animation-fill-mode: forwards;
+}
+
+@keyframes block-left-animate {
+  from {
+    left: -7rem;
+  }
+  to {
+    left: -5rem;
+  }
+}
+
+.block-left {
+  width: inherit;
+  height: inherit;
+
+  background-image: url("../images/contact3.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  transition: all 0.3s ease-in-out;
+}
+
+/*******************************/
+/* Loader */
+/******************************/
+.loadme {
+  color: white;
+}
+
+.loader {
+  font-family: $defaultFont;
+  font-size: 10rem;
+  font-weight: 600;
+
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: $defaultBackground;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* animation: load 0.5s linear 0.5s 1 forwards, changez 1s linear 0.5s 1 forwards; */
+  /* animation: load 1s linear 1.5s 1 forwards, changez 1s linear 2s 1 forwards; */
+  animation: load 0.5s linear 0.5s 1 forwards, changez 1s linear 0.5s 1 forwards;
+}
+
+.homepage-block-right {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  width: 30rem;
+  height: 20rem;
+
+  position: absolute;
+  top: 50%;
+  right: -35rem;
+
+  transform: translate(-50%, -50%);
+  animation-name: block-right-animate;
+  animation-duration: $imgAnimationSpeed;
+  animation-fill-mode: forwards;
+}
+
+@keyframes block-right-animate {
+  from {
+    right: -37rem;
+  }
+  to {
+    right: -35rem;
+  }
+}
+
+.block-left:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.block-right {
+  width: inherit;
+  height: inherit;
+
+  background-image: url("../images/resume2.jpg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.block-right:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.homepage-footer {
+  position: absolute;
+  bottom: 4rem;
+  width: 100%;
+  background: transparent;
+  margin-top: 4rem;
+
+  p,
+  a {
+    float: left;
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: $defaultFont;
+    font-style: none;
+    color: $defaultFontColor;
+
+    letter-spacing: 0.2rem;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  p {
+    margin-left: 4rem;
+  }
+
+  a {
+    float: right;
+    margin-right: 4rem;
+  }
+}
+
+.skills-container {
+  height: 100vh;
+  background: rgb(75, 73, 172);
+}
+
+.projects-container {
+  height: 100vh;
+  background: rgb(172, 172, 87);
+}
+
+.resume-container {
+  height: 100vh;
+  background: rgb(23, 80, 23);
+}
+
+.contact-container {
+  height: 100vh;
+  background: rgb(104, 40, 50);
+}

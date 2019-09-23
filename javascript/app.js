@@ -1,91 +1,3 @@
-// GLOBAL
-var scrollSpeed = 1000;
-var scrollDash = 400;
-/************************************************************************************** */
-// Change main-image on hover
-
-function distortIn(element) {
-	element.style.opacity = "1";
-	element.setAttribute('src', 'images/distorted.jpg');
-}
-
-function distortOut(element) {
-	element.style.opacity = "1";
-	element.setAttribute('src', 'images/main-picture.jpg');
-}
-// END
-/************************************************************************************** */
-
-
-/************************************************************************************** *
-// Setting up auto-scroll for nav links
-function smoothScroll(target, duration) {
-	var target = document.querySelector(target);
-	var targetPosition = target.getBoundingClientRect().top;
-	var startPosition = window.pageYOffset;
-	var startTime = null;
-
-	// This makes the animation smooth
-	function animation(currentTime) {
-		if (startTime === null) startTime = currentTime;
-		var timeElapsed = currentTime - startTime;
-		var run = ease(timeElapsed, startPosition, targetPosition, duration);
-		window.scrollTo(0, run);
-		if (timeElapsed < duration) requestAnimationFrame(animation);
-	}
-
-	// Math formula used for ease motion
-	function ease(t, b, c, d) {
-		t /= d / 2;
-		if (t < 1) return c / 2 * t * t + b;
-		t--;
-		return -c / 2 * (t * (t - 2) - 1) + b;
-	}
-	requestAnimationFrame(animation);
-}
-
-// Projects link
-var scrollProjects = document.querySelector('.projects-js-trigger');
-scrollProjects.addEventListener('click', function () {
-	smoothScroll('.projects-container', scrollSpeed);
-});
-
-var barProjects = document.querySelector('.projects-link');
-barProjects.addEventListener('click', function () {
-	smoothScroll('.projects-container', scrollDash);
-});
-
-// Resume link
-var scrollResume = document.querySelector('.resume-js-trigger');
-scrollResume.addEventListener('click', function () {
-	smoothScroll('.resume-container', scrollSpeed);
-});
-
-var barResume = document.querySelector('.resume-link');
-barResume.addEventListener('click', function () {
-	smoothScroll('.resume-container', scrollDash);
-});
-
-// Contact link
-var scrollContact = document.querySelector('.contact-js-trigger');
-scrollContact.addEventListener('click', function () {
-	smoothScroll('.contact-container', scrollSpeed);
-});
-
-var barContact = document.querySelector('.contact-link');
-barContact.addEventListener('click', function () {
-	smoothScroll('.contact-container', scrollDash);
-});
-
-/* Home Link
-var scrollHome = document.querySelector('.home-link');
-scrollHome.addEventListener('click', function() {
-	smoothScroll('.top', scrollDash);
-});
-// END
-************************************************************************************** */
-
-
 
 /************************************************************************************** *
 // Homepage animations
@@ -185,7 +97,7 @@ window.addEventListener('scroll', function()  {
 window.onscroll = function () { scrollFunction() };
 
 function scrollFunction() {
-	if (document.body.scrollTop > 700 || document.documentElement.scrollTop > 700) {
+	if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
 		document.querySelector('.home-bar').style.top = "0";
 	} else {
 		document.querySelector('.home-bar').style.top = "-10vw";
@@ -196,7 +108,7 @@ function scrollFunction() {
 
 
 /***************************************************************************************/
-// Setting up type writer animation for loader
+// Setting up type-writer animation for loader
 var i = 0;
 var txt = '     TONY VU';
 var speed = 100;
@@ -225,80 +137,115 @@ typeWriter();
 var imgIndex = 1;
 var leftPicture = document.querySelector('.block-left');
 var leftPictureFrame = document.querySelector('.homepage-block-left');
-
-var mainPicture = document.querySelector('.homepage-block-middle');
 var rightPicture = document.querySelector('.block-right');
 var rightPictureFrame = document.querySelector('.homepage-block-right');
+
+var mainPicture = document.querySelector('.main-picture');
+var mainAnimator = document.querySelector('.middle-frame');
 var mainHeader = document.querySelector('.main-header');
 
 
-function reset_animation() {
+function resetSideAnimations() {
 	leftPictureFrame.style.animation = 'none';
 	leftPictureFrame.offsetHeight; /* trigger reflow */
-	leftPictureFrame.style.animation = null; 
+	leftPictureFrame.style.animation = null;
 	rightPictureFrame.style.animation = 'none';
-	rightPictureFrame.offsetHeight; 
-	rightPictureFrame.style.animation = null; 
-  }
+	rightPictureFrame.offsetHeight;
+	rightPictureFrame.style.animation = null;
+}
+
+function resetEnlargeMain() {
+	mainPicture.style.animation = 'none';
+	mainPicture.offsetHeight; /* trigger reflow */
+	mainPicture.style.animation = null;
+}
 
 
-mainPicture.onclick = function() {
-	
+function resetFromLeft() {
+	mainAnimator.style.WebkitAnimationName = "middle-animate-left";
+	mainAnimator.style.animation = 'none';
+	mainAnimator.offsetHeight; /* trigger reflow */
+	mainAnimator.style.animation = null;
+	mainAnimator.style.WebkitAnimationName = "middle-animate-left";
+}
+
+function resetFromRight() {
+	mainAnimator.style.WebkitAnimationName = "middle-animate-right";
+	mainAnimator.style.animation = 'none';
+	mainAnimator.offsetHeight; /* trigger reflow */
+	mainAnimator.style.animation = null;
+	mainAnimator.style.WebkitAnimationName = "middle-animate-right";
+}
+
+mainPicture.onclick = function () {
+
 };
 
 
-leftPicture.onclick = function() {
-	if(imgIndex === 1) {
-		leftPicture.style.backgroundImage = 'url(images/projects2.jpg)';
-		mainPicture.style.backgroundImage = 'url(images/resume3.jpg)';
-		rightPicture.style.backgroundImage = 'url(images/about1.jpg)';
+leftPicture.onclick = function () {
+	if (imgIndex === 1) {
+		leftPicture.style.backgroundImage = 'url(images/resume2.jpg)';
+		mainPicture.setAttribute('src', 'images/contact3.jpg');
+		rightPicture.style.backgroundImage = 'url(images/projects1.jpg)';
 		imgIndex = 3;
-		mainHeader.innerHTML = "R&Eacute;SUM&Eacute;";
-		reset_animation();
-	}
-	else if(imgIndex === 3) {
-		leftPicture.style.backgroundImage = 'url(images/about1.jpg)';
-		mainPicture.style.backgroundImage = 'url(images/projects2.jpg)';
-		rightPicture.style.backgroundImage = 'url(images/resume3.jpg)';
-		imgIndex = 2;
 		mainHeader.innerHTML = "CONTACT";
-		reset_animation();
+		resetSideAnimations();
+		resetFromRight();
+		resetEnlargeMain();
 	}
-	else if(imgIndex === 2) {
-		leftPicture.style.backgroundImage = 'url(images/resume3.jpg)';
-		mainPicture.style.backgroundImage = 'url(images/about1.jpg)';
-		rightPicture.style.backgroundImage = 'url(images/projects2.jpg)';
+	else if (imgIndex === 3) {
+		leftPicture.style.backgroundImage = 'url(images/projects1.jpg)';
+		mainPicture.setAttribute('src', 'images/resume2.jpg');
+		rightPicture.style.backgroundImage = 'url(images/contact3.jpg)';
+		imgIndex = 2;
+		mainHeader.innerHTML = "R&Eacute;SUM&Eacute;";
+		resetSideAnimations();
+		resetFromRight();
+		resetEnlargeMain();
+	}
+	else if (imgIndex === 2) {
+		leftPicture.style.backgroundImage = 'url(images/contact3.jpg)';
+		mainPicture.setAttribute('src', 'images/projects1.jpg');
+		rightPicture.style.backgroundImage = 'url(images/resume2.jpg)';
 		imgIndex = 1;
 		mainHeader.innerHTML = "PROJECTS";
-		reset_animation();
+		resetSideAnimations();
+		resetFromRight();
+		resetEnlargeMain();
 	}
 };
 
 
-rightPicture.onclick = function() {
-	if(imgIndex === 1) {
-		leftPicture.style.backgroundImage = 'url(images/about1.jpg)';
-		mainPicture.style.backgroundImage = 'url(images/projects2.jpg)';
-		rightPicture.style.backgroundImage = 'url(images/resume3.jpg)';
+rightPicture.onclick = function () {
+	if (imgIndex === 1) {
+		leftPicture.style.backgroundImage = 'url(images/projects1.jpg)';
+		mainPicture.setAttribute('src', 'images/resume2.jpg');
+		rightPicture.style.backgroundImage = 'url(images/contact3.jpg)';
 		imgIndex = 2;
-		mainHeader.innerHTML = "CONTACT";
-		reset_animation();
-	}
-	else if(imgIndex === 2) {
-		leftPicture.style.backgroundImage = 'url(images/projects2.jpg)';
-		mainPicture.style.backgroundImage = 'url(images/resume3.jpg)';
-		rightPicture.style.backgroundImage = 'url(images/about1.jpg)';
-		imgIndex = 3;
 		mainHeader.innerHTML = "R&Eacute;SUM&Eacute;";
-		reset_animation();
+		resetSideAnimations();
+		resetFromLeft();
+		resetEnlargeMain();
 	}
-	else if(imgIndex === 3) {
-		leftPicture.style.backgroundImage = 'url(images/resume3.jpg)';
-		mainPicture.style.backgroundImage = 'url(images/about1.jpg)';
-		rightPicture.style.backgroundImage = 'url(images/projects2.jpg)';
+	else if (imgIndex === 2) {
+		leftPicture.style.backgroundImage = 'url(images/resume2.jpg)';
+		mainPicture.setAttribute('src', 'images/contact3.jpg');
+		rightPicture.style.backgroundImage = 'url(images/projects1.jpg)';
+		imgIndex = 3;
+		mainHeader.innerHTML = "CONTACT";
+		resetSideAnimations();
+		resetFromLeft();
+		resetEnlargeMain();
+	}
+	else if (imgIndex === 3) {
+		leftPicture.style.backgroundImage = 'url(images/contact3.jpg)';
+		mainPicture.setAttribute('src', 'images/projects1.jpg');
+		rightPicture.style.backgroundImage = 'url(images/resume2.jpg)';
 		imgIndex = 1;
 		mainHeader.innerHTML = "PROJECTS";
-		reset_animation();
+		resetSideAnimations();
+		resetFromLeft();
+		resetEnlargeMain();
 	}
 };
 
@@ -306,3 +253,73 @@ rightPicture.onclick = function() {
 /************************************************************************************** */
 
 
+/************************************************************************************** */
+// Setting up auto-scroll for nav links
+var scrollSpeed = 1000;
+var scrollDash = 400;
+
+function smoothScroll(target, duration) {
+	var target = document.querySelector(target);
+	var targetPosition = target.getBoundingClientRect().top;
+	var startPosition = window.pageYOffset;
+	var startTime = null;
+
+	// This makes the animation smooth
+	function animation(currentTime) {
+		if(startTime === null) startTime = currentTime;
+		var timeElapsed = currentTime - startTime;
+		var run = ease(timeElapsed, startPosition, targetPosition, duration);
+		window.scrollTo(0, run);
+		if(timeElapsed < duration) requestAnimationFrame(animation);
+	}
+
+	// Math formula used for ease motion
+	function ease(t, b, c, d) {
+		t /= d / 2;
+		if(t < 1) return c / 2 * t * t + b;
+		t--;
+		return -c / 2 * (t * (t-2) - 1) + b;
+	}
+	requestAnimationFrame(animation);
+}
+
+mainPicture.addEventListener('click', function() {
+	if(imgIndex === 1) {
+		smoothScroll('.projects-container', scrollSpeed);
+	}
+	else if(imgIndex === 2) {
+		smoothScroll('.resume-container', scrollSpeed);
+	}
+	else if(imgIndex === 3) {
+		smoothScroll('.contact-container', scrollSpeed);
+	}
+})
+
+
+// Home link
+var barHome = document.querySelector('.home-link');
+barHome.addEventListener('click', function() {
+	smoothScroll('.homepage-container', scrollDash);
+});
+
+// Projects link
+var barProjects = document.querySelector('.projects-link');
+barProjects.addEventListener('click', function() {
+	smoothScroll('.projects-container', scrollDash);
+});
+
+// Resume link
+var barAbout = document.querySelector('.resume-link');
+barAbout.addEventListener('click', function() {
+	smoothScroll('.resume-container', scrollDash);
+});
+
+// Contact link
+var barContact = document.querySelector('.contact-link');
+barContact.addEventListener('click', function() {
+	smoothScroll('.contact-container', scrollDash);
+});
+
+
+// END
+/************************************************************************************** */
