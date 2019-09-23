@@ -416,15 +416,89 @@ nav {
   }
 }
 
+
+
+
+
+
 .skills-container {
   height: 100vh;
   background: rgb(75, 73, 172);
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
 .projects-container {
   height: 100vh;
-  background: rgb(172, 172, 87);
+  background: $defaultBackground;
+
+  display: flex;
+  flex-direction: column;
 }
+
+.project-header h1 {
+  font-family: $defaultFont;
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 0.5rem;
+
+  color: white;
+  text-align: center;
+
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+.project-grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+
+.project-block-one {
+  background: rgb(14, 85, 14);
+  height: 70vh;
+}
+
+
+.project-block-two {
+  background: rgb(110, 30, 44);
+  padding: 20px 0;
+}
+
+
+.project-block-three {
+  background: rgb(107, 84, 33);
+  padding: 20px 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .resume-container {
   height: 100vh;
