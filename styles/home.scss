@@ -203,8 +203,6 @@ nav {
   left: 50%;
   transform: translate(-50%, -50%);
 
-  
-
   animation-name: enlarge;
   animation-duration: $imgAnimationSpeed;
   animation-fill-mode: forwards;
@@ -416,28 +414,10 @@ nav {
   }
 }
 
-
-
-
-
-
 .skills-container {
   height: 100vh;
   background: $defaultBackground;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .projects-container {
   height: 100vh;
@@ -466,39 +446,75 @@ nav {
   justify-content: center;
 }
 
-.project-one-img, .project-two-img, .project-three-img {
+.project-one-img,
+.project-two-img,
+.project-three-img {
+  margin: 1rem auto 0.5rem auto;
+  height: 17rem;
+  width: 17rem;
+  border-radius: 50%;
+  background: blue;
   text-align: center;
+  justify-content: center;
+
+  display: flex;
+  flex-direction: column;
 }
 
-.project-one-img img, .project-two-img img, .project-three-img img{
-  margin: 1rem 0 0.5rem;
-  width: 15vw;
+.project-one-viewsite {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+
+  a {
+    font-family: $defaultFont;
+    font-size: 1.15rem;
+    font-weight: 600;
+  
+    color: rgb(0, 0, 0);
+
+    width: 100%;
+    white-space: nowrap;
+
+    text-decoration: none;
+
+    
+    text-align: center;
+  }
 }
 
-.project-block-one, .project-block-two, .project-block-three {
-  width: 25rem;
+.project-block-one,
+.project-block-two,
+.project-block-three {
+  width: 30rem;
   height: 35rem;
 
   display: flex;
   flex-direction: column;
-  
-  margin: 0 1rem; 
 
-  border-radius: 1%;
+  margin: 0 0.05rem;
+
+  border-radius: 0.5%;
 }
 
-.project-one-summary, .project-two-summary, .project-three-summary{
+.project-one-summary,
+.project-two-summary,
+.project-three-summary {
   margin: 0 1rem;
   font-family: $defaultFont;
   font-size: 1.25rem;
 
-  p, h2, h3 {
+  p,
+  h2,
+  h3 {
     text-align: center;
     margin: 0.5rem 0;
   }
 }
 
-.project-one-summary div, .project-two-summary div, .project-three-summary div{
+.project-one-summary div,
+.project-two-summary div,
+.project-three-summary div {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -507,46 +523,23 @@ nav {
     margin: 0.25rem 2rem;
   }
 
-  ul li{
+  ul li {
     list-style-type: disc;
     margin-bottom: 0.25rem;
   }
 }
 
 .project-block-one {
-  background: rgb(14, 85, 14);
-  
-  
+  background: rgb(228, 228, 228);
 }
-
 
 .project-block-two {
-  background: rgb(110, 30, 44);
-
+  background: rgb(228, 228, 228);
 }
-
 
 .project-block-three {
-  background: rgb(107, 84, 33);
-
+  background: rgb(228, 228, 228);
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .resume-container {
   height: 100vh;
