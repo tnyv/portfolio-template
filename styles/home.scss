@@ -416,7 +416,7 @@ nav {
 
 .skills-container {
   height: 100vh;
-  background: $defaultBackground;
+  background: rgb(75, 73, 172);
 }
 
 .projects-container {
@@ -437,108 +437,28 @@ nav {
   text-align: center;
 
   margin-top: 3rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 .project-grid-container {
   display: grid;
   grid-template-columns: auto auto auto;
-  justify-content: center;
 }
 
-.project-one-img,
-.project-two-img,
-.project-three-img {
-  margin: 1rem auto 0.5rem auto;
-  height: 17rem;
-  width: 17rem;
-  border-radius: 50%;
-  background: blue;
-  text-align: center;
-  justify-content: center;
-
-  display: flex;
-  flex-direction: column;
-}
-
-.project-one-viewsite {
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-
-  a {
-    font-family: $defaultFont;
-    font-size: 1.15rem;
-    font-weight: 600;
-  
-    color: rgb(0, 0, 0);
-
-    width: 100%;
-    white-space: nowrap;
-
-    text-decoration: none;
-
-    
-    text-align: center;
-  }
-}
-
-.project-block-one,
-.project-block-two,
-.project-block-three {
-  width: 30rem;
-  height: 35rem;
-
-  display: flex;
-  flex-direction: column;
-
-  margin: 0 0.05rem;
-
-  border-radius: 0.5%;
-}
-
-.project-one-summary,
-.project-two-summary,
-.project-three-summary {
-  margin: 0 1rem;
-  font-family: $defaultFont;
-  font-size: 1.25rem;
-
-  p,
-  h2,
-  h3 {
-    text-align: center;
-    margin: 0.5rem 0;
-  }
-}
-
-.project-one-summary div,
-.project-two-summary div,
-.project-three-summary div {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-
-  ul {
-    margin: 0.25rem 2rem;
-  }
-
-  ul li {
-    list-style-type: disc;
-    margin-bottom: 0.25rem;
-  }
-}
 
 .project-block-one {
-  background: rgb(228, 228, 228);
+  background: rgb(14, 85, 14);
+  height: 70vh;
 }
 
 .project-block-two {
-  background: rgb(228, 228, 228);
+  background: rgb(110, 30, 44);
+  padding: 20px 0;
 }
 
 .project-block-three {
-  background: rgb(228, 228, 228);
+  background: rgb(107, 84, 33);
+  padding: 20px 0;
 }
 
 .resume-container {
