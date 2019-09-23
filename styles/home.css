@@ -519,21 +519,77 @@ nav {
   display: grid;
   -ms-grid-columns: auto auto auto;
       grid-template-columns: auto auto auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.project-one-img, .project-two-img, .project-three-img {
+  text-align: center;
+}
+
+.project-one-img img, .project-two-img img, .project-three-img img {
+  margin: 1rem 0 0.5rem;
+  width: 15vw;
+}
+
+.project-block-one, .project-block-two, .project-block-three {
+  width: 25rem;
+  height: 35rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 0 1rem;
+  border-radius: 1%;
+}
+
+.project-one-summary, .project-two-summary, .project-three-summary {
+  margin: 0 1rem;
+  font-family: Helvetica;
+  font-size: 1.25rem;
+}
+
+.project-one-summary p, .project-one-summary h2, .project-one-summary h3, .project-two-summary p, .project-two-summary h2, .project-two-summary h3, .project-three-summary p, .project-three-summary h2, .project-three-summary h3 {
+  text-align: center;
+  margin: 0.5rem 0;
+}
+
+.project-one-summary div, .project-two-summary div, .project-three-summary div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.project-one-summary div ul, .project-two-summary div ul, .project-three-summary div ul {
+  margin: 0.25rem 2rem;
+}
+
+.project-one-summary div ul li, .project-two-summary div ul li, .project-three-summary div ul li {
+  list-style-type: disc;
+  margin-bottom: 0.25rem;
 }
 
 .project-block-one {
   background: #0e550e;
-  height: 70vh;
 }
 
 .project-block-two {
   background: #6e1e2c;
-  padding: 20px 0;
 }
 
 .project-block-three {
   background: #6b5421;
-  padding: 20px 0;
 }
 
 .resume-container {
