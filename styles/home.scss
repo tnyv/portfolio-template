@@ -62,7 +62,7 @@ nav {
   width: 100%;
   transition: top 0.5s;
 
-  background: $defaultBackground;
+  background: rgba(26, 26, 26, 0.671);
 
   z-index: 5;
 }
@@ -202,8 +202,6 @@ nav {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-
-  
 
   animation-name: enlarge;
   animation-duration: $imgAnimationSpeed;
@@ -416,32 +414,14 @@ nav {
   }
 }
 
-
-
-
-
-
 .skills-container {
   height: 100vh;
-  background: rgb(75, 73, 172);
+  background: $defaultBackground;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 .projects-container {
-  height: 100vh;
-  background: $defaultBackground;
+  height: 300vh;
+  background: rgba(233, 159, 23, 0.993);
 
   display: flex;
   flex-direction: column;
@@ -449,102 +429,97 @@ nav {
 
 .project-header h1 {
   font-family: $defaultFont;
-  font-size: 2rem;
+  font-size: 3rem;
   font-weight: 600;
   letter-spacing: 0.5rem;
 
   color: white;
   text-align: center;
 
-  margin-top: 3rem;
-  margin-bottom: 3rem;
+  margin-top: 5rem;
+  margin-bottom: 2rem;
 }
 
-.project-grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  justify-content: center;
-}
+.project-one-container {
+  width: 100%;
+  height: 100vh;
 
-.project-one-img, .project-two-img, .project-three-img {
-  text-align: center;
-}
-
-.project-one-img img, .project-two-img img, .project-three-img img{
-  margin: 1rem 0 0.5rem;
-  width: 15vw;
-}
-
-.project-block-one, .project-block-two, .project-block-three {
-  width: 25rem;
-  height: 35rem;
-
-  display: flex;
-  flex-direction: column;
-  
-  margin: 0 1rem; 
-
-  border-radius: 1%;
-}
-
-.project-one-summary, .project-two-summary, .project-three-summary{
-  margin: 0 1rem;
-  font-family: $defaultFont;
-  font-size: 1.25rem;
-
-  p, h2, h3 {
-    text-align: center;
-    margin: 0.5rem 0;
-  }
-}
-
-.project-one-summary div, .project-two-summary div, .project-three-summary div{
   display: flex;
   flex-direction: row;
-  justify-content: center;
+}
 
-  ul {
-    margin: 0.25rem 2rem;
+/* middle-frame */
+.p1-image-frame {
+  height: 40rem;
+  width: 50%;
+}
+
+/* homepage-block-middle */
+.p1-image-block {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+
+  margin: 0 auto;
+
+  width: 45rem;
+  height: 30rem;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.p1-image-block:hover {
+  width: 50rem;
+  height: 35rem;
+  cursor: pointer;
+}
+
+/* main-picture */
+.p1-picture {
+  object-fit: contain;
+  width: 100%;
+  height: 100%;
+
+  animation-name: enlarge;
+  animation-duration: $imgAnimationSpeed;
+  animation-fill-mode: forwards;
+}
+
+@keyframes enlarge {
+  from {
+    opacity: 0;
+    width: 110%;
+    height: 110%;
   }
-
-  ul li{
-    list-style-type: disc;
-    margin-bottom: 0.25rem;
+  to {
+    width: 100%;
+    height: 100%;
+    opacity: 1;
   }
 }
 
-.project-block-one {
-  background: rgb(14, 85, 14);
-  
-  
+/* main-header */
+.p1-header {
+  font-family: $defaultFont;
+  font-size: 7rem;
+  font-weight: 600;
+  letter-spacing: 0.5rem;
+
+  color: transparent;
+
+  text-align: center;
+
+  -webkit-text-stroke-width: 0.25rem;
+  -webkit-text-stroke-color: rgb(255, 255, 255);
 }
 
+/* middle-frame */
+.summary-frame {
+  background: rgb(59, 24, 30);
 
-.project-block-two {
-  background: rgb(110, 30, 44);
+  height: 40rem;
+  width: 50%;
 }
-
-
-.project-block-three {
-  background: rgb(107, 84, 33);
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .resume-container {
   height: 100vh;
