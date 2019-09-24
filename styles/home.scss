@@ -1,6 +1,8 @@
 $defaultFont: Helvetica;
 $defaultBackground: rgb(26, 26, 26);
 $defaultFontColor: rgb(255, 255, 255);
+$fadedBlack: rgba(26, 26, 26, 0.671);
+$readableWhite: rgb(230, 230, 230);
 $imgAnimationSpeed: 0.4s;
 $midLeftAnimateWidth: 60%;
 $midRightAnimateWidth: 40%;
@@ -462,15 +464,15 @@ nav {
 
   margin: 0 auto;
 
-  width: 45rem;
-  height: 30rem;
+  width: 40rem;
+  height: 25rem;
 
   transition: all 0.3s ease-in-out;
 }
 
 .p1-image-block:hover {
-  width: 50rem;
-  height: 35rem;
+  width: 45rem;
+  height: 30rem;
   cursor: pointer;
 }
 
@@ -501,7 +503,7 @@ nav {
 /* main-header */
 .p1-header {
   font-family: $defaultFont;
-  font-size: 7rem;
+  font-size: 5rem;
   font-weight: 600;
   letter-spacing: 0.5rem;
 
@@ -514,11 +516,47 @@ nav {
 }
 
 /* middle-frame */
-.summary-frame {
-  background: rgb(59, 24, 30);
-
-  height: 40rem;
+.p1-summary-frame {
+  margin-right: 3rem;
+  height: 30rem;
   width: 50%;
+}
+
+.p1-summary {
+  font-family: $defaultFont;
+  font-size: 1.2rem;
+  width: 45rem;
+  margin-top: 0.17rem;
+  line-height: 2rem;
+
+  color: $readableWhite;
+  text-align: left;
+
+  h2 {
+    background: $fadedBlack;
+    padding: 1rem;
+    
+  }
+
+  h3 {
+    text-align: left;
+  }
+
+  section {
+    margin: 1rem 0;
+
+    h3 {
+      display: inline-block;
+      margin-right: 1rem;
+      background: $fadedBlack;
+      padding: 0.25rem 0.5rem;
+
+      font-size: 1.2rem;
+      line-height: 2rem;
+
+     
+    }
+  }
 }
 
 .resume-container {

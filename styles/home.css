@@ -538,15 +538,15 @@ nav {
   background-repeat: no-repeat;
   background-position: center;
   margin: 0 auto;
-  width: 45rem;
-  height: 30rem;
+  width: 40rem;
+  height: 25rem;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
 .p1-image-block:hover {
-  width: 50rem;
-  height: 35rem;
+  width: 45rem;
+  height: 30rem;
   cursor: pointer;
 }
 
@@ -580,7 +580,7 @@ nav {
 /* main-header */
 .p1-header {
   font-family: Helvetica;
-  font-size: 7rem;
+  font-size: 5rem;
   font-weight: 600;
   letter-spacing: 0.5rem;
   color: transparent;
@@ -590,10 +590,42 @@ nav {
 }
 
 /* middle-frame */
-.summary-frame {
-  background: #3b181e;
-  height: 40rem;
+.p1-summary-frame {
+  margin-right: 3rem;
+  height: 30rem;
   width: 50%;
+}
+
+.p1-summary {
+  font-family: Helvetica;
+  font-size: 1.2rem;
+  width: 45rem;
+  margin-top: 0.17rem;
+  line-height: 2rem;
+  color: #e6e6e6;
+  text-align: left;
+}
+
+.p1-summary h2 {
+  background: rgba(26, 26, 26, 0.671);
+  padding: 1rem;
+}
+
+.p1-summary h3 {
+  text-align: left;
+}
+
+.p1-summary section {
+  margin: 1rem 0;
+}
+
+.p1-summary section h3 {
+  display: inline-block;
+  margin-right: 1rem;
+  background: rgba(26, 26, 26, 0.671);
+  padding: 0.25rem 0.5rem;
+  font-size: 1.2rem;
+  line-height: 2rem;
 }
 
 .resume-container {
