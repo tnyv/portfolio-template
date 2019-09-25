@@ -84,6 +84,7 @@ nav {
   margin: 0rem 1rem 0rem 1rem;
 
   color: $defaultFontColor;
+  transition-duration: 0.5s;
 }
 
 .home-bar a:hover {
@@ -533,27 +534,43 @@ nav {
     }
   }
   
+  .p1-visit-git {
+    text-align: left;
+  
+  }
   
   .p1-visit-git a{
     display: inline-block;
     margin-top: 3.85rem;
-    margin-right: 2rem;
-    background: $fadedBlack;
     padding: 0.25rem 0.5rem;
 
     font-family: $defaultFont;
     font-size: 1.2rem;
-    line-height: 2rem;
-    color: $readableWhite;
     font-weight: 600;
     text-decoration: none;
+    line-height: 2rem;
 
-    
+    color: $readableWhite;
+    background: $fadedBlack;
+
+    text-align: center;
+    width: 20rem;
+
+ 
   }
+}
+
+.btn-p1-visit {
+  float: left;
+}
+
+.btn-p1-git {
+  float: right;
 }
 
 .p1-visit-git a:hover{
   text-decoration: underline;
+  
 }
 
 
