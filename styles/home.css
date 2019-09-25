@@ -505,6 +505,37 @@ nav {
           flex-direction: column;
 }
 
+.project-header {
+  width: 90%;
+  margin: 0 auto 1.5rem;
+}
+
+.project-header h1 {
+  overflow: hidden;
+  text-align: center;
+}
+
+.project-header h1:before,
+.project-header h1:after {
+  background-color: rgba(26, 26, 26, 0.671);
+  content: "";
+  display: inline-block;
+  height: 0.3rem;
+  position: relative;
+  vertical-align: middle;
+  width: 50%;
+}
+
+.project-header h1:before {
+  right: 0.5em;
+  margin-left: -40%;
+}
+
+.project-header h1:after {
+  left: 0.5em;
+  margin-right: -40%;
+}
+
 .project-header h1 {
   font-family: Helvetica;
   font-size: 3rem;
@@ -531,7 +562,7 @@ nav {
 /* middle-frame */
 .p1-image-frame {
   height: 40rem;
-  width: 50%;
+  width: 52%;
 }
 
 /* homepage-block-middle */
@@ -570,7 +601,7 @@ nav {
 .p1-summary-frame {
   margin-right: 3rem;
   height: 30rem;
-  width: 50%;
+  width: 48%;
 }
 
 .p1-summary {
