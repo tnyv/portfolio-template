@@ -266,31 +266,31 @@ function smoothScroll(target, duration) {
 
 	// This makes the animation smooth
 	function animation(currentTime) {
-		if(startTime === null) startTime = currentTime;
+		if (startTime === null) startTime = currentTime;
 		var timeElapsed = currentTime - startTime;
 		var run = ease(timeElapsed, startPosition, targetPosition, duration);
 		window.scrollTo(0, run);
-		if(timeElapsed < duration) requestAnimationFrame(animation);
+		if (timeElapsed < duration) requestAnimationFrame(animation);
 	}
 
 	// Math formula used for ease motion
 	function ease(t, b, c, d) {
 		t /= d / 2;
-		if(t < 1) return c / 2 * t * t + b;
+		if (t < 1) return c / 2 * t * t + b;
 		t--;
-		return -c / 2 * (t * (t-2) - 1) + b;
+		return -c / 2 * (t * (t - 2) - 1) + b;
 	}
 	requestAnimationFrame(animation);
 }
 
-mainPicture.addEventListener('click', function() {
-	if(imgIndex === 1) {
+mainPicture.addEventListener('click', function () {
+	if (imgIndex === 1) {
 		smoothScroll('.projects-container', scrollSpeed);
 	}
-	else if(imgIndex === 2) {
+	else if (imgIndex === 2) {
 		smoothScroll('.resume-container', scrollSpeed);
 	}
-	else if(imgIndex === 3) {
+	else if (imgIndex === 3) {
 		smoothScroll('.contact-container', scrollSpeed);
 	}
 })
@@ -298,27 +298,36 @@ mainPicture.addEventListener('click', function() {
 
 // Home link
 var barHome = document.querySelector('.home-link');
-barHome.addEventListener('click', function() {
+barHome.addEventListener('click', function () {
 	smoothScroll('.homepage-container', scrollDash);
 });
 
 // Projects link
 var barProjects = document.querySelector('.projects-link');
-barProjects.addEventListener('click', function() {
+barProjects.addEventListener('click', function () {
 	smoothScroll('.projects-container', scrollDash);
 });
 
 // Resume link
 var barAbout = document.querySelector('.resume-link');
-barAbout.addEventListener('click', function() {
+barAbout.addEventListener('click', function () {
 	smoothScroll('.resume-container', scrollDash);
 });
 
 // Contact link
 var barContact = document.querySelector('.contact-link');
-barContact.addEventListener('click', function() {
+barContact.addEventListener('click', function () {
 	smoothScroll('.contact-container', scrollDash);
 });
+
+
+// END
+/************************************************************************************** */
+
+
+/************************************************************************************** */
+// 
+
 
 
 // END

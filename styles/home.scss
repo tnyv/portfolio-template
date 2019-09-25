@@ -466,38 +466,16 @@ nav {
 
   width: 40rem;
   height: 25rem;
-
-  transition: all 0.3s ease-in-out;
 }
 
 .p1-image-block:hover {
-  width: 45rem;
-  height: 30rem;
   cursor: pointer;
 }
 
 /* main-picture */
 .p1-picture {
-  object-fit: contain;
   width: 100%;
   height: 100%;
-
-  animation-name: enlarge;
-  animation-duration: $imgAnimationSpeed;
-  animation-fill-mode: forwards;
-}
-
-@keyframes enlarge {
-  from {
-    opacity: 0;
-    width: 110%;
-    height: 110%;
-  }
-  to {
-    width: 100%;
-    height: 100%;
-    opacity: 1;
-  }
 }
 
 /* main-header */
@@ -535,14 +513,13 @@ nav {
   h2 {
     background: $fadedBlack;
     padding: 1rem;
-    
   }
 
   h3 {
     text-align: left;
   }
 
-  section {
+  .p1-languages {
     margin: 1rem 0;
 
     h3 {
@@ -553,11 +530,38 @@ nav {
 
       font-size: 1.2rem;
       line-height: 2rem;
-
-     
     }
   }
+  
+  
+  .p1-visit-git a{
+    display: inline-block;
+    margin-top: 3.85rem;
+    margin-right: 2rem;
+    background: $fadedBlack;
+    padding: 0.25rem 0.5rem;
+
+    font-family: $defaultFont;
+    font-size: 1.2rem;
+    line-height: 2rem;
+    color: $readableWhite;
+    font-weight: 600;
+    text-decoration: none;
+
+    
+  }
 }
+
+.p1-visit-git a:hover{
+  text-decoration: underline;
+}
+
+
+
+
+
+
+
 
 .resume-container {
   height: 100vh;
