@@ -1,48 +1,47 @@
 
-/************************************************************************************** *
-// Homepage animations
+/**************************************************************************************/
+// Skills animations
 var scrollArea = window.innerWidth;
-var projectsBox = document.querySelector('.projects');
-var resumeBox = document.querySelector('.resume');
-var contactBox = document.querySelector('.contact');
-var logoBox = document.querySelector('.logo-container');
+var skillsHeader = document.querySelector('.skills-header');
+var skillsHtml = document.querySelector('.skills-html');
+var skillsCss = document.querySelector('.skills-css');
+var skillsJavascript = document.querySelector('.skills-javascript');
 
 window.addEventListener('scroll', function () {
 	var scrollTop = window.pageYOffset || window.scrollTop;
 	var scrollPercent = scrollTop / scrollArea || 0;
 	var moveDistance = (scrollPercent * window.innerWidth) * 0.3;
-	var quickMove = (scrollPercent * window.innerWidth) * 0.7;
 
-
-	if (moveDistance > 60) {
-		var distanceTravelled = moveDistance - 60;
-		contactBox.style.transform = "translateX(" + "-" + distanceTravelled + "vw)";
+	if (moveDistance > 280) {
+		var distanceTravelled = moveDistance - 280;
+		skillsJavascript.style.transform = "translateX(" + "-" + distanceTravelled + "vw)";
 	}
-	else if (moveDistance <= 60) {
-		contactBox.style.transform = "translateX(" + "-" + 0 + "vw)";
+	else if (moveDistance <= 280) {
+		skillsJavascript.style.transform = "translateX(" + "-" + 0 + "vw)";
 	}
 
-	if (moveDistance > 40) {
-		var distanceTravelled = moveDistance - 40;
-		resumeBox.style.transform = "translateX(" + "-" + distanceTravelled + "vw)";
+	if (moveDistance > 260) {
+		var distanceTravelled = moveDistance - 260;
+		skillsCss.style.transform = "translateX(" + "-" + distanceTravelled + "vw)";
 	}
-	else if (moveDistance <= 40) {
-		resumeBox.style.transform = "translateX(" + "-" + 0 + "vw)";
-	}
-
-	if (moveDistance > 20) {
-		var distanceTravelled = moveDistance - 20;
-		projectsBox.style.transform = "translateX(" + "-" + distanceTravelled + "vw)";
-	}
-	else if (moveDistance <= 20) {
-		projectsBox.style.transform = "translateX(" + "-" + 0 + "vw)";
+	else if (moveDistance <= 260) {
+		skillsCss.style.transform = "translateX(" + "-" + 0 + "vw)";
 	}
 
-	logoBox.style.transform = "translateX(" + "+" + quickMove + "vw)";
+	if (moveDistance > 240) {
+		var distanceTravelled = moveDistance - 240;
+		skillsHtml.style.transform = "translateX(" + "-" + distanceTravelled + "vw)";
+	}
+	else if (moveDistance <= 240) {
+		skillsHtml.style.transform = "translateX(" + "-" + 0 + "vw)";
+	}
+
+
+	
 
 });
 // END
-************************************************************************************** */
+/************************************************************************************** */
 
 
 
@@ -255,7 +254,7 @@ rightPicture.onclick = function () {
 
 /************************************************************************************** */
 // Setting up auto-scroll for nav links
-var scrollSpeed = 1000;
+var scrollSpeed = 2500;
 var scrollDash = 400;
 
 function smoothScroll(target, duration) {

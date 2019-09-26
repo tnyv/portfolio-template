@@ -420,7 +420,53 @@ nav {
 .skills-container {
   height: 100vh;
   background: $defaultBackground;
+
+  
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    background: $defaultBackground;
+    margin: 0 3rem 7rem;
+    color: white;
+    font-family: $defaultFont;
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: 0.5rem;
+  }
+
+  h1 {
+    text-align: center;
+    padding-top: 4rem;
+  }
+
+  h2 {
+    text-align: left;
+    margin-left: 12rem;
+  }
+
+  h3 {
+    text-align: center;
+  }
+
+  h4 {
+    text-align: right;
+    margin-right: 5rem;
+  }
 }
+
+
+
+
+
+
+
+
+
+
+
+
 
 .projects-container {
   height: 300vh;
@@ -435,7 +481,7 @@ nav {
   margin: 0 auto 1.5rem;
 }
 
-.project-header h1{
+.project-header h1 {
   overflow: hidden;
   text-align: center;
 }
@@ -461,7 +507,6 @@ nav {
   margin-right: -40%;
 }
 
-
 .project-header h1 {
   font-family: $defaultFont;
   font-size: 3rem;
@@ -477,12 +522,26 @@ nav {
 
 .project-one-container {
   width: 100%;
-  height: 100vh;
+  height: 85vh;
 
   display: flex;
   flex-direction: row;
+}
 
-  
+.project-two-container {
+  width: 100%;
+  height: 85vh;
+
+  display: flex;
+  flex-direction: row;
+}
+
+.project-three-container {
+  width: 100%;
+  height: 85vh;
+
+  display: flex;
+  flex-direction: row;
 }
 
 /* middle-frame */
@@ -526,9 +585,10 @@ nav {
 
   -webkit-text-stroke-width: 0.25rem;
   -webkit-text-stroke-color: rgb(255, 255, 255);
+
+  white-space: nowrap;
 }
 
-/* middle-frame */
 .p1-summary-frame {
   margin-right: 3rem;
   height: 30rem;
@@ -539,7 +599,7 @@ nav {
   font-family: $defaultFont;
   font-size: 1.2rem;
   width: 45rem;
-  margin-top: 0.17rem;
+
   line-height: 2rem;
 
   color: $readableWhite;
@@ -567,15 +627,14 @@ nav {
       line-height: 2rem;
     }
   }
-  
+
   .p1-visit-git {
     text-align: left;
-  
   }
-  
-  .p1-visit-git a{
+
+  .p1-visit-git a {
     display: inline-block;
-    margin-top: 3.85rem;
+    margin-top: 4rem;
     padding: 0.25rem 0.5rem;
 
     font-family: $defaultFont;
@@ -584,35 +643,30 @@ nav {
     text-decoration: none;
     line-height: 2rem;
 
-    color: $readableWhite;
-    background: $fadedBlack;
+    color: black;
+    background: rgba(255, 255, 255, 0.671);
 
     text-align: center;
     width: 20rem;
-
- 
   }
 }
 
 .btn-p1-visit {
   float: left;
+  letter-spacing: 0.02rem;
 }
 
 .btn-p1-git {
   float: right;
 }
 
-.p1-visit-git a:hover{
+.p1-visit-git a:hover {
   text-decoration: underline;
-  
 }
 
-
-
-
-
-
-
+#pizzeria-header {
+  font-size: 4.8rem;
+}
 
 .resume-container {
   height: 100vh;
