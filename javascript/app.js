@@ -1,5 +1,5 @@
 
-/**************************************************************************************/
+/**************************************************************************************
 // Skills animations
 var scrollArea = window.innerWidth;
 var skillsHeader = document.querySelector('.skills-header');
@@ -41,7 +41,7 @@ window.addEventListener('scroll', function () {
 
 });
 // END
-/************************************************************************************** */
+************************************************************************************** */
 
 
 
@@ -325,35 +325,41 @@ barContact.addEventListener('click', function () {
 
 
 /************************************************************************************** */
-// Move elements on scroll EXPERIMENT
+// Make elements appear on scroll EXPERIMENT
+
+
+var hideme = document.querySelector('.hideme');
+var projectsContainer = document.querySelector('.projects-container');
+var bottom_of_object = hideme.pageYOffset;
+var bottom_of_window = window.scrollTop + window.height;
+
+
+window.addEventListener('scroll', function () {
+	if (window.pageYOffset >= (projectsContainer.offsetTop * .9)) {
+		hideme.style.animationPlayState = "running";
+	}
+	else if(window.pageYOffset <= (projectsContainer.offsetTop * .9)) {
+		hideme.style.opacity = "0";
+		hideme.style.animationPlayState = "paused";
+	}
+
+
+
+	console.log("bottom of window: " + window.pageYOffset);
+	console.log("bottom of obj: " + (projectsContainer.offsetTop * .9));
+});
 
 
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+/************************************************************************************** */
+// Welcome sign animation on scroll
+var welcome = document.querySelector('.welcome');
+window.addEventListener('scroll', function () {
+	welcome.style.fontSize = Math.max(1 + 0.012 * window.scrollY, 1) + "rem";
+});
 
 // END
 /************************************************************************************** */

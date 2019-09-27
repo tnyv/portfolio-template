@@ -98,9 +98,12 @@ nav {
   display: flex;
   flex-direction: column;
 
+  position: relative;
   height: 110vh;
   margin: 0;
   background: $defaultBackground;
+
+  overflow: hidden;
 }
 
 .logo-container {
@@ -354,7 +357,6 @@ nav {
   animation-duration: $imgAnimationSpeed;
   animation-fill-mode: forwards;
 
-  overflow: hidden;
 }
 
 @keyframes block-right-animate {
@@ -390,7 +392,7 @@ nav {
 
 .homepage-footer {
   position: absolute;
-  bottom: 4rem;
+  bottom: 8rem;
   width: 100%;
   background: transparent;
   margin-top: 4rem;
@@ -508,13 +510,11 @@ nav {
   flex-direction: row;
 }
 
-/* middle-frame */
 .p1-image-frame {
   height: 40rem;
   width: 52%;
 }
 
-/* homepage-block-middle */
 .p1-image-block {
   background-size: contain;
   background-repeat: no-repeat;
@@ -530,13 +530,11 @@ nav {
   cursor: pointer;
 }
 
-/* main-picture */
 .p1-picture {
   width: 100%;
   height: 100%;
 }
 
-/* main-header */
 .p1-header {
   font-family: $defaultFont;
   font-size: 5rem;
@@ -557,6 +555,8 @@ nav {
   margin-right: 3rem;
   height: 30rem;
   width: 48%;
+
+  overflow: hidden;
 }
 
 .p1-summary {
@@ -857,6 +857,26 @@ form {
   font-weight: 900;
   color: white;
   text-align: center;
-
+  box-sizing: border-box;
   line-height: 100vh;
+
+  overflow: hidden;
 }
+
+
+.hideme {
+  animation-name: fade-in;
+  animation-play-state: paused;
+  animation-iteration-count: 1;
+  animation-duration: 2s;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
