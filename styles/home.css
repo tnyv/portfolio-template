@@ -733,7 +733,7 @@ nav {
 }
 
 .contact-container {
-  height: 150vh;
+  height: 100vh;
   background: #96525c;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -786,14 +786,126 @@ nav {
   margin-bottom: 1rem;
 }
 
+.contact-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 90%;
+  margin: 0 auto;
+}
+
 .contact-img-container {
-  width: 100%;
+  width: 50%;
   text-align: center;
 }
 
 .contact-img {
-  width: 15rem;
-  height: 15rem;
+  width: 20rem;
   border-radius: 50%;
+}
+
+form {
+  font-family: Helvetica;
+  font-size: 1rem;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.name-email-container {
+  margin: 0 auto;
+  width: 31rem;
+  height: 5rem;
+}
+
+.form-name-div {
+  float: left;
+}
+
+.form-input-name {
+  font-size: 1rem;
+  background: white;
+  width: 15rem;
+  height: 2.2rem;
+  border-radius: 0.2rem;
+  padding: 0.5rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: 0.3rem;
+}
+
+.form-email-div {
+  float: right;
+}
+
+.form-input-email {
+  font-size: 1rem;
+  background: white;
+  width: 15rem;
+  height: 2.2rem;
+  border-radius: 0.2rem;
+  padding: 0.5rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin-top: 0.3rem;
+}
+
+.message-container {
+  background: transparent;
+  width: 31rem;
+  height: 17rem;
+  margin: 0 auto;
+}
+
+.message-input {
+  font-family: Helvetica;
+  font-size: 1rem;
+  background: white;
+  border-radius: 0.2rem;
+  resize: none;
+  height: 15rem;
+  padding: 0.5rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 100%;
+  margin-top: 0.3rem;
+}
+
+.button-container {
+  width: 100%;
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.submit-btn {
+  font-family: Helvetica;
+  font-size: 1.1rem;
+  height: 2.3rem;
+  width: 10rem;
+  background: rgba(26, 26, 26, 0.671);
+  color: white;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 1rem;
+  -webkit-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+.submit-btn:hover {
+  background: rgba(255, 255, 255, 0.671);
+  color: black;
+  cursor: pointer;
 }
 /*# sourceMappingURL=home.css.map */
