@@ -694,7 +694,12 @@ nav {
   margin: 0 auto;
 }
 
-
+.my-contact-message {
+  margin: 0 auto 1rem;
+  font-family: $defaultFont;
+  font-size: 1.5rem;
+  color: white;
+}
 
 
 .contact-icons {
@@ -846,3 +851,12 @@ form {
   cursor: pointer;
 }
 
+.welcome {
+  font-family: $defaultFont;
+  font-size: 5rem;
+  font-weight: 900;
+  color: white;
+  text-align: center;
+
+  line-height: 100vh;
+}

@@ -765,6 +765,13 @@ nav {
   margin: 0 auto;
 }
 
+.my-contact-message {
+  margin: 0 auto 1rem;
+  font-family: Helvetica;
+  font-size: 1.5rem;
+  color: white;
+}
+
 .contact-icons {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -901,5 +908,14 @@ form {
   background: rgba(255, 255, 255, 0.671);
   color: black;
   cursor: pointer;
+}
+
+.welcome {
+  font-family: Helvetica;
+  font-size: 5rem;
+  font-weight: 900;
+  color: white;
+  text-align: center;
+  line-height: 100vh;
 }
 /*# sourceMappingURL=home.css.map */

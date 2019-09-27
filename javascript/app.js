@@ -325,7 +325,33 @@ barContact.addEventListener('click', function () {
 
 
 /************************************************************************************** */
-// 
+// Move elements on scroll EXPERIMENT
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

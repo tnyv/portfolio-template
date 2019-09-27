@@ -52,7 +52,7 @@
 	</div>
 
 	<div class="skills-container">
-		
+		<h1 class="welcome">WELCOME</h1>
 	</div>
 
 	<div class="projects-container">
@@ -186,16 +186,20 @@
 	</div>
 
 	<div class="resume-container">
-
+			
 	</div>
 
 	<div class="contact-container">
 
 		<div class="contact-header">
 			<span>
-				<h1>LET'S TALK</h1>
+				<h1>CONTACT</h1>
 			</span>
 		</div>
+
+		<h2 class="my-contact-message">
+			Thanks for checking out my portfolio. If you'd like to connect, reach me via any platform below.
+		</h2>
 
 		<div class="contact-icons">
 			<img class="email-icon" src="images/email.png" alt="Email Icon">
@@ -238,19 +242,28 @@
 
 
 
-
+		
 
 	</div>
 
 
 	<footer></footer>
 
+	
+
 	<div class="loader">
 		<h1 class="loadme"></h1>
 	</div>
 
 	<script src="javascript/app.js"></script>
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 
+	<script type="text/javascript">
+		$(document).on('scroll', function() {
+			$('.welcome').css("font-size", Math.max(1 + 0.012*window.scrollY,
+			1) + "rem");
+		})
+	</script>
 </body>
 
 </html>
