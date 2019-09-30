@@ -251,22 +251,7 @@ $midRightAnimateWidth: 40%;
   }
 
   .main-header {
-    font-family: $defaultFont;
-    font-size: 8rem;
-    font-weight: 600;
-    letter-spacing: 0.5rem;
-
-    color: transparent;
-
-    position: absolute;
-    bottom: 7rem;
-    right: -4rem;
-
-    justify-content: center;
-    text-align: center;
-
-    -webkit-text-stroke-width: 0.15rem;
-    -webkit-text-stroke-color: rgb(255, 255, 255);
+    display: none;
   }
 
   .homepage-block-left {

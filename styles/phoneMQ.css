@@ -271,20 +271,7 @@
     }
   }
   .main-header {
-    font-family: Helvetica;
-    font-size: 8rem;
-    font-weight: 600;
-    letter-spacing: 0.5rem;
-    color: transparent;
-    position: absolute;
-    bottom: 7rem;
-    right: -4rem;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    text-align: center;
-    -webkit-text-stroke-width: 0.15rem;
-    -webkit-text-stroke-color: white;
+    display: none;
   }
   .homepage-block-left {
     background-size: contain;

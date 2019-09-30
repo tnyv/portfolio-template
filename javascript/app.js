@@ -286,7 +286,7 @@ screen480.addListener(adjustHomepagePics); // Attach listener function on state 
 /************************************************************************************** */
 
 
-/************************************************************************************** *
+/***************************************************************************************/
 // Setting up auto-scroll for nav links
 var scrollSpeed = 2000;
 var scrollDash = 400;
@@ -316,7 +316,7 @@ function smoothScroll(target, duration) {
 	requestAnimationFrame(animation);
 }
 // END
-************************************************************************************** */
+/************************************************************************************** */
 
 
 
@@ -324,7 +324,7 @@ function smoothScroll(target, duration) {
 
 
 
-/************************************************************************************** *
+/************************************************************************************** */
 // Welcome sign animation on scroll
 var welcome = document.querySelector('.welcome');
 window.addEventListener('scroll', function () {
@@ -336,5 +336,16 @@ window.addEventListener('scroll', function () {
 
 
 /************************************************************************************** */
-// MEDIA QUERIES
+// Homepage swiping for touch screens and phones 
 
+$(function() {      
+	//Enable swiping...
+	$(".middle-frame").swipe( {
+	  //Generic swipe handler for all directions
+	  swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
+		console.log($direction);  
+	  },
+	  //Default is 75px, set to 0 for demo so any distance triggers swipe
+	   threshold:0
+	});
+  });
