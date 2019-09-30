@@ -4,7 +4,9 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 	<link href="styles/home.css" rel="stylesheet" type="text/css" />
-	<title>Tony Vu | Full Stack Developer</title>
+	<link href="styles/phoneMQ.css" rel="stylesheet" type="text/css" />
+	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+	<title>Tony Vu | Front End Developer</title>
 </head>
 
 
@@ -12,9 +14,37 @@
 	<nav>
 		<div class="home-bar">
 			<a href="#" class="contact-link">CONTACT</a>
+			<script>
+				$(".contact-link").click(function () {
+					$('html, body').animate({
+						scrollTop: $(".contact-container").offset().top
+					}, 500);
+				});
+			</script>
 			<a href="#" class="resume-link">R&EacuteSUM&Eacute</a>
+			<script>
+				$(".resume-link").click(function () {
+					$('html, body').animate({
+						scrollTop: $(".resume-container").offset().top
+					}, 500);
+				});
+			</script>
 			<a href="#" class="projects-link">PROJECTS</a>
+			<script>
+				$(".projects-link").click(function () {
+					$('html, body').animate({
+						scrollTop: $(".projects-container").offset().top
+					}, 500);
+				});
+			</script>
 			<a href="#" class="home-link">HOME</a>
+			<script>
+				$(".home-link").click(function () {
+					$('html, body').animate({
+						scrollTop: $(".homepage-container").offset().top
+					}, 500);
+				});
+			</script>
 		</div>
 	</nav>
 
@@ -23,7 +53,7 @@
 			<div class="logo-block">
 				<a href="" class="logo">TONY VU</a>
 			</div>
-			<h1 class="sub-logo">FULL STACK DEVELOPER SEEKING HIRE</h1>
+			<h1 class="sub-logo">FRONT END DEVELOPER SEEKING HIRE</h1>
 		</div>
 
 		<div class="homepage-links-container">
@@ -52,7 +82,7 @@
 	</div>
 
 	<div class="skills-container">
-		<h1 class="welcome">WELCOME</h1>
+		<<h1 class="welcome">WELCOME</h1>>
 	</div>
 
 	<div class="projects-container">
@@ -63,9 +93,9 @@
 			</span>
 		</div>
 
-		<div class="project-one-container">
+		<div class="project-one-container hidep1">
 
-			<div class="p1-image-frame hideme">
+			<div class="p1-image-frame">
 				<div class="p1-image-block">
 					<img class="p1-picture" src="images/project1img.jpg" alt="main">
 					<p class="p1-header" id="automize-header">AUTOMIZE</p>
@@ -74,17 +104,17 @@
 
 			<div class="p1-summary-frame">
 				<div class="p1-summary">
-					<h2>This was one of my first web development projects created for my Web Design and Implementation
+					<p>This was one of my first web development projects created for my Web Design and Implementation
 						college course.
 						It is an e-commerce site for purchasing electric cars.
 						Orginally, I programmed this website using only HTML, CSS, and JavaScript. Later on I added PHP
 						and SQL
 						to utilize databases for storing information about vehicles and user accounts.
 						SASS was later impelemented for cross-browser consistency.
-					</h2>
+					</p>
 					<section class="p1-languages">
 						<h3>Technologies:</h3>
-						<h3>HTML</h3>
+						<h3 class="html-tag">HTML</h3>
 						<h3>SASS</h3>
 						<h3>JavaScript</h3>
 						<h3>PHP</h3>
@@ -99,7 +129,7 @@
 
 		</div>
 
-		<div class="project-two-container">
+		<div class="project-two-container hidep2">
 
 			<!--         middle-frame             -->
 			<div class="p1-image-frame">
@@ -114,14 +144,14 @@
 
 			<div class="p1-summary-frame">
 				<div class="p1-summary">
-					<h2>This was one of my first web development projects created for my Web Design and Implementation
+					<p>This was one of my first web development projects created for my Web Design and Implementation
 						college course.
 						It is an e-commerce site for purchasing electric cars.
 						Orginally, I programmed this website using only HTML, CSS, and JavaScript. Later on I added PHP
 						and SQL
 						to utilize databases for storing information about vehicles and user accounts.
 						SASS was later impelemented for cross-browser consistency.
-					</h2>
+					</p>
 					<section class="p1-languages">
 						<h3>Technologies:</h3>
 						<h3>React JS</h3>
@@ -137,7 +167,7 @@
 
 		</div>
 
-		<div class="project-three-container">
+		<div class="project-three-container hidep3">
 
 			<!--         middle-frame             -->
 			<div class="p1-image-frame">
@@ -152,14 +182,14 @@
 
 			<div class="p1-summary-frame">
 				<div class="p1-summary">
-					<h2>This was one of my first web development projects created for my Web Design and Implementation
+					<p>This was one of my first web development projects created for my Web Design and Implementation
 						college course.
 						It is an e-commerce site for purchasing electric cars.
 						Orginally, I programmed this website using only HTML, CSS, and JavaScript. Later on I added PHP
 						and SQL
 						to utilize databases for storing information about vehicles and user accounts.
 						SASS was later impelemented for cross-browser consistency.
-					</h2>
+					</p>
 					<section class="p1-languages">
 						<h3>Technologies:</h3>
 						<h3>Angular JS</h3>
@@ -182,7 +212,7 @@
 	</div>
 
 	<div class="resume-container">
-			
+
 	</div>
 
 	<div class="contact-container">
@@ -233,23 +263,24 @@
 
 		</form>
 
-		
-		
 
 
 
-		
+
+
+
 
 	</div>
 
 
 	<footer></footer>
 
-	
+
 
 	<div class="loader">
 		<h1 class="loadme"></h1>
 	</div>
+
 
 	<script src="javascript/app.js"></script>
 </body>

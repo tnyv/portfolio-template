@@ -1,0 +1,799 @@
+$defaultFont: Helvetica;
+$defaultBackground: rgb(26, 26, 26);
+$defaultFontColor: rgb(255, 255, 255);
+$fadedBlack: rgba(26, 26, 26, 0.671);
+$readableWhite: rgb(230, 230, 230);
+$imgAnimationSpeed: 0.4s;
+$midLeftAnimateWidth: 60%;
+$midRightAnimateWidth: 40%;
+
+@media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+  /*******************************/
+  /* Defaults */
+  /******************************/
+  * {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+  }
+
+  li {
+    list-style-type: none;
+  }
+
+  body {
+    margin: 0;
+  }
+
+  html {
+    overflow-x: hidden;
+  }
+
+  @keyframes load {
+    from {
+      opacity: 1;
+    }
+
+    to {
+      opacity: 0;
+    }
+  }
+
+  @keyframes changez {
+    to {
+      z-index: -1;
+    }
+  }
+
+    /*******************************/
+  /* Loader */
+  /******************************/
+  .loadme {
+    color: white;
+  }
+
+  .loader {
+    font-family: $defaultFont;
+    font-size: 10rem;
+    font-weight: 600;
+
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: $defaultBackground;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* animation: load 0.5s linear 0.5s 1 forwards, changez 1s linear 0.5s 1 forwards; */
+    /* animation: load 1s linear 1.5s 1 forwards, changez 1s linear 2s 1 forwards; */
+    animation: load 0.5s linear 0.5s 1 forwards, changez 1s linear 0.5s 1 forwards;
+  }
+
+  /***********************/
+  /* Navigation Bar */
+  /***********************/
+  nav {
+    font-family: $defaultFont;
+  }
+
+  .home-bar {
+    display: none;
+  }
+
+
+  /***********************/
+  /* Homepage Container */
+  /***********************/
+  .homepage-container {
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+    height: 100vh;
+    margin: 0;
+    background: $defaultBackground;
+
+    overflow: hidden;
+  }
+
+  .logo-container {
+    display: flex;
+    flex-direction: column;
+
+    margin-top: 5rem;
+
+    text-align: center;
+  }
+
+  .logo-block {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 1rem;
+    background: transparent;
+  }
+
+  .logo {
+    font-size: 7rem;
+    font-weight: 600;
+    font-family: $defaultFont;
+    font-style: none;
+    letter-spacing: 0.2rem;
+    text-decoration: none;
+    white-space: nowrap;
+
+    color: $defaultFontColor;
+    background: transparent;
+
+    padding: 0;
+  }
+
+  .sub-logo {
+    font-size: 2rem;
+    font-weight: 500;
+    font-family: $defaultFont;
+    font-style: none;
+    letter-spacing: 0.2rem;
+    text-decoration: none;
+    white-space: nowrap;
+
+    margin: 0 0 1rem 0;
+
+    color: $defaultFontColor;
+    background: transparent;
+  }
+
+  .homepage-links-container {
+    width: 100%;
+    height: auto;
+
+    align-items: center;
+    justify-content: center;
+
+    display: flex;
+    flex-direction: row;
+
+    background: transparent;
+  }
+
+  .homepage-container .middle p {
+    font-size: 1rem;
+    font-weight: 500;
+    font-family: $defaultFont;
+    font-style: none;
+    color: $defaultFontColor;
+    letter-spacing: 0.2rem;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+  .homepage-block-middle {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    width: 40rem;
+    height: 80rem;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    transition: all 0.3s ease-in-out;
+  }
+
+
+  .main-picture {
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    animation-name: enlarge;
+    animation-duration: $imgAnimationSpeed;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes enlarge {
+    from {
+      opacity: 0;
+      width: 110%;
+      height: 110%;
+    }
+    to {
+      width: 100%;
+      height: 100%;
+      opacity: 1;
+    }
+  }
+
+  .middle-frame {
+    background: transparent;
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+
+    transform: translate(-50%, -50%);
+
+    animation-duration: $imgAnimationSpeed;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes middle-animate-left {
+    from {
+      left: $midLeftAnimateWidth;
+    }
+    to {
+      left: 50%;
+    }
+  }
+
+  @keyframes middle-animate-right {
+    from {
+      left: $midRightAnimateWidth;
+    }
+    to {
+      left: 50%;
+    }
+  }
+
+  .main-header {
+    font-family: $defaultFont;
+    font-size: 8rem;
+    font-weight: 600;
+    letter-spacing: 0.5rem;
+
+    color: transparent;
+
+    position: absolute;
+    bottom: 7rem;
+    right: -4rem;
+
+    justify-content: center;
+    text-align: center;
+
+    -webkit-text-stroke-width: 0.15rem;
+    -webkit-text-stroke-color: rgb(255, 255, 255);
+  }
+
+  .homepage-block-left {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    width: 40rem;
+    height: 80rem;
+
+    position: absolute;
+    top: 50%;
+    left: -15rem;
+
+    transform: translate(-50%, -50%);
+
+    animation-name: block-left-animate;
+    animation-duration: $imgAnimationSpeed;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes block-left-animate {
+    from {
+      
+    }
+    to {
+      
+    }
+  }
+
+
+
+
+  .homepage-block-right {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    width: 40rem;
+    height: 80rem;
+
+    position: absolute;
+    top: 50%;
+    right: -55rem;
+
+    transform: translate(-50%, -50%);
+    animation-name: block-right-animate;
+    animation-duration: $imgAnimationSpeed;
+    animation-fill-mode: forwards;
+  }
+
+  @keyframes block-right-animate {
+    from {
+      
+    }
+    to {
+      
+    }
+  }
+
+
+
+
+  .homepage-footer {
+    position: absolute;
+    bottom: 8rem;
+    width: 100%;
+    background: transparent;
+    margin-top: 4rem;
+
+    p,
+    a {
+      float: left;
+      font-size: 1.5rem;
+      font-weight: 500;
+      font-family: $defaultFont;
+      font-style: none;
+      color: $defaultFontColor;
+
+      letter-spacing: 0.2rem;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    p {
+      margin-left: 4rem;
+    }
+
+    a {
+      float: right;
+      margin-right: 4rem;
+    }
+  }
+
+  .skills-container {
+    height: 110vh;
+    background-image: url("../images/space.jpg");
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .projects-container {
+    height: 290vh;
+    background: rgb(64, 131, 161);
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project-header {
+    width: 90%;
+    margin: 0 auto 1.5rem;
+  }
+
+  .project-header h1 {
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .project-header h1:before,
+  .project-header h1:after {
+    background-color: $fadedBlack;
+    content: "";
+    display: inline-block;
+    height: 0.3rem;
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
+  }
+
+  .project-header h1:before {
+    right: 0.5em;
+    margin-left: -40%;
+  }
+
+  .project-header h1:after {
+    left: 0.5em;
+    margin-right: -40%;
+  }
+
+  .project-header h1 {
+    font-family: $defaultFont;
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: 0.5rem;
+
+    color: white;
+    text-align: center;
+
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+  }
+
+  .project-one-container {
+    width: 100%;
+    height: 85vh;
+
+    display: flex;
+    flex-direction: row;
+  }
+
+  .project-two-container {
+    width: 100%;
+    height: 85vh;
+
+    display: flex;
+    flex-direction: row;
+  }
+
+  .project-three-container {
+    width: 100%;
+    height: 85vh;
+
+    display: flex;
+    flex-direction: row;
+  }
+
+  .p1-image-frame {
+    height: 40rem;
+    width: 52%;
+  }
+
+  .p1-image-block {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    margin: 0 auto;
+
+    width: 40rem;
+    height: 25rem;
+  }
+
+  .p1-image-block:hover {
+    cursor: pointer;
+  }
+
+  .p1-picture {
+    width: 100%;
+    height: 100%;
+  }
+
+  .p1-header {
+    font-family: $defaultFont;
+    font-size: 5rem;
+    font-weight: 600;
+    letter-spacing: 0.5rem;
+
+    color: transparent;
+
+    text-align: center;
+
+    -webkit-text-stroke-width: 0.25rem;
+    -webkit-text-stroke-color: rgb(255, 255, 255);
+
+    white-space: nowrap;
+  }
+
+  .p1-summary-frame {
+    margin-right: 3rem;
+    height: 30rem;
+    width: 48%;
+
+    overflow: hidden;
+  }
+
+  .p1-summary {
+    font-family: $defaultFont;
+    font-size: 1.2rem;
+    width: 45rem;
+
+    line-height: 2rem;
+
+    color: $readableWhite;
+    text-align: left;
+
+    p {
+      background: $fadedBlack;
+      padding: 1rem;
+    }
+
+    h3 {
+      text-align: left;
+    }
+
+    .p1-languages {
+      margin: 1rem 0;
+
+      h3 {
+        display: inline-block;
+        margin-right: 1rem;
+        background: $fadedBlack;
+        padding: 0.25rem 0.5rem;
+
+        font-size: 1.2rem;
+        line-height: 2rem;
+      }
+    }
+
+    .p1-visit-git {
+      text-align: left;
+    }
+
+    .p1-visit-git a {
+      display: inline-block;
+      margin-top: 4rem;
+      padding: 0.25rem 0.5rem;
+
+      font-family: $defaultFont;
+      font-size: 1.2rem;
+      font-weight: 600;
+      text-decoration: none;
+      line-height: 2rem;
+
+      color: black;
+      background: rgba(255, 255, 255, 0.671);
+
+      text-align: center;
+      width: 20rem;
+    }
+  }
+
+  .btn-p1-visit {
+    float: left;
+    letter-spacing: 0.02rem;
+  }
+
+  .btn-p1-git {
+    float: right;
+  }
+
+  .p1-visit-git a:hover {
+    text-decoration: underline;
+  }
+
+  #pizzeria-header {
+    font-size: 4.8rem;
+  }
+
+  .resume-container {
+    height: 110vh;
+    background: rgb(71, 133, 71);
+  }
+
+  .contact-container {
+    height: 100vh;
+    background: rgb(133, 117, 71);
+
+    display: flex;
+    flex-direction: column;
+  }
+
+  .contact-header {
+    width: 90%;
+    margin: 0 auto 0;
+  }
+
+  .contact-header h1 {
+    overflow: hidden;
+    text-align: center;
+  }
+
+  .contact-header h1:before,
+  .contact-header h1:after {
+    background-color: $fadedBlack;
+    content: "";
+    display: inline-block;
+    height: 0.3rem;
+    position: relative;
+    vertical-align: middle;
+    width: 50%;
+  }
+
+  .contact-header h1:before {
+    right: 0.5em;
+    margin-left: -40%;
+  }
+
+  .contact-header h1:after {
+    left: 0.5em;
+    margin-right: -40%;
+  }
+
+  .contact-header h1 {
+    font-family: $defaultFont;
+    font-size: 3rem;
+    font-weight: 600;
+    letter-spacing: 0.5rem;
+
+    color: white;
+    text-align: center;
+
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+  }
+
+  .contact-column {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .my-contact-message {
+    margin: 0 auto 1rem;
+    font-family: $defaultFont;
+    font-size: 1.5rem;
+    color: white;
+  }
+
+  .contact-icons {
+    display: flex;
+    flex-direction: row;
+
+    margin: 0 auto;
+
+    img {
+      margin: 1rem 2rem;
+    }
+
+    img:hover {
+      cursor: pointer;
+    }
+  }
+
+  .email-icon {
+    width: 2rem;
+  }
+
+  .linkedin-icon {
+    width: 2rem;
+  }
+
+  .github-icon {
+    width: 2rem;
+  }
+
+  .contact-img {
+    width: 20rem;
+
+    border-radius: 50%;
+  }
+
+  $formWidth: 31rem;
+  $borderRadius: 0.2rem;
+  $formFontSize: 1rem;
+  $nameEmailHeight: 2.2rem;
+
+  form {
+    font-family: $defaultFont;
+    font-size: $formFontSize;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+
+    height: 100%;
+    width: 50%;
+
+    margin: 1rem auto 0;
+
+    overflow: hidden;
+  }
+
+  .name-email-container {
+    margin: 0 auto;
+
+    width: $formWidth;
+    height: 5rem;
+  }
+
+  .form-name-div {
+    float: left;
+  }
+
+  .form-input-name {
+    font-size: $formFontSize;
+    background: white;
+    width: 15rem;
+    height: $nameEmailHeight;
+
+    border-radius: $borderRadius;
+
+    padding: 0.5rem;
+    box-sizing: border-box;
+    margin-top: 0.3rem;
+  }
+
+  .form-email-div {
+    float: right;
+  }
+
+  .form-input-email {
+    font-size: $formFontSize;
+    background: white;
+    width: 15rem;
+    height: $nameEmailHeight;
+    border-radius: $borderRadius;
+
+    padding: 0.5rem;
+    box-sizing: border-box;
+    margin-top: 0.3rem;
+  }
+
+  .message-container {
+    background: transparent;
+
+    width: $formWidth;
+    height: 17rem;
+
+    margin: 0 auto;
+  }
+
+  .message-input {
+    font-family: $defaultFont;
+    font-size: $formFontSize;
+    background: white;
+    border-radius: $borderRadius;
+    resize: none;
+
+    height: 15rem;
+
+    padding: 0.5rem;
+    box-sizing: border-box;
+    width: 100%;
+    margin-top: 0.3rem;
+  }
+
+  .button-container {
+    width: 100%;
+    text-align: center;
+
+    margin-top: 2rem;
+  }
+
+  .submit-btn {
+    font-family: $defaultFont;
+    font-size: 1.1rem;
+
+    height: 2.3rem;
+    width: 10rem;
+
+    background: rgba(26, 26, 26, 0.671);
+    color: white;
+    box-sizing: border-box;
+
+    border-radius: 1rem;
+    transition-duration: 0.8s;
+  }
+
+  .submit-btn:hover {
+    background: rgba(255, 255, 255, 0.671);
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+  }
+
+  .welcome {
+    font-family: $defaultFont;
+    font-size: 5rem;
+    font-weight: 900;
+    color: white;
+    text-align: center;
+    box-sizing: border-box;
+    line-height: 100vh;
+
+    overflow: hidden;
+  }
+}

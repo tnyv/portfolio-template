@@ -48,6 +48,34 @@ html {
   }
 }
 
+
+/*******************************/
+/* Loader */
+/******************************/
+.loadme {
+  color: white;
+}
+
+.loader {
+  font-family: $defaultFont;
+  font-size: 10rem;
+  font-weight: 600;
+
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: $defaultBackground;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* animation: load 0.5s linear 0.5s 1 forwards, changez 1s linear 0.5s 1 forwards; */
+  /* animation: load 1s linear 1.5s 1 forwards, changez 1s linear 2s 1 forwards; */
+  animation: load 0.5s linear 0.5s 1 forwards, changez 1s linear 0.5s 1 forwards; 
+}
+
 /***********************/
 /* Navigation Bar */
 /***********************/
@@ -313,32 +341,6 @@ nav {
   transition: all 0.3s ease-in-out;
 }
 
-/*******************************/
-/* Loader */
-/******************************/
-.loadme {
-  color: white;
-}
-
-.loader {
-  font-family: $defaultFont;
-  font-size: 10rem;
-  font-weight: 600;
-
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: $defaultBackground;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  /* animation: load 0.5s linear 0.5s 1 forwards, changez 1s linear 0.5s 1 forwards; */
-  /* animation: load 1s linear 1.5s 1 forwards, changez 1s linear 2s 1 forwards; */
-  animation: load 0.5s linear 0.5s 1 forwards, changez 1s linear 0.5s 1 forwards; 
-}
 
 .homepage-block-right {
   background-size: contain;
@@ -436,7 +438,7 @@ nav {
 
 .projects-container {
   height: 290vh;
-  background: rgba(233, 159, 23, 0.993);
+  background: rgb(64, 131, 161);
 
   display: flex;
   flex-direction: column;
@@ -569,7 +571,7 @@ nav {
   color: $readableWhite;
   text-align: left;
 
-  h2 {
+  p {
     background: $fadedBlack;
     padding: 1rem;
   }
@@ -639,7 +641,7 @@ nav {
 
 .contact-container {
   height: 100vh;
-  background: rgb(64, 131, 161);
+  background: rgb(133, 117, 71);
 
   display: flex;
   flex-direction: column;
@@ -863,20 +865,4 @@ form {
   overflow: hidden;
 }
 
-
-.hideme {
-  animation-name: fade-in;
-  animation-play-state: paused;
-  animation-iteration-count: 1;
-  animation-duration: 2s;
-}
-
-@keyframes fade-in {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 

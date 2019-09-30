@@ -176,11 +176,6 @@ function resetFromRight() {
 	mainAnimator.style.WebkitAnimationName = "middle-animate-right";
 }
 
-mainPicture.onclick = function () {
-
-};
-
-
 leftPicture.onclick = function () {
 	if (imgIndex === 1) {
 		leftPicture.style.backgroundImage = 'url(images/resume2.jpg)';
@@ -248,13 +243,52 @@ rightPicture.onclick = function () {
 	}
 };
 
+mainPicture.addEventListener('click', function () {
+	if (imgIndex === 1) {
+		smoothScroll('.projects-container', scrollSpeed);
+	}
+	else if (imgIndex === 2) {
+		smoothScroll('.resume-container', scrollSpeed);
+	}
+	else if (imgIndex === 3) {
+		smoothScroll('.contact-container', scrollSpeed);
+	}
+})
+
+// HOMEPAGE MEDIA QUERIES
+function adjustHomepagePics(screen480) {
+	if (screen480.matches) { // If media query matches
+		if (imgIndex === 1) {
+			leftPicture.style.backgroundImage = 'url(images/contact3phone.jpg)';
+			mainPicture.setAttribute('src', 'images/projects1phone.jpg');
+			rightPicture.style.backgroundImage = 'url(images/resume2phone.jpg)';
+		}
+		else if (imgIndex === 2) {
+			leftPicture.style.backgroundImage = 'url(images/projects1phone.jpg)';
+			mainPicture.setAttribute('src', 'images/resume2phone.jpg');
+			rightPicture.style.backgroundImage = 'url(images/contact3phone.jpg)';
+		}
+		else if (imgIndex === 3) {
+			leftPicture.style.backgroundImage = 'url(images/resume2phone.jpg)';
+			mainPicture.setAttribute('src', 'images/contact3phone.jpg');
+			rightPicture.style.backgroundImage = 'url(images/projects1phone.jpg)';
+		}
+
+
+	}
+}
+
+var screen480 = window.matchMedia("(min-device-width: 0px)" && "(max-device-width: 480px)");
+adjustHomepagePics(screen480);// Call listener function at run time
+screen480.addListener(adjustHomepagePics); // Attach listener function on state changes
+
 // END
 /************************************************************************************** */
 
 
 /************************************************************************************** */
 // Setting up auto-scroll for nav links
-var scrollSpeed = 2500;
+var scrollSpeed = 2000;
 var scrollDash = 400;
 
 function smoothScroll(target, duration) {
@@ -281,73 +315,9 @@ function smoothScroll(target, duration) {
 	}
 	requestAnimationFrame(animation);
 }
-
-mainPicture.addEventListener('click', function () {
-	if (imgIndex === 1) {
-		smoothScroll('.projects-container', scrollSpeed);
-	}
-	else if (imgIndex === 2) {
-		smoothScroll('.resume-container', scrollSpeed);
-	}
-	else if (imgIndex === 3) {
-		smoothScroll('.contact-container', scrollSpeed);
-	}
-})
-
-
-// Home link
-var barHome = document.querySelector('.home-link');
-barHome.addEventListener('click', function () {
-	smoothScroll('.homepage-container', scrollDash);
-});
-
-// Projects link
-var barProjects = document.querySelector('.projects-link');
-barProjects.addEventListener('click', function () {
-	smoothScroll('.projects-container', scrollDash);
-});
-
-// Resume link
-var barAbout = document.querySelector('.resume-link');
-barAbout.addEventListener('click', function () {
-	smoothScroll('.resume-container', scrollDash);
-});
-
-// Contact link
-var barContact = document.querySelector('.contact-link');
-barContact.addEventListener('click', function () {
-	smoothScroll('.contact-container', scrollDash);
-});
-
-
 // END
 /************************************************************************************** */
 
-
-/************************************************************************************** */
-// Make elements appear on scroll EXPERIMENT
-
-
-var hideme = document.querySelector('.hideme');
-var projectsContainer = document.querySelector('.projects-container');
-var bottom_of_object = hideme.pageYOffset;
-var bottom_of_window = window.scrollTop + window.height;
-
-
-window.addEventListener('scroll', function () {
-	if (window.pageYOffset >= (projectsContainer.offsetTop * .9)) {
-		hideme.style.animationPlayState = "running";
-	}
-	else if(window.pageYOffset <= (projectsContainer.offsetTop * .9)) {
-		hideme.style.opacity = "0";
-		hideme.style.animationPlayState = "paused";
-	}
-
-
-
-	console.log("bottom of window: " + window.pageYOffset);
-	console.log("bottom of obj: " + (projectsContainer.offsetTop * .9));
-});
 
 
 
@@ -363,3 +333,8 @@ window.addEventListener('scroll', function () {
 
 // END
 /************************************************************************************** */
+
+
+/************************************************************************************** */
+// MEDIA QUERIES
+
