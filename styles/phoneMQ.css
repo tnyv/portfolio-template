@@ -185,6 +185,11 @@
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
   }
+  .homepage-block-middle:hover {
+    width: 40rem;
+    height: 80rem;
+    cursor: none;
+  }
   .main-picture {
     -o-object-fit: contain;
        object-fit: contain;
@@ -195,12 +200,8 @@
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
-    -webkit-animation-name: enlarge;
-            animation-name: enlarge;
-    -webkit-animation-duration: 0.4s;
-            animation-duration: 0.4s;
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
+    -webkit-animation: none;
+            animation: none;
   }
   @-webkit-keyframes enlarge {
     from {
@@ -291,6 +292,11 @@
     -webkit-animation-fill-mode: forwards;
             animation-fill-mode: forwards;
   }
+  .block-left:hover {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    cursor: none;
+  }
   @-webkit-keyframes block-left-animate {
     from {
     }
@@ -320,6 +326,11 @@
             animation-duration: 0.4s;
     -webkit-animation-fill-mode: forwards;
             animation-fill-mode: forwards;
+  }
+  .block-right:hover {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    cursor: none;
   }
   @-webkit-keyframes block-right-animate {
     from {
@@ -460,9 +471,6 @@
     width: 40rem;
     height: 25rem;
   }
-  .p1-image-block:hover {
-    cursor: pointer;
-  }
   .p1-picture {
     width: 100%;
     height: 100%;
@@ -533,9 +541,6 @@
   }
   .btn-p1-git {
     float: right;
-  }
-  .p1-visit-git a:hover {
-    text-decoration: underline;
   }
   #pizzeria-header {
     font-size: 4.8rem;
@@ -613,9 +618,6 @@
   }
   .contact-icons img {
     margin: 1rem 2rem;
-  }
-  .contact-icons img:hover {
-    cursor: pointer;
   }
   .email-icon {
     width: 2rem;
@@ -715,11 +717,6 @@
     border-radius: 1rem;
     -webkit-transition-duration: 0.8s;
             transition-duration: 0.8s;
-  }
-  .submit-btn:hover {
-    background: rgba(255, 255, 255, 0.671);
-    color: black;
-    cursor: pointer;
   }
   .welcome {
     font-family: Helvetica;

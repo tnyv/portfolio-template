@@ -190,6 +190,11 @@ $midRightAnimateWidth: 40%;
     transition: all 0.3s ease-in-out;
   }
 
+  .homepage-block-middle:hover {
+    width: 40rem;
+    height: 80rem;
+    cursor: none;
+  }
 
   .main-picture {
     object-fit: contain;
@@ -201,9 +206,7 @@ $midRightAnimateWidth: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
 
-    animation-name: enlarge;
-    animation-duration: $imgAnimationSpeed;
-    animation-fill-mode: forwards;
+    animation: none;
   }
 
   @keyframes enlarge {
@@ -273,6 +276,11 @@ $midRightAnimateWidth: 40%;
     animation-fill-mode: forwards;
   }
 
+  .block-left:hover {
+    transform: scale(0);
+    cursor: none;
+  }
+
   @keyframes block-left-animate {
     from {
       
@@ -301,6 +309,11 @@ $midRightAnimateWidth: 40%;
     animation-name: block-right-animate;
     animation-duration: $imgAnimationSpeed;
     animation-fill-mode: forwards;
+  }
+
+  .block-right:hover {
+    transform: scale(0);
+    cursor: none;
   }
 
   @keyframes block-right-animate {
@@ -449,9 +462,6 @@ $midRightAnimateWidth: 40%;
     height: 25rem;
   }
 
-  .p1-image-block:hover {
-    cursor: pointer;
-  }
 
   .p1-picture {
     width: 100%;
@@ -547,9 +557,6 @@ $midRightAnimateWidth: 40%;
     float: right;
   }
 
-  .p1-visit-git a:hover {
-    text-decoration: underline;
-  }
 
   #pizzeria-header {
     font-size: 4.8rem;
@@ -634,9 +641,6 @@ $midRightAnimateWidth: 40%;
       margin: 1rem 2rem;
     }
 
-    img:hover {
-      cursor: pointer;
-    }
   }
 
   .email-icon {
@@ -764,11 +768,6 @@ $midRightAnimateWidth: 40%;
     transition-duration: 0.8s;
   }
 
-  .submit-btn:hover {
-    background: rgba(255, 255, 255, 0.671);
-    color: rgb(0, 0, 0);
-    cursor: pointer;
-  }
 
   .welcome {
     font-family: $defaultFont;

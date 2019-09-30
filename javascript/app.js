@@ -159,7 +159,6 @@ function resetEnlargeMain() {
 	mainPicture.style.animation = null;
 }
 
-
 function resetFromLeft() {
 	mainAnimator.style.WebkitAnimationName = "middle-animate-left";
 	mainAnimator.style.animation = 'none';
@@ -176,84 +175,9 @@ function resetFromRight() {
 	mainAnimator.style.WebkitAnimationName = "middle-animate-right";
 }
 
-leftPicture.onclick = function () {
-	if (imgIndex === 1) {
-		leftPicture.style.backgroundImage = 'url(images/resume2.jpg)';
-		mainPicture.setAttribute('src', 'images/contact3.jpg');
-		rightPicture.style.backgroundImage = 'url(images/projects1.jpg)';
-		imgIndex = 3;
-		mainHeader.innerHTML = "CONTACT";
-		resetSideAnimations();
-		resetFromRight();
-		resetEnlargeMain();
-	}
-	else if (imgIndex === 3) {
-		leftPicture.style.backgroundImage = 'url(images/projects1.jpg)';
-		mainPicture.setAttribute('src', 'images/resume2.jpg');
-		rightPicture.style.backgroundImage = 'url(images/contact3.jpg)';
-		imgIndex = 2;
-		mainHeader.innerHTML = "R&Eacute;SUM&Eacute;";
-		resetSideAnimations();
-		resetFromRight();
-		resetEnlargeMain();
-	}
-	else if (imgIndex === 2) {
-		leftPicture.style.backgroundImage = 'url(images/contact3.jpg)';
-		mainPicture.setAttribute('src', 'images/projects1.jpg');
-		rightPicture.style.backgroundImage = 'url(images/resume2.jpg)';
-		imgIndex = 1;
-		mainHeader.innerHTML = "PROJECTS";
-		resetSideAnimations();
-		resetFromRight();
-		resetEnlargeMain();
-	}
-};
 
 
-rightPicture.onclick = function () {
-	if (imgIndex === 1) {
-		leftPicture.style.backgroundImage = 'url(images/projects1.jpg)';
-		mainPicture.setAttribute('src', 'images/resume2.jpg');
-		rightPicture.style.backgroundImage = 'url(images/contact3.jpg)';
-		imgIndex = 2;
-		mainHeader.innerHTML = "R&Eacute;SUM&Eacute;";
-		resetSideAnimations();
-		resetFromLeft();
-		resetEnlargeMain();
-	}
-	else if (imgIndex === 2) {
-		leftPicture.style.backgroundImage = 'url(images/resume2.jpg)';
-		mainPicture.setAttribute('src', 'images/contact3.jpg');
-		rightPicture.style.backgroundImage = 'url(images/projects1.jpg)';
-		imgIndex = 3;
-		mainHeader.innerHTML = "CONTACT";
-		resetSideAnimations();
-		resetFromLeft();
-		resetEnlargeMain();
-	}
-	else if (imgIndex === 3) {
-		leftPicture.style.backgroundImage = 'url(images/contact3.jpg)';
-		mainPicture.setAttribute('src', 'images/projects1.jpg');
-		rightPicture.style.backgroundImage = 'url(images/resume2.jpg)';
-		imgIndex = 1;
-		mainHeader.innerHTML = "PROJECTS";
-		resetSideAnimations();
-		resetFromLeft();
-		resetEnlargeMain();
-	}
-};
 
-mainPicture.addEventListener('click', function () {
-	if (imgIndex === 1) {
-		smoothScroll('.projects-container', scrollSpeed);
-	}
-	else if (imgIndex === 2) {
-		smoothScroll('.resume-container', scrollSpeed);
-	}
-	else if (imgIndex === 3) {
-		smoothScroll('.contact-container', scrollSpeed);
-	}
-})
 
 // HOMEPAGE MEDIA QUERIES
 function adjustHomepagePics(screen480) {
@@ -273,6 +197,174 @@ function adjustHomepagePics(screen480) {
 			mainPicture.setAttribute('src', 'images/contact3phone.jpg');
 			rightPicture.style.backgroundImage = 'url(images/projects1phone.jpg)';
 		}
+
+		leftPicture.addEventListener('touchstart', function () {
+			if (imgIndex === 1) {
+				leftPicture.style.backgroundImage = 'url(images/resume2phone.jpg)';
+				mainPicture.setAttribute('src', 'images/contact3phone.jpg');
+				rightPicture.style.backgroundImage = 'url(images/projects1phone.jpg)';
+				imgIndex = 3;
+				mainHeader.innerHTML = "CONTACT";
+				resetSideAnimations();
+				resetFromRight();
+				resetEnlargeMain();
+			}
+			else if (imgIndex === 3) {
+				leftPicture.style.backgroundImage = 'url(images/projects1phone.jpg)';
+				mainPicture.setAttribute('src', 'images/resume2phone.jpg');
+				rightPicture.style.backgroundImage = 'url(images/contact3phone.jpg)';
+				imgIndex = 2;
+				mainHeader.innerHTML = "R&Eacute;SUM&Eacute;";
+				resetSideAnimations();
+				resetFromRight();
+				resetEnlargeMain();
+			}
+			else if (imgIndex === 2) {
+				leftPicture.style.backgroundImage = 'url(images/contact3phone.jpg)';
+				mainPicture.setAttribute('src', 'images/projects1phone.jpg');
+				rightPicture.style.backgroundImage = 'url(images/resume2phone.jpg)';
+				imgIndex = 1;
+				mainHeader.innerHTML = "PROJECTS";
+				resetSideAnimations();
+				resetFromRight();
+				resetEnlargeMain();
+			}
+		})
+		
+		
+		rightPicture.addEventListener('touchstart', function () {
+			if (imgIndex === 1) {
+				leftPicture.style.backgroundImage = 'url(images/projects1phone.jpg)';
+				mainPicture.setAttribute('src', 'images/resume2phone.jpg');
+				rightPicture.style.backgroundImage = 'url(images/contact3phone.jpg)';
+				imgIndex = 2;
+				mainHeader.innerHTML = "R&Eacute;SUM&Eacute;";
+				resetSideAnimations();
+				resetFromLeft();
+				resetEnlargeMain();
+			}
+			else if (imgIndex === 2) {
+				leftPicture.style.backgroundImage = 'url(images/resume2phone.jpg)';
+				mainPicture.setAttribute('src', 'images/contact3phone.jpg');
+				rightPicture.style.backgroundImage = 'url(images/projects1phone.jpg)';
+				imgIndex = 3;
+				mainHeader.innerHTML = "CONTACT";
+				resetSideAnimations();
+				resetFromLeft();
+				resetEnlargeMain();
+			}
+			else if (imgIndex === 3) {
+				leftPicture.style.backgroundImage = 'url(images/contact3phone.jpg)';
+				mainPicture.setAttribute('src', 'images/projects1phone.jpg');
+				rightPicture.style.backgroundImage = 'url(images/resume2phone.jpg)';
+				imgIndex = 1;
+				mainHeader.innerHTML = "PROJECTS";
+				resetSideAnimations();
+				resetFromLeft();
+				resetEnlargeMain();
+			}
+		})
+
+
+
+
+
+
+
+
+		mainPicture.addEventListener('touchstart', function () {
+			if (imgIndex === 1) {
+				smoothScroll('.projects-container', scrollSpeed);
+			}
+			else if (imgIndex === 2) {
+				smoothScroll('.resume-container', scrollSpeed);
+			}
+			else if (imgIndex === 3) {
+				smoothScroll('.contact-container', scrollSpeed);
+			}
+		})
+	}
+	else {
+		mainPicture.addEventListener('click', function () {
+			if (imgIndex === 1) {
+				smoothScroll('.projects-container', scrollSpeed);
+			}
+			else if (imgIndex === 2) {
+				smoothScroll('.resume-container', scrollSpeed);
+			}
+			else if (imgIndex === 3) {
+				smoothScroll('.contact-container', scrollSpeed);
+			}
+		})
+
+		leftPicture.onclick = function () {
+			if (imgIndex === 1) {
+				leftPicture.style.backgroundImage = 'url(images/resume2.jpg)';
+				mainPicture.setAttribute('src', 'images/contact3.jpg');
+				rightPicture.style.backgroundImage = 'url(images/projects1.jpg)';
+				imgIndex = 3;
+				mainHeader.innerHTML = "CONTACT";
+				resetSideAnimations();
+				resetFromRight();
+				resetEnlargeMain();
+			}
+			else if (imgIndex === 3) {
+				leftPicture.style.backgroundImage = 'url(images/projects1.jpg)';
+				mainPicture.setAttribute('src', 'images/resume2.jpg');
+				rightPicture.style.backgroundImage = 'url(images/contact3.jpg)';
+				imgIndex = 2;
+				mainHeader.innerHTML = "R&Eacute;SUM&Eacute;";
+				resetSideAnimations();
+				resetFromRight();
+				resetEnlargeMain();
+			}
+			else if (imgIndex === 2) {
+				leftPicture.style.backgroundImage = 'url(images/contact3.jpg)';
+				mainPicture.setAttribute('src', 'images/projects1.jpg');
+				rightPicture.style.backgroundImage = 'url(images/resume2.jpg)';
+				imgIndex = 1;
+				mainHeader.innerHTML = "PROJECTS";
+				resetSideAnimations();
+				resetFromRight();
+				resetEnlargeMain();
+			}
+		};
+		
+		
+		rightPicture.onclick = function () {
+			if (imgIndex === 1) {
+				leftPicture.style.backgroundImage = 'url(images/projects1.jpg)';
+				mainPicture.setAttribute('src', 'images/resume2.jpg');
+				rightPicture.style.backgroundImage = 'url(images/contact3.jpg)';
+				imgIndex = 2;
+				mainHeader.innerHTML = "R&Eacute;SUM&Eacute;";
+				resetSideAnimations();
+				resetFromLeft();
+				resetEnlargeMain();
+			}
+			else if (imgIndex === 2) {
+				leftPicture.style.backgroundImage = 'url(images/resume2.jpg)';
+				mainPicture.setAttribute('src', 'images/contact3.jpg');
+				rightPicture.style.backgroundImage = 'url(images/projects1.jpg)';
+				imgIndex = 3;
+				mainHeader.innerHTML = "CONTACT";
+				resetSideAnimations();
+				resetFromLeft();
+				resetEnlargeMain();
+			}
+			else if (imgIndex === 3) {
+				leftPicture.style.backgroundImage = 'url(images/contact3.jpg)';
+				mainPicture.setAttribute('src', 'images/projects1.jpg');
+				rightPicture.style.backgroundImage = 'url(images/resume2.jpg)';
+				imgIndex = 1;
+				mainHeader.innerHTML = "PROJECTS";
+				resetSideAnimations();
+				resetFromLeft();
+				resetEnlargeMain();
+			}
+		};
+
+
 
 
 	}
@@ -326,10 +418,29 @@ function smoothScroll(target, duration) {
 
 /************************************************************************************** */
 // Welcome sign animation on scroll
+
 var welcome = document.querySelector('.welcome');
-window.addEventListener('scroll', function () {
-	welcome.style.fontSize = Math.max(1 + 0.012 * window.scrollY, 1) + "rem";
-});
+
+
+function phoneWelcome(screen480) {
+	if (screen480.matches) { // If media query matches
+		welcome.style.fontSize = "2rem";
+
+		window.addEventListener('scroll', function () {
+			welcome.style.fontSize = Math.max(1 + 0.0035 * window.scrollY, 1) + "rem";
+		});
+
+	}
+	else {
+		window.addEventListener('scroll', function () {
+			welcome.style.fontSize = Math.max(1 + 0.012 * window.scrollY, 1) + "rem";
+		});
+	}
+}
+
+var screen480 = window.matchMedia("(min-device-width: 0px)" && "(max-device-width: 480px)");
+phoneWelcome(screen480);// Call listener function at run time
+screen480.addListener(phoneWelcome); // Attach listener function on state changes
 
 // END
 /************************************************************************************** */
@@ -338,14 +449,3 @@ window.addEventListener('scroll', function () {
 /************************************************************************************** */
 // Homepage swiping for touch screens and phones 
 
-$(function() {      
-	//Enable swiping...
-	$(".middle-frame").swipe( {
-	  //Generic swipe handler for all directions
-	  swipe:function(event, direction, distance, duration, fingerCount, fingerData) {
-		console.log($direction);  
-	  },
-	  //Default is 75px, set to 0 for demo so any distance triggers swipe
-	   threshold:0
-	});
-  });
