@@ -102,6 +102,7 @@ function scrollFunction() {
 		document.querySelector('.home-bar').style.top = "-10vw";
 	}
 }
+
 // END
 /************************************************************************************** */
 

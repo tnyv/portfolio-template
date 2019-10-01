@@ -10,6 +10,8 @@
     font-size: 100%;
     vertical-align: baseline;
     background: transparent;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
   }
   li {
     list-style-type: none;
@@ -53,7 +55,58 @@
     font-family: Helvetica;
   }
   .home-bar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    position: fixed;
+    top: -10rem;
+    width: 100%;
+    height: 5rem;
+    -webkit-transition: top 0.5s;
+    transition: top 0.5s;
+    background: rgba(26, 26, 26, 0.671);
+    z-index: 5;
+  }
+  .home-link,
+  .projects-link,
+  .resume-link,
+  .contact-link {
+    visibility: hidden;
     display: none;
+  }
+  .tonyvu-link {
+    font-family: Helvetica;
+    font-size: 2rem;
+    font-weight: 600;
+    font-style: none;
+    text-decoration: none;
+    color: white;
+    overflow: hidden;
+    padding: 0.75rem;
+    margin: auto 0;
+    -webkit-transition-duration: 0.5s;
+            transition-duration: 0.5s;
+    visibility: visible;
+    position: absolute;
+    left: 0;
+    top: 0.75rem;
+  }
+  .menu-icon {
+    visibility: visible;
+    right: 0;
+    top: 0;
+  }
+  .menu-icon .menu-line {
+    width: 1rem;
+    height: 0.2rem;
+    background-color: white;
+  }
+  .home-bar a:hover {
+    background: none;
   }
   /***********************/
   /* Homepage Container */
@@ -294,7 +347,7 @@
     background-size: cover;
   }
   .projects-container {
-    height: 320vh;
+    height: 330vh;
     background: #4083a1;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -306,7 +359,7 @@
   }
   .project-header {
     width: 90%;
-    margin: 0 auto 1.5rem;
+    margin: 2rem auto 1.5rem;
   }
   .project-header h1 {
     overflow: hidden;
@@ -343,7 +396,7 @@
   }
   .project-one-container {
     width: 100%;
-    height: 100vh;
+    height: 110vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -354,7 +407,7 @@
   }
   .project-two-container {
     width: 100%;
-    height: 100vh;
+    height: 110vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -365,7 +418,7 @@
   }
   .project-three-container {
     width: 100%;
-    height: 100vh;
+    height: 110vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -403,8 +456,11 @@
     white-space: nowrap;
   }
   .p1-summary-frame {
-    height: 70rem;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
     width: 100%;
+    margin: 0;
     overflow: hidden;
   }
   .p1-summary {
@@ -450,11 +506,11 @@
     background: rgba(255, 255, 255, 0.671);
     text-align: center;
     width: 20rem;
-    line-height: 7rem;
+    line-height: 5rem;
   }
   .p1-summary .p1-visit-git .btn-p1-git {
-    line-height: 3rem;
-    font-size: 2.5rem;
+    line-height: 2.2rem;
+    font-size: 2.2rem;
   }
   .btn-p1-visit {
     height: 7rem;

@@ -106,13 +106,22 @@ nav {
   font-weight: 600;
   font-style: none;
   text-decoration: none;
+  color: $defaultFontColor;
 
   overflow: hidden;
   padding: 0.75rem;
   margin: 0rem 1rem 0rem 1rem;
 
-  color: $defaultFontColor;
+  
   transition-duration: 0.5s;
+}
+
+.tonyvu-link {
+  visibility: hidden;
+}
+
+.menu-icon {
+  visibility: hidden;
 }
 
 .home-bar a:hover {
