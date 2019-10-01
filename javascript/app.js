@@ -205,9 +205,6 @@ function adjustHomepagePics(screen480) {
 				rightPicture.style.backgroundImage = 'url(images/projects1phone.jpg)';
 				imgIndex = 3;
 				mainHeader.innerHTML = "CONTACT";
-				resetSideAnimations();
-				resetFromRight();
-				resetEnlargeMain();
 			}
 			else if (imgIndex === 3) {
 				leftPicture.style.backgroundImage = 'url(images/projects1phone.jpg)';
@@ -215,9 +212,6 @@ function adjustHomepagePics(screen480) {
 				rightPicture.style.backgroundImage = 'url(images/contact3phone.jpg)';
 				imgIndex = 2;
 				mainHeader.innerHTML = "R&Eacute;SUM&Eacute;";
-				resetSideAnimations();
-				resetFromRight();
-				resetEnlargeMain();
 			}
 			else if (imgIndex === 2) {
 				leftPicture.style.backgroundImage = 'url(images/contact3phone.jpg)';
@@ -225,9 +219,6 @@ function adjustHomepagePics(screen480) {
 				rightPicture.style.backgroundImage = 'url(images/resume2phone.jpg)';
 				imgIndex = 1;
 				mainHeader.innerHTML = "PROJECTS";
-				resetSideAnimations();
-				resetFromRight();
-				resetEnlargeMain();
 			}
 		})
 		
@@ -239,9 +230,6 @@ function adjustHomepagePics(screen480) {
 				rightPicture.style.backgroundImage = 'url(images/contact3phone.jpg)';
 				imgIndex = 2;
 				mainHeader.innerHTML = "R&Eacute;SUM&Eacute;";
-				resetSideAnimations();
-				resetFromLeft();
-				resetEnlargeMain();
 			}
 			else if (imgIndex === 2) {
 				leftPicture.style.backgroundImage = 'url(images/resume2phone.jpg)';
@@ -249,9 +237,6 @@ function adjustHomepagePics(screen480) {
 				rightPicture.style.backgroundImage = 'url(images/projects1phone.jpg)';
 				imgIndex = 3;
 				mainHeader.innerHTML = "CONTACT";
-				resetSideAnimations();
-				resetFromLeft();
-				resetEnlargeMain();
 			}
 			else if (imgIndex === 3) {
 				leftPicture.style.backgroundImage = 'url(images/contact3phone.jpg)';
@@ -259,18 +244,8 @@ function adjustHomepagePics(screen480) {
 				rightPicture.style.backgroundImage = 'url(images/resume2phone.jpg)';
 				imgIndex = 1;
 				mainHeader.innerHTML = "PROJECTS";
-				resetSideAnimations();
-				resetFromLeft();
-				resetEnlargeMain();
 			}
 		})
-
-
-
-
-
-
-
 
 		mainPicture.addEventListener('touchstart', function () {
 			if (imgIndex === 1) {

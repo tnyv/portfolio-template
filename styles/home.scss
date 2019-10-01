@@ -361,14 +361,7 @@ nav {
 
 }
 
-@keyframes block-right-animate {
-  from {
-    right: -37rem;
-  }
-  to {
-    right: -35rem;
-  }
-}
+
 
 .block-left:hover {
   transform: scale(1.1);
@@ -426,10 +419,6 @@ nav {
 .skills-container {
   height: 110vh;
   background-image: url("../images/space.jpg");
-
-
-
-  /* Create the parallax scrolling effect */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;

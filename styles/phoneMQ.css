@@ -46,36 +46,6 @@
       z-index: -1;
     }
   }
-  /*******************************/
-  /* Loader */
-  /******************************/
-  .loadme {
-    color: white;
-  }
-  .loader {
-    font-family: Helvetica;
-    font-size: 10rem;
-    font-weight: 600;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background: #1a1a1a;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    /* animation: load 0.5s linear 0.5s 1 forwards, changez 1s linear 0.5s 1 forwards; */
-    /* animation: load 1s linear 1.5s 1 forwards, changez 1s linear 2s 1 forwards; */
-    -webkit-animation: load 0.5s linear 0.5s 1 forwards, changez 1s linear 0.5s 1 forwards;
-            animation: load 0.5s linear 0.5s 1 forwards, changez 1s linear 0.5s 1 forwards;
-  }
   /***********************/
   /* Navigation Bar */
   /***********************/
@@ -176,7 +146,8 @@
     background-repeat: no-repeat;
     background-position: center;
     width: 40rem;
-    height: 80rem;
+    height: 60rem;
+    margin-bottom: 10rem;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -187,7 +158,7 @@
   }
   .homepage-block-middle:hover {
     width: 40rem;
-    height: 80rem;
+    height: 60rem;
     cursor: none;
   }
   .main-picture {
@@ -205,9 +176,9 @@
   }
   @-webkit-keyframes enlarge {
     from {
-      opacity: 0;
-      width: 110%;
-      height: 110%;
+      width: 100%;
+      height: 100%;
+      opacity: 1;
     }
     to {
       width: 100%;
@@ -217,9 +188,9 @@
   }
   @keyframes enlarge {
     from {
-      opacity: 0;
-      width: 110%;
-      height: 110%;
+      width: 100%;
+      height: 100%;
+      opacity: 1;
     }
     to {
       width: 100%;
@@ -234,119 +205,64 @@
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
-    -webkit-animation-duration: 0.4s;
-            animation-duration: 0.4s;
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
-  }
-  @-webkit-keyframes middle-animate-left {
-    from {
-      left: 60%;
-    }
-    to {
-      left: 50%;
-    }
-  }
-  @keyframes middle-animate-left {
-    from {
-      left: 60%;
-    }
-    to {
-      left: 50%;
-    }
-  }
-  @-webkit-keyframes middle-animate-right {
-    from {
-      left: 40%;
-    }
-    to {
-      left: 50%;
-    }
-  }
-  @keyframes middle-animate-right {
-    from {
-      left: 40%;
-    }
-    to {
-      left: 50%;
-    }
+    -webkit-animation: none;
+            animation: none;
   }
   .main-header {
-    display: none;
+    font-family: Helvetica;
+    font-size: 7rem;
+    font-weight: 600;
+    letter-spacing: 0.5rem;
+    color: transparent;
+    text-align: center;
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    -webkit-text-stroke-width: 0.15rem;
+    -webkit-text-stroke-color: white;
   }
   .homepage-block-left {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     width: 40rem;
-    height: 80rem;
+    height: 40rem;
     position: absolute;
     top: 50%;
     left: -15rem;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
-    -webkit-animation-name: block-left-animate;
-            animation-name: block-left-animate;
-    -webkit-animation-duration: 0.4s;
-            animation-duration: 0.4s;
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
+    -webkit-animation: none;
+            animation: none;
   }
   .block-left:hover {
-    -webkit-transform: scale(0);
-            transform: scale(0);
+    -webkit-transform: scale(1);
+            transform: scale(1);
     cursor: none;
-  }
-  @-webkit-keyframes block-left-animate {
-    from {
-    }
-    to {
-    }
-  }
-  @keyframes block-left-animate {
-    from {
-    }
-    to {
-    }
   }
   .homepage-block-right {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     width: 40rem;
-    height: 80rem;
+    height: 40rem;
     position: absolute;
     top: 50%;
     right: -55rem;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
-    -webkit-animation-name: block-right-animate;
-            animation-name: block-right-animate;
-    -webkit-animation-duration: 0.4s;
-            animation-duration: 0.4s;
-    -webkit-animation-fill-mode: forwards;
-            animation-fill-mode: forwards;
+    -webkit-animation: none;
+            animation: none;
   }
   .block-right:hover {
-    -webkit-transform: scale(0);
-            transform: scale(0);
+    -webkit-transform: scale(1);
+            transform: scale(1);
     cursor: none;
-  }
-  @-webkit-keyframes block-right-animate {
-    from {
-    }
-    to {
-    }
-  }
-  @keyframes block-right-animate {
-    from {
-    }
-    to {
-    }
   }
   .homepage-footer {
     position: absolute;
-    bottom: 8rem;
+    bottom: 10rem;
     width: 100%;
     background: transparent;
     margin-top: 4rem;
@@ -373,14 +289,12 @@
   .skills-container {
     height: 110vh;
     background-image: url("../images/space.jpg");
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
   }
   .projects-container {
-    height: 290vh;
+    height: 320vh;
     background: #4083a1;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -418,9 +332,10 @@
   }
   .project-header h1 {
     font-family: Helvetica;
-    font-size: 3rem;
+    font-size: 3.5rem;
     font-weight: 600;
     letter-spacing: 0.5rem;
+    white-space: nowrap;
     color: white;
     text-align: center;
     margin-top: 5rem;
@@ -428,48 +343,48 @@
   }
   .project-one-container {
     width: 100%;
-    height: 85vh;
+    height: 100vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .project-two-container {
     width: 100%;
-    height: 85vh;
+    height: 100vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .project-three-container {
     width: 100%;
-    height: 85vh;
+    height: 100vh;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: horizontal;
+    -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .p1-image-frame {
     height: 40rem;
-    width: 52%;
+    width: 100%;
   }
   .p1-image-block {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
     margin: 0 auto;
-    width: 40rem;
-    height: 25rem;
+    width: 50rem;
+    height: 35rem;
   }
   .p1-picture {
     width: 100%;
@@ -480,6 +395,7 @@
     font-size: 5rem;
     font-weight: 600;
     letter-spacing: 0.5rem;
+    margin: 2rem 0;
     color: transparent;
     text-align: center;
     -webkit-text-stroke-width: 0.25rem;
@@ -487,18 +403,18 @@
     white-space: nowrap;
   }
   .p1-summary-frame {
-    margin-right: 3rem;
-    height: 30rem;
-    width: 48%;
+    height: 70rem;
+    width: 100%;
     overflow: hidden;
   }
   .p1-summary {
     font-family: Helvetica;
-    font-size: 1.2rem;
-    width: 45rem;
-    line-height: 2rem;
+    font-size: 2.5rem;
+    width: 83%;
+    line-height: 3rem;
     color: #e6e6e6;
     text-align: left;
+    margin: 6rem auto 2rem;
   }
   .p1-summary p {
     background: rgba(26, 26, 26, 0.671);
@@ -512,10 +428,11 @@
   }
   .p1-summary .p1-languages h3 {
     display: inline-block;
+    margin-bottom: 1rem;
     margin-right: 1rem;
     background: rgba(26, 26, 26, 0.671);
-    padding: 0.25rem 0.5rem;
-    font-size: 1.2rem;
+    padding: 1rem 1rem;
+    font-size: 2rem;
     line-height: 2rem;
   }
   .p1-summary .p1-visit-git {
@@ -523,23 +440,29 @@
   }
   .p1-summary .p1-visit-git a {
     display: inline-block;
-    margin-top: 4rem;
-    padding: 0.25rem 0.5rem;
+    margin-top: 3rem;
+    padding: 1rem 1.5rem;
     font-family: Helvetica;
-    font-size: 1.2rem;
+    font-size: 3rem;
     font-weight: 600;
     text-decoration: none;
-    line-height: 2rem;
     color: black;
     background: rgba(255, 255, 255, 0.671);
     text-align: center;
     width: 20rem;
+    line-height: 7rem;
+  }
+  .p1-summary .p1-visit-git .btn-p1-git {
+    line-height: 3rem;
+    font-size: 2.5rem;
   }
   .btn-p1-visit {
+    height: 7rem;
     float: left;
     letter-spacing: 0.02rem;
   }
   .btn-p1-git {
+    height: 7rem;
     float: right;
   }
   #pizzeria-header {
