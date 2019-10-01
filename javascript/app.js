@@ -423,5 +423,28 @@ screen480.addListener(phoneWelcome); // Attach listener function on state change
 
 
 /************************************************************************************** */
-// Homepage swiping for touch screens and phones 
+// Menu icon functions
+
+var menuIcon = document.querySelector(".menu-icon");
+var menu = document.querySelector(".phone-nav");
+var menuVisible = false;
+
+menuIcon.addEventListener('touchstart', function () {
+	if(menuVisible == false) {
+		menu.style.visibility = "visible";
+		menuVisible = true;
+	}
+	else if(menuVisible == true) {
+		menu.style.visibility = "hidden";
+		menuVisible = false;
+	}
+
+
+	
+})
+
+
+
+// END
+/************************************************************************************** */
 

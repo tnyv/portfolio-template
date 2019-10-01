@@ -105,10 +105,20 @@
     width: 3.7rem;
     height: 0.7rem;
     background-color: white;
-    margin: .4rem 0;
+    margin: 0.4rem 0;
   }
   .home-bar a:hover {
     background: none;
+  }
+  /***********************/
+  /* Phone Navigation    */
+  /***********************/
+  .phone-nav {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background: rgba(255, 255, 255, 0.904);
+    z-index: 4;
   }
   /***********************/
   /* Homepage Container */
@@ -285,7 +295,7 @@
     height: 40rem;
     position: absolute;
     top: 50%;
-    left: -15rem;
+    left: -10rem;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
     -webkit-animation: none;
@@ -304,7 +314,7 @@
     height: 40rem;
     position: absolute;
     top: 50%;
-    right: -55rem;
+    right: -50rem;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
     -webkit-animation: none;
@@ -349,7 +359,7 @@
     background-size: cover;
   }
   .projects-container {
-    height: 330vh;
+    height: 340vh;
     background: #4083a1;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -398,7 +408,8 @@
   }
   .project-one-container {
     width: 100%;
-    height: 110vh;
+    height: 100vh;
+    margin-bottom: 5rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -409,7 +420,9 @@
   }
   .project-two-container {
     width: 100%;
-    height: 110vh;
+    height: 100vh;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -420,7 +433,9 @@
   }
   .project-three-container {
     width: 100%;
-    height: 110vh;
+    height: 100vh;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
