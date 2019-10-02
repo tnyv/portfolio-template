@@ -357,16 +357,31 @@ function adjustHomepagePics(screen480) {
 				resetEnlargeMain();
 			}
 		};
-
-
-
-
 	}
 }
 
 var screen480 = window.matchMedia("(min-device-width: 0px)" && "(max-device-width: 480px)");
 adjustHomepagePics(screen480);// Call listener function at run time
 screen480.addListener(adjustHomepagePics); // Attach listener function on state changes
+
+// END
+/************************************************************************************** */
+
+
+/***************************************************************************************/
+// Setting up button functions in project container
+
+
+
+
+
+
+
+
+
+
+
+
 
 // END
 /************************************************************************************** */

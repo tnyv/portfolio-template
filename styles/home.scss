@@ -48,7 +48,6 @@ html {
   }
 }
 
-
 /*******************************/
 /* Loader */
 /******************************/
@@ -76,9 +75,9 @@ html {
   animation: load 0.5s linear 0.5s 1 forwards, changez 1s linear 0.5s 1 forwards;
 }
 
-/***********************/
-/* Navigation Bar */
-/***********************/
+/********************************************************************************/
+/*                            NAVIGATION BAR                                    */
+/********************************************************************************/
 nav {
   font-family: $defaultFont;
 }
@@ -112,7 +111,6 @@ nav {
   padding: 0.75rem;
   margin: 0rem 1rem 0rem 1rem;
 
-  
   transition-duration: 0.5s;
 }
 
@@ -132,9 +130,9 @@ nav {
   visibility: hidden;
 }
 
-/***********************/
-/* Homepage Container */
-/***********************/
+/********************************************************************************/
+/*                            HOMEPAGE CONTAINER                                */
+/********************************************************************************/
 .homepage-container {
   display: flex;
   flex-direction: column;
@@ -354,7 +352,6 @@ nav {
   transition: all 0.3s ease-in-out;
 }
 
-
 .homepage-block-right {
   background-size: contain;
   background-repeat: no-repeat;
@@ -371,10 +368,7 @@ nav {
   animation-name: block-right-animate;
   animation-duration: $imgAnimationSpeed;
   animation-fill-mode: forwards;
-
 }
-
-
 
 .block-left:hover {
   transform: scale(1.1);
@@ -429,6 +423,10 @@ nav {
   }
 }
 
+/********************************************************************************/
+/*                            SKILLS CONTAINER                                  */
+/********************************************************************************/
+
 .skills-container {
   height: 110vh;
   background-image: url("../images/space.jpg");
@@ -479,8 +477,12 @@ nav {
   text-align: center;
 
   margin-top: 5rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
+
+/********************************************************************************/
+/*                            PROJECT CONTAINER                                 */
+/********************************************************************************/
 
 .projects-container {
   height: 100vh;
@@ -488,6 +490,35 @@ nav {
 
   display: flex;
   flex-direction: column;
+}
+
+.project-buttons {
+  width: 100%;
+  height: 10rem;
+  margin-bottom: 4rem;
+
+  text-align: center;
+
+  button {
+    font-family: $defaultFont;
+    font-size: 1.3rem;
+    font-weight: 600;
+    white-space: nowrap;
+    width: 13rem;
+
+    border-radius: 1rem;
+
+    margin: 0 2rem;
+    padding: 3rem;
+    background: rgba(238, 60, 60, 0.808);
+    color: white;
+    
+    text-align: center;
+  }
+
+  button:hover {
+    cursor: pointer;
+  }
 }
 
 .project-one-container {
@@ -616,11 +647,18 @@ nav {
   text-decoration: underline;
 }
 
+/********************************************************************************/
+/*                            RESUME CONTAINER                                  */
+/********************************************************************************/
 
 .resume-container {
   height: 110vh;
   background: rgb(71, 133, 71);
 }
+
+/********************************************************************************/
+/*                            CONTACT CONTAINER                                 */
+/********************************************************************************/
 
 .contact-container {
   height: 100vh;
@@ -686,7 +724,6 @@ nav {
   color: white;
 }
 
-
 .contact-icons {
   display: flex;
   flex-direction: row;
@@ -713,9 +750,6 @@ nav {
 .github-icon {
   width: 2rem;
 }
-
-
-
 
 .contact-img {
   width: 20rem;
@@ -847,5 +881,3 @@ form {
 
   overflow: hidden;
 }
-
-
