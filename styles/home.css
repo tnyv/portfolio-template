@@ -81,8 +81,8 @@ html {
           align-items: center;
   /* animation: load 0.5s linear 0.5s 1 forwards, changez 1s linear 0.5s 1 forwards; */
   /* animation: load 1s linear 1.5s 1 forwards, changez 1s linear 2s 1 forwards; */
-  -webkit-animation: load 1s linear 1.5s 1 forwards, changez 1s linear 2s 1 forwards;
-          animation: load 1s linear 1.5s 1 forwards, changez 1s linear 2s 1 forwards;
+  -webkit-animation: load 0.5s linear 0.5s 1 forwards, changez 1s linear 0.5s 1 forwards;
+          animation: load 0.5s linear 0.5s 1 forwards, changez 1s linear 0.5s 1 forwards;
 }
 
 /***********************/
@@ -156,7 +156,7 @@ nav {
       -ms-flex-direction: column;
           flex-direction: column;
   position: relative;
-  height: 110vh;
+  height: 100vh;
   margin: 0;
   background: #1a1a1a;
   overflow: hidden;
@@ -456,7 +456,7 @@ nav {
 
 .homepage-footer {
   position: absolute;
-  bottom: 8rem;
+  bottom: 5rem;
   width: 100%;
   background: transparent;
   margin-top: 4rem;
@@ -491,18 +491,6 @@ nav {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-}
-
-.projects-container {
-  height: 290vh;
-  background: #4083a1;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
 }
 
 .project-header {
@@ -547,33 +535,21 @@ nav {
   margin-bottom: 2rem;
 }
 
+.projects-container {
+  height: 100vh;
+  background: #4083a1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .project-one-container {
   width: 100%;
-  height: 85vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
-.project-two-container {
-  width: 100%;
-  height: 85vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
-.project-three-container {
-  width: 100%;
-  height: 85vh;
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -686,10 +662,6 @@ nav {
 
 .p1-visit-git a:hover {
   text-decoration: underline;
-}
-
-#pizzeria-header {
-  font-size: 4.8rem;
 }
 
 .resume-container {
