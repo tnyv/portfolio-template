@@ -386,14 +386,6 @@ $midRightAnimateWidth: 40%;
     background-size: cover;
   }
 
-  .projects-container {
-    height: 340vh;
-    background: rgb(64, 131, 161);
-
-    display: flex;
-    flex-direction: column;
-  }
-
   .project-header {
     width: 90%;
     margin: 4rem auto 1.5rem;
@@ -440,30 +432,18 @@ $midRightAnimateWidth: 40%;
     margin-bottom: 2rem;
   }
 
+  .projects-container {
+    height: 100vh;
+    background: rgb(64, 131, 161);
+
+    display: flex;
+    flex-direction: column;
+  }
+
   .project-one-container {
     width: 100%;
     height: 100vh;
 
-    margin-bottom: 5rem;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .project-two-container {
-    width: 100%;
-    height: 100vh;
-
-    margin-top: 5rem;
-    margin-bottom: 5rem;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .project-three-container {
-    width: 100%;
-    height: 100vh;
-
-    margin-top: 5rem;
     margin-bottom: 5rem;
     display: flex;
     flex-direction: column;
@@ -591,10 +571,6 @@ $midRightAnimateWidth: 40%;
   .btn-p1-git {
     height: 7rem;
     float: right;
-  }
-
-  #pizzeria-header {
-    font-size: 4.8rem;
   }
 
   .resume-container {

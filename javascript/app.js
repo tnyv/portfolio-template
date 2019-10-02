@@ -93,15 +93,33 @@ window.addEventListener('scroll', function()  {
 
 /***************************************************************************************/
 // Setting up HOME bar to appear when below homepage, and disappear when at homepage. 
+var navState = false;
+
 window.onscroll = function () { scrollFunction() };
 
 function scrollFunction() {
 	if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
-		document.querySelector('.home-bar').style.top = "0";
+		navState = true;
 	} else {
+		navState = false;
+	}
+}
+
+function adjustNavBar(navState) {
+	if (navState == true) {
+		document.querySelector('.home-bar').style.top = "0";
+	}
+	else {
 		document.querySelector('.home-bar').style.top = "-10vw";
 	}
 }
+
+// Function is constantly running. Use this until a better solutions comes along!
+// This process could destroy CPU cycles
+setInterval(function () {
+	adjustNavBar(navState);
+	// console.log("adjustNavBar active");
+}, 500);
 
 // END
 /************************************************************************************** */
@@ -222,8 +240,8 @@ function adjustHomepagePics(screen480) {
 				mainHeader.innerHTML = "PROJECTS";
 			}
 		})
-		
-		
+
+
 		rightPicture.addEventListener('touchstart', function () {
 			if (imgIndex === 1) {
 				leftPicture.style.backgroundImage = 'url(images/projects1phone.jpg)';
@@ -305,8 +323,8 @@ function adjustHomepagePics(screen480) {
 				resetEnlargeMain();
 			}
 		};
-		
-		
+
+
 		rightPicture.onclick = function () {
 			if (imgIndex === 1) {
 				leftPicture.style.backgroundImage = 'url(images/projects1.jpg)';
@@ -430,17 +448,17 @@ var menu = document.querySelector(".phone-nav");
 var menuVisible = false;
 
 menuIcon.addEventListener('touchstart', function () {
-	if(menuVisible == false) {
+	if (menuVisible == false) {
 		menu.style.visibility = "visible";
 		menuVisible = true;
 	}
-	else if(menuVisible == true) {
+	else if (menuVisible == true) {
 		menu.style.visibility = "hidden";
 		menuVisible = false;
 	}
 
 
-	
+
 })
 
 

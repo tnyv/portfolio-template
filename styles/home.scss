@@ -475,7 +475,7 @@ nav {
   font-weight: 600;
   letter-spacing: 0.5rem;
 
-  color: white;
+  color: rgb(0, 0, 0);
   text-align: center;
 
   margin-top: 5rem;
@@ -484,7 +484,7 @@ nav {
 
 .projects-container {
   height: 100vh;
-  background: rgb(64, 131, 161);
+  background: rgb(255, 255, 255);
 
   display: flex;
   flex-direction: column;
@@ -534,7 +534,7 @@ nav {
   text-align: center;
 
   -webkit-text-stroke-width: 0.25rem;
-  -webkit-text-stroke-color: rgb(255, 255, 255);
+  -webkit-text-stroke-color: rgb(0, 0, 0);
 
   white-space: nowrap;
 }
@@ -554,7 +554,7 @@ nav {
 
   line-height: 2rem;
 
-  color: $readableWhite;
+  color: rgb(255, 255, 255);
   text-align: left;
 
   p {
@@ -595,8 +595,8 @@ nav {
     text-decoration: none;
     line-height: 2rem;
 
-    color: black;
-    background: rgba(255, 255, 255, 0.671);
+    color: rgb(255, 255, 255);
+    background: $fadedBlack;
 
     text-align: center;
     width: 20rem;
