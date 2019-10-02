@@ -151,7 +151,7 @@ typeWriter();
 
 
 /***************************************************************************************/
-// Setting up homepage pictures to alternate on click
+// Setting up homepage pictures to alternate on click AND media queries for nav clicks
 var imgIndex = 1;
 var leftPicture = document.querySelector('.block-left');
 var leftPictureFrame = document.querySelector('.homepage-block-left');
@@ -370,14 +370,47 @@ screen480.addListener(adjustHomepagePics); // Attach listener function on state 
 
 /***************************************************************************************/
 // Setting up button functions in project container
+var currentBtn = 1;
 
+var btn1 = document.querySelector('.btn-one');
+var btn2 = document.querySelector('.btn-two');
+var btn3 = document.querySelector('.btn-three');
 
+btn1.onclick = function () {
+	if (currentBtn == 2 || currentBtn == 3) {
+		btn1.style.background = "rgba(238, 60, 60, 0.808)";
+		btn1.style.color = "white";
+		btn2.style.background = "white";
+		btn2.style.color = "black";
+		btn3.style.background = "white";
+		btn3.style.color = "black";
+		currentBtn = 1;
+	}
+};
 
+btn2.onclick = function () {
+	if (currentBtn == 1 || currentBtn == 3) {
+		btn2.style.background = "rgba(238, 60, 60, 0.808)";
+		btn2.style.color = "white";
+		btn1.style.background = "white";
+		btn1.style.color = "black";
+		btn3.style.background = "white";
+		btn3.style.color = "black";
+		currentBtn = 2;
+	}
+};
 
-
-
-
-
+btn3.onclick = function () {
+	if (currentBtn == 1 || currentBtn == 2) {
+		btn3.style.background = "rgba(238, 60, 60, 0.808)";
+		btn3.style.color = "white";
+		btn1.style.background = "white";
+		btn1.style.color = "black";
+		btn2.style.background = "white";
+		btn2.style.color = "black";
+		currentBtn = 3;
+	}
+};
 
 
 

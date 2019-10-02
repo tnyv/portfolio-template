@@ -569,9 +569,16 @@ nav {
   border-radius: 1rem;
   margin: 0 2rem;
   padding: 3rem;
+  background: rgba(255, 255, 255, 0.808);
+  color: black;
+  text-align: center;
+  -webkit-transition: background 0.5s, color 0.5s;
+  transition: background 0.5s, color 0.5s;
+}
+
+.project-buttons .btn-one {
   background: rgba(238, 60, 60, 0.808);
   color: white;
-  text-align: center;
 }
 
 .project-buttons button:hover {
