@@ -497,7 +497,7 @@ $projectFrameHeight: 25rem;
 
 .project-one-container {
   display: block;
-  
+
   width: 100%;
   height: $projectFrameHeight;
 
@@ -505,6 +505,31 @@ $projectFrameHeight: 25rem;
   flex-direction: row;
 
   justify-content: center;
+
+  transition: transform 2s;
+
+  animation-name: float-in;
+  animation-play-state: running;
+  animation-fill-mode: forwards;
+  animation-duration: 2s;
+}
+
+@keyframes float-in {
+  from {
+    transform: translateX(150rem);
+  }
+  to {
+    transform: translateX(0rem);
+  }
+}
+
+@keyframes float-out {
+  from {
+    transform: translateX(0rem);
+  }
+  to {
+    transform: translateX(-150rem);
+  }
 }
 
 .project-buttons {
@@ -541,8 +566,6 @@ $projectFrameHeight: 25rem;
     cursor: pointer;
   }
 }
-
-
 
 .p1-image-frame {
   height: $projectFrameHeight;
@@ -593,7 +616,7 @@ $projectFrameHeight: 25rem;
 }
 
 .p1-summary {
-  position:relative;
+  position: relative;
 
   font-family: $defaultFont;
   font-size: 1.2rem;
@@ -608,7 +631,6 @@ $projectFrameHeight: 25rem;
   h1 {
     font-size: 2rem;
     color: black;
-    
   }
 
   h2 {
@@ -649,7 +671,7 @@ $projectFrameHeight: 25rem;
 
   .p1-visit-git a {
     display: inline-block;
-    
+
     padding: 0.25rem 0.5rem;
 
     font-family: $defaultFont;
@@ -672,8 +694,6 @@ $projectFrameHeight: 25rem;
     right: 0;
   }
 }
-
-
 
 .btn-p1-visit {
   float: left;
@@ -923,3 +943,5 @@ form {
 
   overflow: hidden;
 }
+
+

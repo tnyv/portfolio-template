@@ -570,6 +570,62 @@ nav {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-transition: -webkit-transform 2s;
+  transition: -webkit-transform 2s;
+  transition: transform 2s;
+  transition: transform 2s, -webkit-transform 2s;
+  -webkit-animation-name: float-in;
+          animation-name: float-in;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+@-webkit-keyframes float-in {
+  from {
+    -webkit-transform: translateX(150rem);
+            transform: translateX(150rem);
+  }
+  to {
+    -webkit-transform: translateX(0rem);
+            transform: translateX(0rem);
+  }
+}
+
+@keyframes float-in {
+  from {
+    -webkit-transform: translateX(150rem);
+            transform: translateX(150rem);
+  }
+  to {
+    -webkit-transform: translateX(0rem);
+            transform: translateX(0rem);
+  }
+}
+
+@-webkit-keyframes float-out {
+  from {
+    -webkit-transform: translateX(0rem);
+            transform: translateX(0rem);
+  }
+  to {
+    -webkit-transform: translateX(-150rem);
+            transform: translateX(-150rem);
+  }
+}
+
+@keyframes float-out {
+  from {
+    -webkit-transform: translateX(0rem);
+            transform: translateX(0rem);
+  }
+  to {
+    -webkit-transform: translateX(-150rem);
+            transform: translateX(-150rem);
+  }
 }
 
 .project-buttons {

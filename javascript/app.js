@@ -371,10 +371,13 @@ screen480.addListener(adjustHomepagePics); // Attach listener function on state 
 /***************************************************************************************/
 // Setting up button functions in project container
 var currentBtn = 1;
-
+var p1Container = document.querySelector('.project-one-container');
 var btn1 = document.querySelector('.btn-one');
 var btn2 = document.querySelector('.btn-two');
 var btn3 = document.querySelector('.btn-three');
+var cycled = true;
+
+
 
 btn1.onclick = function () {
 	if (currentBtn == 2 || currentBtn == 3) {
@@ -398,6 +401,27 @@ btn2.onclick = function () {
 		btn3.style.color = "black";
 		currentBtn = 2;
 	}
+
+	p1Container.style.WebkitAnimationName = "float-out";
+	p1Container.style.animation = 'none';
+	p1Container.offsetHeight; /* trigger reflow */
+	p1Container.style.animation = null;
+	p1Container.style.WebkitAnimationName = "float-out";
+
+	var cycleInterval = setInterval(function () {
+		p1Container.style.WebkitAnimationName = "float-in";
+		p1Container.style.animation = 'none';
+		p1Container.offsetHeight; /* trigger reflow */
+		p1Container.style.animation = null;
+		p1Container.style.WebkitAnimationName = "float-in";
+		console.log("interval going");
+		clearInterval(cycleInterval);
+	}, 1000);
+
+
+
+
+
 };
 
 btn3.onclick = function () {
@@ -413,6 +437,12 @@ btn3.onclick = function () {
 };
 
 
+function animateOutPro() {
+	p1Container.style.transform = "translateX(-150rem)";
+}
+function animateOutPro2() {
+	p1Container.style.transform = "translateX(0rem)";
+}
 
 
 
