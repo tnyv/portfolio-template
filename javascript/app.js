@@ -416,7 +416,7 @@ btn2.onclick = function () {
 		p1Container.style.WebkitAnimationName = "float-in";
 		console.log("interval going");
 		clearInterval(cycleInterval);
-	}, 1000);
+	}, 500);
 
 
 
