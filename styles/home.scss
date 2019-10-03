@@ -18,6 +18,7 @@ $midRightAnimateWidth: 40%;
   font-size: 100%;
   vertical-align: baseline;
   background: transparent;
+  box-sizing: border-box;
 }
 
 li {
@@ -483,20 +484,33 @@ nav {
 /********************************************************************************/
 /*                            PROJECT CONTAINER                                 */
 /********************************************************************************/
+$projectFrameHeight: 25rem;
 
 .projects-container {
   height: 100vh;
+  width: 100%;
   background: rgb(255, 255, 255);
 
   display: flex;
   flex-direction: column;
 }
 
+.project-one-container {
+  display: block;
+  
+  width: 100%;
+  height: $projectFrameHeight;
+
+  display: flex;
+  flex-direction: row;
+
+  justify-content: center;
+}
+
 .project-buttons {
   width: 100%;
   height: 10rem;
-  margin-bottom: 4rem;
-
+  margin-bottom: 2rem;
   text-align: center;
 
   button {
@@ -504,18 +518,18 @@ nav {
     font-size: 1.3rem;
     font-weight: 600;
     white-space: nowrap;
-    width: 13rem;
+
+    width: 12rem;
+    height: 7rem;
 
     border-radius: 1rem;
 
     margin: 0 2rem;
-    padding: 3rem;
+
     background: rgba(255, 255, 255, 0.808);
     color: rgb(0, 0, 0);
 
     text-align: center;
-
-    transition: background 0.5s, color 0.5s;
   }
 
   .btn-one {
@@ -529,17 +543,10 @@ nav {
 }
 
 
-.project-one-container {
-  width: 100%;
-  height: 100vh;
-
-  display: flex;
-  flex-direction: row;
-}
 
 .p1-image-frame {
-  height: 40rem;
-  width: 52%;
+  height: $projectFrameHeight;
+  width: 50rem;
 }
 
 .p1-image-block {
@@ -550,7 +557,7 @@ nav {
   margin: 0 auto;
 
   width: 40rem;
-  height: 25rem;
+  height: $projectFrameHeight;
 }
 
 .p1-image-block:hover {
@@ -580,25 +587,40 @@ nav {
 
 .p1-summary-frame {
   margin-right: 3rem;
-  height: 30rem;
-  width: 48%;
-
+  height: $projectFrameHeight;
+  width: 50rem;
   overflow: hidden;
 }
 
 .p1-summary {
+  position:relative;
+
   font-family: $defaultFont;
   font-size: 1.2rem;
-  width: 45rem;
+  width: 50rem;
+  height: $projectFrameHeight;
 
   line-height: 2rem;
 
   color: rgb(255, 255, 255);
   text-align: left;
 
+  h1 {
+    font-size: 2rem;
+    color: black;
+    
+  }
+
+  h2 {
+    color: $fadedBlack;
+    margin-bottom: 1rem;
+  }
+
   p {
-    background: $fadedBlack;
-    padding: 1rem;
+    border-top: 0.1rem solid $fadedBlack;
+    color: $fadedBlack;
+    font-size: 1.2rem;
+    padding-top: 1rem;
   }
 
   h3 {
@@ -620,12 +642,14 @@ nav {
   }
 
   .p1-visit-git {
-    text-align: left;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
   }
 
   .p1-visit-git a {
     display: inline-block;
-    margin-top: 4rem;
+    
     padding: 0.25rem 0.5rem;
 
     font-family: $defaultFont;
@@ -634,13 +658,22 @@ nav {
     text-decoration: none;
     line-height: 2rem;
 
-    color: rgb(255, 255, 255);
-    background: $fadedBlack;
+    color: rgb(0, 0, 0);
+
+    border: 0.15em solid rgba(238, 60, 60, 0.808);
 
     text-align: center;
     width: 20rem;
+
+    transition: background 0.5s, color 0.5s;
+  }
+
+  .btn-p1-git {
+    right: 0;
   }
 }
+
+
 
 .btn-p1-visit {
   float: left;
@@ -652,7 +685,8 @@ nav {
 }
 
 .p1-visit-git a:hover {
-  text-decoration: underline;
+  background: rgba(238, 60, 60, 0.808);
+  color: white;
 }
 
 /********************************************************************************/

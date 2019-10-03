@@ -9,6 +9,8 @@
   font-size: 100%;
   vertical-align: baseline;
   background: transparent;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 li {
@@ -543,6 +545,7 @@ nav {
 /********************************************************************************/
 .projects-container {
   height: 100vh;
+  width: 100%;
   background: white;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -553,10 +556,26 @@ nav {
           flex-direction: column;
 }
 
+.project-one-container {
+  display: block;
+  width: 100%;
+  height: 25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 .project-buttons {
   width: 100%;
   height: 10rem;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
   text-align: center;
 }
 
@@ -565,15 +584,13 @@ nav {
   font-size: 1.3rem;
   font-weight: 600;
   white-space: nowrap;
-  width: 13rem;
+  width: 12rem;
+  height: 7rem;
   border-radius: 1rem;
   margin: 0 2rem;
-  padding: 3rem;
   background: rgba(255, 255, 255, 0.808);
   color: black;
   text-align: center;
-  -webkit-transition: background 0.5s, color 0.5s;
-  transition: background 0.5s, color 0.5s;
 }
 
 .project-buttons .btn-one {
@@ -585,21 +602,9 @@ nav {
   cursor: pointer;
 }
 
-.project-one-container {
-  width: 100%;
-  height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-}
-
 .p1-image-frame {
-  height: 40rem;
-  width: 52%;
+  height: 25rem;
+  width: 50rem;
 }
 
 .p1-image-block {
@@ -634,23 +639,37 @@ nav {
 
 .p1-summary-frame {
   margin-right: 3rem;
-  height: 30rem;
-  width: 48%;
+  height: 25rem;
+  width: 50rem;
   overflow: hidden;
 }
 
 .p1-summary {
+  position: relative;
   font-family: Helvetica;
   font-size: 1.2rem;
-  width: 45rem;
+  width: 50rem;
+  height: 25rem;
   line-height: 2rem;
   color: white;
   text-align: left;
 }
 
+.p1-summary h1 {
+  font-size: 2rem;
+  color: black;
+}
+
+.p1-summary h2 {
+  color: rgba(26, 26, 26, 0.671);
+  margin-bottom: 1rem;
+}
+
 .p1-summary p {
-  background: rgba(26, 26, 26, 0.671);
-  padding: 1rem;
+  border-top: 0.1rem solid rgba(26, 26, 26, 0.671);
+  color: rgba(26, 26, 26, 0.671);
+  font-size: 1.2rem;
+  padding-top: 1rem;
 }
 
 .p1-summary h3 {
@@ -671,22 +690,29 @@ nav {
 }
 
 .p1-summary .p1-visit-git {
-  text-align: left;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 .p1-summary .p1-visit-git a {
   display: inline-block;
-  margin-top: 4rem;
   padding: 0.25rem 0.5rem;
   font-family: Helvetica;
   font-size: 1.2rem;
   font-weight: 600;
   text-decoration: none;
   line-height: 2rem;
-  color: white;
-  background: rgba(26, 26, 26, 0.671);
+  color: black;
+  border: 0.15em solid rgba(238, 60, 60, 0.808);
   text-align: center;
   width: 20rem;
+  -webkit-transition: background 0.5s, color 0.5s;
+  transition: background 0.5s, color 0.5s;
+}
+
+.p1-summary .btn-p1-git {
+  right: 0;
 }
 
 .btn-p1-visit {
@@ -699,7 +725,8 @@ nav {
 }
 
 .p1-visit-git a:hover {
-  text-decoration: underline;
+  background: rgba(238, 60, 60, 0.808);
+  color: white;
 }
 
 /********************************************************************************/
