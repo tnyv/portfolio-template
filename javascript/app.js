@@ -98,7 +98,7 @@ var navState = false;
 window.onscroll = function () { scrollFunction() };
 
 function scrollFunction() {
-	if (document.body.scrollTop > 600 || document.documentElement.scrollTop > 600) {
+	if (document.body.scrollTop > 900 || document.documentElement.scrollTop > 900) {
 		navState = true;
 	} else {
 		navState = false;
@@ -445,8 +445,8 @@ function updateSummaryP1() {
 	lang1.innerHTML = "PHP";
 	lang2.innerHTML = "SQL";
 	lang3.innerHTML = "HTML";
-	lang4.style.opacity = "1";
-	lang5.style.opacity = "1";
+	lang4.style.visibility = "visible";
+	lang5.style.visibility = "visible";
 	lang4.innerHTML = "SASS";
 	lang5.innerHTML = "JavaScript";
 	paragraph.innerHTML = "This was one of my first web development projects created for a" +
@@ -462,8 +462,8 @@ function updateSummaryP2() {
 	lang1.innerHTML = "React JS";
 	lang2.innerHTML = "PHP";
 	lang3.innerHTML = "SQL";
-	lang4.style.opacity = "0";
-	lang5.style.opacity = "0";
+	lang4.style.visibility = "hidden";
+	lang5.style.visibility = "hidden";
 	paragraph.innerHTML = "This website is an online POS platform for Pineapple Pizzeria restaurant." +
 	" I programmed this website using the ReactJS framework. Utilizing ReactJS' components was a" +
 	" gamechanger for my development skills! It is currently my favorite framework to code with.";
@@ -476,8 +476,8 @@ function updateSummaryP3() {
 	lang1.innerHTML = "JavaScript";
 	lang2.innerHTML = "HTML";
 	lang3.innerHTML = "SASS";
-	lang4.style.opacity = "0";
-	lang5.style.opacity = "0";
+	lang4.style.visibility = "hidden";
+	lang5.style.visibility = "hidden";
 	paragraph.innerHTML = "I don't mean to toot my own horn, but I am proud of my portfolio creation!" +
 	" I programmed this website with nothing but HTML, SASS, and JavaScript (with a hint of PHP for" +
 	" webforms ... and some JQuery scroll animations). Developing this website taught me a whole lot about the importance of responsive design" +
@@ -487,6 +487,20 @@ function updateSummaryP3() {
 
 
 
+function resetLangAnimate() {
+	lang1.style.opacity = "0";
+	lang2.style.opacity = "0";
+	lang3.style.opacity = "0";
+	lang4.style.opacity = "0";
+	lang5.style.opacity = "0";
+
+	resetP1Animate(lang1, "lang-animate");
+	resetP1Animate(lang2, "lang-animate");
+	resetP1Animate(lang3, "lang-animate");
+	resetP1Animate(lang4, "lang-animate");
+	resetP1Animate(lang5, "lang-animate");
+}
+
 
 btn1.onclick = function () {
 	btn1ChangeColors();
@@ -495,6 +509,7 @@ btn1.onclick = function () {
 
 	var cycleInterval = setInterval(function () {
 		updateSummaryP1();
+		resetLangAnimate();
 		resetP1Animate(p1Container, "float-in");
 		console.log("interval going");
 		clearInterval(cycleInterval);
@@ -508,6 +523,7 @@ btn2.onclick = function () {
 
 	var cycleInterval = setInterval(function () {
 		updateSummaryP2();
+		resetLangAnimate();
 		resetP1Animate(p1Container, "float-in");
 		console.log("interval going");
 		clearInterval(cycleInterval);
@@ -522,6 +538,7 @@ btn3.onclick = function () {
 
 	var cycleInterval = setInterval(function () {
 		updateSummaryP3();
+		resetLangAnimate();
 		resetP1Animate(p1Container, "float-in");
 		console.log("interval going");
 		clearInterval(cycleInterval);
