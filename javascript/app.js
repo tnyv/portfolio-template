@@ -200,7 +200,7 @@ function resetFromRight() {
 
 // HOMEPAGE MEDIA QUERIES
 function adjustHomepagePics(screen480) {
-	if (screen480.matches) { // If media query matches
+	if (screen480.matches) { // For all phone screen sizes
 		if (imgIndex === 1) {
 			leftPicture.style.backgroundImage = 'url(images/contact3phone.jpg)';
 			mainPicture.setAttribute('src', 'images/projects1phone.jpg');
@@ -241,7 +241,6 @@ function adjustHomepagePics(screen480) {
 			}
 		})
 
-
 		rightPicture.addEventListener('touchstart', function () {
 			if (imgIndex === 1) {
 				leftPicture.style.backgroundImage = 'url(images/projects1phone.jpg)';
@@ -278,7 +277,8 @@ function adjustHomepagePics(screen480) {
 			}
 		})
 	}
-	else {
+
+	else { // For all other non-phone screen sizes
 		mainPicture.addEventListener('click', function () {
 			if (imgIndex === 1) {
 				smoothScroll('.projects-container', scrollSpeed);
@@ -324,7 +324,6 @@ function adjustHomepagePics(screen480) {
 			}
 		};
 
-
 		rightPicture.onclick = function () {
 			if (imgIndex === 1) {
 				leftPicture.style.backgroundImage = 'url(images/projects1.jpg)';
@@ -369,17 +368,42 @@ screen480.addListener(adjustHomepagePics); // Attach listener function on state 
 
 
 /***************************************************************************************/
-// Setting up button functions in project container
+// Setting up button functions in project container. These functions will animate and update
+// project information upon button clicks.
 var currentBtn = 1;
 var p1Container = document.querySelector('.project-one-container');
 var btn1 = document.querySelector('.btn-one');
 var btn2 = document.querySelector('.btn-two');
 var btn3 = document.querySelector('.btn-three');
-var cycled = true;
 
+var title = document.querySelector('.p1-title');
+var subTitle = document.querySelector('.p1-sub-title');
+var lang1 = document.querySelector('.p1-lang1');
+var lang2 = document.querySelector('.p1-lang2');
+var lang3 = document.querySelector('.p1-lang3');
+var lang4 = document.querySelector('.p1-lang4');
+var lang5 = document.querySelector('.p1-lang5');
+var paragraph = document.querySelector('.p1-paragraph');
+var visitSite = document.querySelector('.btn-p1-visit');
+var viewGit = document.querySelector('.btn-p1-git');
+var projectImg = document.querySelector('.p1-picture');
 
+function resetP1Animate(qSelect, animateName) {
+	qSelect.style.WebkitAnimationName = animateName;
+	qSelect.style.animation = 'none';
+	qSelect.offsetHeight; /* trigger reflow */
+	qSelect.style.animation = null;
+	qSelect.style.WebkitAnimationName = animateName;
+}
 
-btn1.onclick = function () {
+function animateOutPro() {
+	p1Container.style.transform = "translateX(-150rem)";
+}
+function animateOutPro2() {
+	p1Container.style.transform = "translateX(0rem)";
+}
+
+function btn1ChangeColors() {
 	if (currentBtn == 2 || currentBtn == 3) {
 		btn1.style.background = "rgba(238, 60, 60, 0.808)";
 		btn1.style.color = "white";
@@ -389,9 +413,9 @@ btn1.onclick = function () {
 		btn3.style.color = "black";
 		currentBtn = 1;
 	}
-};
+}
 
-btn2.onclick = function () {
+function btn2ChangeColors() {
 	if (currentBtn == 1 || currentBtn == 3) {
 		btn2.style.background = "rgba(238, 60, 60, 0.808)";
 		btn2.style.color = "white";
@@ -401,30 +425,9 @@ btn2.onclick = function () {
 		btn3.style.color = "black";
 		currentBtn = 2;
 	}
+}
 
-	p1Container.style.WebkitAnimationName = "float-out";
-	p1Container.style.animation = 'none';
-	p1Container.offsetHeight; /* trigger reflow */
-	p1Container.style.animation = null;
-	p1Container.style.WebkitAnimationName = "float-out";
-
-	var cycleInterval = setInterval(function () {
-		p1Container.style.WebkitAnimationName = "float-in";
-		p1Container.style.animation = 'none';
-		p1Container.offsetHeight; /* trigger reflow */
-		p1Container.style.animation = null;
-		p1Container.style.WebkitAnimationName = "float-in";
-		console.log("interval going");
-		clearInterval(cycleInterval);
-	}, 500);
-
-
-
-
-
-};
-
-btn3.onclick = function () {
+function btn3ChangeColors() {
 	if (currentBtn == 1 || currentBtn == 2) {
 		btn3.style.background = "rgba(238, 60, 60, 0.808)";
 		btn3.style.color = "white";
@@ -434,15 +437,98 @@ btn3.onclick = function () {
 		btn2.style.color = "black";
 		currentBtn = 3;
 	}
+}
+
+function updateSummaryP1() {
+	title.innerHTML = "AUTOMIZE";
+	subTitle.innerHTML = "E-COMMERCE";
+	lang1.innerHTML = "PHP";
+	lang2.innerHTML = "SQL";
+	lang3.innerHTML = "HTML";
+	lang4.style.opacity = "1";
+	lang5.style.opacity = "1";
+	lang4.innerHTML = "SASS";
+	lang5.innerHTML = "JavaScript";
+	paragraph.innerHTML = "This was one of my first web development projects created for a" +
+	" web design/implementation college course. Orginally, I programmed this website using only HTML," +
+	"  CSS, and JavaScript. Later on I added PHP and SQL to utilize databases for storing vehicle and " +
+	"user account information. SASS was later impelemented for cross-browser consistency.";
+	projectImg.setAttribute('src', 'images/automize.jpg');
+}
+
+function updateSummaryP2() {
+	title.innerHTML = "PINEAPPLE PIZZERIA";
+	subTitle.innerHTML = "POS SYSTEM";
+	lang1.innerHTML = "React JS";
+	lang2.innerHTML = "PHP";
+	lang3.innerHTML = "SQL";
+	lang4.style.opacity = "0";
+	lang5.style.opacity = "0";
+	paragraph.innerHTML = "This website is an online POS platform for Pineapple Pizzeria restaurant." +
+	" I programmed this website using the ReactJS framework. Utilizing ReactJS' components was a" +
+	" gamechanger for my development skills! It is currently my favorite framework to code with.";
+	projectImg.setAttribute('src', 'images/pizza.jpg');
+}
+
+function updateSummaryP3() {
+	title.innerHTML = "TONYVU.IO";
+	subTitle.innerHTML = "ONLINE PORTFOLIO";
+	lang1.innerHTML = "JavaScript";
+	lang2.innerHTML = "HTML";
+	lang3.innerHTML = "SASS";
+	lang4.style.opacity = "0";
+	lang5.style.opacity = "0";
+	paragraph.innerHTML = "I don't mean to toot my own horn, but I am proud of my portfolio creation!" +
+	" I programmed this website with nothing but HTML, SASS, and JavaScript (with a hint of PHP for" +
+	" webforms ... and some JQuery scroll animations). Developing this website taught me a whole lot about the importance of responsive design" +
+	", animations, and utilizing Git.";
+	projectImg.setAttribute('src', 'images/tvportfolio.jpg');
+}
+
+
+
+
+btn1.onclick = function () {
+	btn1ChangeColors();
+
+	resetP1Animate(p1Container, "float-out");
+
+	var cycleInterval = setInterval(function () {
+		updateSummaryP1();
+		resetP1Animate(p1Container, "float-in");
+		console.log("interval going");
+		clearInterval(cycleInterval);
+	}, 200);
+};
+
+btn2.onclick = function () {
+	btn2ChangeColors();
+
+	resetP1Animate(p1Container, "float-out");
+
+	var cycleInterval = setInterval(function () {
+		updateSummaryP2();
+		resetP1Animate(p1Container, "float-in");
+		console.log("interval going");
+		clearInterval(cycleInterval);
+	}, 200);
+
+};
+
+btn3.onclick = function () {
+	btn3ChangeColors();
+
+	resetP1Animate(p1Container, "float-out");
+
+	var cycleInterval = setInterval(function () {
+		updateSummaryP3();
+		resetP1Animate(p1Container, "float-in");
+		console.log("interval going");
+		clearInterval(cycleInterval);
+	}, 200);
 };
 
 
-function animateOutPro() {
-	p1Container.style.transform = "translateX(-150rem)";
-}
-function animateOutPro2() {
-	p1Container.style.transform = "translateX(0rem)";
-}
 
 
 
@@ -483,41 +569,6 @@ function smoothScroll(target, duration) {
 /************************************************************************************** */
 
 
-
-
-
-
-
-/************************************************************************************** */
-// Welcome sign animation on scroll
-
-var welcome = document.querySelector('.welcome');
-
-
-function phoneWelcome(screen480) {
-	if (screen480.matches) { // If media query matches
-		welcome.style.fontSize = "2rem";
-
-		window.addEventListener('scroll', function () {
-			welcome.style.fontSize = Math.max(1 + 0.0035 * window.scrollY, 1) + "rem";
-		});
-
-	}
-	else {
-		window.addEventListener('scroll', function () {
-			welcome.style.fontSize = Math.max(1 + 0.012 * window.scrollY, 1) + "rem";
-		});
-	}
-}
-
-var screen480 = window.matchMedia("(min-device-width: 0px)" && "(max-device-width: 480px)");
-phoneWelcome(screen480);// Call listener function at run time
-screen480.addListener(phoneWelcome); // Attach listener function on state changes
-
-// END
-/************************************************************************************** */
-
-
 /************************************************************************************** */
 // Menu icon functions
 
@@ -544,3 +595,10 @@ menuIcon.addEventListener('touchstart', function () {
 // END
 /************************************************************************************** */
 
+
+/************************************************************************************** */
+// 
+
+
+// END
+/************************************************************************************** */

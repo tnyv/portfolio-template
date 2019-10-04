@@ -430,11 +430,7 @@ nav {
 
 .skills-container {
   height: 110vh;
-  background-image: url("../images/space.jpg");
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
+  
 }
 
 .project-header {
@@ -932,16 +928,5 @@ form {
   cursor: pointer;
 }
 
-.welcome {
-  font-family: $defaultFont;
-  font-size: 5rem;
-  font-weight: 900;
-  color: white;
-  text-align: center;
-  box-sizing: border-box;
-  line-height: 100vh;
-
-  overflow: hidden;
-}
 
 

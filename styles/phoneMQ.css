@@ -353,10 +353,6 @@
   }
   .skills-container {
     height: 110vh;
-    background-image: url("../images/space.jpg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
   }
   .project-header {
     width: 90%;
@@ -684,17 +680,6 @@
     border-radius: 1rem;
     -webkit-transition-duration: 0.8s;
             transition-duration: 0.8s;
-  }
-  .welcome {
-    font-family: Helvetica;
-    font-size: 5rem;
-    font-weight: 900;
-    color: white;
-    text-align: center;
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-    line-height: 100vh;
-    overflow: hidden;
   }
 }
 /*# sourceMappingURL=phoneMQ.css.map */
