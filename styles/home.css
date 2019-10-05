@@ -490,7 +490,59 @@ nav {
 /*                            SKILLS CONTAINER                                  */
 /********************************************************************************/
 .skills-container {
-  height: 110vh;
+  height: 90rem;
+  width: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.s-frame-one {
+  position: absolute;
+  left: 0;
+  top: 30rem;
+  height: 40rem;
+  width: 30rem;
+  background-image: url("../images/coast.jpg");
+  background-attachment: fixed;
+  background-position: left;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.s-frame-two {
+  position: absolute;
+  top: 40rem;
+  height: 40rem;
+  width: 30rem;
+  background-image: url("../images/bridge.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.s-frame-three {
+  position: absolute;
+  right: 0;
+  top: 10rem;
+  height: 40rem;
+  width: 30rem;
+  float: right;
+  background-image: url("../images/fall.jpg");
+  background-attachment: fixed;
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .project-header {
@@ -793,7 +845,7 @@ nav {
 /********************************************************************************/
 .contact-container {
   height: 100vh;
-  background: #857547;
+  background: #5769cf;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -877,15 +929,15 @@ nav {
 }
 
 .email-icon {
-  width: 2rem;
+  width: 3rem;
 }
 
 .linkedin-icon {
-  width: 2rem;
+  width: 3rem;
 }
 
 .github-icon {
-  width: 2rem;
+  width: 3rem;
 }
 
 .contact-img {

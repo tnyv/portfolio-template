@@ -449,8 +449,8 @@ function updateSummaryP1() {
 	lang5.style.visibility = "visible";
 	lang4.innerHTML = "SASS";
 	lang5.innerHTML = "JavaScript";
-	paragraph.innerHTML = "This was one of my first web development projects created for a" +
-	" web design/implementation college course. Orginally, I programmed this website using only HTML," +
+	paragraph.innerHTML = "This was one of my first web development projects created for an" +
+	" internet application development college course. Orginally, I programmed this website using only HTML," +
 	"  CSS, and JavaScript. Later on I added PHP and SQL to utilize databases for storing vehicle and " +
 	"user account information. SASS was later impelemented for cross-browser consistency.";
 	projectImg.setAttribute('src', 'images/automize.jpg');
