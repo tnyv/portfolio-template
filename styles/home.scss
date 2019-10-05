@@ -425,10 +425,10 @@ nav {
 }
 
 /********************************************************************************/
-/*                            SKILLS CONTAINER                                  */
+/*                            ABOUT CONTAINER                                  */
 /********************************************************************************/
 
-.skills-container {
+.about-container {
   height: 90rem;
   width: 100%;
   position: relative;
@@ -440,14 +440,52 @@ nav {
   justify-content: center;
 }
 
+.about-header {
+  margin: 10rem 0 0;
+
+  text-align: left;
+  width: 60rem;
+  height: 50rem;
+  
+
+  font-family: 'Space Mono', monospace;
+  font-size: 5rem;
+  font-weight: 400;
+}
+
+.about-me-container {
+  position: absolute;
+  right: 6rem;
+  bottom: 7rem;
+
+
+
+  width: 35rem;
+  text-align: left;
+}
+
+.about-me-header {
+  font-family: 'Space Mono', monospace;
+  font-size: 1rem;
+}
+
+.about-me {
+  font-family: 'Space Mono', monospace;
+  font-size: 1rem;
+}
+
+
+
+
+
+
 .s-frame-one {
   position: absolute;
   left: 0;
-  top: 30rem;
+  top: 25rem;
 
   height: 40rem;
   width: 30rem;
-
   
   background-image: url("../images/coast.jpg");
   background-attachment: fixed;
@@ -458,14 +496,10 @@ nav {
 
 .s-frame-two {
   position: absolute;
-  top: 40rem;
+  top: 45rem;
 
   height: 40rem;
   width: 30rem;
-
-
-
-
 
   background-image: url("../images/bridge.jpg");
   background-attachment: fixed;
@@ -482,9 +516,6 @@ nav {
   height: 40rem;
   width: 30rem;
   float: right;
-
-
-
 
   background-image: url("../images/fall.jpg");
   background-attachment: fixed;
@@ -782,7 +813,7 @@ $projectFrameHeight: 25rem;
 
 .contact-container {
   height: 100vh;
-  background: rgb(87, 105, 207);
+  background: rgb(136, 136, 136);
 
   display: flex;
   flex-direction: column;

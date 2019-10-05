@@ -487,9 +487,9 @@ nav {
 }
 
 /********************************************************************************/
-/*                            SKILLS CONTAINER                                  */
+/*                            ABOUT CONTAINER                                  */
 /********************************************************************************/
-.skills-container {
+.about-container {
   height: 90rem;
   width: 100%;
   position: relative;
@@ -506,10 +506,38 @@ nav {
           justify-content: center;
 }
 
+.about-header {
+  margin: 10rem 0 0;
+  text-align: left;
+  width: 60rem;
+  height: 50rem;
+  font-family: 'Space Mono', monospace;
+  font-size: 5rem;
+  font-weight: 400;
+}
+
+.about-me-container {
+  position: absolute;
+  right: 6rem;
+  bottom: 7rem;
+  width: 35rem;
+  text-align: left;
+}
+
+.about-me-header {
+  font-family: 'Space Mono', monospace;
+  font-size: 1rem;
+}
+
+.about-me {
+  font-family: 'Space Mono', monospace;
+  font-size: 1rem;
+}
+
 .s-frame-one {
   position: absolute;
   left: 0;
-  top: 30rem;
+  top: 25rem;
   height: 40rem;
   width: 30rem;
   background-image: url("../images/coast.jpg");
@@ -521,7 +549,7 @@ nav {
 
 .s-frame-two {
   position: absolute;
-  top: 40rem;
+  top: 45rem;
   height: 40rem;
   width: 30rem;
   background-image: url("../images/bridge.jpg");
@@ -845,7 +873,7 @@ nav {
 /********************************************************************************/
 .contact-container {
   height: 100vh;
-  background: #5769cf;
+  background: #888888;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

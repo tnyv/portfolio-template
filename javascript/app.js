@@ -511,7 +511,6 @@ btn1.onclick = function () {
 		updateSummaryP1();
 		resetLangAnimate();
 		resetP1Animate(p1Container, "float-in");
-		console.log("interval going");
 		clearInterval(cycleInterval);
 	}, 200);
 };
@@ -525,7 +524,6 @@ btn2.onclick = function () {
 		updateSummaryP2();
 		resetLangAnimate();
 		resetP1Animate(p1Container, "float-in");
-		console.log("interval going");
 		clearInterval(cycleInterval);
 	}, 200);
 
@@ -540,7 +538,6 @@ btn3.onclick = function () {
 		updateSummaryP3();
 		resetLangAnimate();
 		resetP1Animate(p1Container, "float-in");
-		console.log("interval going");
 		clearInterval(cycleInterval);
 	}, 200);
 };
