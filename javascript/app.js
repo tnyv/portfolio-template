@@ -91,39 +91,6 @@ window.addEventListener('scroll', function()  {
 // END
 ************************************************************************************** */
 
-/***************************************************************************************/
-// Setting up HOME bar to appear when below homepage, and disappear when at homepage. 
-var navState = false;
-
-window.onscroll = function () { scrollFunction() };
-
-function scrollFunction() {
-	if (document.body.scrollTop > 900 || document.documentElement.scrollTop > 900) {
-		navState = true;
-	} else {
-		navState = false;
-	}
-}
-
-function adjustNavBar(navState) {
-	if (navState == true) {
-		document.querySelector('.home-bar').style.top = "0";
-	}
-	else {
-		document.querySelector('.home-bar').style.top = "-10vw";
-	}
-}
-
-// Function is constantly running. Use this until a better solutions comes along!
-// This process could destroy CPU cycles
-setInterval(function () {
-	adjustNavBar(navState);
-	// console.log("adjustNavBar active");
-}, 500);
-
-// END
-/************************************************************************************** */
-
 
 /***************************************************************************************/
 // Setting up type-writer animation for loader
@@ -609,10 +576,103 @@ menuIcon.addEventListener('touchstart', function () {
 // END
 /************************************************************************************** */
 
+/***************************************************************************************/
+// Setting up HOME bar to appear when below homepage, and disappear when at homepage. 
+var navState = false;
+
+function navStateScrollStatus() {
+	if (document.body.scrollTop > 900 || document.documentElement.scrollTop > 900) {
+		navState = true;
+	} else {
+		navState = false;
+	}
+}
+
+// Function is constantly running. Use this until a better solutions comes along!
+// This process could destroy CPU cycles
+setInterval(function () {
+	adjustNavBar(navState);
+	// console.log("adjustNavBar active");
+}, 500);
+
+function adjustNavBar(navState) {
+	if (navState == true) {
+		document.querySelector('.home-bar').style.top = "0";
+	}
+	else {
+		document.querySelector('.home-bar').style.top = "-10vw";
+	}
+}
+// END
+/************************************************************************************** */
+
+/***************************************************************************************/
+// Setting up about header and about me to scroll in and out based on page scroll position. 
+var aboutHeader = document.querySelector('.about-header');
+var aboutMeContainer = document.querySelector('.about-me-container');
+var sFrameOne = document.querySelector('.s-frame-one');
+var sFrameTwo = document.querySelector('.s-frame-two');
+var sFrameThree = document.querySelector('.s-frame-three');
+
+function aboutHeaderStateScroll() {
+	if (document.documentElement.scrollTop <= 400) {
+		aboutHeader.style.transform = "translateX(-150rem)";
+	}
+	else if ((document.documentElement.scrollTop > 400) && (document.documentElement.scrollTop < 1350)) {
+		aboutHeader.style.transform = "translateX(0rem)";
+	} 
+	else if (document.documentElement.scrollTop >= 1350) {
+		aboutHeader.style.transform = "translateX(-150rem)";
+	}
+}
+
+function aboutMeStateScroll() {
+	if (document.documentElement.scrollTop <= 900) {
+		aboutMeContainer.style.transform = "translateX(50rem)";
+		
+	}
+	else if ((document.documentElement.scrollTop > 900) && (document.documentElement.scrollTop < 2200)) {
+		aboutMeContainer.style.transform = "translateX(0rem)";
+	} 
+	else if (document.documentElement.scrollTop >= 2200) {
+		aboutMeContainer.style.transform = "translateX(50rem)";
+	}
+}
+
+function sFrameStateScroll() {
+	if (document.documentElement.scrollTop <= 800) {
+		sFrameOne.style.height = "0rem";
+		sFrameTwo.style.height = "0rem";
+		sFrameThree.style.height = "0rem";
+	}
+	else if ((document.documentElement.scrollTop > 800) && (document.documentElement.scrollTop < 2000)) {
+		sFrameOne.style.height = "40rem";
+		sFrameTwo.style.height = "40rem";
+		sFrameThree.style.height = "40rem";
+	} 
+	else if (document.documentElement.scrollTop >= 2000) {
+		sFrameOne.style.height = "0rem";
+		sFrameTwo.style.height = "0rem";
+		sFrameThree.style.height = "0rem";
+	}
+}
+// END
+/************************************************************************************** */
+
+
+/************************************************************************************** */
+// Merging all window.onscroll funtions together
+window.onscroll = function () { 
+	navStateScrollStatus(); 
+	aboutHeaderStateScroll();
+	aboutMeStateScroll();
+	sFrameStateScroll();
+};
+// END
+/************************************************************************************** */
 
 /************************************************************************************** */
 // 
-
 
 // END
 /************************************************************************************** */

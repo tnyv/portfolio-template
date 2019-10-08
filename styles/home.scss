@@ -92,7 +92,7 @@ nav {
   width: 100%;
   transition: top 0.5s;
 
-  background: rgba(26, 26, 26, 0.671);
+  background: $defaultBackground;
 
   z-index: 5;
 }
@@ -438,10 +438,12 @@ nav {
 
   text-align: center;
   justify-content: center;
+
+  overflow: hidden;
 }
 
 .about-header {
-  margin: 10rem 0 0;
+  margin: 10rem 0 0 5rem;
 
   text-align: left;
   width: 60rem;
@@ -451,6 +453,9 @@ nav {
   font-family: 'Space Mono', monospace;
   font-size: 5rem;
   font-weight: 400;
+
+  transform: translateX(-100rem);
+  transition: transform 1.5s;
 }
 
 .about-me-container {
@@ -458,10 +463,11 @@ nav {
   right: 6rem;
   bottom: 7rem;
 
-
-
   width: 35rem;
   text-align: left;
+
+  transform: translateX(50rem);
+  transition: transform 1.5s;
 }
 
 .about-me-header {
@@ -472,10 +478,12 @@ nav {
 .about-me {
   font-family: 'Space Mono', monospace;
   font-size: 1rem;
+
+  a {
+    color: black;
+    
+  }
 }
-
-
-
 
 
 
@@ -484,7 +492,7 @@ nav {
   left: 0;
   top: 25rem;
 
-  height: 40rem;
+  height: 0rem;
   width: 30rem;
   
   background-image: url("../images/coast.jpg");
@@ -492,20 +500,22 @@ nav {
   background-position: left;
   background-repeat: no-repeat;
   background-size: contain;
+  transition: height 1.5s;
 }
 
 .s-frame-two {
   position: absolute;
   top: 45rem;
 
-  height: 40rem;
+  height: 0rem;
   width: 30rem;
 
   background-image: url("../images/bridge.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: contain;;
+  background-size: contain;
+  transition: height 1.5s;
 }
 
 .s-frame-three {
@@ -513,15 +523,15 @@ nav {
   right: 0;
   top: 10rem;
 
-  height: 40rem;
+  height: 0rem;
   width: 30rem;
-  float: right;
 
   background-image: url("../images/fall.jpg");
   background-attachment: fixed;
   background-position: right;
   background-repeat: no-repeat;
-  background-size: contain;;
+  background-size: contain;
+  transition: height 1.5s;
 }
 
 
@@ -558,7 +568,7 @@ nav {
 }
 
 .project-header h1 {
-  font-family: $defaultFont;
+  font-family: 'Space Mono', monospace;
   font-size: 3rem;
   font-weight: 600;
   letter-spacing: 0.5rem;
@@ -628,7 +638,7 @@ $projectFrameHeight: 25rem;
   text-align: center;
 
   button {
-    font-family: $defaultFont;
+    font-family: 'Space Mono', monospace;
     font-size: 1.3rem;
     font-weight: 600;
     white-space: nowrap;
@@ -682,7 +692,7 @@ $projectFrameHeight: 25rem;
 }
 
 .p1-header {
-  font-family: $defaultFont;
+  font-family: 'Space Mono', monospace;
   font-size: 5rem;
   font-weight: 600;
   letter-spacing: 0.5rem;
@@ -707,7 +717,7 @@ $projectFrameHeight: 25rem;
 .p1-summary {
   position: relative;
 
-  font-family: $defaultFont;
+  font-family: 'Space Mono', monospace;
   font-size: 1.2rem;
   width: 50rem;
   height: $projectFrameHeight;
@@ -763,7 +773,7 @@ $projectFrameHeight: 25rem;
 
     padding: 0.25rem 0.5rem;
 
-    font-family: $defaultFont;
+    font-family: 'Space Mono', monospace;
     font-size: 1.2rem;
     font-weight: 600;
     text-decoration: none;
@@ -804,7 +814,7 @@ $projectFrameHeight: 25rem;
 
 .resume-container {
   height: 110vh;
-  background: rgb(71, 133, 71);
+  background: rgb(255, 255, 255);
 }
 
 /********************************************************************************/
@@ -812,101 +822,25 @@ $projectFrameHeight: 25rem;
 /********************************************************************************/
 
 .contact-container {
-  height: 100vh;
-  background: rgb(136, 136, 136);
-
-  display: flex;
-  flex-direction: column;
-}
-
-.contact-header {
-  width: 90%;
-  margin: 0 auto 0;
-}
-
-.contact-header h1 {
-  overflow: hidden;
-  text-align: center;
-}
-
-.contact-header h1:before,
-.contact-header h1:after {
-  background-color: $fadedBlack;
-  content: "";
-  display: inline-block;
-  height: 0.3rem;
   position: relative;
-  vertical-align: middle;
-  width: 50%;
+
+  height: 100vh;
+  background: rgb(255, 255, 255);
+
+  
 }
 
-.contact-header h1:before {
-  right: 0.5em;
-  margin-left: -40%;
+.contact-frame {
+  position: absolute;
+  width: 100rem;
+  height: 40rem;
+  background: $defaultBackground;
+
+  bottom: 0;
 }
 
-.contact-header h1:after {
-  left: 0.5em;
-  margin-right: -40%;
-}
 
-.contact-header h1 {
-  font-family: $defaultFont;
-  font-size: 3rem;
-  font-weight: 600;
-  letter-spacing: 0.5rem;
 
-  color: white;
-  text-align: center;
-
-  margin-top: 4rem;
-  margin-bottom: 1rem;
-}
-
-.contact-column {
-  width: 90%;
-  margin: 0 auto;
-}
-
-.my-contact-message {
-  margin: 0 auto 1rem;
-  font-family: $defaultFont;
-  font-size: 1.5rem;
-  color: white;
-}
-
-.contact-icons {
-  display: flex;
-  flex-direction: row;
-
-  margin: 0 auto;
-
-  img {
-    margin: 1rem 2rem;
-  }
-
-  img:hover {
-    cursor: pointer;
-  }
-}
-
-.email-icon {
-  width: 3rem;
-}
-
-.linkedin-icon {
-  width: 3rem;
-}
-
-.github-icon {
-  width: 3rem;
-}
-
-.contact-img {
-  width: 20rem;
-
-  border-radius: 50%;
-}
 
 $formWidth: 31rem;
 $borderRadius: 0.2rem;
@@ -914,14 +848,13 @@ $formFontSize: 1rem;
 $nameEmailHeight: 2.2rem;
 
 form {
-  font-family: $defaultFont;
+  font-family: 'Space Mono', monospace;
   font-size: $formFontSize;
   color: white;
 
   display: flex;
   flex-direction: column;
 
-  height: 100%;
   width: 50%;
 
   margin: 1rem auto 0;
@@ -979,7 +912,7 @@ form {
 }
 
 .message-input {
-  font-family: $defaultFont;
+  font-family: 'Space Mono', monospace;
   font-size: $formFontSize;
   background: white;
   border-radius: $borderRadius;
@@ -1001,7 +934,7 @@ form {
 }
 
 .submit-btn {
-  font-family: $defaultFont;
+  font-family: 'Space Mono', monospace;
   font-size: 1.1rem;
 
   height: 2.3rem;

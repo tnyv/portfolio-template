@@ -109,7 +109,7 @@ nav {
   width: 100%;
   -webkit-transition: top 0.5s;
   transition: top 0.5s;
-  background: rgba(26, 26, 26, 0.671);
+  background: #1a1a1a;
   z-index: 5;
 }
 
@@ -504,16 +504,23 @@ nav {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  overflow: hidden;
 }
 
 .about-header {
-  margin: 10rem 0 0;
+  margin: 10rem 0 0 5rem;
   text-align: left;
   width: 60rem;
   height: 50rem;
   font-family: 'Space Mono', monospace;
   font-size: 5rem;
   font-weight: 400;
+  -webkit-transform: translateX(-100rem);
+          transform: translateX(-100rem);
+  -webkit-transition: -webkit-transform 1.5s;
+  transition: -webkit-transform 1.5s;
+  transition: transform 1.5s;
+  transition: transform 1.5s, -webkit-transform 1.5s;
 }
 
 .about-me-container {
@@ -522,6 +529,12 @@ nav {
   bottom: 7rem;
   width: 35rem;
   text-align: left;
+  -webkit-transform: translateX(50rem);
+          transform: translateX(50rem);
+  -webkit-transition: -webkit-transform 1.5s;
+  transition: -webkit-transform 1.5s;
+  transition: transform 1.5s;
+  transition: transform 1.5s, -webkit-transform 1.5s;
 }
 
 .about-me-header {
@@ -534,43 +547,52 @@ nav {
   font-size: 1rem;
 }
 
+.about-me a {
+  color: black;
+}
+
 .s-frame-one {
   position: absolute;
   left: 0;
   top: 25rem;
-  height: 40rem;
+  height: 0rem;
   width: 30rem;
   background-image: url("../images/coast.jpg");
   background-attachment: fixed;
   background-position: left;
   background-repeat: no-repeat;
   background-size: contain;
+  -webkit-transition: height 1.5s;
+  transition: height 1.5s;
 }
 
 .s-frame-two {
   position: absolute;
   top: 45rem;
-  height: 40rem;
+  height: 0rem;
   width: 30rem;
   background-image: url("../images/bridge.jpg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+  -webkit-transition: height 1.5s;
+  transition: height 1.5s;
 }
 
 .s-frame-three {
   position: absolute;
   right: 0;
   top: 10rem;
-  height: 40rem;
+  height: 0rem;
   width: 30rem;
-  float: right;
   background-image: url("../images/fall.jpg");
   background-attachment: fixed;
   background-position: right;
   background-repeat: no-repeat;
   background-size: contain;
+  -webkit-transition: height 1.5s;
+  transition: height 1.5s;
 }
 
 .project-header {
@@ -605,7 +627,7 @@ nav {
 }
 
 .project-header h1 {
-  font-family: Helvetica;
+  font-family: 'Space Mono', monospace;
   font-size: 3rem;
   font-weight: 600;
   letter-spacing: 0.5rem;
@@ -711,7 +733,7 @@ nav {
 }
 
 .project-buttons button {
-  font-family: Helvetica;
+  font-family: 'Space Mono', monospace;
   font-size: 1.3rem;
   font-weight: 600;
   white-space: nowrap;
@@ -757,7 +779,7 @@ nav {
 }
 
 .p1-header {
-  font-family: Helvetica;
+  font-family: 'Space Mono', monospace;
   font-size: 5rem;
   font-weight: 600;
   letter-spacing: 0.5rem;
@@ -777,7 +799,7 @@ nav {
 
 .p1-summary {
   position: relative;
-  font-family: Helvetica;
+  font-family: 'Space Mono', monospace;
   font-size: 1.2rem;
   width: 50rem;
   height: 25rem;
@@ -829,7 +851,7 @@ nav {
 .p1-summary .p1-visit-git a {
   display: inline-block;
   padding: 0.25rem 0.5rem;
-  font-family: Helvetica;
+  font-family: 'Space Mono', monospace;
   font-size: 1.2rem;
   font-weight: 600;
   text-decoration: none;
@@ -865,116 +887,28 @@ nav {
 /********************************************************************************/
 .resume-container {
   height: 110vh;
-  background: #478547;
+  background: white;
 }
 
 /********************************************************************************/
 /*                            CONTACT CONTAINER                                 */
 /********************************************************************************/
 .contact-container {
-  height: 100vh;
-  background: #888888;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.contact-header {
-  width: 90%;
-  margin: 0 auto 0;
-}
-
-.contact-header h1 {
-  overflow: hidden;
-  text-align: center;
-}
-
-.contact-header h1:before,
-.contact-header h1:after {
-  background-color: rgba(26, 26, 26, 0.671);
-  content: "";
-  display: inline-block;
-  height: 0.3rem;
   position: relative;
-  vertical-align: middle;
-  width: 50%;
+  height: 100vh;
+  background: white;
 }
 
-.contact-header h1:before {
-  right: 0.5em;
-  margin-left: -40%;
-}
-
-.contact-header h1:after {
-  left: 0.5em;
-  margin-right: -40%;
-}
-
-.contact-header h1 {
-  font-family: Helvetica;
-  font-size: 3rem;
-  font-weight: 600;
-  letter-spacing: 0.5rem;
-  color: white;
-  text-align: center;
-  margin-top: 4rem;
-  margin-bottom: 1rem;
-}
-
-.contact-column {
-  width: 90%;
-  margin: 0 auto;
-}
-
-.my-contact-message {
-  margin: 0 auto 1rem;
-  font-family: Helvetica;
-  font-size: 1.5rem;
-  color: white;
-}
-
-.contact-icons {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  margin: 0 auto;
-}
-
-.contact-icons img {
-  margin: 1rem 2rem;
-}
-
-.contact-icons img:hover {
-  cursor: pointer;
-}
-
-.email-icon {
-  width: 3rem;
-}
-
-.linkedin-icon {
-  width: 3rem;
-}
-
-.github-icon {
-  width: 3rem;
-}
-
-.contact-img {
-  width: 20rem;
-  border-radius: 50%;
+.contact-frame {
+  position: absolute;
+  width: 100rem;
+  height: 40rem;
+  background: #1a1a1a;
+  bottom: 0;
 }
 
 form {
-  font-family: Helvetica;
+  font-family: 'Space Mono', monospace;
   font-size: 1rem;
   color: white;
   display: -webkit-box;
@@ -984,7 +918,6 @@ form {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 100%;
   width: 50%;
   margin: 1rem auto 0;
   overflow: hidden;
@@ -1036,7 +969,7 @@ form {
 }
 
 .message-input {
-  font-family: Helvetica;
+  font-family: 'Space Mono', monospace;
   font-size: 1rem;
   background: white;
   border-radius: 0.2rem;
@@ -1056,7 +989,7 @@ form {
 }
 
 .submit-btn {
-  font-family: Helvetica;
+  font-family: 'Space Mono', monospace;
   font-size: 1.1rem;
   height: 2.3rem;
   width: 10rem;
