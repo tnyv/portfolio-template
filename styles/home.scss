@@ -916,12 +916,6 @@ $nameEmailHeight: 2.2rem;
   overflow: hidden;
 }
 
-.social-media-wrapper {
-  width: 50%;
-  background: pink;
-}
-
-
 .name-email-section {
   margin: 0 auto;
 
@@ -981,7 +975,6 @@ $nameEmailHeight: 2.2rem;
   }
 }
 
-
 .message-section {
   background: transparent;
 
@@ -1034,8 +1027,113 @@ $nameEmailHeight: 2.2rem;
   cursor: pointer;
 }
 
+.social-media-wrapper {
+  width: 50%;
+  justify-content: center;
+  text-align: center;
+  
+}
 
+$smBlockWidth: 20rem;
+$smBlockHeight: 10rem;
+$smHead2Size: 0.8rem;
 
+.sm-block {
+  position: relative;
+  width: 40rem;
+  height: 25rem;
+  margin: 3rem 0 0 10rem;
+  color: white;
+  display: flex;
+  flex-direction: row;
+}
+
+.sm-1 {
+  font-family: 'Space Mono', monospace;
+  font-size: 1.1rem;
+  position: absolute;
+  height: $smBlockHeight;
+  width: $smBlockWidth;
+  text-align: left;
+  
+  top: 0;
+  left: 0;
+
+  h2 {
+    color: rgb(156, 156, 156);
+    font-size: $smHead2Size;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+.sm-2 {
+  font-family: 'Space Mono', monospace;
+  font-size: 1.1rem;
+  position: absolute;
+  height: $smBlockHeight;
+  width: $smBlockWidth;
+  text-align: left;
+
+  right: 0;
+
+  h2 {
+    color: rgb(156, 156, 156);
+    font-size: $smHead2Size;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+.sm-3 {
+  font-family: 'Space Mono', monospace;
+  font-size: 1.1rem;
+  position: absolute;
+  height: $smBlockHeight;
+  width: $smBlockWidth;
+  text-align: left;
+
+  left: 0;
+  bottom: 0;
+
+  h2 {
+    color: rgb(156, 156, 156);
+    font-size: $smHead2Size;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+}
+
+.sm-4 {
+  font-family: 'Space Mono', monospace;
+  font-size: 1.1rem;
+  position: absolute;
+  height: $smBlockHeight;
+  width: $smBlockWidth;
+  text-align: left;
+
+  right: 0;
+  bottom: 0;
+
+  h2 {
+    color: rgb(156, 156, 156);
+    font-size: $smHead2Size;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
+}
 
 /********************************************************************************/
 /*                                ANIMATIONS                                    */

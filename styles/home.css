@@ -981,11 +981,6 @@ nav {
   overflow: hidden;
 }
 
-.social-media-wrapper {
-  width: 50%;
-  background: pink;
-}
-
 .name-email-section {
   margin: 0 auto;
   width: 31rem;
@@ -1087,6 +1082,112 @@ nav {
   background: rgba(134, 134, 134, 0.671);
   color: white;
   cursor: pointer;
+}
+
+.social-media-wrapper {
+  width: 50%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+.sm-block {
+  position: relative;
+  width: 40rem;
+  height: 25rem;
+  margin: 3rem 0 0 10rem;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.sm-1 {
+  font-family: 'Space Mono', monospace;
+  font-size: 1.1rem;
+  position: absolute;
+  height: 10rem;
+  width: 20rem;
+  text-align: left;
+  top: 0;
+  left: 0;
+}
+
+.sm-1 h2 {
+  color: #9c9c9c;
+  font-size: 0.8rem;
+}
+
+.sm-1 a {
+  text-decoration: none;
+  color: white;
+}
+
+.sm-2 {
+  font-family: 'Space Mono', monospace;
+  font-size: 1.1rem;
+  position: absolute;
+  height: 10rem;
+  width: 20rem;
+  text-align: left;
+  right: 0;
+}
+
+.sm-2 h2 {
+  color: #9c9c9c;
+  font-size: 0.8rem;
+}
+
+.sm-2 a {
+  text-decoration: none;
+  color: white;
+}
+
+.sm-3 {
+  font-family: 'Space Mono', monospace;
+  font-size: 1.1rem;
+  position: absolute;
+  height: 10rem;
+  width: 20rem;
+  text-align: left;
+  left: 0;
+  bottom: 0;
+}
+
+.sm-3 h2 {
+  color: #9c9c9c;
+  font-size: 0.8rem;
+}
+
+.sm-3 a {
+  text-decoration: none;
+  color: white;
+}
+
+.sm-4 {
+  font-family: 'Space Mono', monospace;
+  font-size: 1.1rem;
+  position: absolute;
+  height: 10rem;
+  width: 20rem;
+  text-align: left;
+  right: 0;
+  bottom: 0;
+}
+
+.sm-4 h2 {
+  color: #9c9c9c;
+  font-size: 0.8rem;
+}
+
+.sm-4 a {
+  text-decoration: none;
+  color: white;
 }
 
 /********************************************************************************/
