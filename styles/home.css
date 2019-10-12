@@ -649,7 +649,7 @@ nav {
 /*                            PROJECT CONTAINER                                 */
 /********************************************************************************/
 .projects-container {
-  height: 70rem;
+  height: 60rem;
   width: 100%;
   background: white;
   display: -webkit-box;
