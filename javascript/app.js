@@ -558,9 +558,6 @@ menuIcon.addEventListener('touchstart', function () {
 		menu.style.visibility = "hidden";
 		menuVisible = false;
 	}
-
-
-
 })
 
 
@@ -605,6 +602,9 @@ var aboutMeContainer = document.querySelector('.about-me-container');
 var sFrameOne = document.querySelector('.s-frame-one');
 var sFrameTwo = document.querySelector('.s-frame-two');
 var sFrameThree = document.querySelector('.s-frame-three');
+var projects1Container = document.querySelector('.project-one-container');
+var contactFrame = document.querySelector('.contact-frame');
+
 
 function aboutHeaderStateScroll() {
 	if (document.documentElement.scrollTop <= 400) {
@@ -648,6 +648,29 @@ function sFrameStateScroll() {
 		sFrameThree.style.height = "0rem";
 	}
 }
+
+function projectsStateScroll() {
+	console.log(document.documentElement.scrollTop);
+	if (document.documentElement.scrollTop <= 2000) {
+		projects1Container.style.opacity = 0;
+	}
+	else if ((document.documentElement.scrollTop > 2000) && (document.documentElement.scrollTop < 2900)) {
+		projects1Container.style.opacity = 1;
+	} 
+	else if (document.documentElement.scrollTop >= 2900) {
+		projects1Container.style.opacity = 0;
+	}
+}
+
+function contactStateScroll() {
+	console.log(document.documentElement.scrollTop);
+	if (document.documentElement.scrollTop <= 3950) {
+		contactFrame.style.transform = "translateX(-150rem)";
+	}
+	else if (document.documentElement.scrollTop >= 3950) {
+		contactFrame.style.transform = "translateX(0rem)";
+	} 
+}
 // END
 /************************************************************************************** */
 
@@ -659,6 +682,8 @@ window.onscroll = function () {
 	aboutHeaderStateScroll();
 	aboutMeStateScroll();
 	sFrameStateScroll();
+	projectsStateScroll();
+	contactStateScroll();
 };
 // END
 /************************************************************************************** */

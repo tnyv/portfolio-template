@@ -610,7 +610,7 @@ $projectFrameHeight: 25rem;
 
   justify-content: center;
 
-  transition: transform 2s;
+  transition: transform 2s, opacity 1s;
 
   animation-name: float-in;
   animation-play-state: running;
@@ -821,7 +821,7 @@ $projectFrameHeight: 25rem;
   height: 110vh;
   background: rgb(255, 255, 255);
 
-  padding-top: 1rem;
+  padding-top: 0.1rem;
 }
 
 .vlogs-header {
@@ -893,6 +893,8 @@ $projectFrameHeight: 25rem;
   flex-direction: row;
 
   z-index: 2;
+
+  transition: transform 1s;
 }
 
 

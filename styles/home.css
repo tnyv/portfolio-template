@@ -675,10 +675,10 @@ nav {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-transition: -webkit-transform 2s;
-  transition: -webkit-transform 2s;
-  transition: transform 2s;
-  transition: transform 2s, -webkit-transform 2s;
+  -webkit-transition: opacity 1s, -webkit-transform 2s;
+  transition: opacity 1s, -webkit-transform 2s;
+  transition: transform 2s, opacity 1s;
+  transition: transform 2s, opacity 1s, -webkit-transform 2s;
   -webkit-animation-name: float-in;
           animation-name: float-in;
   -webkit-animation-play-state: running;
@@ -896,7 +896,7 @@ nav {
 .vlogs-container {
   height: 110vh;
   background: white;
-  padding-top: 1rem;
+  padding-top: 0.1rem;
 }
 
 .vlogs-header {
@@ -965,6 +965,10 @@ nav {
       -ms-flex-direction: row;
           flex-direction: row;
   z-index: 2;
+  -webkit-transition: -webkit-transform 1s;
+  transition: -webkit-transform 1s;
+  transition: transform 1s;
+  transition: transform 1s, -webkit-transform 1s;
 }
 
 .form-wrapper {
