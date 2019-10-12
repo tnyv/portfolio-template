@@ -99,7 +99,7 @@ nav {
 
 .home-link,
 .projects-link,
-.resume-link,
+.vlogs-link,
 .contact-link {
   font-family: $defaultFont;
   font-size: 1rem;
@@ -194,7 +194,7 @@ nav {
   color: $defaultFontColor;
   background: transparent;
 
-  width: 40rem;
+  width: 36rem;
 
   margin: 0 auto;
 }
@@ -458,7 +458,7 @@ nav {
   
 
   font-family: 'Space Mono', monospace;
-  font-size: 5rem;
+  font-size: 4.6rem;
   font-weight: 400;
 
   transform: translateX(-100rem);
@@ -816,13 +816,60 @@ $projectFrameHeight: 25rem;
 }
 
 /********************************************************************************/
-/*                            RESUME CONTAINER                                  */
+/*                            VLOGS CONTAINER                                  */
 /********************************************************************************/
 
-.resume-container {
+.vlogs-container {
   height: 110vh;
   background: rgb(255, 255, 255);
+
+  padding-top: 1rem;
 }
+
+.vlogs-header {
+  width: 90%;
+  margin: 0 auto 1.5rem;
+}
+
+.vlogs-header h1 {
+  overflow: hidden;
+  text-align: center;
+}
+
+.vlogs-header h1:before,
+.vlogs-header h1:after {
+  background-color: $fadedBlack;
+  content: "";
+  display: inline-block;
+  height: 0.3rem;
+  position: relative;
+  vertical-align: middle;
+  width: 50%;
+}
+
+.vlogs-header h1:before {
+  right: 0.5em;
+  margin-left: -40%;
+}
+
+.vlogs-header h1:after {
+  left: 0.5em;
+  margin-right: -40%;
+}
+
+.vlogs-header h1 {
+  font-family: 'Space Mono', monospace;
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: 0.5rem;
+
+  color: rgb(0, 0, 0);
+  text-align: center;
+
+  margin-top: 5rem;
+  margin-bottom: 1rem;
+}
+
 
 /********************************************************************************/
 /*                            CONTACT CONTAINER                                 */
@@ -833,8 +880,6 @@ $projectFrameHeight: 25rem;
 
   height: 100vh;
   background: rgb(255, 255, 255);
-
-  
 }
 
 .contact-frame {
@@ -844,6 +889,8 @@ $projectFrameHeight: 25rem;
   background: $defaultBackground;
 
   bottom: 0;
+  display: flex;
+  flex-direction: row;
 }
 
 
@@ -854,7 +901,7 @@ $borderRadius: 0.2rem;
 $formFontSize: 1rem;
 $nameEmailHeight: 2.2rem;
 
-form {
+.form-wrapper {
   font-family: 'Space Mono', monospace;
   font-size: $formFontSize;
   color: white;
@@ -864,12 +911,18 @@ form {
 
   width: 50%;
 
-  margin: 1rem auto 0;
+  margin: 3rem auto 0;
 
   overflow: hidden;
 }
 
-.name-email-container {
+.social-media-wrapper {
+  width: 50%;
+  background: pink;
+}
+
+
+.name-email-section {
   margin: 0 auto;
 
   width: $formWidth;
@@ -881,6 +934,7 @@ form {
 }
 
 .form-input-name {
+  font-family: 'Space Mono', monospace;
   font-size: $formFontSize;
   background: white;
   width: 15rem;
@@ -898,6 +952,7 @@ form {
 }
 
 .form-input-email {
+  font-family: 'Space Mono', monospace;
   font-size: $formFontSize;
   background: white;
   width: 15rem;
@@ -909,7 +964,25 @@ form {
   margin-top: 0.3rem;
 }
 
-.message-container {
+.subject-section {
+  margin: 0 auto;
+  
+  width: $formWidth;
+  height: 5rem;
+
+  select {
+    margin-top: 0.3rem;
+    font-family: 'Space Mono', monospace;
+    font-size: $formFontSize;
+    border-radius: $borderRadius;
+    background: white;
+    width: $formWidth;
+    height: $nameEmailHeight;
+  }
+}
+
+
+.message-section {
   background: transparent;
 
   width: $formWidth;
@@ -933,7 +1006,7 @@ form {
   margin-top: 0.3rem;
 }
 
-.button-container {
+.button-section {
   width: 100%;
   text-align: center;
 
@@ -947,8 +1020,8 @@ form {
   height: 2.3rem;
   width: 10rem;
 
-  background: rgba(26, 26, 26, 0.671);
-  color: white;
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
   box-sizing: border-box;
 
   border-radius: 1rem;
@@ -956,10 +1029,12 @@ form {
 }
 
 .submit-btn:hover {
-  background: rgba(255, 255, 255, 0.671);
-  color: rgb(0, 0, 0);
+  background: rgba(134, 134, 134, 0.671);
+  color: white;
   cursor: pointer;
 }
+
+
 
 
 /********************************************************************************/

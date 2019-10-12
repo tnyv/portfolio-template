@@ -22,11 +22,11 @@
 					}, 500);
 				});
 			</script>
-			<a href="#" class="resume-link">RESOURCES</a>
+			<a href="#" class="vlogs-link">VLOGS</a>
 			<script>
-				$(".resume-link").click(function () {
+				$(".vlogs-link").click(function () {
 					$('html, body').animate({
-						scrollTop: $(".resume-container").offset().top
+						scrollTop: $(".vlogs-container").offset().top
 					}, 500);
 				});
 			</script>
@@ -67,7 +67,7 @@
 				<a href="" class="logo">MY CODE STORY</a>
 			</div>
 			<div class="sub-logo-block">
-				<h1 class="sub-logo">PROJECTS I BUILT AND RESOURCES I USED TO BECOME A SOFTWARE ENGINEER</h1>
+				<h1 class="sub-logo">PROJECTS I'M BUILDING AND ROUTE IM TAKING TO BECOME A SOFTWARE DEVELOPER</h1>
 			</div>
 		</div>
 
@@ -104,7 +104,7 @@
 		<h1 class="about-header">I strive to become a better programmer everyday.</h1>
 		<div class="about-me-container">
 			<h3 class="about-me-header">About me<br><br></h3>
-			<p class="about-me">Hi, my name is Tony Vu. I began my coding journey in 2014.
+			<p class="about-me">Hi, my name is Tony. I began my coding in 2014.
 				My passion for programming was sparked after I built my first
 				game in C++. I fell in love with the concept of creating something from
 				nothing. Over the years, I've programmed with more languages like Java, 
@@ -116,8 +116,7 @@
 				career is to become a software developer. I'm eager to join a dev
 				team to learn all that there is about software development and deployment.
 				<br><br>
-				Be sure to check out my latest projects below or connect with me via email,
-				LinkedIn, or GitHub.
+				Be sure to check out my latest projects below or connect with me via email or LinkedIn.
 				
 				
 				
@@ -130,14 +129,14 @@
 
 		<div class="project-header">
 			<span>
-				<h1>RECENT PROJECTS</h1>
+				<h1>PROJECTS</h1>
 			</span>
 		</div>
 
 		<div class="project-buttons">
-			<button class="btn-one" type="button" onclick="">PHP/SQL</button>
-			<button class="btn-two" type="button" onclick="">REACT.JS</button>
-			<button class="btn-three" type="button" onclick="">NODE.JS</button>
+			<button class="btn-one" type="button" onclick="">REACT.JS</button>
+			<button class="btn-two" type="button" onclick="">NODE.JS</button>
+			<button class="btn-three" type="button" onclick="">MySQL</button>
 		</div>
 
 		<div class="project-one-container">
@@ -179,16 +178,24 @@
 
 	</div>
 
-	<div class="resume-container">
-
+	<div class="vlogs-container">
+		<div class="vlogs-header">
+			<span>
+				<h1>VLOGS</h1>
+			</span>
+		</div>
 	</div>
 
 	<div class="contact-container">
-
 		<div class="contact-frame">
-			<form action="https://formspree.io/xtonyvux@gmail.com" method="POST">
+			<div class="social-media-wrapper">
+				<p>where u at</p>
+			</div>
 
-				<div class="name-email-container">
+
+
+			<form class="form-wrapper" action="https://formspree.io/xtonyvux@gmail.com" method="POST">
+				<div class="name-email-section">
 					<div class="form-name-div">
 						<label for="name">Name<br>
 							<input class="form-input-name" type="text" name="name">
@@ -202,18 +209,27 @@
 					</div>
 	
 				</div>
-	
-				<div class="message-container">
+				<div class="subject-section">
+					<div class="form-subject-div">
+						<label for="subject">Subject<br>
+							<select>
+								<option></option>
+								<option>Business</option>
+								<option>Job Opportunities</option>
+								<option>Questions</option>
+								<option>Saying Hi</option>
+							</select>
+						</label>
+					</div>	
+				</div>
+				<div class="message-section">
 					<label for="email" class="form-email-label">Message<br>
 						<textarea class="message-input" name="comment" spellcheck="true"></textarea>
 					</label>
 				</div>
-	
-	
-				<div class="button-container">
+				<div class="button-section">
 					<button type="submit" class="submit-btn">Submit</button>
 				</div>
-	
 			</form>
 		</div>
 

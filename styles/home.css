@@ -115,7 +115,7 @@ nav {
 
 .home-link,
 .projects-link,
-.resume-link,
+.vlogs-link,
 .contact-link {
   font-family: Helvetica;
   font-size: 1rem;
@@ -213,7 +213,7 @@ nav {
   letter-spacing: 0.1rem;
   color: white;
   background: transparent;
-  width: 40rem;
+  width: 36rem;
   margin: 0 auto;
 }
 
@@ -521,7 +521,7 @@ nav {
   width: 60rem;
   height: 50rem;
   font-family: 'Space Mono', monospace;
-  font-size: 5rem;
+  font-size: 4.6rem;
   font-weight: 400;
   -webkit-transform: translateX(-100rem);
           transform: translateX(-100rem);
@@ -891,11 +891,54 @@ nav {
 }
 
 /********************************************************************************/
-/*                            RESUME CONTAINER                                  */
+/*                            VLOGS CONTAINER                                  */
 /********************************************************************************/
-.resume-container {
+.vlogs-container {
   height: 110vh;
   background: white;
+  padding-top: 1rem;
+}
+
+.vlogs-header {
+  width: 90%;
+  margin: 0 auto 1.5rem;
+}
+
+.vlogs-header h1 {
+  overflow: hidden;
+  text-align: center;
+}
+
+.vlogs-header h1:before,
+.vlogs-header h1:after {
+  background-color: rgba(26, 26, 26, 0.671);
+  content: "";
+  display: inline-block;
+  height: 0.3rem;
+  position: relative;
+  vertical-align: middle;
+  width: 50%;
+}
+
+.vlogs-header h1:before {
+  right: 0.5em;
+  margin-left: -40%;
+}
+
+.vlogs-header h1:after {
+  left: 0.5em;
+  margin-right: -40%;
+}
+
+.vlogs-header h1 {
+  font-family: 'Space Mono', monospace;
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: 0.5rem;
+  color: black;
+  text-align: center;
+  margin-top: 5rem;
+  margin-bottom: 1rem;
 }
 
 /********************************************************************************/
@@ -913,9 +956,16 @@ nav {
   height: 40rem;
   background: #1a1a1a;
   bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
-form {
+.form-wrapper {
   font-family: 'Space Mono', monospace;
   font-size: 1rem;
   color: white;
@@ -927,11 +977,16 @@ form {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 50%;
-  margin: 1rem auto 0;
+  margin: 3rem auto 0;
   overflow: hidden;
 }
 
-.name-email-container {
+.social-media-wrapper {
+  width: 50%;
+  background: pink;
+}
+
+.name-email-section {
   margin: 0 auto;
   width: 31rem;
   height: 5rem;
@@ -942,6 +997,7 @@ form {
 }
 
 .form-input-name {
+  font-family: 'Space Mono', monospace;
   font-size: 1rem;
   background: white;
   width: 15rem;
@@ -958,6 +1014,7 @@ form {
 }
 
 .form-input-email {
+  font-family: 'Space Mono', monospace;
   font-size: 1rem;
   background: white;
   width: 15rem;
@@ -969,7 +1026,23 @@ form {
   margin-top: 0.3rem;
 }
 
-.message-container {
+.subject-section {
+  margin: 0 auto;
+  width: 31rem;
+  height: 5rem;
+}
+
+.subject-section select {
+  margin-top: 0.3rem;
+  font-family: 'Space Mono', monospace;
+  font-size: 1rem;
+  border-radius: 0.2rem;
+  background: white;
+  width: 31rem;
+  height: 2.2rem;
+}
+
+.message-section {
   background: transparent;
   width: 31rem;
   height: 17rem;
@@ -990,7 +1063,7 @@ form {
   margin-top: 0.3rem;
 }
 
-.button-container {
+.button-section {
   width: 100%;
   text-align: center;
   margin-top: 2rem;
@@ -1001,8 +1074,8 @@ form {
   font-size: 1.1rem;
   height: 2.3rem;
   width: 10rem;
-  background: rgba(26, 26, 26, 0.671);
-  color: white;
+  background: white;
+  color: black;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 1rem;
@@ -1011,8 +1084,8 @@ form {
 }
 
 .submit-btn:hover {
-  background: rgba(255, 255, 255, 0.671);
-  color: black;
+  background: rgba(134, 134, 134, 0.671);
+  color: white;
   cursor: pointer;
 }
 

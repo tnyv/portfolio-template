@@ -95,21 +95,13 @@ window.addEventListener('scroll', function()  {
 /***************************************************************************************/
 // Setting up type-writer animation for loader
 var i = 0;
-var txt = '     TONY VU';
+var txt = '     devtony';
 var speed = 100;
 
 function typeWriter() {
-	if (i === 8) {
-		document.querySelector('.loadme').innerHTML += "Y ";
-		i++;
-		i++;
-		setTimeout(typeWriter, speed);
-	}
-	else if (i < txt.length) {
 		document.querySelector('.loadme').innerHTML += txt.charAt(i);
 		i++;
 		setTimeout(typeWriter, speed);
-	}
 }
 
 typeWriter();
@@ -237,7 +229,7 @@ function adjustHomepagePics(screen480) {
 				smoothScroll('.projects-container', scrollSpeed);
 			}
 			else if (imgIndex === 2) {
-				smoothScroll('.resume-container', scrollSpeed);
+				smoothScroll('.vlogs-container', scrollSpeed);
 			}
 			else if (imgIndex === 3) {
 				smoothScroll('.contact-container', scrollSpeed);
@@ -251,7 +243,7 @@ function adjustHomepagePics(screen480) {
 				smoothScroll('.projects-container', scrollSpeed);
 			}
 			else if (imgIndex === 2) {
-				smoothScroll('.resume-container', scrollSpeed);
+				smoothScroll('.vlogs-container', scrollSpeed);
 			}
 			else if (imgIndex === 3) {
 				smoothScroll('.contact-container', scrollSpeed);
@@ -274,7 +266,7 @@ function adjustHomepagePics(screen480) {
 				mainPicture.setAttribute('src', 'images/resume2.jpg');
 				rightPicture.style.backgroundImage = 'url(images/contact3.jpg)';
 				imgIndex = 2;
-				mainHeader.innerHTML = "R&Eacute;SUM&Eacute;";
+				mainHeader.innerHTML = "VLOGS";
 				resetSideAnimations();
 				resetFromRight();
 				resetEnlargeMain();
@@ -297,7 +289,7 @@ function adjustHomepagePics(screen480) {
 				mainPicture.setAttribute('src', 'images/resume2.jpg');
 				rightPicture.style.backgroundImage = 'url(images/contact3.jpg)';
 				imgIndex = 2;
-				mainHeader.innerHTML = "R&Eacute;SUM&Eacute;";
+				mainHeader.innerHTML = "VLOGS";
 				resetSideAnimations();
 				resetFromLeft();
 				resetEnlargeMain();
