@@ -450,7 +450,7 @@ nav {
 .block-right {
   width: inherit;
   height: inherit;
-  background-image: url("../images/resume2.jpg");
+  background-image: url("../images/vlogs2.jpg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -948,6 +948,7 @@ nav {
   position: relative;
   height: 100vh;
   background: white;
+  z-index: 0;
 }
 
 .contact-frame {
@@ -963,6 +964,7 @@ nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  z-index: 2;
 }
 
 .form-wrapper {
@@ -1188,6 +1190,14 @@ nav {
 .sm-4 a {
   text-decoration: none;
   color: white;
+}
+
+.offset-contact-img {
+  position: absolute;
+  bottom: 15rem;
+  right: 0;
+  width: 50vw;
+  z-index: 1;
 }
 
 /********************************************************************************/

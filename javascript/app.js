@@ -163,22 +163,22 @@ function adjustHomepagePics(screen480) {
 		if (imgIndex === 1) {
 			leftPicture.style.backgroundImage = 'url(images/contact3phone.jpg)';
 			mainPicture.setAttribute('src', 'images/projects1phone.jpg');
-			rightPicture.style.backgroundImage = 'url(images/resume2phone.jpg)';
+			rightPicture.style.backgroundImage = 'url(images/vlogs2phone.jpg)';
 		}
 		else if (imgIndex === 2) {
 			leftPicture.style.backgroundImage = 'url(images/projects1phone.jpg)';
-			mainPicture.setAttribute('src', 'images/resume2phone.jpg');
+			mainPicture.setAttribute('src', 'images/vlogs2phone.jpg');
 			rightPicture.style.backgroundImage = 'url(images/contact3phone.jpg)';
 		}
 		else if (imgIndex === 3) {
-			leftPicture.style.backgroundImage = 'url(images/resume2phone.jpg)';
+			leftPicture.style.backgroundImage = 'url(images/vlogs2phone.jpg)';
 			mainPicture.setAttribute('src', 'images/contact3phone.jpg');
 			rightPicture.style.backgroundImage = 'url(images/projects1phone.jpg)';
 		}
 
 		leftPicture.addEventListener('touchstart', function () {
 			if (imgIndex === 1) {
-				leftPicture.style.backgroundImage = 'url(images/resume2phone.jpg)';
+				leftPicture.style.backgroundImage = 'url(images/vlogs2phone.jpg)';
 				mainPicture.setAttribute('src', 'images/contact3phone.jpg');
 				rightPicture.style.backgroundImage = 'url(images/projects1phone.jpg)';
 				imgIndex = 3;
@@ -186,7 +186,7 @@ function adjustHomepagePics(screen480) {
 			}
 			else if (imgIndex === 3) {
 				leftPicture.style.backgroundImage = 'url(images/projects1phone.jpg)';
-				mainPicture.setAttribute('src', 'images/resume2phone.jpg');
+				mainPicture.setAttribute('src', 'images/vlogs2phone.jpg');
 				rightPicture.style.backgroundImage = 'url(images/contact3phone.jpg)';
 				imgIndex = 2;
 				mainHeader.innerHTML = "R&Eacute;SUM&Eacute;";
@@ -203,13 +203,13 @@ function adjustHomepagePics(screen480) {
 		rightPicture.addEventListener('touchstart', function () {
 			if (imgIndex === 1) {
 				leftPicture.style.backgroundImage = 'url(images/projects1phone.jpg)';
-				mainPicture.setAttribute('src', 'images/resume2phone.jpg');
+				mainPicture.setAttribute('src', 'images/vlogs2phone.jpg');
 				rightPicture.style.backgroundImage = 'url(images/contact3phone.jpg)';
 				imgIndex = 2;
 				mainHeader.innerHTML = "R&Eacute;SUM&Eacute;";
 			}
 			else if (imgIndex === 2) {
-				leftPicture.style.backgroundImage = 'url(images/resume2phone.jpg)';
+				leftPicture.style.backgroundImage = 'url(images/vlogs2phone.jpg)';
 				mainPicture.setAttribute('src', 'images/contact3phone.jpg');
 				rightPicture.style.backgroundImage = 'url(images/projects1phone.jpg)';
 				imgIndex = 3;
@@ -218,7 +218,7 @@ function adjustHomepagePics(screen480) {
 			else if (imgIndex === 3) {
 				leftPicture.style.backgroundImage = 'url(images/contact3phone.jpg)';
 				mainPicture.setAttribute('src', 'images/projects1phone.jpg');
-				rightPicture.style.backgroundImage = 'url(images/resume2phone.jpg)';
+				rightPicture.style.backgroundImage = 'url(images/vlogs2phone.jpg)';
 				imgIndex = 1;
 				mainHeader.innerHTML = "PROJECTS";
 			}
@@ -252,7 +252,7 @@ function adjustHomepagePics(screen480) {
 
 		leftPicture.onclick = function () {
 			if (imgIndex === 1) {
-				leftPicture.style.backgroundImage = 'url(images/resume2.jpg)';
+				leftPicture.style.backgroundImage = 'url(images/vlogs2.jpg)';
 				mainPicture.setAttribute('src', 'images/contact3.jpg');
 				rightPicture.style.backgroundImage = 'url(images/projects1.jpg)';
 				imgIndex = 3;
@@ -263,7 +263,7 @@ function adjustHomepagePics(screen480) {
 			}
 			else if (imgIndex === 3) {
 				leftPicture.style.backgroundImage = 'url(images/projects1.jpg)';
-				mainPicture.setAttribute('src', 'images/resume2.jpg');
+				mainPicture.setAttribute('src', 'images/vlogs2.jpg');
 				rightPicture.style.backgroundImage = 'url(images/contact3.jpg)';
 				imgIndex = 2;
 				mainHeader.innerHTML = "VLOGS";
@@ -274,7 +274,7 @@ function adjustHomepagePics(screen480) {
 			else if (imgIndex === 2) {
 				leftPicture.style.backgroundImage = 'url(images/contact3.jpg)';
 				mainPicture.setAttribute('src', 'images/projects1.jpg');
-				rightPicture.style.backgroundImage = 'url(images/resume2.jpg)';
+				rightPicture.style.backgroundImage = 'url(images/vlogs2.jpg)';
 				imgIndex = 1;
 				mainHeader.innerHTML = "PROJECTS";
 				resetSideAnimations();
@@ -286,7 +286,7 @@ function adjustHomepagePics(screen480) {
 		rightPicture.onclick = function () {
 			if (imgIndex === 1) {
 				leftPicture.style.backgroundImage = 'url(images/projects1.jpg)';
-				mainPicture.setAttribute('src', 'images/resume2.jpg');
+				mainPicture.setAttribute('src', 'images/vlogs2.jpg');
 				rightPicture.style.backgroundImage = 'url(images/contact3.jpg)';
 				imgIndex = 2;
 				mainHeader.innerHTML = "VLOGS";
@@ -295,7 +295,7 @@ function adjustHomepagePics(screen480) {
 				resetEnlargeMain();
 			}
 			else if (imgIndex === 2) {
-				leftPicture.style.backgroundImage = 'url(images/resume2.jpg)';
+				leftPicture.style.backgroundImage = 'url(images/vlogs2.jpg)';
 				mainPicture.setAttribute('src', 'images/contact3.jpg');
 				rightPicture.style.backgroundImage = 'url(images/projects1.jpg)';
 				imgIndex = 3;
@@ -307,7 +307,7 @@ function adjustHomepagePics(screen480) {
 			else if (imgIndex === 3) {
 				leftPicture.style.backgroundImage = 'url(images/contact3.jpg)';
 				mainPicture.setAttribute('src', 'images/projects1.jpg');
-				rightPicture.style.backgroundImage = 'url(images/resume2.jpg)';
+				rightPicture.style.backgroundImage = 'url(images/vlogs2.jpg)';
 				imgIndex = 1;
 				mainHeader.innerHTML = "PROJECTS";
 				resetSideAnimations();

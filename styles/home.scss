@@ -387,7 +387,7 @@ nav {
   width: inherit;
   height: inherit;
 
-  background-image: url("../images/resume2.jpg");
+  background-image: url("../images/vlogs2.jpg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -880,6 +880,8 @@ $projectFrameHeight: 25rem;
 
   height: 100vh;
   background: rgb(255, 255, 255);
+
+  z-index: 0;
 }
 
 .contact-frame {
@@ -891,6 +893,8 @@ $projectFrameHeight: 25rem;
   bottom: 0;
   display: flex;
   flex-direction: row;
+
+  z-index: 2;
 }
 
 
@@ -1133,6 +1137,16 @@ $smHead2Size: 0.8rem;
     text-decoration: none;
     color: white;
   }
+}
+
+.offset-contact-img {
+  position: absolute;
+  bottom: 15rem;
+  right: 0;
+
+  width: 50vw;
+
+  z-index: 1;
 }
 
 /********************************************************************************/
