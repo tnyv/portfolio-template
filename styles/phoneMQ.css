@@ -363,6 +363,20 @@
   /********************************************************************************/
   .about-container {
     height: 110vh;
+    text-align: center;
+  }
+  .about-me-container {
+    position: absolute;
+    bottom: 0rem;
+    width: 35rem;
+    text-align: left;
+    margin: 0 auto;
+    -webkit-transform: translateX(50rem);
+            transform: translateX(50rem);
+    -webkit-transition: -webkit-transform 1.5s;
+    transition: -webkit-transform 1.5s;
+    transition: transform 1.5s;
+    transition: transform 1.5s, -webkit-transform 1.5s;
   }
   .project-header {
     width: 90%;

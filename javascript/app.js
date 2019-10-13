@@ -610,10 +610,10 @@ function aboutHeaderStateScroll() {
 	if (document.documentElement.scrollTop <= 400) {
 		aboutHeader.style.transform = "translateX(-150rem)";
 	}
-	else if ((document.documentElement.scrollTop > 400) && (document.documentElement.scrollTop < 1350)) {
+	else if ((document.documentElement.scrollTop > 400) && (document.documentElement.scrollTop < 1400)) {
 		aboutHeader.style.transform = "translateX(0rem)";
 	}
-	else if (document.documentElement.scrollTop >= 1350) {
+	else if (document.documentElement.scrollTop >= 1400) {
 		aboutHeader.style.transform = "translateX(-150rem)";
 	}
 }
@@ -662,7 +662,6 @@ function projectsStateScroll() {
 }
 
 function contactStateScroll() {
-	console.log(document.documentElement.scrollTop);
 	if (document.documentElement.scrollTop <= 3950) {
 		contactFrame.style.transform = "translateX(-150rem)";
 	}
@@ -680,10 +679,10 @@ function aboutHeaderPhoneScroll() {
 	if (document.documentElement.scrollTop <= 400) {
 		aboutHeader.style.transform = "translateX(-150rem)";
 	}
-	else if ((document.documentElement.scrollTop > 400) && (document.documentElement.scrollTop < 1350)) {
+	else if ((document.documentElement.scrollTop > 400) && (document.documentElement.scrollTop < 2400)) {
 		aboutHeader.style.transform = "translateX(0rem)";
 	}
-	else if (document.documentElement.scrollTop >= 1350) {
+	else if (document.documentElement.scrollTop >= 2400) {
 		aboutHeader.style.transform = "translateX(-150rem)";
 	}
 }
@@ -720,6 +719,7 @@ function sFramePhoneScroll() {
 }
 
 function projectsPhoneScroll() {
+	console.log(document.documentElement.scrollTop);
 	if (document.documentElement.scrollTop <= 2590) {
 		projects1Container.style.opacity = 0;
 	}
@@ -754,7 +754,11 @@ window.onscroll = function () {
 
 	function adjustMediaQAnimations(screen480) {
 		if (screen480.matches) { // For all phone screen sizes
+			aboutHeaderPhoneScroll();
+			aboutMePhoneScroll();
+			sFramePhoneScroll();
 			projectsPhoneScroll();
+			contactPhoneScroll();
 		}
 
 		else { // For all other non-phone screen sizes
