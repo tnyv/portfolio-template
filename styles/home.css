@@ -679,6 +679,7 @@ nav {
   transition: opacity 1s, -webkit-transform 2s;
   transition: transform 2s, opacity 1s;
   transition: transform 2s, opacity 1s, -webkit-transform 2s;
+  overflow: hidden;
   -webkit-animation-name: float-in;
           animation-name: float-in;
   -webkit-animation-play-state: running;
@@ -949,6 +950,7 @@ nav {
   height: 100vh;
   background: white;
   z-index: 0;
+  overflow: hidden;
 }
 
 .contact-frame {

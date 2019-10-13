@@ -50,9 +50,9 @@ $midRightAnimateWidth: 40%;
     }
   }
 
-  /***********************/
-  /* Navigation Bar */
-  /***********************/
+  /********************************************************************************/
+  /*                            NAVIGATION BAR                                    */
+  /********************************************************************************/
   nav {
     font-family: $defaultFont;
   }
@@ -67,14 +67,14 @@ $midRightAnimateWidth: 40%;
 
     transition: top 0.5s;
 
-    background: rgba(26, 26, 26, 0.671);
+    background: $defaultBackground;
 
     z-index: 5;
   }
 
   .home-link,
   .projects-link,
-  .resume-link,
+  .vlogs-link,
   .contact-link {
     visibility: hidden;
     display: none;
@@ -118,9 +118,9 @@ $midRightAnimateWidth: 40%;
     background: none;
   }
 
-  /***********************/
-  /* Phone Navigation    */
-  /***********************/
+  /********************************************************************************/
+  /*                            PHONE NAVIGATION                                  */
+  /********************************************************************************/
   .phone-nav {
     position: fixed;
 
@@ -131,16 +131,9 @@ $midRightAnimateWidth: 40%;
     z-index: 4;
   }
 
-
-
-
-
-
-
-
-  /***********************/
-  /* Homepage Container */
-  /***********************/
+  /********************************************************************************/
+  /*                            HOMEPAGE CONTAINER                                */
+  /********************************************************************************/
   .homepage-container {
     display: flex;
     flex-direction: column;
@@ -170,7 +163,7 @@ $midRightAnimateWidth: 40%;
   }
 
   .logo {
-    font-size: 7rem;
+    font-size: 6rem;
     font-weight: 600;
     font-family: $defaultFont;
     font-style: none;
@@ -184,19 +177,26 @@ $midRightAnimateWidth: 40%;
     padding: 0;
   }
 
+  .sub-logo-block {
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    margin: 0 0 1rem 0;
+  }
+
   .sub-logo {
     font-size: 2rem;
     font-weight: 500;
     font-family: $defaultFont;
     font-style: none;
-    letter-spacing: 0.2rem;
-    text-decoration: none;
-    white-space: nowrap;
-
-    margin: 0 0 1rem 0;
+    letter-spacing: 0.1rem;
 
     color: $defaultFontColor;
     background: transparent;
+
+    width: 40rem;
+
+    margin: 0 auto;
   }
 
   .homepage-links-container {
@@ -378,9 +378,11 @@ $midRightAnimateWidth: 40%;
     }
   }
 
-  .skills-container {
+  /********************************************************************************/
+  /*                            ABOUT CONTAINER                                  */
+  /********************************************************************************/
+  .about-container {
     height: 110vh;
-
   }
 
   .project-header {
@@ -422,16 +424,19 @@ $midRightAnimateWidth: 40%;
 
     white-space: nowrap;
 
-    color: white;
+    color: rgb(0, 0, 0);
     text-align: center;
 
     margin-top: 5rem;
     margin-bottom: 2rem;
   }
 
+  /********************************************************************************/
+  /*                            PROJECT CONTAINER                                 */
+  /********************************************************************************/
   .projects-container {
     height: 100vh;
-    background: rgb(64, 131, 161);
+    background: rgb(255, 255, 255);
 
     display: flex;
     flex-direction: column;
@@ -444,6 +449,8 @@ $midRightAnimateWidth: 40%;
     margin-bottom: 5rem;
     display: flex;
     flex-direction: column;
+
+    overflow: hidden;
   }
 
   .p1-image-frame {
@@ -570,31 +577,29 @@ $midRightAnimateWidth: 40%;
     float: right;
   }
 
-  .resume-container {
+  /********************************************************************************/
+  /*                            VLOGS CONTAINER                                  */
+  /********************************************************************************/
+
+  .vlogs-container {
     height: 110vh;
-    background: rgb(71, 133, 71);
+    background: rgb(255, 255, 255);
+
+    padding-top: 0.1rem;
   }
 
-  .contact-container {
-    height: 100vh;
-    background: rgb(133, 117, 71);
-
-    display: flex;
-    flex-direction: column;
-  }
-
-  .contact-header {
+  .vlogs-header {
     width: 90%;
-    margin: 0 auto 0;
+    margin: 0 auto 1.5rem;
   }
 
-  .contact-header h1 {
+  .vlogs-header h1 {
     overflow: hidden;
     text-align: center;
   }
 
-  .contact-header h1:before,
-  .contact-header h1:after {
+  .vlogs-header h1:before,
+  .vlogs-header h1:after {
     background-color: $fadedBlack;
     content: "";
     display: inline-block;
@@ -604,68 +609,63 @@ $midRightAnimateWidth: 40%;
     width: 50%;
   }
 
-  .contact-header h1:before {
+  .vlogs-header h1:before {
     right: 0.5em;
     margin-left: -40%;
   }
 
-  .contact-header h1:after {
+  .vlogs-header h1:after {
     left: 0.5em;
     margin-right: -40%;
   }
 
-  .contact-header h1 {
-    font-family: $defaultFont;
+  .vlogs-header h1 {
+    font-family: "Space Mono", monospace;
     font-size: 3rem;
     font-weight: 600;
     letter-spacing: 0.5rem;
 
-    color: white;
+    color: rgb(0, 0, 0);
     text-align: center;
 
     margin-top: 4rem;
     margin-bottom: 1rem;
   }
 
-  .contact-column {
-    width: 90%;
-    margin: 0 auto;
+  /********************************************************************************/
+  /*                            CONTACT CONTAINER                                 */
+  /********************************************************************************/
+
+  .contact-container {
+    position: relative;
+
+    height: 100vh;
+    background: rgb(255, 255, 255);
+
+    z-index: 0;
+    overflow: hidden;
   }
 
-  .my-contact-message {
-    margin: 0 auto 1rem;
-    font-family: $defaultFont;
-    font-size: 1.5rem;
-    color: white;
-  }
+  .contact-frame {
+    position: absolute;
+    width: 100%;
+    height: 100rem;
+    background: $defaultBackground;
 
-  .contact-icons {
+    text-align: center;
+    justify-content: center;
+
+    bottom: 0;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
 
-    margin: 0 auto;
+    z-index: 2;
 
-    img {
-      margin: 1rem 2rem;
-    }
+    transition: transform 1s;
   }
 
-  .email-icon {
-    width: 2rem;
-  }
-
-  .linkedin-icon {
-    width: 2rem;
-  }
-
-  .github-icon {
-    width: 2rem;
-  }
-
-  .contact-img {
-    width: 20rem;
-
-    border-radius: 50%;
+  .contact-frame .social-media-wrapper:first-child {
+    order: 1;
   }
 
   $formWidth: 31rem;
@@ -673,23 +673,22 @@ $midRightAnimateWidth: 40%;
   $formFontSize: 1rem;
   $nameEmailHeight: 2.2rem;
 
-  form {
-    font-family: $defaultFont;
+  .form-wrapper {
+    font-family: "Space Mono", monospace;
     font-size: $formFontSize;
     color: white;
 
     display: flex;
     flex-direction: column;
 
-    height: 100%;
     width: 50%;
-
-    margin: 1rem auto 0;
+    height: 50rem;
+    margin: 3rem auto 0;
 
     overflow: hidden;
   }
 
-  .name-email-container {
+  .name-email-section {
     margin: 0 auto;
 
     width: $formWidth;
@@ -701,6 +700,7 @@ $midRightAnimateWidth: 40%;
   }
 
   .form-input-name {
+    font-family: "Space Mono", monospace;
     font-size: $formFontSize;
     background: white;
     width: 15rem;
@@ -718,6 +718,7 @@ $midRightAnimateWidth: 40%;
   }
 
   .form-input-email {
+    font-family: "Space Mono", monospace;
     font-size: $formFontSize;
     background: white;
     width: 15rem;
@@ -729,7 +730,24 @@ $midRightAnimateWidth: 40%;
     margin-top: 0.3rem;
   }
 
-  .message-container {
+  .subject-section {
+    margin: 0 auto;
+
+    width: $formWidth;
+    height: 5rem;
+
+    select {
+      margin-top: 0.3rem;
+      font-family: "Space Mono", monospace;
+      font-size: $formFontSize;
+      border-radius: $borderRadius;
+      background: white;
+      width: $formWidth;
+      height: $nameEmailHeight;
+    }
+  }
+
+  .message-section {
     background: transparent;
 
     width: $formWidth;
@@ -739,7 +757,7 @@ $midRightAnimateWidth: 40%;
   }
 
   .message-input {
-    font-family: $defaultFont;
+    font-family: "Space Mono", monospace;
     font-size: $formFontSize;
     background: white;
     border-radius: $borderRadius;
@@ -753,7 +771,7 @@ $midRightAnimateWidth: 40%;
     margin-top: 0.3rem;
   }
 
-  .button-container {
+  .button-section {
     width: 100%;
     text-align: center;
 
@@ -761,18 +779,141 @@ $midRightAnimateWidth: 40%;
   }
 
   .submit-btn {
-    font-family: $defaultFont;
+    font-family: "Space Mono", monospace;
     font-size: 1.1rem;
 
     height: 2.3rem;
     width: 10rem;
 
-    background: rgba(26, 26, 26, 0.671);
-    color: white;
+    background: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
     box-sizing: border-box;
 
     border-radius: 1rem;
     transition-duration: 0.8s;
   }
 
+  .submit-btn:hover {
+    background: rgba(134, 134, 134, 0.671);
+    color: white;
+    cursor: pointer;
+  }
+
+  .social-media-wrapper {
+    width: 50%;
+    justify-content: center;
+    text-align: center;
+  }
+
+  $smBlockWidth: 20rem;
+  $smBlockHeight: 10rem;
+  $smHead2Size: 0.8rem;
+
+  .sm-block {
+    position: relative;
+    width: 40rem;
+    height: 25rem;
+
+    margin: 0 auto;
+    color: white;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .sm-1 {
+    font-family: "Space Mono", monospace;
+    font-size: 1.1rem;
+    position: absolute;
+    height: $smBlockHeight;
+    width: $smBlockWidth;
+    text-align: left;
+
+    top: 0;
+    left: 0;
+
+    h2 {
+      color: rgb(156, 156, 156);
+      font-size: $smHead2Size;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
+  }
+
+  .sm-2 {
+    font-family: "Space Mono", monospace;
+    font-size: 1.1rem;
+    position: absolute;
+    height: $smBlockHeight;
+    width: $smBlockWidth;
+    text-align: left;
+
+    right: 0;
+
+    h2 {
+      color: rgb(156, 156, 156);
+      font-size: $smHead2Size;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
+  }
+
+  .sm-3 {
+    font-family: "Space Mono", monospace;
+    font-size: 1.1rem;
+    position: absolute;
+    height: $smBlockHeight;
+    width: $smBlockWidth;
+    text-align: left;
+
+    left: 0;
+    bottom: 0;
+
+    h2 {
+      color: rgb(156, 156, 156);
+      font-size: $smHead2Size;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
+  }
+
+  .sm-4 {
+    font-family: "Space Mono", monospace;
+    font-size: 1.1rem;
+    position: absolute;
+    height: $smBlockHeight;
+    width: $smBlockWidth;
+    text-align: left;
+
+    right: 0;
+    bottom: 0;
+
+    h2 {
+      color: rgb(156, 156, 156);
+      font-size: $smHead2Size;
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+    }
+  }
+
+  .offset-contact-img {
+    position: absolute;
+    bottom: 15rem;
+    right: 0;
+
+    width: 50vw;
+
+    z-index: 1;
+  }
 }

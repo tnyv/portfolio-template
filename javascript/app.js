@@ -189,12 +189,12 @@ function adjustHomepagePics(screen480) {
 				mainPicture.setAttribute('src', 'images/vlogs2phone.jpg');
 				rightPicture.style.backgroundImage = 'url(images/contact3phone.jpg)';
 				imgIndex = 2;
-				mainHeader.innerHTML = "R&Eacute;SUM&Eacute;";
+				mainHeader.innerHTML = "VLOGS";
 			}
 			else if (imgIndex === 2) {
 				leftPicture.style.backgroundImage = 'url(images/contact3phone.jpg)';
 				mainPicture.setAttribute('src', 'images/projects1phone.jpg');
-				rightPicture.style.backgroundImage = 'url(images/resume2phone.jpg)';
+				rightPicture.style.backgroundImage = 'url(images/vlogs2phone.jpg)';
 				imgIndex = 1;
 				mainHeader.innerHTML = "PROJECTS";
 			}
@@ -206,7 +206,7 @@ function adjustHomepagePics(screen480) {
 				mainPicture.setAttribute('src', 'images/vlogs2phone.jpg');
 				rightPicture.style.backgroundImage = 'url(images/contact3phone.jpg)';
 				imgIndex = 2;
-				mainHeader.innerHTML = "R&Eacute;SUM&Eacute;";
+				mainHeader.innerHTML = "VLOGS";
 			}
 			else if (imgIndex === 2) {
 				leftPicture.style.backgroundImage = 'url(images/vlogs2phone.jpg)';
@@ -650,7 +650,6 @@ function sFrameStateScroll() {
 }
 
 function projectsStateScroll() {
-	console.log(document.documentElement.scrollTop);
 	if (document.documentElement.scrollTop <= 2000) {
 		projects1Container.style.opacity = 0;
 	}
