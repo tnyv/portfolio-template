@@ -99,9 +99,9 @@ var txt = '     devtony';
 var speed = 100;
 
 function typeWriter() {
-		document.querySelector('.loadme').innerHTML += txt.charAt(i);
-		i++;
-		setTimeout(typeWriter, speed);
+	document.querySelector('.loadme').innerHTML += txt.charAt(i);
+	i++;
+	setTimeout(typeWriter, speed);
 }
 
 typeWriter();
@@ -409,9 +409,9 @@ function updateSummaryP1() {
 	lang4.innerHTML = "SASS";
 	lang5.innerHTML = "JavaScript";
 	paragraph.innerHTML = "This was one of my first web development projects created for an" +
-	" internet application development college course. Orginally, I programmed this website using only HTML," +
-	"  CSS, and JavaScript. Later on I added PHP and SQL to utilize databases for storing vehicle and " +
-	"user account information. SASS was later impelemented for cross-browser consistency.";
+		" internet application development college course. Orginally, I programmed this website using only HTML," +
+		"  CSS, and JavaScript. Later on I added PHP and SQL to utilize databases for storing vehicle and " +
+		"user account information. SASS was later impelemented for cross-browser consistency.";
 	projectImg.setAttribute('src', 'images/automize.jpg');
 }
 
@@ -424,8 +424,8 @@ function updateSummaryP2() {
 	lang4.style.visibility = "hidden";
 	lang5.style.visibility = "hidden";
 	paragraph.innerHTML = "This website is an online POS platform for Pineapple Pizzeria restaurant." +
-	" I programmed this website using the ReactJS framework. Utilizing ReactJS' components was a" +
-	" gamechanger for my development skills! It is currently my favorite framework to code with.";
+		" I programmed this website using the ReactJS framework. Utilizing ReactJS' components was a" +
+		" gamechanger for my development skills! It is currently my favorite framework to code with.";
 	projectImg.setAttribute('src', 'images/pizza.jpg');
 }
 
@@ -438,9 +438,9 @@ function updateSummaryP3() {
 	lang4.style.visibility = "hidden";
 	lang5.style.visibility = "hidden";
 	paragraph.innerHTML = "I don't mean to toot my own horn, but I am proud of my portfolio creation!" +
-	" I programmed this website with nothing but HTML, SASS, and JavaScript (with a hint of PHP for" +
-	" webforms ... and some JQuery scroll animations). Developing this website taught me a whole lot about the importance of responsive design" +
-	", animations, and utilizing Git.";
+		" I programmed this website with nothing but HTML, SASS, and JavaScript (with a hint of PHP for" +
+		" webforms ... and some JQuery scroll animations). Developing this website taught me a whole lot about the importance of responsive design" +
+		", animations, and utilizing Git.";
 	projectImg.setAttribute('src', 'images/tvportfolio.jpg');
 }
 
@@ -612,7 +612,7 @@ function aboutHeaderStateScroll() {
 	}
 	else if ((document.documentElement.scrollTop > 400) && (document.documentElement.scrollTop < 1350)) {
 		aboutHeader.style.transform = "translateX(0rem)";
-	} 
+	}
 	else if (document.documentElement.scrollTop >= 1350) {
 		aboutHeader.style.transform = "translateX(-150rem)";
 	}
@@ -621,11 +621,11 @@ function aboutHeaderStateScroll() {
 function aboutMeStateScroll() {
 	if (document.documentElement.scrollTop <= 900) {
 		aboutMeContainer.style.transform = "translateX(50rem)";
-		
+
 	}
 	else if ((document.documentElement.scrollTop > 900) && (document.documentElement.scrollTop < 2200)) {
 		aboutMeContainer.style.transform = "translateX(0rem)";
-	} 
+	}
 	else if (document.documentElement.scrollTop >= 2200) {
 		aboutMeContainer.style.transform = "translateX(50rem)";
 	}
@@ -641,7 +641,7 @@ function sFrameStateScroll() {
 		sFrameOne.style.height = "40rem";
 		sFrameTwo.style.height = "40rem";
 		sFrameThree.style.height = "40rem";
-	} 
+	}
 	else if (document.documentElement.scrollTop >= 2000) {
 		sFrameOne.style.height = "0rem";
 		sFrameTwo.style.height = "0rem";
@@ -655,7 +655,7 @@ function projectsStateScroll() {
 	}
 	else if ((document.documentElement.scrollTop > 2000) && (document.documentElement.scrollTop < 2900)) {
 		projects1Container.style.opacity = 1;
-	} 
+	}
 	else if (document.documentElement.scrollTop >= 2900) {
 		projects1Container.style.opacity = 0;
 	}
@@ -668,7 +668,77 @@ function contactStateScroll() {
 	}
 	else if (document.documentElement.scrollTop >= 3950) {
 		contactFrame.style.transform = "translateX(0rem)";
-	} 
+	}
+}
+
+
+/************************************************************************************** */
+/*                                 MEDIA QUERY ANIMATIONS                               */
+/************************************************************************************** */
+
+function aboutHeaderPhoneScroll() {
+	if (document.documentElement.scrollTop <= 400) {
+		aboutHeader.style.transform = "translateX(-150rem)";
+	}
+	else if ((document.documentElement.scrollTop > 400) && (document.documentElement.scrollTop < 1350)) {
+		aboutHeader.style.transform = "translateX(0rem)";
+	}
+	else if (document.documentElement.scrollTop >= 1350) {
+		aboutHeader.style.transform = "translateX(-150rem)";
+	}
+}
+
+function aboutMePhoneScroll() {
+	if (document.documentElement.scrollTop <= 900) {
+		aboutMeContainer.style.transform = "translateX(50rem)";
+
+	}
+	else if ((document.documentElement.scrollTop > 900) && (document.documentElement.scrollTop < 2200)) {
+		aboutMeContainer.style.transform = "translateX(0rem)";
+	}
+	else if (document.documentElement.scrollTop >= 2200) {
+		aboutMeContainer.style.transform = "translateX(50rem)";
+	}
+}
+
+function sFramePhoneScroll() {
+	if (document.documentElement.scrollTop <= 800) {
+		sFrameOne.style.height = "0rem";
+		sFrameTwo.style.height = "0rem";
+		sFrameThree.style.height = "0rem";
+	}
+	else if ((document.documentElement.scrollTop > 800) && (document.documentElement.scrollTop < 2000)) {
+		sFrameOne.style.height = "40rem";
+		sFrameTwo.style.height = "40rem";
+		sFrameThree.style.height = "40rem";
+	}
+	else if (document.documentElement.scrollTop >= 2000) {
+		sFrameOne.style.height = "0rem";
+		sFrameTwo.style.height = "0rem";
+		sFrameThree.style.height = "0rem";
+	}
+}
+
+function projectsPhoneScroll() {
+	if (document.documentElement.scrollTop <= 2590) {
+		projects1Container.style.opacity = 0;
+	}
+	else if ((document.documentElement.scrollTop > 2590) && (document.documentElement.scrollTop < 5133)) {
+		projects1Container.style.opacity = 1;
+	}
+	else if (document.documentElement.scrollTop >= 5133) {
+		projects1Container.style.opacity = 0;
+	}
+}
+
+function contactPhoneScroll() {
+	console.log(document.documentElement.scrollTop);
+	if (document.documentElement.scrollTop <= 3950) {
+		contactFrame.style.transform = "translateX(-150rem)";
+	}
+	else if (document.documentElement.scrollTop >= 3950) {
+		contactFrame.style.transform = "translateX(0rem)";
+	}
 }
 // END
 /************************************************************************************** */
@@ -676,13 +746,28 @@ function contactStateScroll() {
 
 /************************************************************************************** */
 // Merging all window.onscroll funtions together
-window.onscroll = function () { 
-	navStateScrollStatus(); 
-	aboutHeaderStateScroll();
-	aboutMeStateScroll();
-	sFrameStateScroll();
-	projectsStateScroll();
-	contactStateScroll();
+
+window.onscroll = function () {
+	var phone480 = window.matchMedia("(min-device-width: 0px)" && "(max-device-width: 480px)");
+	adjustMediaQAnimations(phone480);// Call listener function at run time
+	phone480.addListener(adjustMediaQAnimations); // Attach listener function on state changes
+
+	function adjustMediaQAnimations(screen480) {
+		if (screen480.matches) { // For all phone screen sizes
+			projectsPhoneScroll();
+		}
+
+		else { // For all other non-phone screen sizes
+			navStateScrollStatus();
+			aboutHeaderStateScroll();
+			aboutMeStateScroll();
+			sFrameStateScroll();
+			projectsStateScroll();
+			contactStateScroll();
+
+		}
+	}
+	
 };
 // END
 /************************************************************************************** */
@@ -692,3 +777,7 @@ window.onscroll = function () {
 
 // END
 /************************************************************************************** */
+
+
+// HOMEPAGE MEDIA QUERIES
+
