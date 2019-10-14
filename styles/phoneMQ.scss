@@ -80,7 +80,7 @@ $midRightAnimateWidth: 40%;
     display: none;
   }
 
-  .tonyvu-link {
+  .mvc-link {
     font-family: $defaultFont;
     font-size: 3rem;
     font-weight: 600;
@@ -508,10 +508,11 @@ $midRightAnimateWidth: 40%;
   }
 
   .project-one-container {
+    position: relative;
     width: 100%;
     height: 100vh;
 
-    margin-bottom: 5rem;
+    margin-bottom: 0rem;
     display: flex;
     flex-direction: column;
 
@@ -519,8 +520,19 @@ $midRightAnimateWidth: 40%;
   }
 
   .p1-image-frame {
+    position: absolute;
+    top: 2rem;
+
     height: 40rem;
     width: 100%;
+  }
+
+  .project-buttons {
+    margin-bottom: 0rem;
+
+    button {
+      font-size: 2rem;
+    }
   }
 
   .p1-image-block {
@@ -530,8 +542,8 @@ $midRightAnimateWidth: 40%;
 
     margin: 0 auto;
 
-    width: 50rem;
-    height: 35rem;
+    width: 40rem;
+    height: 25rem;
   }
 
   .p1-picture {
@@ -539,24 +551,17 @@ $midRightAnimateWidth: 40%;
     height: 100%;
   }
 
-  .p1-header {
-    font-family: $defaultFont;
-    font-size: 5rem;
-    font-weight: 600;
-    letter-spacing: 0.5rem;
-
-    margin: 2rem 0;
-    color: transparent;
-
-    text-align: center;
-
-    -webkit-text-stroke-width: 0.25rem;
-    -webkit-text-stroke-color: rgb(255, 255, 255);
-
-    white-space: nowrap;
+  .project-header h1 {
+    font-family: 'Space Mono', monospace;
+    font-size: 4rem;
+  
+    margin-top: 4rem;
+    margin-bottom: 0rem;
   }
 
   .p1-summary-frame {
+    position: absolute;
+    top: 23rem;
     height: fit-content;
     width: 100%;
 
@@ -566,9 +571,9 @@ $midRightAnimateWidth: 40%;
   }
 
   .p1-summary {
-    font-family: $defaultFont;
     font-size: 2.5rem;
     width: 83%;
+    height: 50rem;
 
     line-height: 3rem;
 
@@ -578,8 +583,9 @@ $midRightAnimateWidth: 40%;
     margin: 6rem auto 2rem;
 
     p {
-      background: $fadedBlack;
+      font-size: 1.8rem;
       padding: 1rem;
+      height: 20rem;
     }
 
     h3 {
@@ -612,7 +618,7 @@ $midRightAnimateWidth: 40%;
       padding: 1rem 1.5rem;
 
       font-family: $defaultFont;
-      font-size: 3rem;
+      font-size: 2.5rem;
       font-weight: 600;
       text-decoration: none;
 
@@ -627,7 +633,7 @@ $midRightAnimateWidth: 40%;
 
     .p1-visit-git .btn-p1-git {
       line-height: 2.2rem;
-      font-size: 2.2rem;
+      font-size: 2rem;
     }
   }
 
@@ -641,6 +647,7 @@ $midRightAnimateWidth: 40%;
     height: 7rem;
     float: right;
   }
+
 
   /********************************************************************************/
   /*                            VLOGS CONTAINER                                  */

@@ -705,10 +705,10 @@ function projectsPhoneScroll() {
 	if (document.documentElement.scrollTop <= 2590) {
 		projects1Container.style.opacity = 0;
 	}
-	else if ((document.documentElement.scrollTop > 2590) && (document.documentElement.scrollTop < 5133)) {
+	else if ((document.documentElement.scrollTop > 2590) && (document.documentElement.scrollTop < 5300)) {
 		projects1Container.style.opacity = 1;
 	}
-	else if (document.documentElement.scrollTop >= 5133) {
+	else if (document.documentElement.scrollTop >= 5300) {
 		projects1Container.style.opacity = 0;
 	}
 }
