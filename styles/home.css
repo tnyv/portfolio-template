@@ -111,6 +111,7 @@ nav {
   transition: top 0.5s;
   background: #1a1a1a;
   z-index: 5;
+  overflow: hidden;
 }
 
 .home-link,
@@ -659,6 +660,7 @@ nav {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  overflow: hidden;
 }
 
 .project-one-container {
@@ -898,6 +900,7 @@ nav {
   height: 110vh;
   background: white;
   padding-top: 0.1rem;
+  overflow: hidden;
 }
 
 .vlogs-header {

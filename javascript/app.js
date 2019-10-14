@@ -688,33 +688,15 @@ function aboutHeaderPhoneScroll() {
 }
 
 function aboutMePhoneScroll() {
-	if (document.documentElement.scrollTop <= 900) {
-		aboutMeContainer.style.transform = "translateX(50rem)";
+	if (document.documentElement.scrollTop <= 1075) {
+		aboutMeContainer.style.transform = "translateX(100rem)";
 
 	}
-	else if ((document.documentElement.scrollTop > 900) && (document.documentElement.scrollTop < 2200)) {
+	else if ((document.documentElement.scrollTop > 1075) && (document.documentElement.scrollTop < 3800)) {
 		aboutMeContainer.style.transform = "translateX(0rem)";
 	}
-	else if (document.documentElement.scrollTop >= 2200) {
-		aboutMeContainer.style.transform = "translateX(50rem)";
-	}
-}
-
-function sFramePhoneScroll() {
-	if (document.documentElement.scrollTop <= 800) {
-		sFrameOne.style.height = "0rem";
-		sFrameTwo.style.height = "0rem";
-		sFrameThree.style.height = "0rem";
-	}
-	else if ((document.documentElement.scrollTop > 800) && (document.documentElement.scrollTop < 2000)) {
-		sFrameOne.style.height = "40rem";
-		sFrameTwo.style.height = "40rem";
-		sFrameThree.style.height = "40rem";
-	}
-	else if (document.documentElement.scrollTop >= 2000) {
-		sFrameOne.style.height = "0rem";
-		sFrameTwo.style.height = "0rem";
-		sFrameThree.style.height = "0rem";
+	else if (document.documentElement.scrollTop >= 3800) {
+		aboutMeContainer.style.transform = "translateX(100rem)";
 	}
 }
 
@@ -756,7 +738,6 @@ window.onscroll = function () {
 		if (screen480.matches) { // For all phone screen sizes
 			aboutHeaderPhoneScroll();
 			aboutMePhoneScroll();
-			sFramePhoneScroll();
 			projectsPhoneScroll();
 			contactPhoneScroll();
 		}

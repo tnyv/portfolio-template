@@ -381,28 +381,75 @@ $midRightAnimateWidth: 40%;
   /********************************************************************************/
   /*                            ABOUT CONTAINER                                  */
   /********************************************************************************/
+
   .about-container {
-    height: 110vh;
+    height: 100rem;
+    width: 100%;
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
     text-align: center;
+    justify-content: center;
+
+    overflow: hidden;
   }
 
-  .about-me-container {
-    position: absolute;
-    bottom: 0rem;
-  
-    width: 35rem;
-    text-align: left;
-  
+  .about-header {
+    position: relative;
     margin: 0 auto;
 
-    transform: translateX(50rem);
+    text-align: center;
+    width: 50rem;
+    height: 30rem;
+
+    font-family: "Space Mono", monospace;
+    font-size: 4.3rem;
+    font-weight: 400;
+
+    transform: translateX(-100rem);
     transition: transform 1.5s;
   }
 
-  .about-me {
+  .about-me-container {
+    position: static;
+ 
+    margin: 0 auto;
+    width: 50rem;
+    text-align: left;
 
+    transform: translateX(100rem);
+    transition: transform 1.5s;
   }
-  
+
+  .about-me-header {
+    font-family: "Space Mono", monospace;
+    font-size: 3rem;
+  }
+
+  .about-me {
+    font-family: "Space Mono", monospace;
+    font-size: 1.7rem;
+
+    a {
+      color: black;
+    }
+  }
+
+  .s-frame-one {
+    visibility: hidden;
+  }
+
+  .s-frame-two {
+    visibility: hidden;
+  }
+
+  .s-frame-three {
+    visibility: hidden;
+  }
+
+
   .project-header {
     width: 90%;
     margin: 4rem auto 1.5rem;

@@ -95,6 +95,7 @@ nav {
   background: $defaultBackground;
 
   z-index: 5;
+  overflow: hidden;
 }
 
 .home-link,
@@ -597,6 +598,8 @@ $projectFrameHeight: 25rem;
 
   display: flex;
   flex-direction: column;
+
+  overflow: hidden;
 }
 
 .project-one-container {
@@ -824,6 +827,7 @@ $projectFrameHeight: 25rem;
   background: rgb(255, 255, 255);
 
   padding-top: 0.1rem;
+  overflow: hidden;
 }
 
 .vlogs-header {
