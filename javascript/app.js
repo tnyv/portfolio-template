@@ -666,15 +666,26 @@ slider.scrollLeft = 725;
 /************************************************************************************** */
 
 var phoneHeader = document.querySelector('.phone-header');
+var phoneMidPic = document.querySelector('.middle-block');
+var phoneLeftPic = document.querySelector('.left-block');
+var phoneRightPic = document.querySelector('.right-block');
+
 slider.addEventListener('scroll', function (event) {
     if (slider.scrollLeft < 240) {
 		phoneHeader.innerHTML = "CONTACT";
+		phoneMidPic.style.opacity = "0";
+		phoneRightPic.style.opacity = "0";
 	}
 	else if (slider.scrollLeft > 240 && slider.scrollLeft < 1150) {
 		phoneHeader.innerHTML = "PROJECTS";
+		phoneMidPic.style.opacity = "1";
+		phoneLeftPic.style.opacity = "1";
+		phoneRightPic.style.opacity = "1";
 	}
 	else if (slider.scrollLeft > 1150) {
 		phoneHeader.innerHTML = "VLOGS";
+		phoneMidPic.style.opacity = "0";
+		phoneLeftPic.style.opacity = "0";
 	}
 });
 

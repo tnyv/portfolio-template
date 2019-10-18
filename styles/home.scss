@@ -148,7 +148,7 @@ nav {
 }
 
 .main {
-  margin-top: 10rem;
+  margin-top: 13rem;
   grid-area: main;
   padding: 0;
 
@@ -170,16 +170,21 @@ nav {
   margin: 0;
 }
 
+$phoneImgSpeed: 0.7s;
+
 .middle-block {
   margin: 0 5rem;
+  transition: opacity $phoneImgSpeed;
 }
 
 .left-block {
   margin-left: 10rem;
+  transition: opacity $phoneImgSpeed;
 }
 
 .right-block {
   margin-right: 10rem;
+  transition: opacity $phoneImgSpeed;
 }
 
 .phone-header {
@@ -200,11 +205,10 @@ nav {
 
 .phone-arrow {
   visibility: hidden;
-  text-align: center;
-
+  padding: 0 3rem 3rem;
   font-size: 5rem;
   color: white;
-  margin: 0;
+  margin: 0 auto;
 
   animation-name: arrow;
   animation-duration: .5s;
