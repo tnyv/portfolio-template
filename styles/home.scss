@@ -95,7 +95,7 @@ nav {
   background: $defaultBackground;
 
   z-index: 5;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 .home-link,
@@ -143,32 +143,32 @@ nav {
   padding: 3.5em 1em;
   font-size: 1em;
   font-weight: 700;
+
+  overflow-x: hidden;
 }
 
 .main {
+  margin-top: 10rem;
   grid-area: main;
   padding: 0;
-  overflow-x: scroll;
+
   overflow-y: hidden;
 }
 
 .items {
   position: relative;
-
   width: 100%;
-  overflow-x: scroll;
+
   overflow-y: hidden;
   white-space: nowrap;
 }
 
 .item {
   display: inline-block;
-
   width: 40rem;
 
   margin: 0;
 }
-
 
 .middle-block {
   margin: 0 5rem;
@@ -182,9 +182,19 @@ nav {
   margin-right: 10rem;
 }
 
-html {
- background: rgb(26, 26, 26);
+.phone-header {
+  text-align: center;
+
+  font-family: $defaultFont;
+  font-size: 7rem;
+  font-weight: 600;
+  letter-spacing: 0.5rem;
+  -webkit-text-stroke-width: 0.15rem;
+  -webkit-text-stroke-color: rgb(255, 255, 255);
+
+  color: transparent;
 }
+
 /********************************************************************************/
 /*                            HOMEPAGE CONTAINER                                */
 /********************************************************************************/
@@ -254,6 +264,7 @@ html {
 }
 
 .homepage-links-container {
+  position: relative;
   width: 100%;
   height: auto;
 
@@ -493,7 +504,7 @@ html {
   height: 90rem;
   width: 100%;
   position: relative;
-  
+
   display: flex;
   flex-direction: row;
 
@@ -509,9 +520,8 @@ html {
   text-align: left;
   width: 60rem;
   height: 50rem;
-  
 
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
   font-size: 4.6rem;
   font-weight: 400;
 
@@ -532,21 +542,18 @@ html {
 }
 
 .about-me-header {
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
   font-size: 1rem;
 }
 
 .about-me {
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
   font-size: 1rem;
 
   a {
     color: black;
-    
   }
 }
-
-
 
 .s-frame-one {
   position: absolute;
@@ -555,7 +562,7 @@ html {
 
   height: 0rem;
   width: 30rem;
-  
+
   background-image: url("../images/coast.jpg");
   background-attachment: fixed;
   background-position: left;
@@ -627,7 +634,7 @@ html {
 }
 
 .project-header h1 {
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
   font-size: 3rem;
   font-weight: 600;
   letter-spacing: 0.5rem;
@@ -701,7 +708,7 @@ $projectFrameHeight: 25rem;
   text-align: center;
 
   button {
-    font-family: 'Space Mono', monospace;
+    font-family: "Space Mono", monospace;
     font-size: 1.3rem;
     font-weight: 600;
     white-space: nowrap;
@@ -755,7 +762,7 @@ $projectFrameHeight: 25rem;
 }
 
 .p1-header {
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
   font-size: 5rem;
   font-weight: 600;
   letter-spacing: 0.5rem;
@@ -780,7 +787,7 @@ $projectFrameHeight: 25rem;
 .p1-summary {
   position: relative;
 
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
   font-size: 1.2rem;
   width: 50rem;
   height: $projectFrameHeight;
@@ -836,7 +843,7 @@ $projectFrameHeight: 25rem;
 
     padding: 0.25rem 0.5rem;
 
-    font-family: 'Space Mono', monospace;
+    font-family: "Space Mono", monospace;
     font-size: 1.2rem;
     font-weight: 600;
     text-decoration: none;
@@ -915,7 +922,7 @@ $projectFrameHeight: 25rem;
 }
 
 .vlogs-header h1 {
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
   font-size: 3rem;
   font-weight: 600;
   letter-spacing: 0.5rem;
@@ -926,7 +933,6 @@ $projectFrameHeight: 25rem;
   margin-top: 4rem;
   margin-bottom: 1rem;
 }
-
 
 /********************************************************************************/
 /*                            CONTACT CONTAINER                                 */
@@ -957,16 +963,13 @@ $projectFrameHeight: 25rem;
   transition: transform 1s;
 }
 
-
-
-
 $formWidth: 31rem;
 $borderRadius: 0.2rem;
 $formFontSize: 1rem;
 $nameEmailHeight: 2.2rem;
 
 .form-wrapper {
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
   font-size: $formFontSize;
   color: white;
 
@@ -992,7 +995,7 @@ $nameEmailHeight: 2.2rem;
 }
 
 .form-input-name {
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
   font-size: $formFontSize;
   background: white;
   width: 15rem;
@@ -1010,7 +1013,7 @@ $nameEmailHeight: 2.2rem;
 }
 
 .form-input-email {
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
   font-size: $formFontSize;
   background: white;
   width: 15rem;
@@ -1024,13 +1027,13 @@ $nameEmailHeight: 2.2rem;
 
 .subject-section {
   margin: 0 auto;
-  
+
   width: $formWidth;
   height: 5rem;
 
   select {
     margin-top: 0.3rem;
-    font-family: 'Space Mono', monospace;
+    font-family: "Space Mono", monospace;
     font-size: $formFontSize;
     border-radius: $borderRadius;
     background: white;
@@ -1049,7 +1052,7 @@ $nameEmailHeight: 2.2rem;
 }
 
 .message-input {
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
   font-size: $formFontSize;
   background: white;
   border-radius: $borderRadius;
@@ -1071,7 +1074,7 @@ $nameEmailHeight: 2.2rem;
 }
 
 .submit-btn {
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
   font-size: 1.1rem;
 
   height: 2.3rem;
@@ -1095,7 +1098,6 @@ $nameEmailHeight: 2.2rem;
   width: 50%;
   justify-content: center;
   text-align: center;
-  
 }
 
 $smBlockWidth: 20rem;
@@ -1113,13 +1115,13 @@ $smHead2Size: 0.8rem;
 }
 
 .sm-1 {
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
   font-size: 1.1rem;
   position: absolute;
   height: $smBlockHeight;
   width: $smBlockWidth;
   text-align: left;
-  
+
   top: 0;
   left: 0;
 
@@ -1135,7 +1137,7 @@ $smHead2Size: 0.8rem;
 }
 
 .sm-2 {
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
   font-size: 1.1rem;
   position: absolute;
   height: $smBlockHeight;
@@ -1156,7 +1158,7 @@ $smHead2Size: 0.8rem;
 }
 
 .sm-3 {
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
   font-size: 1.1rem;
   position: absolute;
   height: $smBlockHeight;
@@ -1178,7 +1180,7 @@ $smHead2Size: 0.8rem;
 }
 
 .sm-4 {
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
   font-size: 1.1rem;
   position: absolute;
   height: $smBlockHeight;
@@ -1219,7 +1221,7 @@ $langDuration: 0.8s;
   animation-name: lang-animate;
   animation-duration: $langDuration;
   animation-fill-mode: forwards;
-  animation-delay: .5s;
+  animation-delay: 0.5s;
 }
 
 .p1-lang2 {
@@ -1227,7 +1229,7 @@ $langDuration: 0.8s;
   animation-name: lang-animate;
   animation-duration: $langDuration;
   animation-fill-mode: forwards;
-  animation-delay: .8s;
+  animation-delay: 0.8s;
 }
 
 .p1-lang3 {
@@ -1262,5 +1264,3 @@ $langDuration: 0.8s;
     opacity: 1;
   }
 }
-
-

@@ -158,169 +158,87 @@ function resetFromRight() {
 
 
 // HOMEPAGE MEDIA QUERIES
-function adjustHomepagePics(screen480) {
-	if (screen480.matches) { // For all phone screen sizes
-		if (imgIndex === 1) {
-			leftPicture.style.backgroundImage = 'url(images/contact3phone.jpg)';
-			mainPicture.setAttribute('src', 'images/projects1phone.jpg');
-			rightPicture.style.backgroundImage = 'url(images/vlogs2phone.jpg)';
-		}
-		else if (imgIndex === 2) {
-			leftPicture.style.backgroundImage = 'url(images/projects1phone.jpg)';
-			mainPicture.setAttribute('src', 'images/vlogs2phone.jpg');
-			rightPicture.style.backgroundImage = 'url(images/contact3phone.jpg)';
-		}
-		else if (imgIndex === 3) {
-			leftPicture.style.backgroundImage = 'url(images/vlogs2phone.jpg)';
-			mainPicture.setAttribute('src', 'images/contact3phone.jpg');
-			rightPicture.style.backgroundImage = 'url(images/projects1phone.jpg)';
-		}
 
-		leftPicture.addEventListener('touchstart', function () {
-			if (imgIndex === 1) {
-				leftPicture.style.backgroundImage = 'url(images/vlogs2phone.jpg)';
-				mainPicture.setAttribute('src', 'images/contact3phone.jpg');
-				rightPicture.style.backgroundImage = 'url(images/projects1phone.jpg)';
-				imgIndex = 3;
-				mainHeader.innerHTML = "CONTACT";
-			}
-			else if (imgIndex === 3) {
-				leftPicture.style.backgroundImage = 'url(images/projects1phone.jpg)';
-				mainPicture.setAttribute('src', 'images/vlogs2phone.jpg');
-				rightPicture.style.backgroundImage = 'url(images/contact3phone.jpg)';
-				imgIndex = 2;
-				mainHeader.innerHTML = "VLOGS";
-			}
-			else if (imgIndex === 2) {
-				leftPicture.style.backgroundImage = 'url(images/contact3phone.jpg)';
-				mainPicture.setAttribute('src', 'images/projects1phone.jpg');
-				rightPicture.style.backgroundImage = 'url(images/vlogs2phone.jpg)';
-				imgIndex = 1;
-				mainHeader.innerHTML = "PROJECTS";
-			}
-		})
 
-		rightPicture.addEventListener('touchstart', function () {
-			if (imgIndex === 1) {
-				leftPicture.style.backgroundImage = 'url(images/projects1phone.jpg)';
-				mainPicture.setAttribute('src', 'images/vlogs2phone.jpg');
-				rightPicture.style.backgroundImage = 'url(images/contact3phone.jpg)';
-				imgIndex = 2;
-				mainHeader.innerHTML = "VLOGS";
-			}
-			else if (imgIndex === 2) {
-				leftPicture.style.backgroundImage = 'url(images/vlogs2phone.jpg)';
-				mainPicture.setAttribute('src', 'images/contact3phone.jpg');
-				rightPicture.style.backgroundImage = 'url(images/projects1phone.jpg)';
-				imgIndex = 3;
-				mainHeader.innerHTML = "CONTACT";
-			}
-			else if (imgIndex === 3) {
-				leftPicture.style.backgroundImage = 'url(images/contact3phone.jpg)';
-				mainPicture.setAttribute('src', 'images/projects1phone.jpg');
-				rightPicture.style.backgroundImage = 'url(images/vlogs2phone.jpg)';
-				imgIndex = 1;
-				mainHeader.innerHTML = "PROJECTS";
-			}
-		})
-
-		mainPicture.addEventListener('touchstart', function () {
-			if (imgIndex === 1) {
-				smoothScroll('.projects-container', scrollSpeed);
-			}
-			else if (imgIndex === 2) {
-				smoothScroll('.vlogs-container', scrollSpeed);
-			}
-			else if (imgIndex === 3) {
-				smoothScroll('.contact-container', scrollSpeed);
-			}
-		})
+mainPicture.addEventListener('click', function () {
+	if (imgIndex === 1) {
+		smoothScroll('.projects-container', scrollSpeed);
 	}
-
-	else { // For all other non-phone screen sizes
-		mainPicture.addEventListener('click', function () {
-			if (imgIndex === 1) {
-				smoothScroll('.projects-container', scrollSpeed);
-			}
-			else if (imgIndex === 2) {
-				smoothScroll('.vlogs-container', scrollSpeed);
-			}
-			else if (imgIndex === 3) {
-				smoothScroll('.contact-container', scrollSpeed);
-			}
-		})
-
-		leftPicture.onclick = function () {
-			if (imgIndex === 1) {
-				leftPicture.style.backgroundImage = 'url(images/vlogs2.jpg)';
-				mainPicture.setAttribute('src', 'images/contact3.jpg');
-				rightPicture.style.backgroundImage = 'url(images/projects1.jpg)';
-				imgIndex = 3;
-				mainHeader.innerHTML = "CONTACT";
-				resetSideAnimations();
-				resetFromRight();
-				resetEnlargeMain();
-			}
-			else if (imgIndex === 3) {
-				leftPicture.style.backgroundImage = 'url(images/projects1.jpg)';
-				mainPicture.setAttribute('src', 'images/vlogs2.jpg');
-				rightPicture.style.backgroundImage = 'url(images/contact3.jpg)';
-				imgIndex = 2;
-				mainHeader.innerHTML = "VLOGS";
-				resetSideAnimations();
-				resetFromRight();
-				resetEnlargeMain();
-			}
-			else if (imgIndex === 2) {
-				leftPicture.style.backgroundImage = 'url(images/contact3.jpg)';
-				mainPicture.setAttribute('src', 'images/projects1.jpg');
-				rightPicture.style.backgroundImage = 'url(images/vlogs2.jpg)';
-				imgIndex = 1;
-				mainHeader.innerHTML = "PROJECTS";
-				resetSideAnimations();
-				resetFromRight();
-				resetEnlargeMain();
-			}
-		};
-
-		rightPicture.onclick = function () {
-			if (imgIndex === 1) {
-				leftPicture.style.backgroundImage = 'url(images/projects1.jpg)';
-				mainPicture.setAttribute('src', 'images/vlogs2.jpg');
-				rightPicture.style.backgroundImage = 'url(images/contact3.jpg)';
-				imgIndex = 2;
-				mainHeader.innerHTML = "VLOGS";
-				resetSideAnimations();
-				resetFromLeft();
-				resetEnlargeMain();
-			}
-			else if (imgIndex === 2) {
-				leftPicture.style.backgroundImage = 'url(images/vlogs2.jpg)';
-				mainPicture.setAttribute('src', 'images/contact3.jpg');
-				rightPicture.style.backgroundImage = 'url(images/projects1.jpg)';
-				imgIndex = 3;
-				mainHeader.innerHTML = "CONTACT";
-				resetSideAnimations();
-				resetFromLeft();
-				resetEnlargeMain();
-			}
-			else if (imgIndex === 3) {
-				leftPicture.style.backgroundImage = 'url(images/contact3.jpg)';
-				mainPicture.setAttribute('src', 'images/projects1.jpg');
-				rightPicture.style.backgroundImage = 'url(images/vlogs2.jpg)';
-				imgIndex = 1;
-				mainHeader.innerHTML = "PROJECTS";
-				resetSideAnimations();
-				resetFromLeft();
-				resetEnlargeMain();
-			}
-		};
+	else if (imgIndex === 2) {
+		smoothScroll('.vlogs-container', scrollSpeed);
 	}
-}
+	else if (imgIndex === 3) {
+		smoothScroll('.contact-container', scrollSpeed);
+	}
+})
 
-var screen480 = window.matchMedia("(min-device-width: 0px)" && "(max-device-width: 480px)");
-adjustHomepagePics(screen480);// Call listener function at run time
-screen480.addListener(adjustHomepagePics); // Attach listener function on state changes
+leftPicture.onclick = function () {
+	if (imgIndex === 1) {
+		leftPicture.style.backgroundImage = 'url(images/vlogs2.jpg)';
+		mainPicture.setAttribute('src', 'images/contact3.jpg');
+		rightPicture.style.backgroundImage = 'url(images/projects1.jpg)';
+		imgIndex = 3;
+		mainHeader.innerHTML = "CONTACT";
+		resetSideAnimations();
+		resetFromRight();
+		resetEnlargeMain();
+	}
+	else if (imgIndex === 3) {
+		leftPicture.style.backgroundImage = 'url(images/projects1.jpg)';
+		mainPicture.setAttribute('src', 'images/vlogs2.jpg');
+		rightPicture.style.backgroundImage = 'url(images/contact3.jpg)';
+		imgIndex = 2;
+		mainHeader.innerHTML = "VLOGS";
+		resetSideAnimations();
+		resetFromRight();
+		resetEnlargeMain();
+	}
+	else if (imgIndex === 2) {
+		leftPicture.style.backgroundImage = 'url(images/contact3.jpg)';
+		mainPicture.setAttribute('src', 'images/projects1.jpg');
+		rightPicture.style.backgroundImage = 'url(images/vlogs2.jpg)';
+		imgIndex = 1;
+		mainHeader.innerHTML = "PROJECTS";
+		resetSideAnimations();
+		resetFromRight();
+		resetEnlargeMain();
+	}
+};
+
+rightPicture.onclick = function () {
+	if (imgIndex === 1) {
+		leftPicture.style.backgroundImage = 'url(images/projects1.jpg)';
+		mainPicture.setAttribute('src', 'images/vlogs2.jpg');
+		rightPicture.style.backgroundImage = 'url(images/contact3.jpg)';
+		imgIndex = 2;
+		mainHeader.innerHTML = "VLOGS";
+		resetSideAnimations();
+		resetFromLeft();
+		resetEnlargeMain();
+	}
+	else if (imgIndex === 2) {
+		leftPicture.style.backgroundImage = 'url(images/vlogs2.jpg)';
+		mainPicture.setAttribute('src', 'images/contact3.jpg');
+		rightPicture.style.backgroundImage = 'url(images/projects1.jpg)';
+		imgIndex = 3;
+		mainHeader.innerHTML = "CONTACT";
+		resetSideAnimations();
+		resetFromLeft();
+		resetEnlargeMain();
+	}
+	else if (imgIndex === 3) {
+		leftPicture.style.backgroundImage = 'url(images/contact3.jpg)';
+		mainPicture.setAttribute('src', 'images/projects1.jpg');
+		rightPicture.style.backgroundImage = 'url(images/vlogs2.jpg)';
+		imgIndex = 1;
+		mainHeader.innerHTML = "PROJECTS";
+		resetSideAnimations();
+		resetFromLeft();
+		resetEnlargeMain();
+	}
+};
+
+
 
 // END
 /************************************************************************************** */
@@ -734,8 +652,8 @@ window.onscroll = function () {
 	adjustMediaQAnimations(phone480);// Call listener function at run time
 	phone480.addListener(adjustMediaQAnimations); // Attach listener function on state changes
 
-	function adjustMediaQAnimations(screen480) {
-		if (screen480.matches) { // For all phone screen sizes
+	function adjustMediaQAnimations(phone480) {
+		if (phone480.matches) { // For all phone screen sizes
 			aboutHeaderPhoneScroll();
 			aboutMePhoneScroll();
 			projectsPhoneScroll();

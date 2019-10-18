@@ -158,19 +158,19 @@ nav {
   padding: 3.5em 1em;
   font-size: 1em;
   font-weight: 700;
+  overflow-x: hidden;
 }
 
 .main {
+  margin-top: 10rem;
   grid-area: main;
   padding: 0;
-  overflow-x: scroll;
   overflow-y: hidden;
 }
 
 .items {
   position: relative;
   width: 100%;
-  overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
 }
@@ -193,8 +193,15 @@ nav {
   margin-right: 10rem;
 }
 
-html {
-  background: #1a1a1a;
+.phone-header {
+  text-align: center;
+  font-family: Helvetica;
+  font-size: 7rem;
+  font-weight: 600;
+  letter-spacing: 0.5rem;
+  -webkit-text-stroke-width: 0.15rem;
+  -webkit-text-stroke-color: white;
+  color: transparent;
 }
 
 /********************************************************************************/
@@ -269,6 +276,7 @@ html {
 }
 
 .homepage-links-container {
+  position: relative;
   width: 100%;
   height: auto;
   -webkit-box-align: center;
@@ -571,7 +579,7 @@ html {
   text-align: left;
   width: 60rem;
   height: 50rem;
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
   font-size: 4.6rem;
   font-weight: 400;
   -webkit-transform: translateX(-100rem);
@@ -597,12 +605,12 @@ html {
 }
 
 .about-me-header {
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
   font-size: 1rem;
 }
 
 .about-me {
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
   font-size: 1rem;
 }
 
@@ -686,7 +694,7 @@ html {
 }
 
 .project-header h1 {
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
   font-size: 3rem;
   font-weight: 600;
   letter-spacing: 0.5rem;
@@ -794,7 +802,7 @@ html {
 }
 
 .project-buttons button {
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
   font-size: 1.3rem;
   font-weight: 600;
   white-space: nowrap;
@@ -840,7 +848,7 @@ html {
 }
 
 .p1-header {
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
   font-size: 5rem;
   font-weight: 600;
   letter-spacing: 0.5rem;
@@ -860,7 +868,7 @@ html {
 
 .p1-summary {
   position: relative;
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
   font-size: 1.2rem;
   width: 50rem;
   height: 25rem;
@@ -912,7 +920,7 @@ html {
 .p1-summary .p1-visit-git a {
   display: inline-block;
   padding: 0.25rem 0.5rem;
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
   font-size: 1.2rem;
   font-weight: 600;
   text-decoration: none;
@@ -985,7 +993,7 @@ html {
 }
 
 .vlogs-header h1 {
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
   font-size: 3rem;
   font-weight: 600;
   letter-spacing: 0.5rem;
@@ -1027,7 +1035,7 @@ html {
 }
 
 .form-wrapper {
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
   font-size: 1rem;
   color: white;
   display: -webkit-box;
@@ -1053,7 +1061,7 @@ html {
 }
 
 .form-input-name {
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
   font-size: 1rem;
   background: white;
   width: 15rem;
@@ -1070,7 +1078,7 @@ html {
 }
 
 .form-input-email {
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
   font-size: 1rem;
   background: white;
   width: 15rem;
@@ -1090,7 +1098,7 @@ html {
 
 .subject-section select {
   margin-top: 0.3rem;
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
   font-size: 1rem;
   border-radius: 0.2rem;
   background: white;
@@ -1106,7 +1114,7 @@ html {
 }
 
 .message-input {
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
   font-size: 1rem;
   background: white;
   border-radius: 0.2rem;
@@ -1126,7 +1134,7 @@ html {
 }
 
 .submit-btn {
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
   font-size: 1.1rem;
   height: 2.3rem;
   width: 10rem;
@@ -1169,7 +1177,7 @@ html {
 }
 
 .sm-1 {
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
   font-size: 1.1rem;
   position: absolute;
   height: 10rem;
@@ -1190,7 +1198,7 @@ html {
 }
 
 .sm-2 {
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
   font-size: 1.1rem;
   position: absolute;
   height: 10rem;
@@ -1210,7 +1218,7 @@ html {
 }
 
 .sm-3 {
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
   font-size: 1.1rem;
   position: absolute;
   height: 10rem;
@@ -1231,7 +1239,7 @@ html {
 }
 
 .sm-4 {
-  font-family: 'Space Mono', monospace;
+  font-family: "Space Mono", monospace;
   font-size: 1.1rem;
   position: absolute;
   height: 10rem;
@@ -1270,8 +1278,8 @@ html {
           animation-duration: 0.8s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  -webkit-animation-delay: .5s;
-          animation-delay: .5s;
+  -webkit-animation-delay: 0.5s;
+          animation-delay: 0.5s;
 }
 
 .p1-lang2 {
@@ -1282,8 +1290,8 @@ html {
           animation-duration: 0.8s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
-  -webkit-animation-delay: .8s;
-          animation-delay: .8s;
+  -webkit-animation-delay: 0.8s;
+          animation-delay: 0.8s;
 }
 
 .p1-lang3 {
