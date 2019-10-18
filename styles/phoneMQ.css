@@ -126,6 +126,12 @@
   .grid-phone {
     visibility: visible;
   }
+  .phone-header {
+    visibility: visible;
+  }
+  .phone-arrow {
+    visibility: visible;
+  }
   /********************************************************************************/
   /*                            HOMEPAGE CONTAINER                                */
   /********************************************************************************/
@@ -229,30 +235,7 @@
     visibility: hidden;
   }
   .homepage-footer {
-    position: absolute;
-    bottom: 10rem;
-    width: 100%;
-    background: transparent;
-    margin-top: 4rem;
-  }
-  .homepage-footer p,
-  .homepage-footer a {
-    float: left;
-    font-size: 1.4rem;
-    font-weight: 500;
-    font-family: Helvetica;
-    font-style: none;
-    color: white;
-    letter-spacing: 0.2rem;
-    text-decoration: none;
-    white-space: nowrap;
-  }
-  .homepage-footer p {
-    margin-left: 2rem;
-  }
-  .homepage-footer a {
-    float: right;
-    margin-right: 2rem;
+    visibility: hidden;
   }
   /********************************************************************************/
   /*                            ABOUT CONTAINER                                  */

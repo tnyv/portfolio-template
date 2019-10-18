@@ -138,6 +138,14 @@ $midRightAnimateWidth: 40%;
     visibility: visible;
   }
 
+  .phone-header {
+    visibility: visible;
+  }
+
+  .phone-arrow {
+    visibility: visible;
+  }
+
   /********************************************************************************/
   /*                            HOMEPAGE CONTAINER                                */
   /********************************************************************************/
@@ -242,36 +250,8 @@ $midRightAnimateWidth: 40%;
     visibility: hidden;
   }
 
-
   .homepage-footer {
-    position: absolute;
-    bottom: 10rem;
-    width: 100%;
-    background: transparent;
-    margin-top: 4rem;
-
-    p,
-    a {
-      float: left;
-      font-size: 1.4rem;
-      font-weight: 500;
-      font-family: $defaultFont;
-      font-style: none;
-      color: $defaultFontColor;
-
-      letter-spacing: 0.2rem;
-      text-decoration: none;
-      white-space: nowrap;
-    }
-
-    p {
-      margin-left: 2rem;
-    }
-
-    a {
-      float: right;
-      margin-right: 2rem;
-    }
+    visibility: hidden;
   }
 
   /********************************************************************************/
