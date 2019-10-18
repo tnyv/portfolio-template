@@ -132,6 +132,13 @@ $midRightAnimateWidth: 40%;
   }
 
   /********************************************************************************/
+  /*                              SCROLLABLE PHONE                                */
+  /********************************************************************************/
+  .grid-phone {
+    visibility: visible;
+  }
+
+  /********************************************************************************/
   /*                            HOMEPAGE CONTAINER                                */
   /********************************************************************************/
   .homepage-container {
@@ -224,65 +231,15 @@ $midRightAnimateWidth: 40%;
   }
 
   .homepage-block-middle {
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-
-    width: 40rem;
-    height: 60rem;
-
-    margin-bottom: 10rem;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-
-    transform: translate(-50%, -50%);
-
-    transition: all 0.3s ease-in-out;
+    visibility: hidden;
   }
 
-  .homepage-block-middle:hover {
-    width: 40rem;
-    height: 60rem;
-    cursor: none;
+  .homepage-block-left {
+    visibility: hidden;
   }
 
-  .main-picture {
-    object-fit: contain;
-    width: 100%;
-    height: 100%;
-
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-
-    animation: none;
-  }
-
-  @keyframes enlarge {
-    from {
-      width: 100%;
-      height: 100%;
-      opacity: 1;
-    }
-    to {
-      width: 100%;
-      height: 100%;
-      opacity: 1;
-    }
-  }
-
-  .middle-frame {
-    background: transparent;
-
-    position: absolute;
-    top: 50%;
-    left: 50%;
-
-    transform: translate(-50%, -50%);
-
-    animation: none;
+  .homepage-block-right {
+    visibility: hidden;
   }
 
   .main-header {
@@ -304,48 +261,6 @@ $midRightAnimateWidth: 40%;
     -webkit-text-stroke-color: rgb(255, 255, 255);
   }
 
-  .homepage-block-left {
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-
-    width: 40rem;
-    height: 40rem;
-
-    position: absolute;
-    top: 50%;
-    left: -10rem;
-
-    transform: translate(-50%, -50%);
-
-    animation: none;
-  }
-
-  .block-left:hover {
-    transform: scale(1);
-    cursor: none;
-  }
-
-  .homepage-block-right {
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-
-    width: 40rem;
-    height: 40rem;
-
-    position: absolute;
-    top: 50%;
-    right: -50rem;
-
-    transform: translate(-50%, -50%);
-    animation: none;
-  }
-
-  .block-right:hover {
-    transform: scale(1);
-    cursor: none;
-  }
 
   .homepage-footer {
     position: absolute;
@@ -414,7 +329,7 @@ $midRightAnimateWidth: 40%;
 
   .about-me-container {
     position: static;
- 
+
     margin: 0 auto;
     width: 50rem;
     text-align: left;
@@ -448,7 +363,6 @@ $midRightAnimateWidth: 40%;
   .s-frame-three {
     visibility: hidden;
   }
-
 
   .project-header {
     width: 90%;
@@ -552,9 +466,9 @@ $midRightAnimateWidth: 40%;
   }
 
   .project-header h1 {
-    font-family: 'Space Mono', monospace;
+    font-family: "Space Mono", monospace;
     font-size: 4rem;
-  
+
     margin-top: 4rem;
     margin-bottom: 0rem;
   }
@@ -648,7 +562,6 @@ $midRightAnimateWidth: 40%;
     float: right;
   }
 
-
   /********************************************************************************/
   /*                            VLOGS CONTAINER                                  */
   /********************************************************************************/
@@ -725,7 +638,6 @@ $midRightAnimateWidth: 40%;
     text-align: left;
     justify-content: center;
 
-  
     display: flex;
     flex-direction: column;
 
@@ -898,15 +810,17 @@ $midRightAnimateWidth: 40%;
     color: white;
     display: flex;
     flex-direction: column;
-
   }
 
-  .sm-1, .sm-2, .sm-3, .sm-4 {
+  .sm-1,
+  .sm-2,
+  .sm-3,
+  .sm-4 {
     position: static;
 
     font-family: "Space Mono", monospace;
     font-size: $smParaSize;
-    
+
     height: $smBlockHeight;
     width: $smBlockWidth;
     text-align: left;
@@ -922,10 +836,6 @@ $midRightAnimateWidth: 40%;
       color: white;
     }
   }
-
-
-
-
 
   .offset-contact-img {
     visibility: hidden;

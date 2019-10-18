@@ -148,6 +148,56 @@ nav {
 }
 
 /********************************************************************************/
+/*                              SCROLLABLE PHONE                                */
+/********************************************************************************/
+.grid-phone {
+  visibility: hidden;
+}
+
+.grid-phone {
+  padding: 3.5em 1em;
+  font-size: 1em;
+  font-weight: 700;
+}
+
+.main {
+  grid-area: main;
+  padding: 0;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
+.items {
+  position: relative;
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+.item {
+  display: inline-block;
+  width: 40rem;
+  margin: 0;
+}
+
+.middle-block {
+  margin: 0 5rem;
+}
+
+.left-block {
+  margin-left: 10rem;
+}
+
+.right-block {
+  margin-right: 10rem;
+}
+
+html {
+  background: #1a1a1a;
+}
+
+/********************************************************************************/
 /*                            HOMEPAGE CONTAINER                                */
 /********************************************************************************/
 .homepage-container {

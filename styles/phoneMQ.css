@@ -121,6 +121,12 @@
     z-index: 4;
   }
   /********************************************************************************/
+  /*                              SCROLLABLE PHONE                                */
+  /********************************************************************************/
+  .grid-phone {
+    visibility: visible;
+  }
+  /********************************************************************************/
   /*                            HOMEPAGE CONTAINER                                */
   /********************************************************************************/
   .homepage-container {
@@ -214,71 +220,13 @@
     white-space: nowrap;
   }
   .homepage-block-middle {
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 40rem;
-    height: 60rem;
-    margin-bottom: 10rem;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    -webkit-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
+    visibility: hidden;
   }
-  .homepage-block-middle:hover {
-    width: 40rem;
-    height: 60rem;
-    cursor: none;
+  .homepage-block-left {
+    visibility: hidden;
   }
-  .main-picture {
-    -o-object-fit: contain;
-       object-fit: contain;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    -webkit-animation: none;
-            animation: none;
-  }
-  @-webkit-keyframes enlarge {
-    from {
-      width: 100%;
-      height: 100%;
-      opacity: 1;
-    }
-    to {
-      width: 100%;
-      height: 100%;
-      opacity: 1;
-    }
-  }
-  @keyframes enlarge {
-    from {
-      width: 100%;
-      height: 100%;
-      opacity: 1;
-    }
-    to {
-      width: 100%;
-      height: 100%;
-      opacity: 1;
-    }
-  }
-  .middle-frame {
-    background: transparent;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    -webkit-animation: none;
-            animation: none;
+  .homepage-block-right {
+    visibility: hidden;
   }
   .main-header {
     font-family: Helvetica;
@@ -293,44 +241,6 @@
     right: 0;
     -webkit-text-stroke-width: 0.15rem;
     -webkit-text-stroke-color: white;
-  }
-  .homepage-block-left {
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 40rem;
-    height: 40rem;
-    position: absolute;
-    top: 50%;
-    left: -10rem;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    -webkit-animation: none;
-            animation: none;
-  }
-  .block-left:hover {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    cursor: none;
-  }
-  .homepage-block-right {
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 40rem;
-    height: 40rem;
-    position: absolute;
-    top: 50%;
-    right: -50rem;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    -webkit-animation: none;
-            animation: none;
-  }
-  .block-right:hover {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-    cursor: none;
   }
   .homepage-footer {
     position: absolute;
@@ -516,7 +426,7 @@
     height: 100%;
   }
   .project-header h1 {
-    font-family: 'Space Mono', monospace;
+    font-family: "Space Mono", monospace;
     font-size: 4rem;
     margin-top: 4rem;
     margin-bottom: 0rem;
@@ -803,7 +713,10 @@
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .sm-1, .sm-2, .sm-3, .sm-4 {
+  .sm-1,
+  .sm-2,
+  .sm-3,
+  .sm-4 {
     position: static;
     font-family: "Space Mono", monospace;
     font-size: 2.5rem;
@@ -812,11 +725,17 @@
     text-align: left;
     margin-bottom: 5rem;
   }
-  .sm-1 h2, .sm-2 h2, .sm-3 h2, .sm-4 h2 {
+  .sm-1 h2,
+  .sm-2 h2,
+  .sm-3 h2,
+  .sm-4 h2 {
     color: #9c9c9c;
     font-size: 2rem;
   }
-  .sm-1 a, .sm-2 a, .sm-3 a, .sm-4 a {
+  .sm-1 a,
+  .sm-2 a,
+  .sm-3 a,
+  .sm-4 a {
     text-decoration: none;
     color: white;
   }
