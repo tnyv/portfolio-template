@@ -613,7 +613,7 @@ $phoneImgSpeed: 0.7s;
     float: right;
     margin-right: 4rem;
   }
-  
+
   @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
     visibility: hidden;
   }
@@ -777,7 +777,7 @@ $phoneImgSpeed: 0.7s;
 
 .project-header h1 {
   font-family: "Space Mono", monospace;
-    
+
   overflow: hidden;
   text-align: center;
 
@@ -956,8 +956,6 @@ $projectFrameHeight: 25rem;
 
   width: 40rem;
   height: $projectFrameHeight;
-
-
 }
 
 .p1-image-block:hover {
@@ -1047,7 +1045,8 @@ $projectFrameHeight: 25rem;
   .p1-languages-wrapper {
     margin: 1rem 0;
 
-    h3 { /* Programming Languages */
+    h3 {
+      /* Programming Languages */
       display: inline-block;
       margin-right: 1rem;
       background: $fadedBlack;
@@ -1205,7 +1204,8 @@ $projectFrameHeight: 25rem;
   overflow: hidden;
 
   @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
-    height: 120rem;
+    visibility: hidden;
+    height: 0vh;
   }
 }
 
@@ -1222,16 +1222,12 @@ $projectFrameHeight: 25rem;
   z-index: 2;
 
   transition: transform 1s;
-
-  @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
-    height: 120rem;
-  }
 }
 
 $formWidth: 31rem;
-$borderRadius: 0.2rem;
 $formFontSize: 1rem;
 $nameEmailHeight: 2.2rem;
+$borderRadius: 0.2rem;
 
 .form-wrapper {
   font-family: "Space Mono", monospace;
@@ -1334,7 +1330,6 @@ $nameEmailHeight: 2.2rem;
 .button-section {
   width: 100%;
   text-align: center;
-
   margin-top: 2rem;
 }
 
@@ -1379,71 +1374,9 @@ $smHead2Size: 0.8rem;
   flex-direction: row;
 }
 
-.sm-1 {
-  font-family: "Space Mono", monospace;
-  font-size: 1.1rem;
-  position: absolute;
-  height: $smBlockHeight;
-  width: $smBlockWidth;
-  text-align: left;
-
-  top: 0;
-  left: 0;
-
-  h2 {
-    color: rgb(156, 156, 156);
-    font-size: $smHead2Size;
-  }
-
-  a {
-    text-decoration: none;
-    color: white;
-  }
-}
-
-.sm-2 {
-  font-family: "Space Mono", monospace;
-  font-size: 1.1rem;
-  position: absolute;
-  height: $smBlockHeight;
-  width: $smBlockWidth;
-  text-align: left;
-
-  right: 0;
-
-  h2 {
-    color: rgb(156, 156, 156);
-    font-size: $smHead2Size;
-  }
-
-  a {
-    text-decoration: none;
-    color: white;
-  }
-}
-
-.sm-3 {
-  font-family: "Space Mono", monospace;
-  font-size: 1.1rem;
-  position: absolute;
-  height: $smBlockHeight;
-  width: $smBlockWidth;
-  text-align: left;
-
-  left: 0;
-  bottom: 0;
-
-  h2 {
-    color: rgb(156, 156, 156);
-    font-size: $smHead2Size;
-  }
-
-  a {
-    text-decoration: none;
-    color: white;
-  }
-}
-
+.sm-1,
+.sm-2,
+.sm-3,
 .sm-4 {
   font-family: "Space Mono", monospace;
   font-size: 1.1rem;
@@ -1452,9 +1385,6 @@ $smHead2Size: 0.8rem;
   width: $smBlockWidth;
   text-align: left;
 
-  right: 0;
-  bottom: 0;
-
   h2 {
     color: rgb(156, 156, 156);
     font-size: $smHead2Size;
@@ -1464,6 +1394,25 @@ $smHead2Size: 0.8rem;
     text-decoration: none;
     color: white;
   }
+}
+
+.sm-1 {
+  top: 0;
+  left: 0;
+}
+
+.sm-2 {
+  right: 0;
+}
+
+.sm-3 {
+  left: 0;
+  bottom: 0;
+}
+
+.sm-4 {
+  right: 0;
+  bottom: 0;
 }
 
 .offset-contact-img {
@@ -1475,6 +1424,129 @@ $smHead2Size: 0.8rem;
 
   z-index: 1;
 }
+
+/********************************************************************************/
+/*                           PHONE CONTACT CONTAINER                            */
+/********************************************************************************/
+
+
+.contact-top {
+  font-size: 5rem;
+}
+
+.phone-contact-container {
+  visibility: hidden;
+  height: 0vh;
+  position: relative;
+  
+  background: pink;
+  overflow: hidden;
+
+  @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+    visibility: visible;
+    height: 150vh;
+  }
+}
+
+.phone-form-wrapper {
+  font-family: "Space Mono", monospace;
+  font-size: 2.2rem;
+  color: white;
+  background: $defaultBackground;
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  height: 70rem;
+  margin: 3rem auto;
+
+  overflow: hidden;
+}
+
+.phone-name-email-section {
+  margin: 0 auto;
+  width: 95%;
+  height: 12rem;
+
+  background: green;
+}
+
+.phone-form-name-div {
+  float: left;
+  background: grey;
+}
+
+.phone-form-input-name {
+  font-family: "Space Mono", monospace;
+  background: white;
+  width: 28rem;
+  height: 5rem;
+
+  border-radius: $borderRadius;
+
+  padding: 0.5rem;
+  box-sizing: border-box;
+  margin-top: 0.3rem;
+}
+
+.phone-form-email-div {
+  float: right;
+  background: grey;
+}
+
+.phone-form-input-email {
+  font-family: "Space Mono", monospace;
+  background: white;
+  width: 28rem;
+  height: 5rem;
+
+  border-radius: $borderRadius;
+
+  padding: 0.5rem;
+  box-sizing: border-box;
+  margin-top: 0.3rem;
+}
+
+.phone-subject-section {
+  margin: 0 auto;
+
+  width: 95%;
+  height: 12rem;
+
+  background: blue;
+
+  select {
+    margin-top: 0.3rem;
+    font-family: "Space Mono", monospace;
+    border-radius: $borderRadius;
+    background: white;
+    width: 100%;
+    height: 5rem;
+  }
+}
+
+.phone-message-section {
+  background: orange;
+  width: 95%;
+  height: 30rem;
+
+  margin: 0 auto;
+}
+
+.phone-message-input {
+  font-family: "Space Mono", monospace;
+  background: white;
+  border-radius: $borderRadius;
+  resize: none;
+
+  height: 30rem;
+
+  padding: 0.5rem;
+  box-sizing: border-box;
+  width: 100%;
+  margin-top: 0.3rem;
+}
+
 
 /********************************************************************************/
 /*                                ANIMATIONS                                    */

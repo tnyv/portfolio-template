@@ -4,7 +4,6 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 	<link href="styles/home.css" rel="stylesheet" type="text/css" />
-	<link href="styles/phoneMQ.css" rel="stylesheet" type="text/css" />
 	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Space+Mono&display=swap" rel="stylesheet">
 	<title>My Code Story Test</title>
@@ -101,7 +100,7 @@
 
 		<p class="phone-header">PROJECTS</p>
 		<p class="phone-arrow">&#709;</p>
-		
+
 		<div class="homepage-footer">
 			<p>MINNEAPOLIS, MINNESOTA</p>
 			<a href="#">CONTACT@MYCODESTORY.COM</a>
@@ -221,8 +220,6 @@
 				</div>
 			</div>
 
-
-
 			<form class="form-wrapper" action="https://formspree.io/xtonyvux@gmail.com" method="POST">
 				<div class="name-email-section">
 					<div class="form-name-div">
@@ -239,17 +236,15 @@
 
 				</div>
 				<div class="subject-section">
-					<div class="form-subject-div">
-						<label for="subject">Subject<br>
-							<select>
-								<option></option>
-								<option>Business</option>
-								<option>Job Opportunities</option>
-								<option>Questions</option>
-								<option>Saying Hi</option>
-							</select>
-						</label>
-					</div>
+					<label for="subject">Subject<br>
+						<select>
+							<option></option>
+							<option>Business</option>
+							<option>Job Opportunities</option>
+							<option>Questions</option>
+							<option>Saying Hi</option>
+						</select>
+					</label>
 				</div>
 				<div class="message-section">
 					<label for="email" class="form-email-label">Message<br>
@@ -261,11 +256,54 @@
 				</div>
 			</form>
 		</div>
-
 		<img class="offset-contact-img" src="images/offsetcontact.jpg">
-
 	</div>
 
+	<div class="phone-contact-container">
+		<p class="contact-top">CONTACT TOP</p>
+
+		<form class="phone-form-wrapper" action="https://formspree.io/xtonyvux@gmail.com" method="POST">
+			<div class="phone-name-email-section">
+				<div class="phone-form-name-div">
+					<label for="name">Name<br>
+						<input class="phone-form-input-name" type="text" name="name">
+					</label>
+				</div>
+
+				<div class="phone-form-email-div">
+					<label for="email" class="form-email-label">Email<br>
+						<input class="phone-form-input-email" type="email" name="email">
+					</label>
+				</div>
+
+			</div>
+			<div class="phone-subject-section">
+				<label for="subject">Subject<br>
+					<select>
+						<option></option>
+						<option>Business</option>
+						<option>Job Opportunities</option>
+						<option>Questions</option>
+						<option>Saying Hi</option>
+					</select>
+				</label>
+			</div>
+			<div class="phone-message-section">
+				<label for="email" class="form-email-label">Message<br>
+					<textarea class="phone-message-input" name="comment" spellcheck="true"></textarea>
+				</label>
+			</div>
+			<div class="phone-button-section">
+				<button type="submit" class="submit-btn">Submit</button>
+			</div>
+		</form>
+
+
+
+
+
+
+	</div>
 
 	<footer></footer>
 

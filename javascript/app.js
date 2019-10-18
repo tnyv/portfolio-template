@@ -687,11 +687,6 @@ slider.scrollLeft = 725;
 
 /************************************************************************************** */
 // Change phone header based on scrollLeft position
-
-
-// END
-/************************************************************************************** */
-
 var phoneHeader = document.querySelector('.phone-header');
 var phoneMidPic = document.querySelector('.middle-block');
 var phoneLeftPic = document.querySelector('.left-block');
@@ -723,17 +718,6 @@ slider.addEventListener('scroll', function (event) {
 	}
 });
 
-
-/************************************************************************************** */
-// 
-
-// END
-/************************************************************************************** */
-
-slider.onclick = function () {
-	console.log(slider.scrollLeft);
-};
-
 phoneArrow.addEventListener('click', function () {
 	if (imgIndex === 1) {
 		smoothScroll('.projects-container', scrollSpeed);
@@ -742,6 +726,20 @@ phoneArrow.addEventListener('click', function () {
 		smoothScroll('.vlogs-container', scrollSpeed);
 	}
 	else if (imgIndex === 3) {
-		smoothScroll('.contact-container', scrollSpeed);
+		smoothScroll('.phone-contact-container', scrollSpeed);
 	}
 })
+
+
+// END
+/************************************************************************************** */
+
+
+
+
+/************************************************************************************** */
+// 
+
+// END
+/************************************************************************************** */
+
