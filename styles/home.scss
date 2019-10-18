@@ -19,6 +19,8 @@ $midRightAnimateWidth: 40%;
   vertical-align: baseline;
   background: transparent;
   box-sizing: border-box;
+
+  
 }
 
 li {
@@ -31,6 +33,8 @@ body {
 
 html {
   overflow-x: hidden;
+  touch-action: manipulation;
+  
 }
 
 @keyframes load {
@@ -178,7 +182,7 @@ $phoneImgSpeed: 0.7s;
 }
 
 .left-block {
-  margin-left: 10rem;
+  margin-left: 11rem;
   transition: opacity $phoneImgSpeed;
 }
 
@@ -200,7 +204,7 @@ $phoneImgSpeed: 0.7s;
 
   color: transparent;
 
-  margin: 10rem 0 0;
+  margin: 5rem 0 0;
 }
 
 .phone-arrow {

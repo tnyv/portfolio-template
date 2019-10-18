@@ -669,23 +669,30 @@ var phoneHeader = document.querySelector('.phone-header');
 var phoneMidPic = document.querySelector('.middle-block');
 var phoneLeftPic = document.querySelector('.left-block');
 var phoneRightPic = document.querySelector('.right-block');
+var phoneArrow = document.querySelector('.phone-arrow');
 
 slider.addEventListener('scroll', function (event) {
     if (slider.scrollLeft < 240) {
 		phoneHeader.innerHTML = "CONTACT";
 		phoneMidPic.style.opacity = "0";
 		phoneRightPic.style.opacity = "0";
+
+		imgIndex = 3;
 	}
 	else if (slider.scrollLeft > 240 && slider.scrollLeft < 1150) {
 		phoneHeader.innerHTML = "PROJECTS";
 		phoneMidPic.style.opacity = "1";
 		phoneLeftPic.style.opacity = "1";
 		phoneRightPic.style.opacity = "1";
+
+		imgIndex = 1;
 	}
 	else if (slider.scrollLeft > 1150) {
 		phoneHeader.innerHTML = "VLOGS";
 		phoneMidPic.style.opacity = "0";
 		phoneLeftPic.style.opacity = "0";
+
+		imgIndex = 2;
 	}
 });
 
@@ -700,3 +707,14 @@ slider.onclick = function() {
 	console.log(slider.scrollLeft);
 };
 
+phoneArrow.addEventListener('click', function () {
+	if (imgIndex === 1) {
+		smoothScroll('.projects-container', scrollSpeed);
+	}
+	else if (imgIndex === 2) {
+		smoothScroll('.vlogs-container', scrollSpeed);
+	}
+	else if (imgIndex === 3) {
+		smoothScroll('.contact-container', scrollSpeed);
+	}
+})
