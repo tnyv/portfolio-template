@@ -116,6 +116,12 @@ nav {
   overflow: hidden;
 }
 
+@media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+  .home-bar {
+    visibility: hidden;
+  }
+}
+
 .home-link,
 .projects-link,
 .vlogs-link,
@@ -133,12 +139,58 @@ nav {
           transition-duration: 0.5s;
 }
 
+@media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+  .home-link,
+  .projects-link,
+  .vlogs-link,
+  .contact-link {
+    visibility: hidden;
+    display: none;
+  }
+}
+
 .mvc-link {
+  font-family: Helvetica;
+  font-size: 3rem;
+  font-weight: 600;
+  font-style: none;
+  text-decoration: none;
+  color: white;
+  overflow: hidden;
+  padding: 0.75rem;
+  margin: auto 0;
+  -webkit-transition-duration: 0.5s;
+          transition-duration: 0.5s;
+  position: absolute;
+  left: 0;
+  top: 1rem;
   visibility: hidden;
+}
+
+@media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+  .mvc-link {
+    visibility: visible;
+  }
 }
 
 .menu-icon {
   visibility: hidden;
+  position: absolute;
+  right: 2rem;
+  top: 1.6rem;
+}
+
+.menu-icon .menu-line {
+  width: 3.7rem;
+  height: 0.7rem;
+  background-color: white;
+  margin: 0.4rem 0;
+}
+
+@media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+  .menu-icon {
+    visibility: visible;
+  }
 }
 
 .home-bar a:hover {
@@ -146,6 +198,11 @@ nav {
 }
 
 .phone-nav {
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.904);
+  z-index: 4;
   visibility: hidden;
 }
 
@@ -154,6 +211,12 @@ nav {
 /********************************************************************************/
 .grid-phone {
   visibility: hidden;
+}
+
+@media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+  .grid-phone {
+    visibility: visible;
+  }
 }
 
 .grid-phone {
@@ -214,6 +277,12 @@ nav {
   margin: 5rem 0 0;
 }
 
+@media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+  .phone-header {
+    visibility: visible;
+  }
+}
+
 .phone-arrow {
   visibility: hidden;
   padding: 0 3rem 3rem;
@@ -222,14 +291,20 @@ nav {
   margin: 0 auto;
   -webkit-animation-name: arrow;
           animation-name: arrow;
-  -webkit-animation-duration: .5s;
-          animation-duration: .5s;
+  -webkit-animation-duration: 0.5s;
+          animation-duration: 0.5s;
   -webkit-animation-direction: alternate;
           animation-direction: alternate;
   -webkit-animation-iteration-count: infinite;
           animation-iteration-count: infinite;
   -webkit-animation-timing-function: ease-in;
           animation-timing-function: ease-in;
+}
+
+@media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+  .phone-arrow {
+    visibility: visible;
+  }
 }
 
 @-webkit-keyframes arrow {
@@ -284,6 +359,12 @@ nav {
   text-align: center;
 }
 
+@media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+  .logo-container {
+    margin-top: 5rem;
+  }
+}
+
 .logo-block {
   width: 100%;
   text-align: center;
@@ -302,6 +383,12 @@ nav {
   color: white;
   background: transparent;
   padding: 0;
+}
+
+@media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+  .logo {
+    font-size: 6rem;
+  }
 }
 
 .sub-logo-block {
@@ -323,6 +410,13 @@ nav {
   background: transparent;
   width: 36rem;
   margin: 0 auto;
+}
+
+@media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+  .sub-logo {
+    font-size: 2rem;
+    width: 40rem;
+  }
 }
 
 .homepage-links-container {
@@ -369,6 +463,12 @@ nav {
           transform: translate(-50%, -50%);
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+}
+
+@media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+  .homepage-block-middle {
+    visibility: hidden;
+  }
 }
 
 .homepage-block-middle:hover {
@@ -502,6 +602,12 @@ nav {
           animation-fill-mode: forwards;
 }
 
+@media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+  .homepage-block-left {
+    visibility: hidden;
+  }
+}
+
 @-webkit-keyframes block-left-animate {
   from {
     left: -7rem;
@@ -548,6 +654,12 @@ nav {
           animation-duration: 0.4s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+}
+
+@media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+  .homepage-block-right {
+    visibility: hidden;
+  }
 }
 
 .block-left:hover {
@@ -603,6 +715,12 @@ nav {
   margin-right: 4rem;
 }
 
+@media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+  .homepage-footer {
+    visibility: hidden;
+  }
+}
+
 /********************************************************************************/
 /*                            ABOUT CONTAINER                                  */
 /********************************************************************************/
@@ -624,7 +742,18 @@ nav {
   overflow: hidden;
 }
 
+@media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+  .about-container {
+    height: 115rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .about-header {
+  position: relative;
   margin: 10rem 0 0 5rem;
   text-align: left;
   width: 60rem;
@@ -638,6 +767,16 @@ nav {
   transition: -webkit-transform 1.5s;
   transition: transform 1.5s;
   transition: transform 1.5s, -webkit-transform 1.5s;
+}
+
+@media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+  .about-header {
+    margin: 5rem auto 0;
+    text-align: center;
+    width: 50rem;
+    height: 30rem;
+    font-size: 4.3rem;
+  }
 }
 
 .about-me-container {
@@ -654,9 +793,25 @@ nav {
   transition: transform 1.5s, -webkit-transform 1.5s;
 }
 
+@media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+  .about-me-container {
+    position: static;
+    margin: 0 auto;
+    width: 90%;
+    -webkit-transform: translateX(100rem);
+            transform: translateX(100rem);
+  }
+}
+
 .about-me-header {
   font-family: "Space Mono", monospace;
   font-size: 1rem;
+}
+
+@media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+  .about-me-header {
+    font-size: 3rem;
+  }
 }
 
 .about-me {
@@ -666,6 +821,12 @@ nav {
 
 .about-me a {
   color: black;
+}
+
+@media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+  .about-me {
+    font-size: 2rem;
+  }
 }
 
 .s-frame-one {
@@ -683,6 +844,12 @@ nav {
   transition: height 1.5s;
 }
 
+@media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+  .s-frame-one {
+    visibility: hidden;
+  }
+}
+
 .s-frame-two {
   position: absolute;
   top: 45rem;
@@ -695,6 +862,12 @@ nav {
   background-size: contain;
   -webkit-transition: height 1.5s;
   transition: height 1.5s;
+}
+
+@media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+  .s-frame-two {
+    visibility: hidden;
+  }
 }
 
 .s-frame-three {
@@ -712,14 +885,35 @@ nav {
   transition: height 1.5s;
 }
 
+@media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+  .s-frame-three {
+    visibility: hidden;
+  }
+}
+
 .project-header {
   width: 90%;
   margin: 0 auto 1.5rem;
 }
 
+@media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+  .project-header {
+    margin: 4rem auto 1.5rem;
+  }
+}
+
 .project-header h1 {
+  font-family: "Space Mono", monospace;
   overflow: hidden;
   text-align: center;
+}
+
+@media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+  .project-header h1 {
+    font-size: 4rem;
+    margin-top: 4rem;
+    margin-bottom: 0rem;
+  }
 }
 
 .project-header h1:before,
@@ -748,10 +942,18 @@ nav {
   font-size: 3rem;
   font-weight: 600;
   letter-spacing: 0.5rem;
+  white-space: nowrap;
   color: black;
   text-align: center;
   margin-top: 4rem;
   margin-bottom: 1rem;
+}
+
+@media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+  .project-header h1 {
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+  }
 }
 
 /********************************************************************************/
@@ -771,7 +973,14 @@ nav {
   overflow: hidden;
 }
 
+@media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+  .projects-container {
+    height: 115vh;
+  }
+}
+
 .project-one-container {
+  position: relative;
   display: block;
   width: 100%;
   height: 25rem;
@@ -798,6 +1007,16 @@ nav {
           animation-fill-mode: forwards;
   -webkit-animation-duration: 1s;
           animation-duration: 1s;
+}
+
+@media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+  .project-one-container {
+    height: 115vh;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 @-webkit-keyframes float-in {
@@ -874,9 +1093,27 @@ nav {
   cursor: pointer;
 }
 
+@media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+  .project-buttons {
+    margin-bottom: 0rem;
+  }
+  .project-buttons button {
+    font-size: 2.2rem;
+  }
+}
+
 .p1-image-frame {
   height: 25rem;
   width: 50rem;
+}
+
+@media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+  .p1-image-frame {
+    position: absolute;
+    top: 2rem;
+    height: 40rem;
+    width: 100%;
+  }
 }
 
 .p1-image-block {
@@ -916,58 +1153,101 @@ nav {
   overflow: hidden;
 }
 
-.p1-summary {
+@media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+  .p1-summary-frame {
+    position: absolute;
+    top: 23rem;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    width: 100%;
+    margin: 0;
+  }
+}
+
+.p1-summary-wrapper {
   position: relative;
   font-family: "Space Mono", monospace;
   font-size: 1.2rem;
   width: 50rem;
   height: 25rem;
   line-height: 2rem;
-  color: white;
+  color: #e6e6e6;
   text-align: left;
 }
 
-.p1-summary h1 {
+@media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+  .p1-summary-wrapper {
+    font-size: 2.5rem;
+    width: 83%;
+    height: 55rem;
+    line-height: 3rem;
+    margin: 6rem auto 2rem;
+  }
+}
+
+.p1-summary-wrapper .p1-title {
   font-size: 2rem;
   color: black;
 }
 
-.p1-summary h2 {
+.p1-summary-wrapper .p1-sub-title {
   color: rgba(26, 26, 26, 0.671);
   margin-bottom: 1rem;
 }
 
-.p1-summary p {
+.p1-summary-wrapper .p1-paragraph {
   border-top: 0.1rem solid rgba(26, 26, 26, 0.671);
   color: black;
   font-size: 1.2rem;
   padding-top: 1rem;
 }
 
-.p1-summary h3 {
-  text-align: left;
+@media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+  .p1-summary-wrapper .p1-paragraph {
+    font-size: 2rem;
+    padding: 1rem;
+    height: 20rem;
+  }
 }
 
-.p1-summary .p1-languages {
+.p1-summary-wrapper .p1-languages-wrapper {
   margin: 1rem 0;
 }
 
-.p1-summary .p1-languages h3 {
+.p1-summary-wrapper .p1-languages-wrapper h3 {
+  /* Programming Languages */
   display: inline-block;
   margin-right: 1rem;
   background: rgba(26, 26, 26, 0.671);
   padding: 0.25rem 0.5rem;
   font-size: 1.2rem;
   line-height: 2rem;
+  text-align: left;
 }
 
-.p1-summary .p1-visit-git {
+@media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+  .p1-summary-wrapper .p1-languages-wrapper h3 {
+    margin-bottom: 1rem;
+    padding: 1rem 1rem;
+    font-size: 2rem;
+  }
+}
+
+.p1-summary-wrapper .p1-visit-git {
   position: absolute;
   bottom: 0;
   width: 100%;
 }
 
-.p1-summary .p1-visit-git a {
+@media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+  .p1-summary-wrapper .p1-visit-git {
+    text-align: left;
+    margin-top: 20rem;
+  }
+}
+
+.p1-summary-wrapper .p1-visit-git a {
   display: inline-block;
   padding: 0.25rem 0.5rem;
   font-family: "Space Mono", monospace;
@@ -983,8 +1263,23 @@ nav {
   transition: background 0.5s, color 0.5s;
 }
 
-.p1-summary .btn-p1-git {
+@media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+  .p1-summary-wrapper .p1-visit-git a {
+    padding: 1rem 1.5rem;
+    font-size: 2.5rem;
+    line-height: 5rem;
+  }
+}
+
+.p1-summary-wrapper .btn-p1-git {
   right: 0;
+}
+
+@media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+  .p1-summary-wrapper .btn-p1-git {
+    line-height: 2.2rem;
+    font-size: 2rem;
+  }
 }
 
 .btn-p1-visit {
@@ -992,8 +1287,20 @@ nav {
   letter-spacing: 0.02rem;
 }
 
+@media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+  .btn-p1-visit {
+    height: 7rem;
+  }
+}
+
 .btn-p1-git {
   float: right;
+}
+
+@media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+  .btn-p1-git {
+    height: 7rem;
+  }
 }
 
 .p1-visit-git a:hover {
@@ -1064,6 +1371,12 @@ nav {
   overflow: hidden;
 }
 
+@media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+  .contact-container {
+    height: 120rem;
+  }
+}
+
 .contact-frame {
   position: absolute;
   width: 100rem;
@@ -1082,6 +1395,12 @@ nav {
   transition: -webkit-transform 1s;
   transition: transform 1s;
   transition: transform 1s, -webkit-transform 1s;
+}
+
+@media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+  .contact-frame {
+    height: 120rem;
+  }
 }
 
 .form-wrapper {

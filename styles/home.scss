@@ -19,8 +19,6 @@ $midRightAnimateWidth: 40%;
   vertical-align: baseline;
   background: transparent;
   box-sizing: border-box;
-
-  
 }
 
 li {
@@ -34,7 +32,6 @@ body {
 html {
   overflow-x: hidden;
   touch-action: manipulation;
-  
 }
 
 @keyframes load {
@@ -100,6 +97,10 @@ nav {
 
   z-index: 5;
   overflow: hidden;
+
+  @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+    visibility: hidden;
+  }
 }
 
 .home-link,
@@ -118,14 +119,53 @@ nav {
   margin: 0rem 1rem 0rem 1rem;
 
   transition-duration: 0.5s;
+
+  @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+    visibility: hidden;
+    display: none;
+  }
 }
 
 .mvc-link {
+  font-family: $defaultFont;
+  font-size: 3rem;
+  font-weight: 600;
+  font-style: none;
+  text-decoration: none;
+  color: $defaultFontColor;
+
+  overflow: hidden;
+  padding: 0.75rem;
+  margin: auto 0;
+
+  transition-duration: 0.5s;
+  position: absolute;
+  left: 0;
+  top: 1rem;
+
   visibility: hidden;
+
+  @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+    visibility: visible;
+  }
 }
 
 .menu-icon {
   visibility: hidden;
+  position: absolute;
+  right: 2rem;
+  top: 1.6rem;
+
+  .menu-line {
+    width: 3.7rem;
+    height: 0.7rem;
+    background-color: rgb(255, 255, 255);
+    margin: 0.4rem 0;
+  }
+
+  @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+    visibility: visible;
+  }
 }
 
 .home-bar a:hover {
@@ -133,6 +173,14 @@ nav {
 }
 
 .phone-nav {
+  position: fixed;
+
+  height: 100%;
+  width: 100%;
+
+  background: rgba(255, 255, 255, 0.904);
+  z-index: 4;
+
   visibility: hidden;
 }
 
@@ -141,6 +189,10 @@ nav {
 /********************************************************************************/
 .grid-phone {
   visibility: hidden;
+
+  @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+    visibility: visible;
+  }
 }
 
 .grid-phone {
@@ -205,6 +257,10 @@ $phoneImgSpeed: 0.7s;
   color: transparent;
 
   margin: 5rem 0 0;
+
+  @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+    visibility: visible;
+  }
 }
 
 .phone-arrow {
@@ -215,10 +271,14 @@ $phoneImgSpeed: 0.7s;
   margin: 0 auto;
 
   animation-name: arrow;
-  animation-duration: .5s;
+  animation-duration: 0.5s;
   animation-direction: alternate;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in;
+
+  @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+    visibility: visible;
+  }
 }
 
 @keyframes arrow {
@@ -251,6 +311,10 @@ $phoneImgSpeed: 0.7s;
   margin-top: 2rem;
 
   text-align: center;
+
+  @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+    margin-top: 5rem;
+  }
 }
 
 .logo-block {
@@ -273,6 +337,10 @@ $phoneImgSpeed: 0.7s;
   background: transparent;
 
   padding: 0;
+
+  @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+    font-size: 6rem;
+  }
 }
 
 .sub-logo-block {
@@ -295,6 +363,11 @@ $phoneImgSpeed: 0.7s;
   width: 36rem;
 
   margin: 0 auto;
+
+  @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+    font-size: 2rem;
+    width: 40rem;
+  }
 }
 
 .homepage-links-container {
@@ -337,6 +410,10 @@ $phoneImgSpeed: 0.7s;
   transform: translate(-50%, -50%);
 
   transition: all 0.3s ease-in-out;
+
+  @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+    visibility: hidden;
+  }
 }
 
 .homepage-block-middle:hover {
@@ -436,6 +513,10 @@ $phoneImgSpeed: 0.7s;
   animation-name: block-left-animate;
   animation-duration: $imgAnimationSpeed;
   animation-fill-mode: forwards;
+
+  @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+    visibility: hidden;
+  }
 }
 
 @keyframes block-left-animate {
@@ -475,6 +556,10 @@ $phoneImgSpeed: 0.7s;
   animation-name: block-right-animate;
   animation-duration: $imgAnimationSpeed;
   animation-fill-mode: forwards;
+
+  @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+    visibility: hidden;
+  }
 }
 
 .block-left:hover {
@@ -528,6 +613,10 @@ $phoneImgSpeed: 0.7s;
     float: right;
     margin-right: 4rem;
   }
+  
+  @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+    visibility: hidden;
+  }
 }
 
 /********************************************************************************/
@@ -546,9 +635,15 @@ $phoneImgSpeed: 0.7s;
   justify-content: center;
 
   overflow: hidden;
+
+  @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+    height: 115rem;
+    flex-direction: column;
+  }
 }
 
 .about-header {
+  position: relative;
   margin: 10rem 0 0 5rem;
 
   text-align: left;
@@ -561,6 +656,14 @@ $phoneImgSpeed: 0.7s;
 
   transform: translateX(-100rem);
   transition: transform 1.5s;
+
+  @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+    margin: 5rem auto 0;
+    text-align: center;
+    width: 50rem;
+    height: 30rem;
+    font-size: 4.3rem;
+  }
 }
 
 .about-me-container {
@@ -573,11 +676,22 @@ $phoneImgSpeed: 0.7s;
 
   transform: translateX(50rem);
   transition: transform 1.5s;
+
+  @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+    position: static;
+    margin: 0 auto;
+    width: 90%;
+    transform: translateX(100rem);
+  }
 }
 
 .about-me-header {
   font-family: "Space Mono", monospace;
   font-size: 1rem;
+
+  @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+    font-size: 3rem;
+  }
 }
 
 .about-me {
@@ -586,6 +700,10 @@ $phoneImgSpeed: 0.7s;
 
   a {
     color: black;
+  }
+
+  @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+    font-size: 2rem;
   }
 }
 
@@ -603,6 +721,10 @@ $phoneImgSpeed: 0.7s;
   background-repeat: no-repeat;
   background-size: contain;
   transition: height 1.5s;
+
+  @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+    visibility: hidden;
+  }
 }
 
 .s-frame-two {
@@ -618,6 +740,10 @@ $phoneImgSpeed: 0.7s;
   background-repeat: no-repeat;
   background-size: contain;
   transition: height 1.5s;
+
+  @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+    visibility: hidden;
+  }
 }
 
 .s-frame-three {
@@ -634,16 +760,32 @@ $phoneImgSpeed: 0.7s;
   background-repeat: no-repeat;
   background-size: contain;
   transition: height 1.5s;
+
+  @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+    visibility: hidden;
+  }
 }
 
 .project-header {
   width: 90%;
   margin: 0 auto 1.5rem;
+
+  @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+    margin: 4rem auto 1.5rem;
+  }
 }
 
 .project-header h1 {
+  font-family: "Space Mono", monospace;
+    
   overflow: hidden;
   text-align: center;
+
+  @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+    font-size: 4rem;
+    margin-top: 4rem;
+    margin-bottom: 0rem;
+  }
 }
 
 .project-header h1:before,
@@ -672,12 +814,17 @@ $phoneImgSpeed: 0.7s;
   font-size: 3rem;
   font-weight: 600;
   letter-spacing: 0.5rem;
-
+  white-space: nowrap;
   color: rgb(0, 0, 0);
   text-align: center;
 
   margin-top: 4rem;
   margin-bottom: 1rem;
+
+  @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+  }
 }
 
 /********************************************************************************/
@@ -694,9 +841,14 @@ $projectFrameHeight: 25rem;
   flex-direction: column;
 
   overflow: hidden;
+
+  @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+    height: 115vh;
+  }
 }
 
 .project-one-container {
+  position: relative;
   display: block;
 
   width: 100%;
@@ -715,6 +867,11 @@ $projectFrameHeight: 25rem;
   animation-play-state: running;
   animation-fill-mode: forwards;
   animation-duration: 1s;
+
+  @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+    height: 115vh;
+    flex-direction: column;
+  }
 }
 
 @keyframes float-in {
@@ -768,11 +925,26 @@ $projectFrameHeight: 25rem;
   button:hover {
     cursor: pointer;
   }
+
+  @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+    margin-bottom: 0rem;
+
+    button {
+      font-size: 2.2rem;
+    }
+  }
 }
 
 .p1-image-frame {
   height: $projectFrameHeight;
   width: 50rem;
+
+  @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+    position: absolute;
+    top: 2rem;
+    height: 40rem;
+    width: 100%;
+  }
 }
 
 .p1-image-block {
@@ -784,6 +956,8 @@ $projectFrameHeight: 25rem;
 
   width: 40rem;
   height: $projectFrameHeight;
+
+
 }
 
 .p1-image-block:hover {
@@ -816,9 +990,17 @@ $projectFrameHeight: 25rem;
   height: $projectFrameHeight;
   width: 50rem;
   overflow: hidden;
+
+  @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+    position: absolute;
+    top: 23rem;
+    height: fit-content;
+    width: 100%;
+    margin: 0;
+  }
 }
 
-.p1-summary {
+.p1-summary-wrapper {
   position: relative;
 
   font-family: "Space Mono", monospace;
@@ -828,34 +1010,44 @@ $projectFrameHeight: 25rem;
 
   line-height: 2rem;
 
-  color: rgb(255, 255, 255);
+  color: $readableWhite;
   text-align: left;
 
-  h1 {
+  @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+    font-size: 2.5rem;
+    width: 83%;
+    height: 55rem;
+    line-height: 3rem;
+    margin: 6rem auto 2rem;
+  }
+
+  .p1-title {
     font-size: 2rem;
     color: black;
   }
 
-  h2 {
+  .p1-sub-title {
     color: $fadedBlack;
     margin-bottom: 1rem;
   }
 
-  p {
+  .p1-paragraph {
     border-top: 0.1rem solid $fadedBlack;
     color: black;
     font-size: 1.2rem;
     padding-top: 1rem;
+
+    @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+      font-size: 2rem;
+      padding: 1rem;
+      height: 20rem;
+    }
   }
 
-  h3 {
-    text-align: left;
-  }
-
-  .p1-languages {
+  .p1-languages-wrapper {
     margin: 1rem 0;
 
-    h3 {
+    h3 { /* Programming Languages */
       display: inline-block;
       margin-right: 1rem;
       background: $fadedBlack;
@@ -863,6 +1055,13 @@ $projectFrameHeight: 25rem;
 
       font-size: 1.2rem;
       line-height: 2rem;
+      text-align: left;
+
+      @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+        margin-bottom: 1rem;
+        padding: 1rem 1rem;
+        font-size: 2rem;
+      }
     }
   }
 
@@ -870,6 +1069,11 @@ $projectFrameHeight: 25rem;
     position: absolute;
     bottom: 0;
     width: 100%;
+
+    @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+      text-align: left;
+      margin-top: 20rem;
+    }
   }
 
   .p1-visit-git a {
@@ -891,20 +1095,39 @@ $projectFrameHeight: 25rem;
     width: 20rem;
 
     transition: background 0.5s, color 0.5s;
+
+    @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+      padding: 1rem 1.5rem;
+      font-size: 2.5rem;
+      line-height: 5rem;
+    }
   }
 
   .btn-p1-git {
     right: 0;
+
+    @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+      line-height: 2.2rem;
+      font-size: 2rem;
+    }
   }
 }
 
 .btn-p1-visit {
   float: left;
   letter-spacing: 0.02rem;
+
+  @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+    height: 7rem;
+  }
 }
 
 .btn-p1-git {
   float: right;
+
+  @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+    height: 7rem;
+  }
 }
 
 .p1-visit-git a:hover {
@@ -980,6 +1203,10 @@ $projectFrameHeight: 25rem;
 
   z-index: 0;
   overflow: hidden;
+
+  @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+    height: 120rem;
+  }
 }
 
 .contact-frame {
@@ -995,6 +1222,10 @@ $projectFrameHeight: 25rem;
   z-index: 2;
 
   transition: transform 1s;
+
+  @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+    height: 120rem;
+  }
 }
 
 $formWidth: 31rem;

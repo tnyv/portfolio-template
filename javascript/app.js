@@ -278,11 +278,13 @@ function updateSummaryP1() {
 function updateSummaryP2() {
 	title.innerHTML = "PINEAPPLE PIZZERIA";
 	subTitle.innerHTML = "POS SYSTEM";
-	lang1.innerHTML = "React JS";
-	lang2.innerHTML = "PHP";
-	lang3.innerHTML = "SQL";
+	lang1.innerHTML = "PHP";
+	lang2.innerHTML = "SQL";
+	lang3.innerHTML = "HTML";
 	lang4.style.visibility = "hidden";
 	lang5.style.visibility = "hidden";
+	lang4.innerHTML = "";
+	lang5.innerHTML = "";
 	paragraph.innerHTML = "This website is an online POS platform for Pineapple Pizzeria restaurant." +
 		" I programmed this website using the ReactJS framework. Utilizing ReactJS' components was a" +
 		" gamechanger for my development skills! It is currently my favorite framework to code with.";
@@ -297,6 +299,8 @@ function updateSummaryP3() {
 	lang3.innerHTML = "SASS";
 	lang4.style.visibility = "hidden";
 	lang5.style.visibility = "hidden";
+	lang4.innerHTML = "";
+	lang5.innerHTML = "";
 	paragraph.innerHTML = "I don't mean to toot my own horn, but I am proud of my portfolio creation!" +
 		" I programmed this website with nothing but HTML, SASS, and JavaScript (with a hint of PHP for" +
 		" webforms ... and some JQuery scroll animations). Developing this website taught me a whole lot about the importance of responsive design" +
@@ -429,6 +433,23 @@ menuIcon.addEventListener('touchstart', function () {
 // Setting up HOME bar to appear when below homepage, and disappear when at homepage. 
 var navState = false;
 
+// This function makes sure the infinite interval does not run on phones. (Top stop phone glitching)
+function runInterval() {
+	if (stopIntervalQuery.matches) {
+		clearInterval(navStateInterval);
+	}
+	else {
+		// Function is constantly running. Use this until a better solutions comes along!
+		// This process could destroy CPU cycles
+		var navStateInterval = setInterval(function () {
+			adjustNavBar(navState);
+			// console.log("adjustNavBar active");
+		
+			console.log('running');
+		}, 500);
+	}
+}
+
 function navStateScrollStatus() {
 	if (document.body.scrollTop > 900 || document.documentElement.scrollTop > 900) {
 		navState = true;
@@ -437,12 +458,7 @@ function navStateScrollStatus() {
 	}
 }
 
-// Function is constantly running. Use this until a better solutions comes along!
-// This process could destroy CPU cycles
-setInterval(function () {
-	adjustNavBar(navState);
-	// console.log("adjustNavBar active");
-}, 500);
+
 
 function adjustNavBar(navState) {
 	if (navState == true) {
@@ -454,6 +470,19 @@ function adjustNavBar(navState) {
 }
 // END
 /************************************************************************************** */
+
+var stopIntervalQuery = window.matchMedia("(min-device-width: 0px)" && "(max-device-width: 480px)");
+runInterval(stopIntervalQuery);// Call listener function at run time
+stopIntervalQuery.addListener(runInterval); // Attach listener function on state changes
+
+
+
+
+
+
+	
+
+
 
 /***************************************************************************************/
 // Setting up about header and about me to scroll in and out based on page scroll position. 
@@ -561,7 +590,6 @@ function aboutMePhoneScroll() {
 }
 
 function projectsPhoneScroll() {
-	console.log(document.documentElement.scrollTop);
 	if (document.documentElement.scrollTop <= 2590) {
 		projects1Container.style.opacity = 0;
 	}
@@ -574,7 +602,6 @@ function projectsPhoneScroll() {
 }
 
 function contactPhoneScroll() {
-	console.log(document.documentElement.scrollTop);
 	if (document.documentElement.scrollTop <= 3950) {
 		contactFrame.style.transform = "translateX(-150rem)";
 	}
@@ -637,7 +664,7 @@ slider.addEventListener('mouseleave', () => {
 slider.addEventListener('mouseup', () => {
 	isDown = false;
 
-	
+
 });
 
 slider.addEventListener('mousemove', (e) => {
@@ -672,7 +699,7 @@ var phoneRightPic = document.querySelector('.right-block');
 var phoneArrow = document.querySelector('.phone-arrow');
 
 slider.addEventListener('scroll', function (event) {
-    if (slider.scrollLeft < 240) {
+	if (slider.scrollLeft < 240) {
 		phoneHeader.innerHTML = "CONTACT";
 		phoneMidPic.style.opacity = "0";
 		phoneRightPic.style.opacity = "0";
@@ -703,7 +730,7 @@ slider.addEventListener('scroll', function (event) {
 // END
 /************************************************************************************** */
 
-slider.onclick = function() {
+slider.onclick = function () {
 	console.log(slider.scrollLeft);
 };
 
