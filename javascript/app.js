@@ -35,61 +35,11 @@ window.addEventListener('scroll', function () {
 	else if (moveDistance <= 240) {
 		skillsHtml.style.transform = "translateX(" + "-" + 0 + "vw)";
 	}
-
-
-	
-
 });
 // END
 ************************************************************************************** */
 
 
-
-/***************************************************************************************
-// Setting up HOME bar to appear when below homepage, and disappear when at homepage. 
-var currentPosition = "Above";
-var homeClicked = false;
-var scrollHome = document.querySelector('.home-link');
-
-scrollHome.addEventListener('click', function() {
-	smoothScroll('.html', scrollSpeed);
-
-	if(currentPosition === "Below") {
-		document.querySelector('.home-bar').style.animationName = "home-animation-in";
-		homeClicked = true;
-	}
-});
-
-window.addEventListener('scroll', function()  {
-	var skillsPos = document.querySelector('.skills-container').offsetTop;
-
-	if(skillsPos >= (window.pageYOffset+5)) {
-		// this.console.log("Above");
-
-		if((currentPosition === "Below") && homeClicked === false) {
-			document.querySelector('.home-bar').style.animationName = "home-animation-in";
-			currentPosition = "Above";
-		}
-	}
-	else {
-		// this.console.log("Below");
-
-		if((currentPosition === "Above") && homeClicked === false) {
-			document.querySelector('.home-bar').style.animationName = "home-animation-out";
-			currentPosition = "Below";
-		}
-	}
-	
-	if(this.window.pageYOffset === 0) {
-		homeClicked = false;
-	}
-		// Used for debugging
-		//this.console.log("skills C offset: " + document.querySelector('.skills-container').offsetTop);
-		//this.console.log("pageYoffset: " + window.pageYOffset);
-
-	});
-// END
-************************************************************************************** */
 
 
 /***************************************************************************************/
@@ -152,12 +102,6 @@ function resetFromRight() {
 	mainAnimator.style.animation = null;
 	mainAnimator.style.WebkitAnimationName = "middle-animate-right";
 }
-
-
-
-
-
-// HOMEPAGE MEDIA QUERIES
 
 
 mainPicture.addEventListener('click', function () {
@@ -237,8 +181,6 @@ rightPicture.onclick = function () {
 		resetEnlargeMain();
 	}
 };
-
-
 
 // END
 /************************************************************************************** */
@@ -686,8 +628,6 @@ slider.addEventListener('mousedown', (e) => {
 	isDown = true;
 	startX = e.pageX - slider.offsetLeft;
 	scrollLeft = slider.scrollLeft;
-
-
 });
 
 slider.addEventListener('mouseleave', () => {
@@ -696,27 +636,48 @@ slider.addEventListener('mouseleave', () => {
 
 slider.addEventListener('mouseup', () => {
 	isDown = false;
-});
 
+	
+});
 
 slider.addEventListener('mousemove', (e) => {
 	if (!isDown) return;
-
 	e.preventDefault(); // prevents links or
 	// other actions from happening
-
 	const x = e.pageX - slider.offsetLeft;
-
 	const walk = (x - startX) * 1; //scroll-fast
-
 	slider.scrollLeft = scrollLeft - walk;
 
-
+	console.log(slider.scrollLeft);
 });
 
+// Center div on start
 slider.scrollLeft = 725;
+
 // END
 /************************************************************************************** */
+
+
+/************************************************************************************** */
+// Change phone header based on scrollLeft position
+
+
+// END
+/************************************************************************************** */
+
+var phoneHeader = document.querySelector('.phone-header');
+slider.addEventListener('scroll', function (event) {
+    if (slider.scrollLeft < 240) {
+		phoneHeader.innerHTML = "CONTACT";
+	}
+	else if (slider.scrollLeft > 240 && slider.scrollLeft < 1150) {
+		phoneHeader.innerHTML = "PROJECTS";
+	}
+	else if (slider.scrollLeft > 1150) {
+		phoneHeader.innerHTML = "VLOGS";
+	}
+});
+
 
 /************************************************************************************** */
 // 
@@ -724,6 +685,7 @@ slider.scrollLeft = 725;
 // END
 /************************************************************************************** */
 
-
-// HOMEPAGE MEDIA QUERIES
+slider.onclick = function() {
+	console.log(slider.scrollLeft);
+};
 
