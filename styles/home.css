@@ -227,7 +227,7 @@ nav {
 }
 
 .main {
-  margin-top: 13rem;
+  margin-top: 4rem;
   grid-area: main;
   padding: 0;
   overflow-y: hidden;
@@ -247,7 +247,7 @@ nav {
 }
 
 .middle-block {
-  margin: 0 5rem;
+  margin: 0 7rem;
   -webkit-transition: opacity 0.7s;
   transition: opacity 0.7s;
 }
@@ -309,23 +309,23 @@ nav {
 
 @-webkit-keyframes arrow {
   from {
-    -webkit-transform: translateY(0rem);
-            transform: translateY(0rem);
+    -webkit-transform: translateY(-1vh);
+            transform: translateY(-1vh);
   }
   to {
-    -webkit-transform: translateY(2rem);
-            transform: translateY(2rem);
+    -webkit-transform: translateY(2vh);
+            transform: translateY(2vh);
   }
 }
 
 @keyframes arrow {
   from {
-    -webkit-transform: translateY(0rem);
-            transform: translateY(0rem);
+    -webkit-transform: translateY(-1vh);
+            transform: translateY(-1vh);
   }
   to {
-    -webkit-transform: translateY(2rem);
-            transform: translateY(2rem);
+    -webkit-transform: translateY(2vh);
+            transform: translateY(2vh);
   }
 }
 
@@ -1066,7 +1066,6 @@ nav {
 .project-buttons {
   width: 100%;
   height: 10rem;
-  margin-bottom: 2rem;
   text-align: center;
 }
 
@@ -1099,6 +1098,7 @@ nav {
   }
   .project-buttons button {
     font-size: 2.2rem;
+    margin: 0 4rem;
   }
 }
 
@@ -1179,7 +1179,7 @@ nav {
 @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
   .p1-summary-wrapper {
     font-size: 2.5rem;
-    width: 83%;
+    width: 90%;
     height: 55rem;
     line-height: 3rem;
     margin: 6rem auto 2rem;
@@ -1267,7 +1267,7 @@ nav {
   .p1-summary-wrapper .p1-visit-git a {
     padding: 1rem 1.5rem;
     font-size: 2.5rem;
-    line-height: 5rem;
+    line-height: 4rem;
   }
 }
 
@@ -1277,7 +1277,6 @@ nav {
 
 @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
   .p1-summary-wrapper .btn-p1-git {
-    line-height: 2.2rem;
     font-size: 2rem;
   }
 }
@@ -1384,6 +1383,7 @@ nav {
   height: 40rem;
   background: #1a1a1a;
   bottom: 0;
+  left: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1599,6 +1599,7 @@ nav {
 /*                           PHONE CONTACT CONTAINER                            */
 /********************************************************************************/
 .contact-top {
+  margin: 5rem;
   font-size: 5rem;
 }
 
@@ -1606,14 +1607,15 @@ nav {
   visibility: hidden;
   height: 0vh;
   position: relative;
-  background: pink;
   overflow: hidden;
 }
 
 @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
   .phone-contact-container {
     visibility: visible;
-    height: 150vh;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
   }
 }
 
@@ -1630,27 +1632,26 @@ nav {
       -ms-flex-direction: column;
           flex-direction: column;
   width: 100%;
-  height: 70rem;
-  margin: 3rem auto;
+  height: 80rem;
+  margin: 3rem auto -0.2rem;
+  padding-top: 3rem;
   overflow: hidden;
 }
 
 .phone-name-email-section {
   margin: 0 auto;
-  width: 95%;
-  height: 12rem;
-  background: green;
+  width: 90%;
+  height: 10rem;
 }
 
 .phone-form-name-div {
   float: left;
-  background: grey;
 }
 
 .phone-form-input-name {
   font-family: "Space Mono", monospace;
   background: white;
-  width: 28rem;
+  width: 27rem;
   height: 5rem;
   border-radius: 0.2rem;
   padding: 0.5rem;
@@ -1661,13 +1662,12 @@ nav {
 
 .phone-form-email-div {
   float: right;
-  background: grey;
 }
 
 .phone-form-input-email {
   font-family: "Space Mono", monospace;
   background: white;
-  width: 28rem;
+  width: 27rem;
   height: 5rem;
   border-radius: 0.2rem;
   padding: 0.5rem;
@@ -1678,9 +1678,8 @@ nav {
 
 .phone-subject-section {
   margin: 0 auto;
-  width: 95%;
-  height: 12rem;
-  background: blue;
+  width: 90%;
+  height: 10rem;
 }
 
 .phone-subject-section select {
@@ -1693,10 +1692,9 @@ nav {
 }
 
 .phone-message-section {
-  background: orange;
-  width: 95%;
-  height: 30rem;
-  margin: 0 auto;
+  width: 90%;
+  height: 35rem;
+  margin: 0 auto 4rem;
 }
 
 .phone-message-input {
@@ -1710,6 +1708,69 @@ nav {
           box-sizing: border-box;
   width: 100%;
   margin-top: 0.3rem;
+}
+
+.phone-button-section {
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+.phone-submit-btn {
+  font-family: "Space Mono", monospace;
+  font-size: 2rem;
+  font-weight: 600;
+  height: 5rem;
+  width: 30rem;
+  background: white;
+  color: black;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 5rem;
+  -webkit-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+.phone-sm-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #1a1a1a;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.phone-sm-1,
+.phone-sm-2,
+.phone-sm-3,
+.phone-sm-4 {
+  font-family: "Space Mono", monospace;
+  font-size: 2.5rem;
+  height: 10rem;
+  width: 100%;
+  text-align: left;
+  margin: 0 3rem 2rem;
+}
+
+.phone-sm-1 h2,
+.phone-sm-2 h2,
+.phone-sm-3 h2,
+.phone-sm-4 h2 {
+  color: #9c9c9c;
+  font-size: 2.2rem;
+}
+
+.phone-sm-1 a,
+.phone-sm-2 a,
+.phone-sm-3 a,
+.phone-sm-4 a {
+  text-decoration: none;
+  color: white;
 }
 
 /********************************************************************************/

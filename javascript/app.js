@@ -674,12 +674,14 @@ slider.addEventListener('mousemove', (e) => {
 	const x = e.pageX - slider.offsetLeft;
 	const walk = (x - startX) * 1; //scroll-fast
 	slider.scrollLeft = scrollLeft - walk;
-
-	console.log(slider.scrollLeft);
 });
 
 // Center div on start
-slider.scrollLeft = 725;
+slider.scrollLeft = 763;
+
+slider.onclick = function() {
+	console.log(slider.scrollLeft);
+};
 
 // END
 /************************************************************************************** */

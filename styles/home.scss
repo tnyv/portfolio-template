@@ -204,7 +204,7 @@ nav {
 }
 
 .main {
-  margin-top: 13rem;
+  margin-top: 4rem;
   grid-area: main;
   padding: 0;
 
@@ -229,7 +229,7 @@ nav {
 $phoneImgSpeed: 0.7s;
 
 .middle-block {
-  margin: 0 5rem;
+  margin: 0 7rem;
   transition: opacity $phoneImgSpeed;
 }
 
@@ -283,10 +283,10 @@ $phoneImgSpeed: 0.7s;
 
 @keyframes arrow {
   from {
-    transform: translateY(0rem);
+    transform: translateY(-1vh);
   }
   to {
-    transform: translateY(2rem);
+    transform: translateY(2vh);
   }
 }
 /********************************************************************************/
@@ -895,7 +895,6 @@ $projectFrameHeight: 25rem;
 .project-buttons {
   width: 100%;
   height: 10rem;
-  margin-bottom: 2rem;
   text-align: center;
 
   button {
@@ -931,6 +930,7 @@ $projectFrameHeight: 25rem;
 
     button {
       font-size: 2.2rem;
+      margin: 0 4rem;
     }
   }
 }
@@ -1013,7 +1013,7 @@ $projectFrameHeight: 25rem;
 
   @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
     font-size: 2.5rem;
-    width: 83%;
+    width: 90%;
     height: 55rem;
     line-height: 3rem;
     margin: 6rem auto 2rem;
@@ -1098,7 +1098,7 @@ $projectFrameHeight: 25rem;
     @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
       padding: 1rem 1.5rem;
       font-size: 2.5rem;
-      line-height: 5rem;
+      line-height: 4rem;
     }
   }
 
@@ -1106,7 +1106,7 @@ $projectFrameHeight: 25rem;
     right: 0;
 
     @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
-      line-height: 2.2rem;
+     
       font-size: 2rem;
     }
   }
@@ -1216,6 +1216,7 @@ $projectFrameHeight: 25rem;
   background: $defaultBackground;
 
   bottom: 0;
+  left: 0;
   display: flex;
   flex-direction: row;
 
@@ -1431,6 +1432,7 @@ $smHead2Size: 0.8rem;
 
 
 .contact-top {
+  margin: 5rem;
   font-size: 5rem;
 }
 
@@ -1439,12 +1441,11 @@ $smHead2Size: 0.8rem;
   height: 0vh;
   position: relative;
   
-  background: pink;
   overflow: hidden;
 
   @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
     visibility: visible;
-    height: 150vh;
+    height: fit-content;
   }
 }
 
@@ -1457,29 +1458,26 @@ $smHead2Size: 0.8rem;
   flex-direction: column;
 
   width: 100%;
-  height: 70rem;
-  margin: 3rem auto;
-
+  height: 80rem;
+  margin: 3rem auto -0.2rem;
+  padding-top: 3rem;
   overflow: hidden;
 }
 
 .phone-name-email-section {
   margin: 0 auto;
-  width: 95%;
-  height: 12rem;
-
-  background: green;
+  width: 90%;
+  height: 10rem;
 }
 
 .phone-form-name-div {
   float: left;
-  background: grey;
 }
 
 .phone-form-input-name {
   font-family: "Space Mono", monospace;
   background: white;
-  width: 28rem;
+  width: 27rem;
   height: 5rem;
 
   border-radius: $borderRadius;
@@ -1491,13 +1489,12 @@ $smHead2Size: 0.8rem;
 
 .phone-form-email-div {
   float: right;
-  background: grey;
 }
 
 .phone-form-input-email {
   font-family: "Space Mono", monospace;
   background: white;
-  width: 28rem;
+  width: 27rem;
   height: 5rem;
 
   border-radius: $borderRadius;
@@ -1510,10 +1507,8 @@ $smHead2Size: 0.8rem;
 .phone-subject-section {
   margin: 0 auto;
 
-  width: 95%;
-  height: 12rem;
-
-  background: blue;
+  width: 90%;
+  height: 10rem;
 
   select {
     margin-top: 0.3rem;
@@ -1526,11 +1521,10 @@ $smHead2Size: 0.8rem;
 }
 
 .phone-message-section {
-  background: orange;
-  width: 95%;
-  height: 30rem;
+  width: 90%;
+  height: 35rem;
 
-  margin: 0 auto;
+  margin: 0 auto 4rem;
 }
 
 .phone-message-input {
@@ -1545,6 +1539,60 @@ $smHead2Size: 0.8rem;
   box-sizing: border-box;
   width: 100%;
   margin-top: 0.3rem;
+  
+}
+
+.phone-button-section {
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+.phone-submit-btn {
+  font-family: "Space Mono", monospace;
+  font-size: 2rem;
+  font-weight: 600;
+  height: 5rem;
+  width: 30rem;
+
+  background: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  box-sizing: border-box;
+
+  border-radius: 5rem;
+  transition-duration: 0.8s;
+}
+
+.phone-sm-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: $defaultBackground;
+  display: flex;
+  flex-direction: column;
+}
+
+.phone-sm-1,
+.phone-sm-2,
+.phone-sm-3,
+.phone-sm-4 {
+  font-family: "Space Mono", monospace;
+  font-size: 2.5rem;
+  height: 10rem;
+  width: 100%;
+  text-align: left;
+
+  margin: 0 3rem 2rem;
+
+  h2 {
+    color: rgb(156, 156, 156);
+    font-size: 2.2rem;
+  }
+
+  a {
+    text-decoration: none;
+    color: white;
+  }
 }
 
 
