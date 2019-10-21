@@ -13,6 +13,13 @@
           box-sizing: border-box;
 }
 
+::-webkit-scrollbar {
+  width: 0px;
+  /* Remove scrollbar space */
+  background: transparent;
+  /* Optional: just make scrollbar invisible */
+}
+
 li {
   list-style-type: none;
 }
@@ -441,6 +448,12 @@ nav {
   }
 }
 
+@media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
+  .logo {
+    font-size: 5rem;
+  }
+}
+
 .sub-logo-block {
   width: 100%;
   text-align: center;
@@ -466,6 +479,13 @@ nav {
   .sub-logo {
     font-size: 2rem;
     width: 40rem;
+  }
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
+  .sub-logo {
+    font-size: 1.5rem;
+    width: 30rem;
   }
 }
 
@@ -518,6 +538,12 @@ nav {
 @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
   .homepage-block-middle {
     visibility: hidden;
+  }
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
+  .homepage-block-middle {
+    width: 35rem;
   }
 }
 
@@ -584,6 +610,12 @@ nav {
           animation-fill-mode: forwards;
 }
 
+@media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
+  .middle-frame {
+    top: 25%;
+  }
+}
+
 @-webkit-keyframes middle-animate-left {
   from {
     left: 60%;
@@ -633,6 +665,13 @@ nav {
   -webkit-text-stroke-color: white;
 }
 
+@media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
+  .main-header {
+    font-size: 5rem;
+    bottom: 2rem;
+  }
+}
+
 .homepage-block-left {
   background-size: contain;
   background-repeat: no-repeat;
@@ -658,6 +697,13 @@ nav {
   }
 }
 
+@media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
+  .homepage-block-left {
+    top: 25%;
+    left: -10rem;
+  }
+}
+
 @-webkit-keyframes block-left-animate {
   from {
     left: -7rem;
@@ -673,6 +719,25 @@ nav {
   }
   to {
     left: -5rem;
+  }
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
+  @-webkit-keyframes block-left-animate {
+    from {
+      left: -7rem;
+    }
+    to {
+      left: -10rem;
+    }
+  }
+  @keyframes block-left-animate {
+    from {
+      left: -7rem;
+    }
+    to {
+      left: -10rem;
+    }
   }
 }
 
@@ -709,6 +774,13 @@ nav {
 @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
   .homepage-block-right {
     visibility: hidden;
+  }
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
+  .homepage-block-right {
+    top: 25%;
+    right: -40rem;
   }
 }
 
@@ -802,6 +874,16 @@ nav {
   }
 }
 
+@media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
+  .about-container {
+    height: 100rem;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .about-header {
   position: relative;
   margin: 10rem 0 0 5rem;
@@ -822,6 +904,16 @@ nav {
 @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
   .about-header {
     margin: 5rem auto 0;
+    text-align: center;
+    width: 50rem;
+    height: 30rem;
+    font-size: 4.3rem;
+  }
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
+  .about-header {
+    margin: 2rem auto 0;
     text-align: center;
     width: 50rem;
     height: 30rem;
@@ -853,12 +945,28 @@ nav {
   }
 }
 
+@media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
+  .about-me-container {
+    position: static;
+    margin: 0 auto;
+    width: 90%;
+    -webkit-transform: translateX(100rem);
+            transform: translateX(100rem);
+  }
+}
+
 .about-me-header {
   font-family: "Space Mono", monospace;
   font-size: 1rem;
 }
 
 @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+  .about-me-header {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
   .about-me-header {
     font-size: 3rem;
   }
@@ -874,6 +982,12 @@ nav {
 }
 
 @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+  .about-me {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
   .about-me {
     font-size: 2rem;
   }
@@ -900,6 +1014,12 @@ nav {
   }
 }
 
+@media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
+  .s-frame-one {
+    visibility: hidden;
+  }
+}
+
 .s-frame-two {
   position: absolute;
   top: 45rem;
@@ -915,6 +1035,12 @@ nav {
 }
 
 @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+  .s-frame-two {
+    visibility: hidden;
+  }
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
   .s-frame-two {
     visibility: hidden;
   }
@@ -936,6 +1062,12 @@ nav {
 }
 
 @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+  .s-frame-three {
+    visibility: hidden;
+  }
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
   .s-frame-three {
     visibility: hidden;
   }
