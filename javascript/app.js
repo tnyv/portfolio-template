@@ -103,7 +103,7 @@ function resetFromRight() {
 	mainAnimator.style.WebkitAnimationName = "middle-animate-right";
 }
 
-
+// Scroll to container on click
 mainPicture.addEventListener('click', function () {
 	if (imgIndex === 1) {
 		smoothScroll('.projects-container', scrollSpeed);
@@ -406,36 +406,13 @@ function smoothScroll(target, duration) {
 /************************************************************************************** */
 
 
-/************************************************************************************** */
-// Menu icon functions
-
-var menuIcon = document.querySelector(".menu-icon");
-var menu = document.querySelector(".phone-nav");
-var menuVisible = false;
-
-menuIcon.addEventListener('touchstart', function () {
-	if (menuVisible == false) {
-		menu.style.visibility = "visible";
-		menuVisible = true;
-	}
-	else if (menuVisible == true) {
-		menu.style.visibility = "hidden";
-		menuVisible = false;
-	}
-})
-
-
-
-// END
-/************************************************************************************** */
-
 /***************************************************************************************/
 // Setting up HOME bar to appear when below homepage, and disappear when at homepage. 
 var navState = false;
 
 // This function makes sure the infinite interval does not run on phones. (Top stop phone glitching)
 function runInterval() {
-	if (stopIntervalQuery.matches) {
+	if (query480.matches) {
 		clearInterval(navStateInterval);
 	}
 	else {
@@ -468,12 +445,21 @@ function adjustNavBar(navState) {
 		document.querySelector('.home-bar').style.top = "-10vw";
 	}
 }
+
+function adjustPhoneBar() {
+	if (document.body.scrollTop > 1430 || document.documentElement.scrollTop > 1430) {
+		document.querySelector('.phone-homebar').style.top = "0";
+	}
+	else {
+		document.querySelector('.phone-homebar').style.top = "-10rem";
+	}
+}
 // END
 /************************************************************************************** */
 
-var stopIntervalQuery = window.matchMedia("(min-device-width: 0px)" && "(max-device-width: 480px)");
-runInterval(stopIntervalQuery);// Call listener function at run time
-stopIntervalQuery.addListener(runInterval); // Attach listener function on state changes
+var query480 = window.matchMedia("(min-device-width: 0px)" && "(max-device-width: 480px)");
+runInterval(query480);// Call listener function at run time
+query480.addListener(runInterval); // Attach listener function on state changes
 
 
 
@@ -627,6 +613,7 @@ window.onscroll = function () {
 			aboutMePhoneScroll();
 			projectsPhoneScroll();
 			contactPhoneScroll();
+			adjustPhoneBar();
 		}
 
 		else { // For all other non-phone screen sizes
@@ -636,10 +623,10 @@ window.onscroll = function () {
 			sFrameStateScroll();
 			projectsStateScroll();
 			contactStateScroll();
-
 		}
 	}
 
+	console.log(document.documentElement.scrollTop);
 };
 // END
 /************************************************************************************** */
@@ -688,12 +675,16 @@ slider.onclick = function() {
 
 
 /************************************************************************************** */
-// Change phone header based on scrollLeft position
+// Change phone header based on scrollLeft position and set up navigation scrolling
 var phoneHeader = document.querySelector('.phone-header');
 var phoneMidPic = document.querySelector('.middle-block');
 var phoneLeftPic = document.querySelector('.left-block');
 var phoneRightPic = document.querySelector('.right-block');
 var phoneArrow = document.querySelector('.phone-arrow');
+var phoneAboutNav = document.querySelector('.phone-about-li');
+var phoneProjectsNav = document.querySelector('.phone-projects-li');
+var phoneVlogsNav = document.querySelector('.phone-vlogs-li');
+var phoneContactNav = document.querySelector('.phone-contact-li');
 
 slider.addEventListener('scroll', function (event) {
 	if (slider.scrollLeft < 240) {
@@ -720,7 +711,7 @@ slider.addEventListener('scroll', function (event) {
 	}
 });
 
-phoneArrow.addEventListener('click', function () {
+phoneArrow.addEventListener('touchstart', function () {
 	if (imgIndex === 1) {
 		smoothScroll('.projects-container', scrollSpeed);
 	}
@@ -732,12 +723,71 @@ phoneArrow.addEventListener('click', function () {
 	}
 })
 
+phoneAboutNav.addEventListener('touchstart', function () {
+	smoothScroll('.about-container', scrollDash);
+	menu.style.visibility = "hidden";
+	menuVisible = false;
+});
 
+phoneProjectsNav.addEventListener('touchstart', function () {
+	smoothScroll('.projects-container', scrollDash);
+	menu.style.visibility = "hidden";
+	menuVisible = false;
+});
+
+phoneVlogsNav.addEventListener('touchstart', function () {
+	smoothScroll('.vlogs-container', scrollDash);
+	menu.style.visibility = "hidden";
+	menuVisible = false;
+});
+
+phoneContactNav.addEventListener('touchstart', function () {
+	smoothScroll('.contact-container', scrollDash);
+	menu.style.visibility = "hidden";
+	menuVisible = false;
+});
 // END
 /************************************************************************************** */
 
 
+/************************************************************************************** */
+// Menu icon functions. Setting up phone nav link animations
 
+var menuIcon = document.querySelector(".phone-menu-icon");
+var menu = document.querySelector(".phone-nav");
+var menuVisible = false;
+
+menuIcon.addEventListener('touchstart', function () {
+	if (menuVisible == false) {
+		menu.style.visibility = "visible";
+		menuVisible = true;
+
+		animatePhoneNavs();
+	}
+	else if (menuVisible == true) {
+		menu.style.visibility = "hidden";
+		menuVisible = false;
+
+		animateResetPhoneNavs();
+	}
+});
+
+function animatePhoneNavs() {
+	phoneAboutNav.style.transform = "translateX(" + "0" + "rem)";
+	phoneProjectsNav.style.transform = "translateX(" + "0" + "rem)";
+	phoneVlogsNav.style.transform = "translateX(" + "0" + "rem)";
+	phoneContactNav.style.transform = "translateX(" + "0" + "rem)";
+}
+
+function animateResetPhoneNavs() {
+	phoneAboutNav.style.transform = "translateX(" + "-50" + "rem)";
+	phoneProjectsNav.style.transform = "translateX(" + "-50" + "rem)";
+	phoneVlogsNav.style.transform = "translateX(" + "-50" + "rem)";
+	phoneContactNav.style.transform = "translateX(" + "-50" + "rem)";
+}
+
+// END
+/************************************************************************************** */
 
 /************************************************************************************** */
 // 

@@ -97,10 +97,6 @@ nav {
 
   z-index: 5;
   overflow: hidden;
-
-  @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
-    visibility: hidden;
-  }
 }
 
 .home-link,
@@ -124,47 +120,98 @@ nav {
     visibility: hidden;
     display: none;
   }
+  @media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
+    
+
+  }
+  @media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
+
+
+  }
+  @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
+    
+
+  }
+  @media only screen and (min-device-width: 1025px) and (max-device-width: 1281px) {
+      
+      
+  }
+  @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
+      
+      
+  }
 }
 
-.mvc-link {
+.phone-homebar {
+  position: fixed;
+  top: -10rem;
+  width: 100%;
+  height: 6rem;
+
+  background: $defaultBackground;
+
+  z-index: 4;
+
+  transition: top 1s;
+  visibility: hidden;
+  
+  @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+    visibility: visible;
+  }
+  @media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
+    
+
+  }
+  @media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
+
+
+  }
+  @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
+    
+
+  }
+  @media only screen and (min-device-width: 1025px) and (max-device-width: 1281px) {
+      
+      
+  }
+  @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
+      
+      
+  }
+}
+
+.phone-mvc-link {
   font-family: $defaultFont;
   font-size: 3rem;
   font-weight: 600;
   font-style: none;
   text-decoration: none;
-  color: $defaultFontColor;
+  color: white;
 
   overflow: hidden;
   padding: 0.75rem;
   margin: auto 0;
 
-  transition-duration: 0.5s;
   position: absolute;
   left: 0;
-  top: 1rem;
-
-  visibility: hidden;
-
-  @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
-    visibility: visible;
-  }
+  top: .5rem;
 }
 
-.menu-icon {
-  visibility: hidden;
+.phone-menu-icon {
   position: absolute;
-  right: 2rem;
-  top: 1.6rem;
 
-  .menu-line {
+  padding: 1.2rem 2rem 1.6rem 3rem;
+  right: 0rem;
+  top: 0rem;
+  background-color: transparent;
+  
+  
+  .phone-menu-line {
     width: 3.7rem;
     height: 0.7rem;
     background-color: rgb(255, 255, 255);
-    margin: 0.4rem 0;
-  }
-
-  @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
-    visibility: visible;
+    margin: 0.4rem auto;
+    z-index: 5;
   }
 }
 
@@ -173,17 +220,50 @@ nav {
 }
 
 .phone-nav {
+  margin-top: 6rem;
   position: fixed;
 
   height: 100%;
   width: 100%;
 
-  background: rgba(255, 255, 255, 0.904);
-  z-index: 4;
+  background: rgb(255, 255, 255);
+  z-index: 5;
 
   visibility: hidden;
+
+  li {
+  font-family: "Space Mono", monospace;
+  font-size: 5rem;
+  font-weight: 400;
+
+  text-align: center;
+
+  margin: 5rem 0;
+  }
 }
 
+.phone-about-li {
+  transform: translateX(-50rem);
+  transition: transform 0.5s;
+}
+
+.phone-projects-li {
+  transform: translateX(-50rem);
+  transition: transform 0.5s;
+  transition-delay: 0.2s;
+}
+
+.phone-vlogs-li {
+  transform: translateX(-50rem);
+  transition: transform 0.5s;
+  transition-delay: 0.4s;
+}
+
+.phone-contact-li {
+  transform: translateX(-50rem);
+  transition: transform 0.5s;
+  transition-delay: 0.6s;
+}
 /********************************************************************************/
 /*                              SCROLLABLE PHONE                                */
 /********************************************************************************/
@@ -192,6 +272,26 @@ nav {
 
   @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
     visibility: visible;
+  }
+  @media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
+    
+
+  }
+  @media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
+
+
+  }
+  @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
+    
+
+  }
+  @media only screen and (min-device-width: 1025px) and (max-device-width: 1281px) {
+      
+      
+  }
+  @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
+      
+      
   }
 }
 
@@ -261,6 +361,26 @@ $phoneImgSpeed: 0.7s;
   @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
     visibility: visible;
   }
+  @media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
+    
+
+  }
+  @media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
+
+
+  }
+  @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
+    
+
+  }
+  @media only screen and (min-device-width: 1025px) and (max-device-width: 1281px) {
+      
+      
+  }
+  @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
+      
+      
+  }
 }
 
 .phone-arrow {
@@ -278,6 +398,26 @@ $phoneImgSpeed: 0.7s;
 
   @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
     visibility: visible;
+  }
+  @media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
+    
+
+  }
+  @media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
+
+
+  }
+  @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
+    
+
+  }
+  @media only screen and (min-device-width: 1025px) and (max-device-width: 1281px) {
+      
+      
+  }
+  @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
+      
+      
   }
 }
 
@@ -315,6 +455,26 @@ $phoneImgSpeed: 0.7s;
   @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
     margin-top: 5rem;
   }
+  @media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
+    
+
+  }
+  @media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
+
+
+  }
+  @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
+    
+
+  }
+  @media only screen and (min-device-width: 1025px) and (max-device-width: 1281px) {
+      
+      
+  }
+  @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
+      
+      
+  }
 }
 
 .logo-block {
@@ -340,6 +500,26 @@ $phoneImgSpeed: 0.7s;
 
   @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
     font-size: 6rem;
+  }
+  @media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
+    
+
+  }
+  @media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
+
+
+  }
+  @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
+    
+
+  }
+  @media only screen and (min-device-width: 1025px) and (max-device-width: 1281px) {
+      
+      
+  }
+  @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
+      
+      
   }
 }
 
@@ -367,6 +547,26 @@ $phoneImgSpeed: 0.7s;
   @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
     font-size: 2rem;
     width: 40rem;
+  }
+  @media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
+    
+
+  }
+  @media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
+
+
+  }
+  @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
+    
+
+  }
+  @media only screen and (min-device-width: 1025px) and (max-device-width: 1281px) {
+      
+      
+  }
+  @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
+      
+      
   }
 }
 
@@ -413,6 +613,26 @@ $phoneImgSpeed: 0.7s;
 
   @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
     visibility: hidden;
+  }
+  @media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
+    
+
+  }
+  @media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
+
+
+  }
+  @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
+    
+
+  }
+  @media only screen and (min-device-width: 1025px) and (max-device-width: 1281px) {
+      
+      
+  }
+  @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
+      
+      
   }
 }
 
@@ -517,6 +737,26 @@ $phoneImgSpeed: 0.7s;
   @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
     visibility: hidden;
   }
+  @media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
+    
+
+  }
+  @media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
+
+
+  }
+  @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
+    
+
+  }
+  @media only screen and (min-device-width: 1025px) and (max-device-width: 1281px) {
+      
+      
+  }
+  @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
+      
+      
+  }
 }
 
 @keyframes block-left-animate {
@@ -559,6 +799,26 @@ $phoneImgSpeed: 0.7s;
 
   @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
     visibility: hidden;
+  }
+  @media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
+    
+
+  }
+  @media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
+
+
+  }
+  @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
+    
+
+  }
+  @media only screen and (min-device-width: 1025px) and (max-device-width: 1281px) {
+      
+      
+  }
+  @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
+      
+      
   }
 }
 
@@ -617,6 +877,26 @@ $phoneImgSpeed: 0.7s;
   @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
     visibility: hidden;
   }
+  @media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
+    
+
+  }
+  @media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
+
+
+  }
+  @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
+    
+
+  }
+  @media only screen and (min-device-width: 1025px) and (max-device-width: 1281px) {
+      
+      
+  }
+  @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
+      
+      
+  }
 }
 
 /********************************************************************************/
@@ -639,6 +919,26 @@ $phoneImgSpeed: 0.7s;
   @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
     height: 115rem;
     flex-direction: column;
+  }
+  @media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
+    
+
+  }
+  @media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
+
+
+  }
+  @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
+    
+
+  }
+  @media only screen and (min-device-width: 1025px) and (max-device-width: 1281px) {
+      
+      
+  }
+  @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
+      
+      
   }
 }
 
@@ -664,6 +964,26 @@ $phoneImgSpeed: 0.7s;
     height: 30rem;
     font-size: 4.3rem;
   }
+  @media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
+    
+
+  }
+  @media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
+
+
+  }
+  @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
+    
+
+  }
+  @media only screen and (min-device-width: 1025px) and (max-device-width: 1281px) {
+      
+      
+  }
+  @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
+      
+      
+  }
 }
 
 .about-me-container {
@@ -683,6 +1003,26 @@ $phoneImgSpeed: 0.7s;
     width: 90%;
     transform: translateX(100rem);
   }
+  @media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
+    
+
+  }
+  @media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
+
+
+  }
+  @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
+    
+
+  }
+  @media only screen and (min-device-width: 1025px) and (max-device-width: 1281px) {
+      
+      
+  }
+  @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
+      
+      
+  }
 }
 
 .about-me-header {
@@ -691,6 +1031,26 @@ $phoneImgSpeed: 0.7s;
 
   @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
     font-size: 3rem;
+  }
+  @media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
+    
+
+  }
+  @media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
+
+
+  }
+  @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
+    
+
+  }
+  @media only screen and (min-device-width: 1025px) and (max-device-width: 1281px) {
+      
+      
+  }
+  @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
+      
+      
   }
 }
 
@@ -704,6 +1064,26 @@ $phoneImgSpeed: 0.7s;
 
   @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
     font-size: 2rem;
+  }
+  @media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
+    
+
+  }
+  @media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
+
+
+  }
+  @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
+    
+
+  }
+  @media only screen and (min-device-width: 1025px) and (max-device-width: 1281px) {
+      
+      
+  }
+  @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
+      
+      
   }
 }
 
@@ -725,6 +1105,26 @@ $phoneImgSpeed: 0.7s;
   @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
     visibility: hidden;
   }
+  @media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
+    
+
+  }
+  @media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
+
+
+  }
+  @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
+    
+
+  }
+  @media only screen and (min-device-width: 1025px) and (max-device-width: 1281px) {
+      
+      
+  }
+  @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
+      
+      
+  }
 }
 
 .s-frame-two {
@@ -743,6 +1143,26 @@ $phoneImgSpeed: 0.7s;
 
   @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
     visibility: hidden;
+  }
+  @media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
+    
+
+  }
+  @media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
+
+
+  }
+  @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
+    
+
+  }
+  @media only screen and (min-device-width: 1025px) and (max-device-width: 1281px) {
+      
+      
+  }
+  @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
+      
+      
   }
 }
 
@@ -764,6 +1184,26 @@ $phoneImgSpeed: 0.7s;
   @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
     visibility: hidden;
   }
+  @media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
+    
+
+  }
+  @media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
+
+
+  }
+  @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
+    
+
+  }
+  @media only screen and (min-device-width: 1025px) and (max-device-width: 1281px) {
+      
+      
+  }
+  @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
+      
+      
+  }
 }
 
 .project-header {
@@ -772,6 +1212,26 @@ $phoneImgSpeed: 0.7s;
 
   @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
     margin: 4rem auto 1.5rem;
+  }
+  @media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
+    
+
+  }
+  @media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
+
+
+  }
+  @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
+    
+
+  }
+  @media only screen and (min-device-width: 1025px) and (max-device-width: 1281px) {
+      
+      
+  }
+  @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
+      
+      
   }
 }
 
@@ -785,6 +1245,26 @@ $phoneImgSpeed: 0.7s;
     font-size: 4rem;
     margin-top: 4rem;
     margin-bottom: 0rem;
+  }
+  @media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
+    
+
+  }
+  @media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
+
+
+  }
+  @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
+    
+
+  }
+  @media only screen and (min-device-width: 1025px) and (max-device-width: 1281px) {
+      
+      
+  }
+  @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
+      
+      
   }
 }
 
@@ -825,6 +1305,26 @@ $phoneImgSpeed: 0.7s;
     margin-top: 5rem;
     margin-bottom: 2rem;
   }
+  @media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
+    
+
+  }
+  @media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
+
+
+  }
+  @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
+    
+
+  }
+  @media only screen and (min-device-width: 1025px) and (max-device-width: 1281px) {
+      
+      
+  }
+  @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
+      
+      
+  }
 }
 
 /********************************************************************************/
@@ -844,6 +1344,26 @@ $projectFrameHeight: 25rem;
 
   @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
     height: 115vh;
+  }
+  @media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
+    
+
+  }
+  @media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
+
+
+  }
+  @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
+    
+
+  }
+  @media only screen and (min-device-width: 1025px) and (max-device-width: 1281px) {
+      
+      
+  }
+  @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
+      
+      
   }
 }
 
@@ -871,6 +1391,26 @@ $projectFrameHeight: 25rem;
   @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
     height: 115vh;
     flex-direction: column;
+  }
+  @media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
+    
+
+  }
+  @media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
+
+
+  }
+  @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
+    
+
+  }
+  @media only screen and (min-device-width: 1025px) and (max-device-width: 1281px) {
+      
+      
+  }
+  @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
+      
+      
   }
 }
 
@@ -933,6 +1473,26 @@ $projectFrameHeight: 25rem;
       margin: 0 4rem;
     }
   }
+  @media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
+    
+
+  }
+  @media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
+
+
+  }
+  @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
+    
+
+  }
+  @media only screen and (min-device-width: 1025px) and (max-device-width: 1281px) {
+      
+      
+  }
+  @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
+      
+      
+  }
 }
 
 .p1-image-frame {
@@ -944,6 +1504,26 @@ $projectFrameHeight: 25rem;
     top: 2rem;
     height: 40rem;
     width: 100%;
+  }
+  @media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
+    
+
+  }
+  @media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
+
+
+  }
+  @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
+    
+
+  }
+  @media only screen and (min-device-width: 1025px) and (max-device-width: 1281px) {
+      
+      
+  }
+  @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
+      
+      
   }
 }
 
@@ -996,6 +1576,26 @@ $projectFrameHeight: 25rem;
     width: 100%;
     margin: 0;
   }
+  @media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
+    
+
+  }
+  @media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
+
+
+  }
+  @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
+    
+
+  }
+  @media only screen and (min-device-width: 1025px) and (max-device-width: 1281px) {
+      
+      
+  }
+  @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
+      
+      
+  }
 }
 
 .p1-summary-wrapper {
@@ -1019,6 +1619,27 @@ $projectFrameHeight: 25rem;
     margin: 6rem auto 2rem;
   }
 
+  @media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
+    
+
+  }
+  @media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
+
+
+  }
+  @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
+    
+
+  }
+  @media only screen and (min-device-width: 1025px) and (max-device-width: 1281px) {
+      
+      
+  }
+  @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
+      
+      
+  }
+
   .p1-title {
     font-size: 2rem;
     color: black;
@@ -1039,6 +1660,26 @@ $projectFrameHeight: 25rem;
       font-size: 2rem;
       padding: 1rem;
       height: 20rem;
+    }
+    @media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
+    
+
+    }
+    @media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
+  
+  
+    }
+    @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
+      
+  
+    }
+    @media only screen and (min-device-width: 1025px) and (max-device-width: 1281px) {
+        
+        
+    }
+    @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
+        
+        
     }
   }
 
@@ -1061,6 +1702,26 @@ $projectFrameHeight: 25rem;
         padding: 1rem 1rem;
         font-size: 2rem;
       }
+      @media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
+    
+
+      }
+      @media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
+    
+    
+      }
+      @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
+        
+    
+      }
+      @media only screen and (min-device-width: 1025px) and (max-device-width: 1281px) {
+          
+          
+      }
+      @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
+          
+          
+      }
     }
   }
 
@@ -1072,6 +1733,26 @@ $projectFrameHeight: 25rem;
     @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
       text-align: left;
       margin-top: 20rem;
+    }
+    @media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
+    
+
+    }
+    @media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
+  
+  
+    }
+    @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
+      
+  
+    }
+    @media only screen and (min-device-width: 1025px) and (max-device-width: 1281px) {
+        
+        
+    }
+    @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
+        
+        
     }
   }
 
@@ -1100,14 +1781,53 @@ $projectFrameHeight: 25rem;
       font-size: 2.5rem;
       line-height: 4rem;
     }
+    @media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
+    
+
+    }
+    @media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
+  
+  
+    }
+    @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
+      
+  
+    }
+    @media only screen and (min-device-width: 1025px) and (max-device-width: 1281px) {
+        
+        
+    }
+    @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
+        
+        
+    }
   }
 
   .btn-p1-git {
     right: 0;
 
     @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
-     
       font-size: 2rem;
+    }
+    @media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
+    
+
+    }
+    @media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
+  
+  
+    }
+    @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
+      
+  
+    }
+    @media only screen and (min-device-width: 1025px) and (max-device-width: 1281px) {
+        
+        
+    }
+    @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
+        
+        
     }
   }
 }
@@ -1119,6 +1839,26 @@ $projectFrameHeight: 25rem;
   @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
     height: 7rem;
   }
+  @media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
+    
+
+  }
+  @media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
+
+
+  }
+  @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
+    
+
+  }
+  @media only screen and (min-device-width: 1025px) and (max-device-width: 1281px) {
+      
+      
+  }
+  @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
+      
+      
+  }
 }
 
 .btn-p1-git {
@@ -1126,6 +1866,26 @@ $projectFrameHeight: 25rem;
 
   @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
     height: 7rem;
+  }
+  @media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
+    
+
+  }
+  @media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
+
+
+  }
+  @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
+    
+
+  }
+  @media only screen and (min-device-width: 1025px) and (max-device-width: 1281px) {
+      
+      
+  }
+  @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
+      
+      
   }
 }
 
@@ -1142,7 +1902,7 @@ $projectFrameHeight: 25rem;
   height: 110vh;
   background: rgb(255, 255, 255);
 
-  padding-top: 0.1rem;
+  padding-top: 5rem;
   overflow: hidden;
 }
 
@@ -1206,6 +1966,26 @@ $projectFrameHeight: 25rem;
   @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
     visibility: hidden;
     height: 0vh;
+  }
+  @media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
+    
+
+  }
+  @media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
+
+
+  }
+  @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
+    
+
+  }
+  @media only screen and (min-device-width: 1025px) and (max-device-width: 1281px) {
+      
+      
+  }
+  @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
+      
+      
   }
 }
 
@@ -1431,9 +2211,13 @@ $smHead2Size: 0.8rem;
 /********************************************************************************/
 
 
-.contact-top {
-  margin: 5rem;
-  font-size: 5rem;
+.phone-contact-top {
+  font-family: "Space Mono", monospace;
+  font-size: 2rem;
+
+  text-align: center;
+
+  padding: 8rem 1rem 0;
 }
 
 .phone-contact-container {
@@ -1447,6 +2231,26 @@ $smHead2Size: 0.8rem;
     visibility: visible;
     height: fit-content;
   }
+  @media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
+    
+
+  }
+  @media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
+
+
+  }
+  @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
+    
+
+  }
+  @media only screen and (min-device-width: 1025px) and (max-device-width: 1281px) {
+      
+      
+  }
+  @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
+      
+      
+  }
 }
 
 .phone-form-wrapper {
@@ -1458,7 +2262,7 @@ $smHead2Size: 0.8rem;
   flex-direction: column;
 
   width: 100%;
-  height: 80rem;
+  height: 73rem;
   margin: 3rem auto -0.2rem;
   padding-top: 3rem;
   overflow: hidden;
