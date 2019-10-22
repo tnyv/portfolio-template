@@ -37,6 +37,14 @@
 					}, 500);
 				});
 			</script>
+			<a href="#" class="about-link">ABOUT</a>
+			<script>
+				$(".about-link").click(function () {
+					$('html, body').animate({
+						scrollTop: $(".about-container").offset().top
+					}, 1200);
+				});
+			</script>
 			<a href="#" class="home-link">HOME</a>
 			<script>
 				$(".home-link").click(function () {
@@ -345,7 +353,7 @@
 	</div>
 
 
-	<script src="javascript/app.js"></script>
+	<!-- <script src="javascript/app.js"></script> -->
 </body>
 
 </html>
