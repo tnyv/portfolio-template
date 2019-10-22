@@ -412,6 +412,12 @@ nav {
   }
 }
 
+@media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
+  .homepage-container {
+    height: 70rem;
+  }
+}
+
 .logo-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1919,6 +1925,13 @@ nav {
   }
 }
 
+@media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
+  .contact-container {
+    visibility: hidden;
+    height: 0vh;
+  }
+}
+
 .contact-frame {
   position: absolute;
   width: 100rem;
@@ -2172,6 +2185,15 @@ nav {
   }
 }
 
+@media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
+  .phone-contact-container {
+    visibility: visible;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+}
+
 .phone-form-wrapper {
   font-family: "Space Mono", monospace;
   font-size: 2.2rem;
@@ -2211,6 +2233,17 @@ nav {
   }
 }
 
+@media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
+  .phone-form-wrapper {
+    visibility: visible;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    font-size: 2rem;
+    margin: 3rem auto -0.2rem;
+  }
+}
+
 .phone-name-email-section {
   margin: 0 auto;
   width: 90%;
@@ -2218,6 +2251,12 @@ nav {
 }
 
 @media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
+  .phone-name-email-section {
+    height: 7rem;
+  }
+}
+
+@media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
   .phone-name-email-section {
     height: 7rem;
   }
@@ -2245,6 +2284,12 @@ nav {
   }
 }
 
+@media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
+  .phone-form-input-name {
+    height: 3rem;
+  }
+}
+
 .phone-form-email-div {
   float: right;
 }
@@ -2262,6 +2307,12 @@ nav {
 }
 
 @media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
+  .phone-form-input-email {
+    height: 3rem;
+  }
+}
+
+@media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
   .phone-form-input-email {
     height: 3rem;
   }
@@ -2288,7 +2339,19 @@ nav {
   }
 }
 
+@media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
+  .phone-subject-section select {
+    height: 3rem;
+  }
+}
+
 @media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
+  .phone-subject-section {
+    height: 7rem;
+  }
+}
+
+@media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
   .phone-subject-section {
     height: 7rem;
   }
@@ -2301,6 +2364,12 @@ nav {
 }
 
 @media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
+  .phone-message-section {
+    height: 25rem;
+  }
+}
+
+@media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
   .phone-message-section {
     height: 25rem;
   }
@@ -2320,6 +2389,12 @@ nav {
 }
 
 @media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
+  .phone-message-input {
+    height: 20rem;
+  }
+}
+
+@media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
   .phone-message-input {
     height: 20rem;
   }
@@ -2381,6 +2456,15 @@ nav {
   }
 }
 
+@media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
+  .phone-sm-1,
+  .phone-sm-2,
+  .phone-sm-3,
+  .phone-sm-4 {
+    font-size: 2rem;
+  }
+}
+
 .phone-sm-1 h2,
 .phone-sm-2 h2,
 .phone-sm-3 h2,
@@ -2398,6 +2482,15 @@ nav {
   }
 }
 
+@media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
+  .phone-sm-1 h2,
+  .phone-sm-2 h2,
+  .phone-sm-3 h2,
+  .phone-sm-4 h2 {
+    font-size: 1.5rem;
+  }
+}
+
 .phone-sm-1 a,
 .phone-sm-2 a,
 .phone-sm-3 a,
@@ -2407,6 +2500,13 @@ nav {
 }
 
 @media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
+  .phone-sm-1 {
+    font-size: 2rem;
+    margin-top: 5rem;
+  }
+}
+
+@media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
   .phone-sm-1 {
     font-size: 2rem;
     margin-top: 5rem;

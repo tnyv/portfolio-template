@@ -353,7 +353,7 @@ $phoneImgSpeed: 0.7s;
     height: 50rem;
   }
   @media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
-
+    height: 70rem;
 
   }
   @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
@@ -2073,7 +2073,8 @@ $projectFrameHeight: 25rem;
 
   }
   @media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
-
+    visibility: hidden;
+    height: 0vh;
 
   }
   @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
@@ -2104,6 +2105,24 @@ $projectFrameHeight: 25rem;
   z-index: 2;
 
   transition: transform 1s;
+
+
+  @media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
+
+
+  }
+  @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
+    
+
+  }
+  @media only screen and (min-device-width: 1025px) and (max-device-width: 1281px) {
+      
+      
+  }
+  @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
+      
+      
+  }
 }
 
 $formWidth: 31rem;
@@ -2359,7 +2378,8 @@ $smHead2Size: 0.8rem;
 
   }
   @media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
-
+    visibility: visible;
+    height: fit-content;
 
   }
   @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
@@ -2401,7 +2421,10 @@ $smHead2Size: 0.8rem;
     margin: 3rem auto -0.2rem;
   }
   @media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
-
+    visibility: visible;
+    height: fit-content;
+    font-size: 2rem;
+    margin: 3rem auto -0.2rem;
 
   }
   @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
@@ -2428,7 +2451,7 @@ $smHead2Size: 0.8rem;
 
   }
   @media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
-
+    height: 7rem;
 
   }
   @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
@@ -2467,7 +2490,7 @@ $smHead2Size: 0.8rem;
 
   }
   @media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
-
+    height: 3rem;
 
   }
   @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
@@ -2505,7 +2528,7 @@ $smHead2Size: 0.8rem;
 
   }
   @media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
-
+    height: 3rem;
 
   }
   @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
@@ -2541,8 +2564,7 @@ $smHead2Size: 0.8rem;
   
     }
     @media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
-  
-  
+      height: 3rem;
     }
     @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
       
@@ -2563,7 +2585,7 @@ $smHead2Size: 0.8rem;
 
   }
   @media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
-
+    height: 7rem;
 
   }
   @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
@@ -2591,7 +2613,7 @@ $smHead2Size: 0.8rem;
 
   }
   @media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
-
+    height: 25rem;
 
   }
   @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
@@ -2626,7 +2648,7 @@ $smHead2Size: 0.8rem;
 
   }
   @media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
-
+    height: 20rem;
 
   }
   @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
@@ -2690,7 +2712,7 @@ $smHead2Size: 0.8rem;
     
   }
   @media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
-
+    font-size: 2rem;
 
   }
   @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
@@ -2715,7 +2737,7 @@ $smHead2Size: 0.8rem;
 
     }
     @media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
-  
+      font-size: 1.5rem;
   
     }
     @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
@@ -2744,7 +2766,8 @@ $smHead2Size: 0.8rem;
     margin-top: 5rem;
   }
   @media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
-
+    font-size: 2rem;
+    margin-top: 5rem;
 
   }
   @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {

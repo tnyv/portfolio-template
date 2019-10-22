@@ -407,70 +407,6 @@ function smoothScroll(target, duration) {
 
 
 /***************************************************************************************/
-// Setting up HOME bar to appear when below homepage, and disappear when at homepage. 
-var navState = false;
-
-// This function makes sure the infinite interval does not run on phones. (Top stop phone glitching)
-function runInterval() {
-	if (query480.matches) {
-		clearInterval(navStateInterval);
-	}
-	else {
-		// Function is constantly running. Use this until a better solutions comes along!
-		// This process could destroy CPU cycles
-		var navStateInterval = setInterval(function () {
-			adjustNavBar(navState);
-			// console.log("adjustNavBar active");
-		
-			console.log('running');
-		}, 500);
-	}
-}
-
-function navStateScrollStatus() {
-	if (document.body.scrollTop > 900 || document.documentElement.scrollTop > 900) {
-		navState = true;
-	} else {
-		navState = false;
-	}
-}
-
-
-
-function adjustNavBar(navState) {
-	if (navState == true) {
-		document.querySelector('.home-bar').style.top = "0";
-	}
-	else {
-		document.querySelector('.home-bar').style.top = "-10vw";
-	}
-}
-
-function adjustPhoneBar() {
-	if (document.body.scrollTop > 1430 || document.documentElement.scrollTop > 1430) {
-		document.querySelector('.phone-homebar').style.top = "0";
-	}
-	else {
-		document.querySelector('.phone-homebar').style.top = "-10rem";
-	}
-}
-// END
-/************************************************************************************** */
-
-var query480 = window.matchMedia("(min-device-width: 0px)" && "(max-device-width: 480px)");
-runInterval(query480);// Call listener function at run time
-query480.addListener(runInterval); // Attach listener function on state changes
-
-
-
-
-
-
-	
-
-
-
-/***************************************************************************************/
 // Setting up about header and about me to scroll in and out based on page scroll position. 
 var aboutHeader = document.querySelector('.about-header');
 var aboutMeContainer = document.querySelector('.about-me-container');
@@ -536,6 +472,7 @@ function projectsStateScroll() {
 	}
 }
 
+
 function contactStateScroll() {
 	if (document.documentElement.scrollTop <= 3950) {
 		contactFrame.style.transform = "translateX(-150rem)";
@@ -547,10 +484,10 @@ function contactStateScroll() {
 
 
 /************************************************************************************** */
-/*                                 MEDIA QUERY ANIMATIONS                               */
+/*                           MEDIA QUERY ANIMATIONS 480 PX                              */
 /************************************************************************************** */
 
-function aboutHeaderPhoneScroll() {
+function aboutHeader480Scroll() {
 	if (document.documentElement.scrollTop <= 400) {
 		aboutHeader.style.transform = "translateX(-150rem)";
 	}
@@ -562,7 +499,7 @@ function aboutHeaderPhoneScroll() {
 	}
 }
 
-function aboutMePhoneScroll() {
+function aboutMe480Scroll() {
 	if (document.documentElement.scrollTop <= 1075) {
 		aboutMeContainer.style.transform = "translateX(100rem)";
 
@@ -575,7 +512,7 @@ function aboutMePhoneScroll() {
 	}
 }
 
-function projectsPhoneScroll() {
+function projects480Scroll() {
 	if (document.documentElement.scrollTop <= 2590) {
 		projects1Container.style.opacity = 0;
 	}
@@ -587,7 +524,7 @@ function projectsPhoneScroll() {
 	}
 }
 
-function contactPhoneScroll() {
+function contact480Scroll() {
 	if (document.documentElement.scrollTop <= 3950) {
 		contactFrame.style.transform = "translateX(-150rem)";
 	}
@@ -600,34 +537,157 @@ function contactPhoneScroll() {
 
 
 /************************************************************************************** */
+/*                           MEDIA QUERY ANIMATIONS 640 PX                              */
+/************************************************************************************** */
+
+function aboutHeader640Scroll() {
+	if (document.documentElement.scrollTop <= 160) {
+		aboutHeader.style.transform = "translateX(-150rem)";
+	}
+	else if ((document.documentElement.scrollTop > 160) && (document.documentElement.scrollTop < 2400)) {
+		aboutHeader.style.transform = "translateX(0rem)";
+	}
+	else if (document.documentElement.scrollTop >= 2400) {
+		aboutHeader.style.transform = "translateX(-150rem)";
+	}
+}
+
+function aboutMe640Scroll() {
+	if (document.documentElement.scrollTop <= 300) {
+		aboutMeContainer.style.transform = "translateX(100rem)";
+
+	}
+	else if ((document.documentElement.scrollTop > 300) && (document.documentElement.scrollTop < 3800)) {
+		aboutMeContainer.style.transform = "translateX(0rem)";
+	}
+	else if (document.documentElement.scrollTop >= 3800) {
+		aboutMeContainer.style.transform = "translateX(100rem)";
+	}
+}
+
+function projects640Scroll() {
+	if (document.documentElement.scrollTop <= 1420) {
+		projects1Container.style.opacity = 0;
+	}
+	else if ((document.documentElement.scrollTop > 1420) && (document.documentElement.scrollTop < 3800)) {
+		projects1Container.style.opacity = 1;
+	}
+	else if (document.documentElement.scrollTop >= 3800) {
+		projects1Container.style.opacity = 0;
+	}
+}
+
+function contact640Scroll() {
+	if (document.documentElement.scrollTop <= 3950) {
+		contactFrame.style.transform = "translateX(-150rem)";
+	}
+	else if (document.documentElement.scrollTop >= 3950) {
+		contactFrame.style.transform = "translateX(0rem)";
+	}
+}
+// END
+/************************************************************************************** */
+
+
+
+/***************************************************************************************/
+// Setting up HOME bar to appear when below homepage, and disappear when at homepage. 
+var navState = false;
+
+var query480 = window.matchMedia("(min-device-width: 0px)" && "(max-device-width: 480px)");
+runInterval(query480);// Call listener function at run time
+query480.addListener(runInterval); // Attach listener function on state changes
+
+// This function makes sure the infinite interval does not run on phones. (Top stop phone glitching)
+function runInterval() {
+	if (query480.matches) {
+		clearInterval(navStateInterval);
+	}
+	else {
+		// Function is constantly running. Use this until a better solutions comes along!
+		// This process could destroy CPU cycles
+		var navStateInterval = setInterval(function () {
+			showNavBar(navState);
+		
+			console.log('running');
+		}, 500);
+	}
+}
+
+function nav640ScrollStatus() {
+	if (document.body.scrollTop > 640 || document.documentElement.scrollTop > 640) {
+		navState = true;
+	} else {
+		navState = false;
+	}
+}
+
+function showNavBar(navState) {
+	if (navState == true) {
+		document.querySelector('.home-bar').style.top = "0";
+	}
+	else {
+		document.querySelector('.home-bar').style.top = "-10vw";
+	}
+}
+
+function adjust480HomeBar() {
+	if (document.body.scrollTop > 1430 || document.documentElement.scrollTop > 1430) {
+		document.querySelector('.phone-homebar').style.top = "0";
+	}
+	else {
+		document.querySelector('.phone-homebar').style.top = "-10rem";
+	}
+}
+
+// END
+/************************************************************************************** */
+
+
+/************************************************************************************** */
 // Merging all window.onscroll funtions together
 
 window.onscroll = function () {
 	var phone480 = window.matchMedia("(min-device-width: 0px)" && "(max-device-width: 480px)");
-	adjustMediaQAnimations(phone480);// Call listener function at run time
-	phone480.addListener(adjustMediaQAnimations); // Attach listener function on state changes
+	adjust480Animations(phone480);// Call listener function at run time
+	phone480.addListener(adjust480Animations); // Attach listener function on state changes
 
-	function adjustMediaQAnimations(phone480) {
+	var media640 = window.matchMedia("(min-device-width: 481px)" && "(max-device-width: 640px)");
+	adjust640Animations(media640);
+	media640.addListener(adjust640Animations); 
+
+
+	function adjust480Animations() {
 		if (phone480.matches) { // For all phone screen sizes
-			aboutHeaderPhoneScroll();
-			aboutMePhoneScroll();
-			projectsPhoneScroll();
-			contactPhoneScroll();
-			adjustPhoneBar();
+			aboutHeader480Scroll();
+			aboutMe480Scroll();
+			projects480Scroll();
+			contact480Scroll();
+			adjust480HomeBar();
 		}
+	}
 
-		else { // For all other non-phone screen sizes
-			navStateScrollStatus();
-			aboutHeaderStateScroll();
-			aboutMeStateScroll();
-			sFrameStateScroll();
-			projectsStateScroll();
-			contactStateScroll();
+	function adjust640Animations() {
+		if (media640.matches) { 
+			aboutHeader640Scroll();
+			aboutMe640Scroll();
+			projects640Scroll();
+			contact640Scroll();
+			nav640ScrollStatus();
 		}
 	}
 
 	console.log(document.documentElement.scrollTop);
 };
+
+function allMedia1840() {
+	navStateScrollStatus();
+	aboutHeaderStateScroll();
+	aboutMeStateScroll();
+	sFrameStateScroll();
+	projectsStateScroll();
+	contactStateScroll();
+}
 // END
 /************************************************************************************** */
 
