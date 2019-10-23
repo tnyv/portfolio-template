@@ -571,6 +571,7 @@ function projects640Scroll() {
 	}
 	else if ((document.documentElement.scrollTop > 1420) && (document.documentElement.scrollTop < 3800)) {
 		projects1Container.style.opacity = 1;
+		console.log('ABOUT ME 640');
 	}
 	else if (document.documentElement.scrollTop >= 3800) {
 		projects1Container.style.opacity = 0;
@@ -588,6 +589,77 @@ function contact640Scroll() {
 // END
 /************************************************************************************** */
 
+
+/************************************************************************************** */
+/*                           MEDIA QUERY ANIMATIONS 960 PX                              */
+/************************************************************************************** */
+
+function aboutHeader960Scroll() {
+	if (document.documentElement.scrollTop <= 160) {
+		aboutHeader.style.transform = "translateX(-150rem)";
+	}
+	else if ((document.documentElement.scrollTop > 160) && (document.documentElement.scrollTop < 2400)) {
+		aboutHeader.style.transform = "translateX(0rem)";
+	}
+	else if (document.documentElement.scrollTop >= 2400) {
+		aboutHeader.style.transform = "translateX(-150rem)";
+	}
+}
+
+function aboutMe960Scroll() {
+	if (document.documentElement.scrollTop <= 1560) {
+		aboutMeContainer.style.transform = "translateX(100rem)";
+
+	}
+	else if ((document.documentElement.scrollTop > 1560) && (document.documentElement.scrollTop < 3500)) {
+		aboutMeContainer.style.transform = "translateX(0rem)";
+		console.log('ABOUT ME 960');
+	}
+	else if (document.documentElement.scrollTop >= 3500) {
+		aboutMeContainer.style.transform = "translateX(100rem)";
+	}
+}
+
+function projects960Scroll() {
+	if (document.documentElement.scrollTop <= 2730) {
+		projects1Container.style.opacity = 0;
+	}
+	else if ((document.documentElement.scrollTop > 2730) && (document.documentElement.scrollTop < 4550)) {
+		projects1Container.style.opacity = 1;
+	}
+	else if (document.documentElement.scrollTop >= 4550) {
+		projects1Container.style.opacity = 0;
+	}
+}
+
+function contact960Scroll() {
+	if (document.documentElement.scrollTop <= 3950) {
+		contactFrame.style.transform = "translateX(-150rem)";
+	}
+	else if (document.documentElement.scrollTop >= 3950) {
+		contactFrame.style.transform = "translateX(0rem)";
+	}
+}
+
+function sFrame960Scroll() {
+	if (document.documentElement.scrollTop <= 800) {
+		sFrameOne.style.height = "0rem";
+		sFrameTwo.style.height = "0rem";
+		sFrameThree.style.height = "0rem";
+	}
+	else if ((document.documentElement.scrollTop > 800) && (document.documentElement.scrollTop < 2580)) {
+		sFrameOne.style.height = "40rem";
+		sFrameTwo.style.height = "40rem";
+		sFrameThree.style.height = "40rem";
+	}
+	else if (document.documentElement.scrollTop >= 2580) {
+		sFrameOne.style.height = "0rem";
+		sFrameTwo.style.height = "0rem";
+		sFrameThree.style.height = "0rem";
+	}
+}
+// END
+/************************************************************************************** */
 
 
 /***************************************************************************************/
@@ -614,14 +686,6 @@ function runInterval() {
 	}
 }
 
-function nav640ScrollStatus() {
-	if (document.body.scrollTop > 640 || document.documentElement.scrollTop > 640) {
-		navState = true;
-	} else {
-		navState = false;
-	}
-}
-
 function showNavBar(navState) {
 	if (navState == true) {
 		document.querySelector('.home-bar').style.top = "0";
@@ -631,12 +695,28 @@ function showNavBar(navState) {
 	}
 }
 
-function adjust480HomeBar() {
+function nav480ScrollStatus() {
 	if (document.body.scrollTop > 1430 || document.documentElement.scrollTop > 1430) {
 		document.querySelector('.phone-homebar').style.top = "0";
 	}
 	else {
 		document.querySelector('.phone-homebar').style.top = "-10rem";
+	}
+}
+
+function nav640ScrollStatus() {
+	if (document.body.scrollTop > 640 || document.documentElement.scrollTop > 640) {
+		navState = true;
+	} else {
+		navState = false;
+	}
+}
+
+function nav960ScrollStatus() {
+	if (document.body.scrollTop > 640 || document.documentElement.scrollTop > 640) {
+		navState = true;
+	} else {
+		navState = false;
 	}
 }
 
@@ -648,13 +728,17 @@ function adjust480HomeBar() {
 // Merging all window.onscroll funtions together
 
 window.onscroll = function () {
-	var phone480 = window.matchMedia("(min-device-width: 0px)" && "(max-device-width: 480px)");
+	var phone480 = window.matchMedia("(min-device-width: 0px)");
 	adjust480Animations(phone480);// Call listener function at run time
 	phone480.addListener(adjust480Animations); // Attach listener function on state changes
 
-	var media640 = window.matchMedia("(min-device-width: 481px)" && "(max-device-width: 640px)");
+	var media640 = window.matchMedia("(min-device-width: 481px)");
 	adjust640Animations(media640);
 	media640.addListener(adjust640Animations); 
+
+	var media960 = window.matchMedia("(min-device-width: 641px)");
+	adjust960Animations(media960);
+	media960.addListener(adjust960Animations); 
 
 
 	function adjust480Animations() {
@@ -663,7 +747,7 @@ window.onscroll = function () {
 			aboutMe480Scroll();
 			projects480Scroll();
 			contact480Scroll();
-			adjust480HomeBar();
+			nav480ScrollStatus();
 		}
 	}
 
@@ -677,6 +761,16 @@ window.onscroll = function () {
 		}
 	}
 
+	function adjust960Animations() {
+		if (media960.matches) { 
+			aboutHeader960Scroll();
+			aboutMe960Scroll();
+			projects960Scroll();
+			contact960Scroll();
+			sFrame960Scroll();
+			nav960ScrollStatus();
+		}
+	}
 	console.log(document.documentElement.scrollTop);
 };
 
