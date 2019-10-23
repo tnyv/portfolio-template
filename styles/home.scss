@@ -349,24 +349,11 @@ $phoneImgSpeed: 0.7s;
 
   overflow: hidden;
 
+  @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+    height: 120rem;
+  }
   @media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
     height: 50rem;
-  }
-  @media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
-    height: 70rem;
-
-  }
-  @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
-    height: 60rem;
-
-  }
-  @media only screen and (min-device-width: 1025px) and (max-device-width: 1281px) {
-      
-      
-  }
-  @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
-      
-      
   }
 }
 
@@ -399,6 +386,10 @@ $phoneImgSpeed: 0.7s;
   @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
       
       
+  }
+  @media only screen and (min-device-width: 1861px) {
+    
+    
   }
 }
 
@@ -444,6 +435,10 @@ $phoneImgSpeed: 0.7s;
   @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
       
       
+  }
+  @media only screen and (min-device-width: 1861px) {
+    
+    
   }
 }
 
@@ -492,6 +487,10 @@ $phoneImgSpeed: 0.7s;
   @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
       
       
+  }
+  @media only screen and (min-device-width: 1861px) {
+    
+    
   }
 }
 
@@ -547,16 +546,20 @@ $phoneImgSpeed: 0.7s;
 
   }
   @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
-    width: 40rem;
+    width: 35rem;
 
   }
   @media only screen and (min-device-width: 1025px) and (max-device-width: 1281px) {
-      
+    width: 40rem;
       
   }
   @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
       
       
+  }
+  @media only screen and (min-device-width: 1861px) {
+    
+
   }
 }
 
@@ -570,15 +573,20 @@ $phoneImgSpeed: 0.7s;
     cursor: pointer;
   }
   @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
-    width: 45rem;
+    width: 40rem;
     cursor: pointer;
 
   }
   @media only screen and (min-device-width: 1025px) and (max-device-width: 1281px) {
+    width: 45rem;
+    cursor: pointer;
+      
+  }
+  @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
       
       
   }
-  @media only screen and (min-device-width: 1282px) {
+  @media only screen and (min-device-width: 1861px) {
     width: 50rem;
     height: 35rem;
     cursor: pointer;
@@ -629,6 +637,24 @@ $phoneImgSpeed: 0.7s;
   @media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
     top: 20%;
   }
+  @media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
+    top: 30%;
+  }
+  @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
+    top: 30%;
+  }
+  @media only screen and (min-device-width: 1025px) and (max-device-width: 1281px) {
+    top: 30%;
+      
+  }
+  @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
+      
+      
+  }
+  @media only screen and (min-device-width: 1861px) {
+    
+
+  }
 }
 
 @keyframes middle-animate-left {
@@ -673,17 +699,22 @@ $phoneImgSpeed: 0.7s;
 
   }
   @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
-    font-size: 5rem;
-    bottom: 0.2rem;
+    font-size: 4rem;
+    bottom: 2rem;
 
   }
   @media only screen and (min-device-width: 1025px) and (max-device-width: 1281px) {
-      
+    font-size: 4rem;
+    bottom: .2rem;
       
   }
   @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
       
       
+  }
+  @media only screen and (min-device-width: 1861px) {
+    
+
   }
 }
 
@@ -713,19 +744,25 @@ $phoneImgSpeed: 0.7s;
     width: 25rem;
   }
   @media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
+    top: 30%;
     width: 25rem;
   }
   @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
     width: 25rem;
-
+    top: 30%;
   }
   @media only screen and (min-device-width: 1025px) and (max-device-width: 1281px) {
-      
+    width: 27rem;
+    top: 30%;
       
   }
   @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
       
       
+  }
+  @media only screen and (min-device-width: 1861px) {
+    
+
   }
 }
 
@@ -777,21 +814,28 @@ $phoneImgSpeed: 0.7s;
     right: -30rem;
   }
   @media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
+    top: 30%;
     width: 25rem;
     right: -30rem;
 
   }
   @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
+    top: 30%;
     width: 25rem;
     right: -30rem;
   }
   @media only screen and (min-device-width: 1025px) and (max-device-width: 1281px) {
-      
-      
+    width: 27rem;
+    top: 30%;
+    right: -32rem;
   }
   @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
       
       
+  }
+  @media only screen and (min-device-width: 1861px) {
+    
+
   }
 }
 
@@ -853,6 +897,10 @@ $phoneImgSpeed: 0.7s;
       
       
   }
+  @media only screen and (min-device-width: 1861px) {
+    
+
+  }
   }
 
   p {
@@ -913,6 +961,10 @@ $phoneImgSpeed: 0.7s;
       
       
   }
+  @media only screen and (min-device-width: 1861px) {
+    
+
+  }
 }
 
 .about-header {
@@ -967,6 +1019,10 @@ $phoneImgSpeed: 0.7s;
       
       
   }
+  @media only screen and (min-device-width: 1861px) {
+    
+
+  }
 }
 
 .about-me-container {
@@ -1013,6 +1069,10 @@ $phoneImgSpeed: 0.7s;
       
       
   }
+  @media only screen and (min-device-width: 1861px) {
+    
+
+  }
 }
 
 .about-me-header {
@@ -1041,6 +1101,10 @@ $phoneImgSpeed: 0.7s;
   @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
       
       
+  }
+  @media only screen and (min-device-width: 1861px) {
+    
+
   }
 }
 
@@ -1074,6 +1138,10 @@ $phoneImgSpeed: 0.7s;
   @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
       
       
+  }
+  @media only screen and (min-device-width: 1861px) {
+    
+
   }
 }
 
@@ -1115,6 +1183,10 @@ $phoneImgSpeed: 0.7s;
       
       
   }
+  @media only screen and (min-device-width: 1861px) {
+    
+
+  }
 }
 
 .s-frame-two {
@@ -1153,6 +1225,10 @@ $phoneImgSpeed: 0.7s;
   @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
       
       
+  }
+  @media only screen and (min-device-width: 1861px) {
+    
+
   }
 }
 
@@ -1195,6 +1271,10 @@ $phoneImgSpeed: 0.7s;
       
       
   }
+  @media only screen and (min-device-width: 1861px) {
+    
+
+  }
 }
 
 .project-header {
@@ -1223,6 +1303,10 @@ $phoneImgSpeed: 0.7s;
   @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
       
       
+  }
+  @media only screen and (min-device-width: 1861px) {
+    
+
   }
 }
 
@@ -1284,6 +1368,10 @@ $phoneImgSpeed: 0.7s;
       
       
   }
+  @media only screen and (min-device-width: 1861px) {
+    
+
+  }
 }
 
 /********************************************************************************/
@@ -1322,6 +1410,10 @@ $projectFrameHeight: 25rem;
   @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
       
       
+  }
+  @media only screen and (min-device-width: 1861px) {
+    
+
   }
 }
 
@@ -1369,6 +1461,10 @@ $projectFrameHeight: 25rem;
   @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
       
       
+  }
+  @media only screen and (min-device-width: 1861px) {
+    
+
   }
 }
 
@@ -1466,6 +1562,10 @@ $projectFrameHeight: 25rem;
       
       
   }
+  @media only screen and (min-device-width: 1861px) {
+    
+
+  }
 }
 
 .p1-image-frame {
@@ -1500,6 +1600,10 @@ $projectFrameHeight: 25rem;
       
       
   }
+  @media only screen and (min-device-width: 1861px) {
+    
+
+  }
 }
 
 .p1-image-block {
@@ -1533,6 +1637,10 @@ $projectFrameHeight: 25rem;
   @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
       
       
+  }
+  @media only screen and (min-device-width: 1861px) {
+    
+
   }
 }
 
@@ -1579,6 +1687,10 @@ $projectFrameHeight: 25rem;
   @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
       
       
+  }
+  @media only screen and (min-device-width: 1861px) {
+    
+
   }
 }
 
@@ -1627,6 +1739,10 @@ $projectFrameHeight: 25rem;
       
       
   }
+  @media only screen and (min-device-width: 1861px) {
+    
+
+  }
 
   .p1-title {
     font-size: 2rem;
@@ -1650,6 +1766,10 @@ $projectFrameHeight: 25rem;
     @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
         
         
+    }
+    @media only screen and (min-device-width: 1861px) {
+    
+
     }
   }
 
@@ -1678,6 +1798,10 @@ $projectFrameHeight: 25rem;
     @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
         
         
+    }
+    @media only screen and (min-device-width: 1861px) {
+    
+
     }
   }
 
@@ -1715,6 +1839,10 @@ $projectFrameHeight: 25rem;
         
         
     }
+    @media only screen and (min-device-width: 1861px) {
+    
+
+    }
   }
 
   .p1-languages-wrapper {
@@ -1744,6 +1872,10 @@ $projectFrameHeight: 25rem;
     @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
         
         
+    }
+    @media only screen and (min-device-width: 1861px) {
+    
+
     }
 
     h3 {
@@ -1781,6 +1913,10 @@ $projectFrameHeight: 25rem;
           
           
       }
+      @media only screen and (min-device-width: 1861px) {
+    
+
+      }
     }
   }
 
@@ -1813,6 +1949,10 @@ $projectFrameHeight: 25rem;
     @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
         
         
+    }
+    @media only screen and (min-device-width: 1861px) {
+    
+
     }
   }
 
@@ -1863,6 +2003,10 @@ $projectFrameHeight: 25rem;
         
         
     }
+    @media only screen and (min-device-width: 1861px) {
+    
+
+    }
   }
 
   .btn-p1-git {
@@ -1890,6 +2034,10 @@ $projectFrameHeight: 25rem;
     @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
         
         
+    }
+    @media only screen and (min-device-width: 1861px) {
+    
+
     }
   }
 }
@@ -1921,6 +2069,10 @@ $projectFrameHeight: 25rem;
       
       
   }
+  @media only screen and (min-device-width: 1861px) {
+    
+
+  }
 }
 
 .btn-p1-git {
@@ -1948,6 +2100,10 @@ $projectFrameHeight: 25rem;
   @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
       
       
+  }
+  @media only screen and (min-device-width: 1861px) {
+    
+
   }
 }
 
@@ -1989,6 +2145,10 @@ $projectFrameHeight: 25rem;
   @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
       
       
+  }
+  @media only screen and (min-device-width: 1861px) {
+    
+
   }
 }
 
@@ -2075,6 +2235,10 @@ $projectFrameHeight: 25rem;
       
       
   }
+  @media only screen and (min-device-width: 1861px) {
+    
+
+  }
 }
 
 .contact-top {
@@ -2096,6 +2260,10 @@ $projectFrameHeight: 25rem;
   @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
       
       
+  }
+  @media only screen and (min-device-width: 1861px) {
+    
+
   }
 }
 
@@ -2127,6 +2295,10 @@ $projectFrameHeight: 25rem;
   @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
       
       
+  }
+  @media only screen and (min-device-width: 1861px) {
+    
+
   }
 }
 
@@ -2168,6 +2340,10 @@ $borderRadius: 0.2rem;
       
       
   }
+  @media only screen and (min-device-width: 1861px) {
+    
+
+  }
 }
 
 .form-name-div {
@@ -2200,6 +2376,10 @@ $borderRadius: 0.2rem;
       
       
   }
+  @media only screen and (min-device-width: 1861px) {
+    
+
+  }
 }
 
 .form-email-div {
@@ -2231,6 +2411,10 @@ $borderRadius: 0.2rem;
       
       
   }
+  @media only screen and (min-device-width: 1861px) {
+    
+
+  }
 }
 
 .subject-section {
@@ -2250,6 +2434,10 @@ $borderRadius: 0.2rem;
   @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
       
       
+  }
+  @media only screen and (min-device-width: 1861px) {
+    
+
   }
 
   select {
@@ -2273,6 +2461,10 @@ $borderRadius: 0.2rem;
         
         
     }
+    @media only screen and (min-device-width: 1861px) {
+    
+
+    }
   }
 }
 
@@ -2295,6 +2487,10 @@ $borderRadius: 0.2rem;
   @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
       
       
+  }
+  @media only screen and (min-device-width: 1861px) {
+    
+
   }
 }
 
@@ -2324,6 +2520,10 @@ $borderRadius: 0.2rem;
       
       
   }
+  @media only screen and (min-device-width: 1861px) {
+    
+
+  }
 }
 
 .button-section {
@@ -2340,6 +2540,10 @@ $borderRadius: 0.2rem;
   @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
       
       
+  }
+  @media only screen and (min-device-width: 1861px) {
+    
+
   }
 }
 
@@ -2369,6 +2573,10 @@ $borderRadius: 0.2rem;
   @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
       
       
+  }
+  @media only screen and (min-device-width: 1861px) {
+    
+
   }
 }
 
@@ -2410,6 +2618,10 @@ $smHead2Size: 0.8rem;
       
       
   }
+  @media only screen and (min-device-width: 1861px) {
+    
+
+  }
 }
 
 .sm-1,
@@ -2435,6 +2647,10 @@ $smHead2Size: 0.8rem;
       
       
   }
+  @media only screen and (min-device-width: 1861px) {
+    
+
+  }
 
   h2 {
     color: rgb(156, 156, 156);
@@ -2451,6 +2667,10 @@ $smHead2Size: 0.8rem;
     @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
         
         
+    }
+    @media only screen and (min-device-width: 1861px) {
+    
+
     }
   }
 
@@ -2478,6 +2698,10 @@ $smHead2Size: 0.8rem;
       
       
   }
+  @media only screen and (min-device-width: 1861px) {
+    
+
+  }
 }
 
 .sm-3 {
@@ -2499,6 +2723,10 @@ $smHead2Size: 0.8rem;
   @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
       
       
+  }
+  @media only screen and (min-device-width: 1861px) {
+    
+
   }
 }
 
@@ -2545,6 +2773,10 @@ $smHead2Size: 0.8rem;
       
       
   }
+  @media only screen and (min-device-width: 1861px) {
+    
+
+  }
 }
 
 .phone-contact-container {
@@ -2579,6 +2811,10 @@ $smHead2Size: 0.8rem;
   @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
       
       
+  }
+  @media only screen and (min-device-width: 1861px) {
+    
+
   }
 }
 
@@ -2625,6 +2861,10 @@ $smHead2Size: 0.8rem;
       
       
   }
+  @media only screen and (min-device-width: 1861px) {
+    
+
+  }
 }
 
 .phone-name-email-section {
@@ -2651,6 +2891,10 @@ $smHead2Size: 0.8rem;
   @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
       
       
+  }
+  @media only screen and (min-device-width: 1861px) {
+    
+
   }
 }
 
@@ -2691,6 +2935,10 @@ $smHead2Size: 0.8rem;
       
       
   }
+  @media only screen and (min-device-width: 1861px) {
+    
+
+  }
 }
 
 .phone-form-email-div {
@@ -2729,6 +2977,10 @@ $smHead2Size: 0.8rem;
       
       
   }
+  @media only screen and (min-device-width: 1861px) {
+    
+
+  }
 }
 
 .phone-subject-section {
@@ -2764,6 +3016,10 @@ $smHead2Size: 0.8rem;
         
         
     }
+    @media only screen and (min-device-width: 1861px) {
+    
+
+    }
   }
 
   @media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
@@ -2785,6 +3041,10 @@ $smHead2Size: 0.8rem;
   @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
       
       
+  }
+  @media only screen and (min-device-width: 1861px) {
+    
+
   }
 }
 
@@ -2813,6 +3073,10 @@ $smHead2Size: 0.8rem;
   @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
       
       
+  }
+  @media only screen and (min-device-width: 1861px) {
+    
+
   }
 }
 
@@ -2848,6 +3112,10 @@ $smHead2Size: 0.8rem;
   @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
       
       
+  }
+  @media only screen and (min-device-width: 1861px) {
+    
+
   }
 }
 
@@ -2913,6 +3181,10 @@ $smHead2Size: 0.8rem;
       
       
   }
+  @media only screen and (min-device-width: 1861px) {
+    
+
+  }
 
   h2 {
     color: rgb(156, 156, 156);
@@ -2937,6 +3209,10 @@ $smHead2Size: 0.8rem;
     @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
         
         
+    }
+    @media only screen and (min-device-width: 1861px) {
+    
+
     }
   }
 
@@ -2967,6 +3243,10 @@ $smHead2Size: 0.8rem;
   @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
       
       
+  }
+  @media only screen and (min-device-width: 1861px) {
+    
+
   }
 }
 /********************************************************************************/

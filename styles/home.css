@@ -406,21 +406,15 @@ nav {
   overflow: hidden;
 }
 
+@media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+  .homepage-container {
+    height: 120rem;
+  }
+}
+
 @media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
   .homepage-container {
     height: 50rem;
-  }
-}
-
-@media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
-  .homepage-container {
-    height: 70rem;
-  }
-}
-
-@media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
-  .homepage-container {
-    height: 60rem;
   }
 }
 
@@ -594,6 +588,12 @@ nav {
 
 @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
   .homepage-block-middle {
+    width: 35rem;
+  }
+}
+
+@media only screen and (min-device-width: 1025px) and (max-device-width: 1281px) {
+  .homepage-block-middle {
     width: 40rem;
   }
 }
@@ -614,12 +614,19 @@ nav {
 
 @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
   .homepage-block-middle:hover {
+    width: 40rem;
+    cursor: pointer;
+  }
+}
+
+@media only screen and (min-device-width: 1025px) and (max-device-width: 1281px) {
+  .homepage-block-middle:hover {
     width: 45rem;
     cursor: pointer;
   }
 }
 
-@media only screen and (min-device-width: 1282px) {
+@media only screen and (min-device-width: 1861px) {
   .homepage-block-middle:hover {
     width: 50rem;
     height: 35rem;
@@ -690,6 +697,24 @@ nav {
   }
 }
 
+@media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
+  .middle-frame {
+    top: 30%;
+  }
+}
+
+@media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
+  .middle-frame {
+    top: 30%;
+  }
+}
+
+@media only screen and (min-device-width: 1025px) and (max-device-width: 1281px) {
+  .middle-frame {
+    top: 30%;
+  }
+}
+
 @-webkit-keyframes middle-animate-left {
   from {
     left: 60%;
@@ -755,8 +780,15 @@ nav {
 
 @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
   .main-header {
-    font-size: 5rem;
-    bottom: 0.2rem;
+    font-size: 4rem;
+    bottom: 2rem;
+  }
+}
+
+@media only screen and (min-device-width: 1025px) and (max-device-width: 1281px) {
+  .main-header {
+    font-size: 4rem;
+    bottom: .2rem;
   }
 }
 
@@ -794,6 +826,7 @@ nav {
 
 @media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
   .homepage-block-left {
+    top: 30%;
     width: 25rem;
   }
 }
@@ -801,6 +834,14 @@ nav {
 @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
   .homepage-block-left {
     width: 25rem;
+    top: 30%;
+  }
+}
+
+@media only screen and (min-device-width: 1025px) and (max-device-width: 1281px) {
+  .homepage-block-left {
+    width: 27rem;
+    top: 30%;
   }
 }
 
@@ -868,6 +909,7 @@ nav {
 
 @media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
   .homepage-block-right {
+    top: 30%;
     width: 25rem;
     right: -30rem;
   }
@@ -875,8 +917,17 @@ nav {
 
 @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
   .homepage-block-right {
+    top: 30%;
     width: 25rem;
     right: -30rem;
+  }
+}
+
+@media only screen and (min-device-width: 1025px) and (max-device-width: 1281px) {
+  .homepage-block-right {
+    width: 27rem;
+    top: 30%;
+    right: -32rem;
   }
 }
 
