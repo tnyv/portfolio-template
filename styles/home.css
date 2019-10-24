@@ -2618,34 +2618,44 @@ nav {
 }
 
 .contact-top {
+  position: absolute;
   font-family: "Space Mono", monospace;
   font-size: 2rem;
-  text-align: center;
-  padding: 8rem 1rem 0;
+  text-align: left;
+  width: 47rem;
+  left: 2%;
+  bottom: 45rem;
 }
 
 @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
   .contact-top {
-    font-size: 1.5rem;
-    text-align: center;
-    padding: 4rem 1rem 0;
+    font-size: 1.2rem;
+    width: 29rem;
+    bottom: 28rem;
   }
 }
 
 @media only screen and (min-device-width: 1025px) and (max-device-width: 1281px) {
   .contact-top {
-    font-size: 1.5rem;
-    text-align: center;
-    padding: 4rem 1rem 0;
+    font-size: 1.2rem;
+    width: 29rem;
+    bottom: 28rem;
   }
 }
 
-@media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
+@media only screen and (min-device-width: 1282px) and (max-device-width: 1600px) {
   .contact-top {
     font-size: 1.2rem;
-    text-align: center;
-    padding: 8rem 3rem 0;
-    width: 37rem;
+    width: 29rem;
+    bottom: 32rem;
+  }
+}
+
+@media only screen and (min-device-width: 1601px) and (max-device-width: 1860px) {
+  .contact-top {
+    font-size: 1.5rem;
+    width: 35rem;
+    bottom: 32rem;
   }
 }
 
