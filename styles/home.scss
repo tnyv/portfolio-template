@@ -554,7 +554,7 @@ $phoneImgSpeed: 0.7s;
       
   }
   @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
-      
+    width: 40rem;
       
   }
   @media only screen and (min-device-width: 1861px) {
@@ -583,7 +583,8 @@ $phoneImgSpeed: 0.7s;
       
   }
   @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
-      
+    width: 45rem;
+    cursor: pointer;
       
   }
   @media only screen and (min-device-width: 1861px) {
@@ -648,7 +649,7 @@ $phoneImgSpeed: 0.7s;
       
   }
   @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
-      
+    top: 30%;
       
   }
   @media only screen and (min-device-width: 1861px) {
@@ -709,7 +710,8 @@ $phoneImgSpeed: 0.7s;
       
   }
   @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
-      
+    font-size: 4.5rem;
+    bottom: .5rem;
       
   }
   @media only screen and (min-device-width: 1861px) {
@@ -757,7 +759,8 @@ $phoneImgSpeed: 0.7s;
       
   }
   @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
-      
+    width: 27rem;
+    top: 30%;
       
   }
   @media only screen and (min-device-width: 1861px) {
@@ -830,7 +833,9 @@ $phoneImgSpeed: 0.7s;
     right: -32rem;
   }
   @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
-      
+    width: 27rem;
+    top: 30%;
+    right: -32rem;
       
   }
   @media only screen and (min-device-width: 1861px) {
@@ -958,7 +963,7 @@ $phoneImgSpeed: 0.7s;
       
   }
   @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
-      
+    height: 105rem;
       
   }
   @media only screen and (min-device-width: 1861px) {
@@ -1020,7 +1025,12 @@ $phoneImgSpeed: 0.7s;
     padding-left: 5rem;
   }
   @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
-      
+    margin: 5rem auto 0;
+    text-align: left;
+    width: 45rem;
+    height: 20rem;
+    font-size: 3rem;
+    padding-left: 5rem;
       
   }
   @media only screen and (min-device-width: 1861px) {
@@ -1073,7 +1083,10 @@ $phoneImgSpeed: 0.7s;
       
   }
   @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
-      
+    margin: 0 auto;
+    bottom: 0rem;
+    width: 28rem;
+    right: 2rem;
       
   }
   @media only screen and (min-device-width: 1861px) {
@@ -1187,7 +1200,7 @@ $phoneImgSpeed: 0.7s;
       
   }
   @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
-      
+    width: 17rem;
       
   }
   @media only screen and (min-device-width: 1861px) {
@@ -1230,7 +1243,7 @@ $phoneImgSpeed: 0.7s;
       
   }
   @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
-      
+    width: 17rem;
       
   }
   @media only screen and (min-device-width: 1861px) {
@@ -1275,7 +1288,7 @@ $phoneImgSpeed: 0.7s;
       
   }
   @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
-      
+    width: 17rem;
       
   }
   @media only screen and (min-device-width: 1861px) {
@@ -1296,20 +1309,20 @@ $phoneImgSpeed: 0.7s;
 
   }
   @media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
-
+    margin: 0rem auto 1rem;
 
   }
   @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
-    
+    margin: 0rem auto 1rem;
 
   }
   @media only screen and (min-device-width: 1025px) and (max-device-width: 1281px) {
-      
+    margin: 0rem auto 1rem;
       
   }
   @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
       
-      
+    margin: 0rem auto 1rem;
   }
   @media only screen and (min-device-width: 1861px) {
     
@@ -1360,19 +1373,29 @@ $phoneImgSpeed: 0.7s;
     font-size: 2rem;
   }
   @media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
-
+    margin-top: 3rem;
+    margin-bottom: 0rem;
+    font-size: 2rem;
 
   }
   @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
-    
+    margin-top: 3rem;
+    margin-bottom: 0rem;
+    font-size: 2.5rem;
 
   }
   @media only screen and (min-device-width: 1025px) and (max-device-width: 1281px) {
-      
+    margin-top: 3rem;
+    margin-bottom: 0rem;
+    font-size: 2.7rem;
+
       
   }
   @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
-      
+    margin-top: 3rem;
+    margin-bottom: 0rem;
+    font-size: 2.7rem;
+
       
   }
   @media only screen and (min-device-width: 1861px) {
@@ -1415,7 +1438,7 @@ $projectFrameHeight: 25rem;
       
   }
   @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
-      
+    
       
   }
   @media only screen and (min-device-width: 1861px) {
@@ -1465,7 +1488,7 @@ $projectFrameHeight: 25rem;
     height: 35rem;
   }
   @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
-      
+    height: 40rem;
       
   }
   @media only screen and (min-device-width: 1861px) {
@@ -1579,7 +1602,14 @@ $projectFrameHeight: 25rem;
       
   }
   @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
-      
+    margin-bottom: 0rem;
+    height: 7rem;
+    button {
+      font-size: 1.2rem;
+      margin: 0 4rem;
+      width: 8rem;
+      height: 5rem;
+    }
       
   }
   @media only screen and (min-device-width: 1861px) {
@@ -1656,7 +1686,8 @@ $projectFrameHeight: 25rem;
       
   }
   @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
-      
+    width: 30rem;
+    height: 20rem;
       
   }
   @media only screen and (min-device-width: 1861px) {
@@ -1706,7 +1737,7 @@ $projectFrameHeight: 25rem;
       
   }
   @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
-      
+    height: fit-content;
       
   }
   @media only screen and (min-device-width: 1861px) {
@@ -1745,12 +1776,13 @@ $projectFrameHeight: 25rem;
   }
   @media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
     font-size: 1.2rem;
-    height: 35rem;
+    line-height: 1.5rem;
+    height: 27rem;
   }
   @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
     font-size: 1.2rem;
-    height: 30rem;
-
+    height: 25rem;
+    line-height: 1.5rem;
   }
   @media only screen and (min-device-width: 1025px) and (max-device-width: 1281px) {
     font-size: 1.5rem;
@@ -1758,8 +1790,9 @@ $projectFrameHeight: 25rem;
       
   }
   @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
-      
-      
+    font-size: 1.5rem;
+    height: 28rem;
+    line-height: 1.8rem;
   }
   @media only screen and (min-device-width: 1861px) {
     
@@ -1860,7 +1893,7 @@ $projectFrameHeight: 25rem;
         
     }
     @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
-        
+      width: 35rem;
         
     }
     @media only screen and (min-device-width: 1861px) {
@@ -1896,7 +1929,9 @@ $projectFrameHeight: 25rem;
         
     }
     @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
-        
+      font-size: 1.75rem;
+      width: 35rem;
+      margin: 0.3rem 0;
         
     }
     @media only screen and (min-device-width: 1861px) {
@@ -1937,7 +1972,8 @@ $projectFrameHeight: 25rem;
           
       }
       @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
-          
+        margin-right: .2rem;
+        font-size: 1.1rem;
           
       }
       @media only screen and (min-device-width: 1861px) {
@@ -1974,7 +2010,7 @@ $projectFrameHeight: 25rem;
         
     }
     @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
-        
+      width: 35rem;
         
     }
     @media only screen and (min-device-width: 1861px) {
@@ -2027,7 +2063,7 @@ $projectFrameHeight: 25rem;
         
     }
     @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
-        
+        width: 13rem;
         
     }
     @media only screen and (min-device-width: 1861px) {
@@ -2170,7 +2206,7 @@ $projectFrameHeight: 25rem;
       
   }
   @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
-      
+    height: 60rem;
       
   }
   @media only screen and (min-device-width: 1861px) {
@@ -2221,6 +2257,46 @@ $projectFrameHeight: 25rem;
 
   margin-top: 4rem;
   margin-bottom: 1rem;
+
+  @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+  }
+  @media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
+    margin-top: 3rem;
+    margin-bottom: 0rem;
+    font-size: 2rem;
+  }
+  @media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
+    margin-top: 3rem;
+    margin-bottom: 0rem;
+    font-size: 2rem;
+
+  }
+  @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
+    margin-top: 3rem;
+    margin-bottom: 0rem;
+    font-size: 2.5rem;
+
+  }
+  @media only screen and (min-device-width: 1025px) and (max-device-width: 1281px) {
+    margin-top: 3rem;
+    margin-bottom: 0rem;
+    font-size: 2.7rem;
+
+      
+  }
+  @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
+    margin-top: 3rem;
+    margin-bottom: 0rem;
+    font-size: 2.7rem;
+
+      
+  }
+  @media only screen and (min-device-width: 1861px) {
+    
+
+  }
 }
 
 /********************************************************************************/
@@ -2255,11 +2331,11 @@ $projectFrameHeight: 25rem;
   
   }
   @media only screen and (min-device-width: 1025px) and (max-device-width: 1281px) {
-   
+    height: 50rem;
       
   }
   @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
-      
+    height: 46rem;
       
   }
   @media only screen and (min-device-width: 1861px) {
@@ -2287,7 +2363,10 @@ $projectFrameHeight: 25rem;
       
   }
   @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
-      
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 8rem 3rem 0;
+    width: 37rem;
       
   }
   @media only screen and (min-device-width: 1861px) {
@@ -2323,7 +2402,8 @@ $projectFrameHeight: 25rem;
       
   }
   @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
-      
+    width: 70rem;
+    height: 30rem;
       
   }
   @media only screen and (min-device-width: 1861px) {
@@ -2368,7 +2448,8 @@ $borderRadius: 0.2rem;
       
   }
   @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
-      
+    width: 23rem;
+    height: 3.5rem;
       
   }
   @media only screen and (min-device-width: 1861px) {
@@ -2406,7 +2487,9 @@ $borderRadius: 0.2rem;
       
   }
   @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
-      
+    font-size: 1rem;
+    width: 11rem;
+    height: 1.5rem;
       
   }
   @media only screen and (min-device-width: 1861px) {
@@ -2443,6 +2526,9 @@ $borderRadius: 0.2rem;
       
   }
   @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
+    font-size: 1rem;
+    width: 11rem;
+    height: 1.5rem;
       
       
   }
@@ -2468,6 +2554,8 @@ $borderRadius: 0.2rem;
       
   }
   @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
+    width: 23rem;
+    height: 3.5rem; 
       
       
   }
@@ -2495,7 +2583,8 @@ $borderRadius: 0.2rem;
         
     }
     @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
-        
+      width: 23rem;
+      height: 1.5rem;
         
     }
     @media only screen and (min-device-width: 1861px) {
@@ -2523,7 +2612,8 @@ $borderRadius: 0.2rem;
       
   }
   @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
-      
+    width: 23rem;
+    height: 1.5rem
       
   }
   @media only screen and (min-device-width: 1861px) {
@@ -2555,7 +2645,7 @@ $borderRadius: 0.2rem;
       
   }
   @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
-      
+    height: 8rem;
       
   }
   @media only screen and (min-device-width: 1861px) {
@@ -2576,7 +2666,7 @@ $borderRadius: 0.2rem;
       
   }
   @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
-      
+    margin-top: 10rem;
       
   }
   @media only screen and (min-device-width: 1861px) {
@@ -2611,7 +2701,9 @@ $borderRadius: 0.2rem;
       
   }
   @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
-      
+    font-size: 1rem;
+    height: 2rem;
+  width: 8rem;
       
   }
   @media only screen and (min-device-width: 1861px) {
@@ -2657,6 +2749,9 @@ $smHead2Size: 0.8rem;
       
   }
   @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
+    width: 28rem;
+    height: 15rem;
+    margin: 3rem 0 0 5rem;
       
       
   }
@@ -2737,7 +2832,7 @@ $smHead2Size: 0.8rem;
       
   }
   @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
-      
+    width: 10rem;
       
   }
   @media only screen and (min-device-width: 1861px) {
@@ -2763,7 +2858,7 @@ $smHead2Size: 0.8rem;
       
   }
   @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
-      
+    width: 10rem;
       
   }
   @media only screen and (min-device-width: 1861px) {
@@ -2789,7 +2884,7 @@ $smHead2Size: 0.8rem;
       
   }
   @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
-      
+    bottom: 10rem;
       
   }
   @media only screen and (min-device-width: 1861px) {
