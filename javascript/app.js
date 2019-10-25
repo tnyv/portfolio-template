@@ -571,7 +571,6 @@ function projects640Scroll() {
 	}
 	else if ((document.documentElement.scrollTop > 1420) && (document.documentElement.scrollTop < 3800)) {
 		projects1Container.style.opacity = 1;
-		console.log('ABOUT ME 640');
 	}
 	else if (document.documentElement.scrollTop >= 3800) {
 		projects1Container.style.opacity = 0;
@@ -613,7 +612,6 @@ function aboutMe960Scroll() {
 	}
 	else if ((document.documentElement.scrollTop > 1560) && (document.documentElement.scrollTop < 3500)) {
 		aboutMeContainer.style.transform = "translateX(0rem)";
-		console.log('ABOUT ME 960');
 	}
 	else if (document.documentElement.scrollTop >= 3500) {
 		aboutMeContainer.style.transform = "translateX(100rem)";
@@ -662,6 +660,148 @@ function sFrame960Scroll() {
 /************************************************************************************** */
 
 
+/************************************************************************************** */
+/*                           MEDIA QUERY ANIMATIONS 1024 PX                              */
+/************************************************************************************** */
+
+function aboutHeader1024Scroll() {
+	if (document.documentElement.scrollTop <= 160) {
+		aboutHeader.style.transform = "translateX(-150rem)";
+	}
+	else if ((document.documentElement.scrollTop > 160) && (document.documentElement.scrollTop < 2400)) {
+		aboutHeader.style.transform = "translateX(0rem)";
+	}
+	else if (document.documentElement.scrollTop >= 2400) {
+		aboutHeader.style.transform = "translateX(-150rem)";
+	}
+}
+
+function aboutMe1024Scroll() {
+	if (document.documentElement.scrollTop <= 1560) {
+		aboutMeContainer.style.transform = "translateX(100rem)";
+
+	}
+	else if ((document.documentElement.scrollTop > 1560) && (document.documentElement.scrollTop < 3500)) {
+		aboutMeContainer.style.transform = "translateX(0rem)";
+	}
+	else if (document.documentElement.scrollTop >= 3500) {
+		aboutMeContainer.style.transform = "translateX(100rem)";
+	}
+}
+
+function projects1024Scroll() {
+	if (document.documentElement.scrollTop <= 2300) {
+		projects1Container.style.opacity = 0;
+	}
+	else if ((document.documentElement.scrollTop > 2300) && (document.documentElement.scrollTop < 3500)) {
+		projects1Container.style.opacity = 1;
+	}
+	else if (document.documentElement.scrollTop >= 3500) {
+		projects1Container.style.opacity = 0;
+	}
+}
+
+function contact1024Scroll() {
+	if (document.documentElement.scrollTop <= 3950) {
+		contactFrame.style.transform = "translateX(-150rem)";
+	}
+	else if (document.documentElement.scrollTop >= 3950) {
+		contactFrame.style.transform = "translateX(0rem)";
+	}
+}
+
+function sFrame1024Scroll() {
+	if (document.documentElement.scrollTop <= 420) {
+		sFrameOne.style.height = "0rem";
+		sFrameTwo.style.height = "0rem";
+		sFrameThree.style.height = "0rem";
+	}
+	else if ((document.documentElement.scrollTop > 420) && (document.documentElement.scrollTop < 2580)) {
+		sFrameOne.style.height = "40rem";
+		sFrameTwo.style.height = "40rem";
+		sFrameThree.style.height = "40rem";
+	}
+	else if (document.documentElement.scrollTop >= 2580) {
+		sFrameOne.style.height = "0rem";
+		sFrameTwo.style.height = "0rem";
+		sFrameThree.style.height = "0rem";
+	}
+}
+// END
+/************************************************************************************** */
+
+
+/************************************************************************************** */
+/*                           MEDIA QUERY ANIMATIONS 1281 PX                              */
+/************************************************************************************** */
+
+function aboutHeader1281Scroll() {
+	if (document.documentElement.scrollTop <= 160) {
+		aboutHeader.style.transform = "translateX(-150rem)";
+	}
+	else if ((document.documentElement.scrollTop > 160) && (document.documentElement.scrollTop < 2400)) {
+		aboutHeader.style.transform = "translateX(0rem)";
+	}
+	else if (document.documentElement.scrollTop >= 2400) {
+		aboutHeader.style.transform = "translateX(-150rem)";
+	}
+}
+
+function aboutMe1281Scroll() {
+	if (document.documentElement.scrollTop <= 1040) {
+		aboutMeContainer.style.transform = "translateX(100rem)";
+
+	}
+	else if ((document.documentElement.scrollTop > 1040) && (document.documentElement.scrollTop < 2536)) {
+		aboutMeContainer.style.transform = "translateX(0rem)";
+	}
+	else if (document.documentElement.scrollTop >= 2536) {
+		aboutMeContainer.style.transform = "translateX(100rem)";
+	}
+}
+
+function projects1281Scroll() {
+	if (document.documentElement.scrollTop <= 1970) {
+		projects1Container.style.opacity = 0;
+	}
+	else if ((document.documentElement.scrollTop > 1970) && (document.documentElement.scrollTop < 3660)) {
+		projects1Container.style.opacity = 1;
+	}
+	else if (document.documentElement.scrollTop >= 3660) {
+		projects1Container.style.opacity = 0;
+	}
+}
+
+function contact1281Scroll() {
+	if (document.documentElement.scrollTop <= 3950) {
+		contactFrame.style.transform = "translateX(-150rem)";
+	}
+	else if (document.documentElement.scrollTop >= 3950) {
+		contactFrame.style.transform = "translateX(0rem)";
+	}
+}
+
+function sFrame1281Scroll() {
+	if (document.documentElement.scrollTop <= 340) {
+		sFrameOne.style.height = "0rem";
+		sFrameTwo.style.height = "0rem";
+		sFrameThree.style.height = "0rem";
+	}
+	else if ((document.documentElement.scrollTop > 340) && (document.documentElement.scrollTop < 2580)) {
+		sFrameOne.style.height = "40rem";
+		sFrameTwo.style.height = "40rem";
+		sFrameThree.style.height = "40rem";
+	}
+	else if (document.documentElement.scrollTop >= 2580) {
+		sFrameOne.style.height = "0rem";
+		sFrameTwo.style.height = "0rem";
+		sFrameThree.style.height = "0rem";
+	}
+}
+// END
+/************************************************************************************** */
+
+
 /***************************************************************************************/
 // Setting up HOME bar to appear when below homepage, and disappear when at homepage. 
 var navState = false;
@@ -681,7 +821,7 @@ function runInterval() {
 		var navStateInterval = setInterval(function () {
 			showNavBar(navState);
 		
-			console.log('running');
+			// console.log('running');
 		}, 500);
 	}
 }
@@ -720,6 +860,21 @@ function nav960ScrollStatus() {
 	}
 }
 
+function nav1024ScrollStatus() {
+	if (document.body.scrollTop > 640 || document.documentElement.scrollTop > 640) {
+		navState = true;
+	} else {
+		navState = false;
+	}
+}
+
+function nav1281ScrollStatus() {
+	if (document.body.scrollTop > 640 || document.documentElement.scrollTop > 640) {
+		navState = true;
+	} else {
+		navState = false;
+	}
+}
 // END
 /************************************************************************************** */
 
@@ -740,6 +895,13 @@ window.onscroll = function () {
 	adjust960Animations(media960);
 	media960.addListener(adjust960Animations); 
 
+	var media1024 = window.matchMedia("(min-device-width: 960px)");
+	adjust1024Animations(media1024);
+	media1024.addListener(adjust1024Animations); 
+
+	var media1281 = window.matchMedia("(min-device-width: 1024px)");
+	adjust1281Animations(media1281);
+	media1281.addListener(adjust1281Animations); 
 
 	function adjust480Animations() {
 		if (phone480.matches) { // For all phone screen sizes
@@ -769,6 +931,28 @@ window.onscroll = function () {
 			contact960Scroll();
 			sFrame960Scroll();
 			nav960ScrollStatus();
+		}
+	}
+
+	function adjust1024Animations() {
+		if (media1024.matches) { 
+			aboutHeader1024Scroll();
+			aboutMe1024Scroll();
+			projects1024Scroll();
+			contact1024Scroll();
+			sFrame1024Scroll();
+			nav1024ScrollStatus();
+		}
+	}
+
+	function adjust1281Animations() {
+		if (media1281.matches) { 
+			aboutHeader1281Scroll();
+			aboutMe1281Scroll();
+			projects1281Scroll();
+			contact1281Scroll();
+			sFrame1281Scroll();
+			nav1281ScrollStatus();
 		}
 	}
 	console.log(document.documentElement.scrollTop);
