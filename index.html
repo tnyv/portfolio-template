@@ -6,7 +6,7 @@
 	<link href="styles/home.css" rel="stylesheet" type="text/css" />
 	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Space+Mono&display=swap" rel="stylesheet">
-	<title>My Code Story</title>
+	<title>Tony Vu | Full Stack Developer</title>
 </head>
 
 
@@ -80,7 +80,7 @@
 	<div class="homepage-container">
 		<div class="logo-container">
 			<div class="logo-block">
-				<a href="" class="logo">MY CODE STORY</a>
+				<a href="" class="logo">TONY VU</a>
 			</div>
 			<div class="sub-logo-block">
 				<h1 class="sub-logo">
@@ -120,7 +120,7 @@
 
 		<div class="homepage-footer">
 			<p>MINNEAPOLIS, MINNESOTA</p>
-			<a href="#">TONY@MYCODESTORY.COM</a>
+			<a href="#">CONTACT@TONYVU.IO</a>
 		</div>
 	</div>
 
@@ -132,7 +132,7 @@
 		<h1 class="about-header">I strive to become a better programmer everyday.</h1>
 		<div class="about-me-container">
 			<h3 class="about-me-header">About me<br><br></h3>
-			<p class="about-me">Hi, my name is Tony. I began my coding in 2014.
+			<p class="about-me">Hi, my name is Tony. I began coding in 2014.
 				My passion for programming was sparked after I built my first
 				game in C++. I fell in love with the concept of creating something from
 				nothing. Over the years, I've programmed with more languages like Java,
@@ -222,7 +222,7 @@
 				<div class="sm-block">
 					<div class="sm-1">
 						<h2>Email</h2>
-						<a href="mailto: tonyvu.dev@gmail.com">tony@mycodestory.com</a>
+						<a href="mailto: tonyvu.dev@gmail.com">contact@tonyvu.io</a>
 					</div>
 					<div class="sm-2">
 						<h2>LinkedIn</h2>
@@ -244,21 +244,21 @@
 			<form class="form-wrapper" action="emailscript.php" method="POST">
 				<div class="name-email-section">
 					<div class="form-name-div">
-						<label for="name">Name<br>
+						<label>Name<br>
 							<input class="form-input-name" type="text" name="name">
 						</label>
 					</div>
 
 					<div class="form-email-div">
-						<label for="email" class="form-email-label">Email<br>
+						<label class="form-email-label">Email<br>
 							<input class="form-input-email" type="email" name="email">
 						</label>
 					</div>
 
 				</div>
 				<div class="subject-section">
-					<label for="subject">Subject<br>
-						<select>
+					<label>Subject<br>
+						<select name="subject">
 							<option></option>
 							<option>Business</option>
 							<option>Job Opportunities</option>
@@ -268,12 +268,29 @@
 					</label>
 				</div>
 				<div class="message-section">
-					<label for="email" class="form-email-label">Message<br>
-						<textarea class="message-input" name="comment" spellcheck="true"></textarea>
+					<label class="form-email-label">Message<br>
+						<textarea class="message-input" name="message" spellcheck="true"></textarea>
 					</label>
 				</div>
 				<div class="button-section">
 					<button type="submit" class="submit-btn">Submit</button>
+					<script>
+						$('#submit-btn').click(function () {
+							$.ajax({
+								url: 'emailscript.php',
+								type: 'POST',
+								data: {
+									name = $_POST['name'],
+									email = $_POST['email'],
+									subject = $_POST['subject'],
+									message = $_POST['message'],
+								},
+								success: function (msg) {
+									alert('Email Sent');
+								}
+							});
+						});
+					</script>
 				</div>
 			</form>
 		</div>
@@ -289,21 +306,21 @@
 		<form class="phone-form-wrapper" action="mailto:xtonyvux@gmail.com" method="POST">
 			<div class="phone-name-email-section">
 				<div class="phone-form-name-div">
-					<label for="name">Name<br>
+					<label>Name<br>
 						<input class="phone-form-input-name" type="text" name="name">
 					</label>
 				</div>
 
 				<div class="phone-form-email-div">
-					<label for="email" class="form-email-label">Email<br>
+					<label class="form-email-label">Email<br>
 						<input class="phone-form-input-email" type="email" name="email">
 					</label>
 				</div>
 
 			</div>
 			<div class="phone-subject-section">
-				<label for="subject">Subject<br>
-					<select>
+				<label>Subject<br>
+					<select name="subject">
 						<option></option>
 						<option>Business</option>
 						<option>Job Opportunities</option>
@@ -313,8 +330,8 @@
 				</label>
 			</div>
 			<div class="phone-message-section">
-				<label for="email" class="form-email-label">Message<br>
-					<textarea class="phone-message-input" name="comment" spellcheck="true"></textarea>
+				<label class="form-email-label">Message<br>
+					<textarea class="phone-message-input" name="message" spellcheck="true"></textarea>
 				</label>
 			</div>
 			<div class="phone-button-section">
@@ -325,7 +342,7 @@
 		<div class="phone-sm-wrapper">
 			<div class="phone-sm-1">
 				<h2>Email</h2>
-				<a href="mailto: tonyvu.dev@gmail.com">tony@mycodestory.com</a>
+				<a href="mailto: tonyvu.dev@gmail.com">contact@tonyvu.io</a>
 			</div>
 			<div class="phone-sm-2">
 				<h2>LinkedIn</h2>
@@ -357,7 +374,7 @@
 	</div>
 
 
-	<script src="javascript/app.js"></script> 
+	<script src="javascript/app.js"></script>
 </body>
 
 </html>
