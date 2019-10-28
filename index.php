@@ -6,7 +6,7 @@
 	<link href="styles/home.css" rel="stylesheet" type="text/css" />
 	<script src="https://code.jquery.com/jquery-3.4.1.js"></script>
 	<link href="https://fonts.googleapis.com/css?family=Space+Mono&display=swap" rel="stylesheet">
-	<title>Tony Vu | Full Stack Developer</title>
+	<title>Tony Vu | Software Developer</title>
 </head>
 
 
@@ -15,7 +15,7 @@
 		<div class="home-bar">
 			<a href="#" class="contact-link">CONTACT</a>
 			<script>
-				$(".contact-link").click(function () {
+				$(".contact-link").click(function() {
 					$('html, body').animate({
 						scrollTop: $(".contact-container").offset().top
 					}, 500);
@@ -23,7 +23,7 @@
 			</script>
 			<a href="#" class="vlogs-link">VLOGS</a>
 			<script>
-				$(".vlogs-link").click(function () {
+				$(".vlogs-link").click(function() {
 					$('html, body').animate({
 						scrollTop: $(".vlogs-container").offset().top
 					}, 500);
@@ -31,7 +31,7 @@
 			</script>
 			<a href="#" class="projects-link">PROJECTS</a>
 			<script>
-				$(".projects-link").click(function () {
+				$(".projects-link").click(function() {
 					$('html, body').animate({
 						scrollTop: $(".projects-container").offset().top
 					}, 500);
@@ -39,7 +39,7 @@
 			</script>
 			<a href="#" class="about-link">ABOUT</a>
 			<script>
-				$(".about-link").click(function () {
+				$(".about-link").click(function() {
 					$('html, body').animate({
 						scrollTop: $(".about-container").offset().top
 					}, 1200);
@@ -47,7 +47,7 @@
 			</script>
 			<a href="#" class="home-link">HOME</a>
 			<script>
-				$(".home-link").click(function () {
+				$(".home-link").click(function() {
 					$('html, body').animate({
 						scrollTop: $(".homepage-container").offset().top
 					}, 1200);
@@ -80,7 +80,7 @@
 	<div class="homepage-container">
 		<div class="logo-container">
 			<div class="logo-block">
-				<a href="" class="logo">TONY VU</a>
+				<a href="" class="logo">MY CODE STORY</a>
 			</div>
 			<div class="sub-logo-block">
 				<h1 class="sub-logo">
@@ -120,7 +120,7 @@
 
 		<div class="homepage-footer">
 			<p>MINNEAPOLIS, MINNESOTA</p>
-			<a href="#">CONTACT@TONYVU.IO</a>
+			<a href="#">INFO@MYCODESTORY.COM</a>
 		</div>
 	</div>
 
@@ -153,7 +153,7 @@
 
 	<div class="projects-container">
 
-		<div class="project-header">
+		<div class="projects-header">
 			<span>
 				<h1>PROJECTS</h1>
 			</span>
@@ -241,24 +241,24 @@
 				</div>
 			</div>
 
-			<form class="form-wrapper" action="emailscript.php" method="POST">
+			<form class="form-wrapper" onclick="return false" method="POST">
 				<div class="name-email-section">
 					<div class="form-name-div">
 						<label>Name<br>
-							<input class="form-input-name" type="text" name="name">
+							<input class="name-input" type="text" name="name" required="true">
 						</label>
 					</div>
 
 					<div class="form-email-div">
 						<label class="form-email-label">Email<br>
-							<input class="form-input-email" type="email" name="email">
+							<input class="email-input" type="email" name="email" required="required">
 						</label>
 					</div>
 
 				</div>
 				<div class="subject-section">
 					<label>Subject<br>
-						<select name="subject">
+						<select class="subject-input" name="subject" required="required">
 							<option></option>
 							<option>Business</option>
 							<option>Job Opportunities</option>
@@ -269,26 +269,33 @@
 				</div>
 				<div class="message-section">
 					<label class="form-email-label">Message<br>
-						<textarea class="message-input" name="message" spellcheck="true"></textarea>
+						<textarea class="message-input" name="message" spellcheck="true" required="required"></textarea>
 					</label>
 				</div>
 				<div class="button-section">
 					<button type="submit" class="submit-btn">Submit</button>
 					<script>
-						$('#submit-btn').click(function () {
-							$.ajax({
-								url: 'emailscript.php',
-								type: 'POST',
-								data: {
-									name = $_POST['name'],
-									email = $_POST['email'],
-									subject = $_POST['subject'],
-									message = $_POST['message'],
-								},
-								success: function (msg) {
-									alert('Email Sent');
-								}
-							});
+						$('.submit-btn').click(function() {
+							if (!$('.name-input').val() ||
+								!$('.email-input').val() ||
+								!$('.subject-input').val() ||
+								!$('.message-input').val()) {
+								alert('Message NOT sent. Please fill in all sections on form.');
+							} else {
+								$.ajax({
+									url: 'emailscript.php',
+									type: 'POST',
+									data: {
+										name: $('.name-input').val(),
+										email: $('.email-input').val(),
+										subject: $('.subject-input').val(),
+										message: $('.message-input').val()
+									},
+									success: function(msg) {
+										alert('Your message has been received. I\'ll get back to you as soon as possible!');
+									}
+								});
+							}
 						});
 					</script>
 				</div>
@@ -303,24 +310,24 @@
 			platforms below.
 		</p>
 
-		<form class="phone-form-wrapper" action="mailto:xtonyvux@gmail.com" method="POST">
+		<form class="phone-form-wrapper" onclick="return false" method="POST">
 			<div class="phone-name-email-section">
 				<div class="phone-form-name-div">
 					<label>Name<br>
-						<input class="phone-form-input-name" type="text" name="name">
+						<input class="phone-name-input" type="text" name="name" required="required">
 					</label>
 				</div>
 
 				<div class="phone-form-email-div">
 					<label class="form-email-label">Email<br>
-						<input class="phone-form-input-email" type="email" name="email">
+						<input class="phone-email-input" type="email" name="email" required="required">
 					</label>
 				</div>
 
 			</div>
 			<div class="phone-subject-section">
 				<label>Subject<br>
-					<select name="subject">
+					<select name="subject" class="phone-subject-input" required="required">
 						<option></option>
 						<option>Business</option>
 						<option>Job Opportunities</option>
@@ -331,11 +338,35 @@
 			</div>
 			<div class="phone-message-section">
 				<label class="form-email-label">Message<br>
-					<textarea class="phone-message-input" name="message" spellcheck="true"></textarea>
+					<textarea class="phone-message-input" name="message" spellcheck="true" required="required"></textarea>
 				</label>
 			</div>
 			<div class="phone-button-section">
 				<button type="submit" class="phone-submit-btn">Submit</button>
+				<script>
+					$('.phone-submit-btn').click(function() {
+						if (!$('.phone-name-input').val() ||
+							!$('.phone-email-input').val() ||
+							!$('.phone-subject-input').val() ||
+							!$('.phone-message-input').val()) {
+							alert('Message NOT sent. Please fill in all sections on form.');
+						} else {
+							$.ajax({
+								url: 'emailscript.php',
+								type: 'POST',
+								data: {
+									name: $('.phone-name-input').val(),
+									email: $('.phone-email-input').val(),
+									subject: $('.phone-subject-input').val(),
+									message: $('.phone-message-input').val()
+								},
+								success: function(msg) {
+									alert('Your message has been received. I\'ll get back to you as soon as possible!');
+								}
+							});
+						}
+					});
+				</script>
 			</div>
 		</form>
 

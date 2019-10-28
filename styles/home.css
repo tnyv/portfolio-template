@@ -182,7 +182,7 @@ nav {
   margin: auto 0;
   position: absolute;
   left: 0;
-  top: .5rem;
+  top: 0.5rem;
 }
 
 .phone-menu-icon {
@@ -813,14 +813,14 @@ nav {
 @media only screen and (min-device-width: 1025px) and (max-device-width: 1281px) {
   .main-header {
     font-size: 4rem;
-    bottom: .2rem;
+    bottom: 0.2rem;
   }
 }
 
 @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
   .main-header {
     font-size: 4.5rem;
-    bottom: .5rem;
+    bottom: 0.5rem;
   }
 }
 
@@ -1490,49 +1490,55 @@ nav {
   }
 }
 
-.project-header {
+.projects-header {
   width: 90%;
   margin: 0 auto 1.5rem;
 }
 
 @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
-  .project-header {
+  .projects-header {
     margin: 4rem auto 1.5rem;
   }
 }
 
 @media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
-  .project-header {
+  .projects-header {
     margin: 0rem auto 1rem;
   }
 }
 
 @media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
-  .project-header {
+  .projects-header {
     margin: 0rem auto 1rem;
   }
 }
 
 @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
-  .project-header {
+  .projects-header {
     margin: 0rem auto 1rem;
   }
 }
 
 @media only screen and (min-device-width: 1025px) and (max-device-width: 1281px) {
-  .project-header {
+  .projects-header {
     margin: 0rem auto 1rem;
   }
 }
 
 @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
-  .project-header {
+  .projects-header {
     margin: 0rem auto 1rem;
   }
 }
 
-.project-header h1:before,
-.project-header h1:after {
+@media only screen and (min-device-width: 1861px) {
+  .projects-header {
+    margin: 3rem auto 1rem;
+  }
+}
+
+.projects-header h1:before,
+.projects-header h1:after {
   background-color: rgba(26, 26, 26, 0.671);
   content: "";
   display: inline-block;
@@ -1542,37 +1548,38 @@ nav {
   width: 50%;
 }
 
-.project-header h1:before {
+.projects-header h1:before {
   right: 0.5em;
   margin-left: -40%;
 }
 
-.project-header h1:after {
+.projects-header h1:after {
   left: 0.5em;
   margin-right: -40%;
 }
 
-.project-header h1 {
+.projects-header h1 {
   font-family: "Space Mono", monospace;
   font-size: 3rem;
   font-weight: 600;
   letter-spacing: 0.5rem;
-  white-space: nowrap;
   color: black;
   text-align: center;
-  margin-top: 4rem;
+  margin-top: 0rem;
   margin-bottom: 1rem;
+  overflow: hidden;
+  text-align: center;
 }
 
 @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
-  .project-header h1 {
+  .projects-header h1 {
     margin-top: 5rem;
     margin-bottom: 2rem;
   }
 }
 
 @media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
-  .project-header h1 {
+  .projects-header h1 {
     margin-top: 3rem;
     margin-bottom: 0rem;
     font-size: 2rem;
@@ -1580,7 +1587,7 @@ nav {
 }
 
 @media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
-  .project-header h1 {
+  .projects-header h1 {
     margin-top: 3rem;
     margin-bottom: 0rem;
     font-size: 2rem;
@@ -1588,7 +1595,7 @@ nav {
 }
 
 @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
-  .project-header h1 {
+  .projects-header h1 {
     margin-top: 3rem;
     margin-bottom: 0rem;
     font-size: 2.5rem;
@@ -1596,7 +1603,7 @@ nav {
 }
 
 @media only screen and (min-device-width: 1025px) and (max-device-width: 1281px) {
-  .project-header h1 {
+  .projects-header h1 {
     margin-top: 3rem;
     margin-bottom: 0rem;
     font-size: 2.7rem;
@@ -1604,7 +1611,7 @@ nav {
 }
 
 @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
-  .project-header h1 {
+  .projects-header h1 {
     margin-top: 3rem;
     margin-bottom: 0rem;
     font-size: 2.7rem;
@@ -2270,27 +2277,27 @@ nav {
 
 @media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
   .p1-summary-wrapper .p1-languages-wrapper h3 {
-    margin-right: .2rem;
+    margin-right: 0.2rem;
   }
 }
 
 @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
   .p1-summary-wrapper .p1-languages-wrapper h3 {
-    margin-right: .2rem;
+    margin-right: 0.2rem;
     font-size: 1rem;
   }
 }
 
 @media only screen and (min-device-width: 1025px) and (max-device-width: 1281px) {
   .p1-summary-wrapper .p1-languages-wrapper h3 {
-    margin-right: .2rem;
+    margin-right: 0.2rem;
     font-size: 1.1rem;
   }
 }
 
 @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
   .p1-summary-wrapper .p1-languages-wrapper h3 {
-    margin-right: .2rem;
+    margin-right: 0.2rem;
     font-size: 1.1rem;
   }
 }
@@ -2536,9 +2543,10 @@ nav {
   }
 }
 
-.vlogs-header h1 {
-  overflow: hidden;
-  text-align: center;
+@media only screen and (min-device-width: 1861px) {
+  .vlogs-header {
+    margin: 3rem auto 1rem;
+  }
 }
 
 .vlogs-header h1:before,
@@ -2571,6 +2579,8 @@ nav {
   text-align: center;
   margin-top: 0rem;
   margin-bottom: 1rem;
+  overflow: hidden;
+  text-align: center;
 }
 
 @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
@@ -2801,7 +2811,7 @@ nav {
   float: left;
 }
 
-.form-input-name {
+.name-input {
   font-family: "Space Mono", monospace;
   font-size: 1rem;
   background: white;
@@ -2815,7 +2825,7 @@ nav {
 }
 
 @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
-  .form-input-name {
+  .name-input {
     font-size: 1rem;
     width: 11rem;
     height: 1.5rem;
@@ -2823,7 +2833,7 @@ nav {
 }
 
 @media only screen and (min-device-width: 1025px) and (max-device-width: 1281px) {
-  .form-input-name {
+  .name-input {
     font-size: 1rem;
     width: 11rem;
     height: 1.5rem;
@@ -2831,7 +2841,7 @@ nav {
 }
 
 @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
-  .form-input-name {
+  .name-input {
     font-size: 1rem;
     width: 11rem;
     height: 1.5rem;
@@ -2842,7 +2852,7 @@ nav {
   float: right;
 }
 
-.form-input-email {
+.email-input {
   font-family: "Space Mono", monospace;
   font-size: 1rem;
   background: white;
@@ -2856,7 +2866,7 @@ nav {
 }
 
 @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
-  .form-input-email {
+  .email-input {
     font-size: 1rem;
     width: 11rem;
     height: 1.5rem;
@@ -2864,7 +2874,7 @@ nav {
 }
 
 @media only screen and (min-device-width: 1025px) and (max-device-width: 1281px) {
-  .form-input-email {
+  .email-input {
     font-size: 1rem;
     width: 11rem;
     height: 1.5rem;
@@ -2872,7 +2882,7 @@ nav {
 }
 
 @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
-  .form-input-email {
+  .email-input {
     font-size: 1rem;
     width: 11rem;
     height: 1.5rem;
@@ -3367,7 +3377,7 @@ nav {
   float: left;
 }
 
-.phone-form-input-name {
+.phone-name-input {
   font-family: "Space Mono", monospace;
   background: white;
   width: 27rem;
@@ -3380,13 +3390,13 @@ nav {
 }
 
 @media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
-  .phone-form-input-name {
+  .phone-name-input {
     height: 3rem;
   }
 }
 
 @media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
-  .phone-form-input-name {
+  .phone-name-input {
     height: 3rem;
   }
 }
@@ -3395,7 +3405,7 @@ nav {
   float: right;
 }
 
-.phone-form-input-email {
+.phone-email-input {
   font-family: "Space Mono", monospace;
   background: white;
   width: 27rem;
@@ -3408,13 +3418,13 @@ nav {
 }
 
 @media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
-  .phone-form-input-email {
+  .phone-email-input {
     height: 3rem;
   }
 }
 
 @media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
-  .phone-form-input-email {
+  .phone-email-input {
     height: 3rem;
   }
 }

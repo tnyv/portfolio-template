@@ -955,7 +955,6 @@ window.onscroll = function () {
 			nav1281ScrollStatus();
 		}
 	}
-	console.log(document.documentElement.scrollTop);
 };
 
 function allMedia1840() {
@@ -1003,10 +1002,6 @@ slider.addEventListener('mousemove', (e) => {
 
 // Center div on start
 slider.scrollLeft = 763;
-
-slider.onclick = function() {
-	console.log(slider.scrollLeft);
-};
 
 // END
 /************************************************************************************** */
