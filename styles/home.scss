@@ -1778,6 +1778,7 @@ $projectFrameHeight: 25rem;
 .p1-visit-git a:hover {
   background: rgba(238, 60, 60, 0.808);
   color: white;
+  cursor: pointer;
 }
 
 .warning-wrapper {
@@ -1791,8 +1792,12 @@ $projectFrameHeight: 25rem;
 
   background: rgb(255, 138, 60);
   text-align: center;
+ 
+  z-index: 0;
 
-  z-index: 5;
+  opacity: 0;
+
+
 
   @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
     height: 150rem;
@@ -1813,7 +1818,7 @@ $projectFrameHeight: 25rem;
     height: 100rem;
   }
   
- 
+
   .warning-sign {
     position: absolute;
     top: 58rem;

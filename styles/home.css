@@ -2440,6 +2440,7 @@ nav {
 .p1-visit-git a:hover {
   background: rgba(238, 60, 60, 0.808);
   color: white;
+  cursor: pointer;
 }
 
 .warning-wrapper {
@@ -2452,7 +2453,8 @@ nav {
   height: 100rem;
   background: #ff8a3c;
   text-align: center;
-  z-index: 5;
+  z-index: 0;
+  opacity: 0;
 }
 
 @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {

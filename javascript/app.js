@@ -148,9 +148,9 @@ rightPicture.onclick = function () {
 // project information upon button clicks.
 var currentBtn = 1;
 var p1Container = document.querySelector('.project-one-container');
-var btn1 = document.querySelector('.btn-one');
-var btn2 = document.querySelector('.btn-two');
-var btn3 = document.querySelector('.btn-three');
+var btn1Project = document.querySelector('.btn-one');
+var btn2Project = document.querySelector('.btn-two');
+var btn3Project = document.querySelector('.btn-three');
 
 var title = document.querySelector('.p1-title');
 var subTitle = document.querySelector('.p1-sub-title');
@@ -181,36 +181,36 @@ function animateOutPro2() {
 
 function btn1ChangeColors() {
 	if (currentBtn == 2 || currentBtn == 3) {
-		btn1.style.background = "rgba(238, 60, 60, 0.808)";
-		btn1.style.color = "white";
-		btn2.style.background = "white";
-		btn2.style.color = "black";
-		btn3.style.background = "white";
-		btn3.style.color = "black";
+		btn1Project.style.background = "rgba(238, 60, 60, 0.808)";
+		btn1Project.style.color = "white";
+		btn2Project.style.background = "white";
+		btn2Project.style.color = "black";
+		btn3Project.style.background = "white";
+		btn3Project.style.color = "black";
 		currentBtn = 1;
 	}
 }
 
 function btn2ChangeColors() {
 	if (currentBtn == 1 || currentBtn == 3) {
-		btn2.style.background = "rgba(238, 60, 60, 0.808)";
-		btn2.style.color = "white";
-		btn1.style.background = "white";
-		btn1.style.color = "black";
-		btn3.style.background = "white";
-		btn3.style.color = "black";
+		btn2Project.style.background = "rgba(238, 60, 60, 0.808)";
+		btn2Project.style.color = "white";
+		btn1Project.style.background = "white";
+		btn1Project.style.color = "black";
+		btn3Project.style.background = "white";
+		btn3Project.style.color = "black";
 		currentBtn = 2;
 	}
 }
 
 function btn3ChangeColors() {
 	if (currentBtn == 1 || currentBtn == 2) {
-		btn3.style.background = "rgba(238, 60, 60, 0.808)";
-		btn3.style.color = "white";
-		btn1.style.background = "white";
-		btn1.style.color = "black";
-		btn2.style.background = "white";
-		btn2.style.color = "black";
+		btn3Project.style.background = "rgba(238, 60, 60, 0.808)";
+		btn3Project.style.color = "white";
+		btn1Project.style.background = "white";
+		btn1Project.style.color = "black";
+		btn2Project.style.background = "white";
+		btn2Project.style.color = "black";
 		currentBtn = 3;
 	}
 }
@@ -277,7 +277,7 @@ function resetLangAnimate() {
 }
 
 
-btn1.onclick = function () {
+btn1Project.onclick = function () {
 	btn1ChangeColors();
 
 	resetP1Animate(p1Container, "float-out");
@@ -290,7 +290,7 @@ btn1.onclick = function () {
 	}, 200);
 };
 
-btn2.onclick = function () {
+btn2Project.onclick = function () {
 	btn2ChangeColors();
 
 	resetP1Animate(p1Container, "float-out");
@@ -304,7 +304,7 @@ btn2.onclick = function () {
 
 };
 
-btn3.onclick = function () {
+btn3Project.onclick = function () {
 	btn3ChangeColors();
 
 	resetP1Animate(p1Container, "float-out");
@@ -772,7 +772,7 @@ function runInterval() {
 		// This process could destroy CPU cycles
 		var navStateInterval = setInterval(function () {
 			showNavBar(navState);
-		
+
 			// console.log('running');
 		}, 500);
 	}
@@ -841,19 +841,19 @@ window.onscroll = function () {
 
 	var media640 = window.matchMedia("(min-device-width: 481px)");
 	adjust640Animations(media640);
-	media640.addListener(adjust640Animations); 
+	media640.addListener(adjust640Animations);
 
 	var media960 = window.matchMedia("(min-device-width: 641px)");
 	adjust960Animations(media960);
-	media960.addListener(adjust960Animations); 
+	media960.addListener(adjust960Animations);
 
 	var media1024 = window.matchMedia("(min-device-width: 960px)");
 	adjust1024Animations(media1024);
-	media1024.addListener(adjust1024Animations); 
+	media1024.addListener(adjust1024Animations);
 
 	var media1281 = window.matchMedia("(min-device-width: 1024px)");
 	adjust1281Animations(media1281);
-	media1281.addListener(adjust1281Animations); 
+	media1281.addListener(adjust1281Animations);
 
 	function adjust480Animations() {
 		if (phone480.matches) { // For all phone screen sizes
@@ -866,7 +866,7 @@ window.onscroll = function () {
 	}
 
 	function adjust640Animations() {
-		if (media640.matches) { 
+		if (media640.matches) {
 			aboutHeader640Scroll();
 			aboutMe640Scroll();
 			projects640Scroll();
@@ -876,7 +876,7 @@ window.onscroll = function () {
 	}
 
 	function adjust960Animations() {
-		if (media960.matches) { 
+		if (media960.matches) {
 			aboutHeader960Scroll();
 			aboutMe960Scroll();
 			projects960Scroll();
@@ -887,7 +887,7 @@ window.onscroll = function () {
 	}
 
 	function adjust1024Animations() {
-		if (media1024.matches) { 
+		if (media1024.matches) {
 			aboutHeader1024Scroll();
 			aboutMe1024Scroll();
 			projects1024Scroll();
@@ -898,7 +898,7 @@ window.onscroll = function () {
 	}
 
 	function adjust1281Animations() {
-		if (media1281.matches) { 
+		if (media1281.matches) {
 			aboutHeader1281Scroll();
 			aboutMe1281Scroll();
 			projects1281Scroll();
@@ -1075,8 +1075,42 @@ function animateResetPhoneNavs() {
 /************************************************************************************** */
 
 /************************************************************************************** */
+// Setting up project buttons to make warning message appear on DEMO or CODE button presses
+var demoBtn = document.querySelector('.btn-p1-visit');
+var codeBtn = document.querySelector('.btn-p1-git');
+var warningSign = document.querySelector('.warning-wrapper');
+
+demoBtn.onclick = function () {
+	warningSign.style.opacity = "1";
+	warningSign.style.zIndex = "5";
+	warningSign.style.transitionDuration = "0s";
+
+	setTimeout(function() {
+		revertWarningMsg();
+	}, 100);
+}
+
+codeBtn.onclick = function () {
+	warningSign.style.opacity = "1";
+	warningSign.style.zIndex = "5";
+	warningSign.style.transitionDuration = "0s";
+
+	setTimeout(function() {
+		revertWarningMsg();
+	}, 100);
+}
+
+function revertWarningMsg() {
+	warningSign.style.transitionDuration = "1s";
+	warningSign.style.opacity = "0";
+	warningSign.style.zIndex = "0";
+}
+// END
+/************************************************************************************** */
+
+
+/************************************************************************************** */
 // 
 
 // END
 /************************************************************************************** */
-
