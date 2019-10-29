@@ -1,47 +1,4 @@
 
-/**************************************************************************************
-// Skills animations
-var scrollArea = window.innerWidth;
-var skillsHeader = document.querySelector('.skills-header');
-var skillsHtml = document.querySelector('.skills-html');
-var skillsCss = document.querySelector('.skills-css');
-var skillsJavascript = document.querySelector('.skills-javascript');
-
-window.addEventListener('scroll', function () {
-	var scrollTop = window.pageYOffset || window.scrollTop;
-	var scrollPercent = scrollTop / scrollArea || 0;
-	var moveDistance = (scrollPercent * window.innerWidth) * 0.3;
-
-	if (moveDistance > 280) {
-		var distanceTravelled = moveDistance - 280;
-		skillsJavascript.style.transform = "translateX(" + "-" + distanceTravelled + "vw)";
-	}
-	else if (moveDistance <= 280) {
-		skillsJavascript.style.transform = "translateX(" + "-" + 0 + "vw)";
-	}
-
-	if (moveDistance > 260) {
-		var distanceTravelled = moveDistance - 260;
-		skillsCss.style.transform = "translateX(" + "-" + distanceTravelled + "vw)";
-	}
-	else if (moveDistance <= 260) {
-		skillsCss.style.transform = "translateX(" + "-" + 0 + "vw)";
-	}
-
-	if (moveDistance > 240) {
-		var distanceTravelled = moveDistance - 240;
-		skillsHtml.style.transform = "translateX(" + "-" + distanceTravelled + "vw)";
-	}
-	else if (moveDistance <= 240) {
-		skillsHtml.style.transform = "translateX(" + "-" + 0 + "vw)";
-	}
-});
-// END
-************************************************************************************** */
-
-
-
-
 /***************************************************************************************/
 // Setting up type-writer animation for loader
 var i = 0;
@@ -261,13 +218,13 @@ function btn3ChangeColors() {
 function updateSummaryP1() {
 	title.innerHTML = "AUTOMIZE";
 	subTitle.innerHTML = "E-COMMERCE";
-	lang1.innerHTML = "PHP";
-	lang2.innerHTML = "SQL";
-	lang3.innerHTML = "HTML";
+	lang1.innerHTML = "TECHNOLOGIES";
+	lang2.innerHTML = "REACT.JS";
+	lang3.innerHTML = "REDUX";
 	lang4.style.visibility = "visible";
 	lang5.style.visibility = "visible";
-	lang4.innerHTML = "SASS";
-	lang5.innerHTML = "JavaScript";
+	lang4.innerHTML = "PHP";
+	lang5.innerHTML = "SASS";
 	paragraph.innerHTML = "This was one of my first web development projects created for an" +
 		" internet application development college course. Orginally, I programmed this website using only HTML," +
 		"  CSS, and JavaScript. Later on I added PHP and SQL to utilize databases for storing vehicle and " +
@@ -276,36 +233,31 @@ function updateSummaryP1() {
 }
 
 function updateSummaryP2() {
-	title.innerHTML = "PINEAPPLE PIZZERIA";
-	subTitle.innerHTML = "POS SYSTEM";
-	lang1.innerHTML = "PHP";
-	lang2.innerHTML = "SQL";
-	lang3.innerHTML = "HTML";
-	lang4.style.visibility = "hidden";
-	lang5.style.visibility = "hidden";
-	lang4.innerHTML = "";
-	lang5.innerHTML = "";
-	paragraph.innerHTML = "This website is an online POS platform for Pineapple Pizzeria restaurant." +
-		" I programmed this website using the ReactJS framework. Utilizing ReactJS' components was a" +
-		" gamechanger for my development skills! It is currently my favorite framework to code with.";
-	projectImg.setAttribute('src', 'images/pizza.jpg');
+	title.innerHTML = "PROJECT 2";
+	subTitle.innerHTML = "E-COMMERCE";
+	lang1.innerHTML = "TECHNOLOGIES:";
+	lang2.innerHTML = "JavaScript";
+	lang3.innerHTML = "SQL";
+	lang4.style.visibility = "visible";
+	lang5.style.visibility = "visible";
+	lang4.innerHTML = "PHP";
+	lang5.innerHTML = "SASS";
+	paragraph.innerHTML = "Concept for web project 2 is currently in the making. Check back later for updates!"
+	projectImg.setAttribute('src', 'images/automize.jpg');
 }
 
 function updateSummaryP3() {
-	title.innerHTML = "TONYVU.IO";
-	subTitle.innerHTML = "ONLINE PORTFOLIO";
-	lang1.innerHTML = "JavaScript";
-	lang2.innerHTML = "HTML";
-	lang3.innerHTML = "SASS";
-	lang4.style.visibility = "hidden";
+	title.innerHTML = "PROJECT 3";
+	subTitle.innerHTML = "POS SYSTEM";
+	lang1.innerHTML = "TECHNOLOGIES:";
+	lang2.innerHTML = "REACT.JS";
+	lang3.innerHTML = "REDUX";
+	lang4.style.visibility = "visible";
 	lang5.style.visibility = "hidden";
-	lang4.innerHTML = "";
+	lang4.innerHTML = "BOOTSTRAP";
 	lang5.innerHTML = "";
-	paragraph.innerHTML = "I don't mean to toot my own horn, but I am proud of my portfolio creation!" +
-		" I programmed this website with nothing but HTML, SASS, and JavaScript (with a hint of PHP for" +
-		" webforms ... and some JQuery scroll animations). Developing this website taught me a whole lot about the importance of responsive design" +
-		", animations, and utilizing Git.";
-	projectImg.setAttribute('src', 'images/tvportfolio.jpg');
+	paragraph.innerHTML = "Concept for web project 3 is currently in the making. Check back later for updates!"
+	projectImg.setAttribute('src', 'images/pizza.jpg');
 }
 
 

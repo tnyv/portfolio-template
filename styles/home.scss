@@ -1498,8 +1498,6 @@ $projectFrameHeight: 25rem;
   height: $projectFrameHeight;
 
   line-height: 2rem;
-
-  color: $readableWhite;
   text-align: left;
 
   @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
@@ -1541,6 +1539,9 @@ $projectFrameHeight: 25rem;
     font-size: 2rem;
     color: black;
 
+    @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+      
+    }
     @media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
       font-size: 1.8rem;
     }
@@ -1613,11 +1614,6 @@ $projectFrameHeight: 25rem;
   .p1-languages-wrapper {
     margin: 1rem 0;
 
-    @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
-      margin-bottom: 1rem;
-      padding: 1rem 1rem;
-      font-size: 2rem;
-    }
     @media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
       margin: 0 0 1rem;
     }
@@ -1644,36 +1640,25 @@ $projectFrameHeight: 25rem;
     h3 {
       /* Programming Languages */
       display: inline-block;
-      margin-right: 1rem;
-      background: $fadedBlack;
-      padding: 0.25rem 0.5rem;
-
       font-size: 1.2rem;
       line-height: 2rem;
       text-align: left;
 
       @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
         margin-bottom: 1rem;
-        padding: 1rem 1rem;
         font-size: 2rem;
       }
       @media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
         margin-bottom: 1rem;
         font-size: 1.5rem;
       }
-      @media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
-        margin-right: 0.2rem;
-      }
       @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
-        margin-right: 0.2rem;
         font-size: 1rem;
       }
       @media only screen and (min-device-width: 1025px) and (max-device-width: 1281px) {
-        margin-right: 0.2rem;
         font-size: 1.1rem;
       }
       @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
-        margin-right: 0.2rem;
         font-size: 1.1rem;
       }
     }

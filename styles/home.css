@@ -2033,7 +2033,6 @@ nav {
   width: 50rem;
   height: 25rem;
   line-height: 2rem;
-  color: #e6e6e6;
   text-align: left;
 }
 
@@ -2204,14 +2203,6 @@ nav {
   margin: 1rem 0;
 }
 
-@media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
-  .p1-summary-wrapper .p1-languages-wrapper {
-    margin-bottom: 1rem;
-    padding: 1rem 1rem;
-    font-size: 2rem;
-  }
-}
-
 @media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
   .p1-summary-wrapper .p1-languages-wrapper {
     margin: 0 0 1rem;
@@ -2252,9 +2243,6 @@ nav {
 .p1-summary-wrapper .p1-languages-wrapper h3 {
   /* Programming Languages */
   display: inline-block;
-  margin-right: 1rem;
-  background: rgba(26, 26, 26, 0.671);
-  padding: 0.25rem 0.5rem;
   font-size: 1.2rem;
   line-height: 2rem;
   text-align: left;
@@ -2263,7 +2251,6 @@ nav {
 @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
   .p1-summary-wrapper .p1-languages-wrapper h3 {
     margin-bottom: 1rem;
-    padding: 1rem 1rem;
     font-size: 2rem;
   }
 }
@@ -2275,29 +2262,20 @@ nav {
   }
 }
 
-@media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
-  .p1-summary-wrapper .p1-languages-wrapper h3 {
-    margin-right: 0.2rem;
-  }
-}
-
 @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
   .p1-summary-wrapper .p1-languages-wrapper h3 {
-    margin-right: 0.2rem;
     font-size: 1rem;
   }
 }
 
 @media only screen and (min-device-width: 1025px) and (max-device-width: 1281px) {
   .p1-summary-wrapper .p1-languages-wrapper h3 {
-    margin-right: 0.2rem;
     font-size: 1.1rem;
   }
 }
 
 @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
   .p1-summary-wrapper .p1-languages-wrapper h3 {
-    margin-right: 0.2rem;
     font-size: 1.1rem;
   }
 }
