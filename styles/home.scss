@@ -1216,6 +1216,7 @@ $phoneImgSpeed: 0.7s;
 $projectFrameHeight: 25rem;
 
 .projects-container {
+  position: relative;
   height: 60rem;
   width: 100%;
   background: rgb(255, 255, 255);
@@ -1779,6 +1780,83 @@ $projectFrameHeight: 25rem;
   color: white;
 }
 
+.warning-wrapper {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 95%;
+  height: 100rem;
+
+  background: rgb(255, 138, 60);
+  text-align: center;
+
+  z-index: 5;
+
+  @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+    height: 150rem;
+  }
+  @media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
+    height: 110rem;
+  }
+  @media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
+    height: 100rem;
+  }
+  @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
+    height: 100rem;
+  }
+  @media only screen and (min-device-width: 1025px) and (max-device-width: 1281px) {
+    height: 100rem;
+  }
+  @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
+    height: 100rem;
+  }
+  
+ 
+  .warning-sign {
+    position: absolute;
+    top: 58rem;
+
+    font-family: $defaultFont;
+    font-size: 4rem;
+    font-weight: 600;
+    width: 100%;
+    text-align: center;
+    color: black;
+
+    @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+      top: 105rem;
+      font-size: 5rem;
+      font-weight: 600;
+    }
+    @media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
+      top: 77rem;
+      font-size: 5rem;
+      font-weight: 600;
+    }
+    @media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
+      top: 62rem;
+      font-size: 4rem;
+      font-weight: 600;
+    }
+    @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
+      top: 64rem;
+      font-size: 4rem;
+      font-weight: 600;
+    }
+    @media only screen and (min-device-width: 1025px) and (max-device-width: 1281px) {
+      top: 63rem;
+      font-size: 4rem;
+      font-weight: 600;
+    }
+    @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
+      top: 65rem;
+      font-size: 4rem;
+      font-weight: 600;
+    }
+  }
+}
 /********************************************************************************/
 /*                            VLOGS CONTAINER                                  */
 /********************************************************************************/
