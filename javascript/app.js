@@ -153,7 +153,6 @@ var btn2Project = document.querySelector('.btn-two');
 var btn3Project = document.querySelector('.btn-three');
 
 var title = document.querySelector('.p1-title');
-var subTitle = document.querySelector('.p1-sub-title');
 var lang1 = document.querySelector('.p1-lang1');
 var lang2 = document.querySelector('.p1-lang2');
 var lang3 = document.querySelector('.p1-lang3');
@@ -217,7 +216,6 @@ function btn3ChangeColors() {
 
 function updateSummaryP1() {
 	title.innerHTML = "UNITY TUTORING";
-	subTitle.innerHTML = "EDUCATION";
 	lang1.innerHTML = "REACT.JS";
 	lang2.innerHTML = "REDUX";
 	lang3.innerHTML = "BOOSTRAP";
@@ -227,15 +225,14 @@ function updateSummaryP1() {
 	lang5.innerHTML = "MySQL";
 	paragraph.innerHTML = "I wanted to build a website that allowed English tutors " +
 		"to connect with students globally via webcam. The goal of the website " +
-		"was to make the UI and UX as simple and intuitive as possible for students " +
+		"was to have the UI and UX as simple and intuitive as possible for students " +
 		"and tutors. MySQL was utilized to store admin, tutor, and student accounts. " +
 		"I used React Bootsrap in an effort to necessitate scalability.";
-	projectImg.setAttribute('src', 'images/automize.jpg');
+	projectImg.setAttribute('src', 'images/tutor.jpg');
 }
 
 function updateSummaryP2() {
 	title.innerHTML = "PROJECT 2";
-	subTitle.innerHTML = "E-COMMERCE";
 	lang1.innerHTML = "TECHNOLOGIES:";
 	lang2.innerHTML = "JavaScript";
 	lang3.innerHTML = "SQL";
@@ -244,12 +241,11 @@ function updateSummaryP2() {
 	lang4.innerHTML = "PHP";
 	lang5.innerHTML = "SASS";
 	paragraph.innerHTML = "Concept for web project 2 is currently in the making. Check back later for updates!"
-	projectImg.setAttribute('src', 'images/automize.jpg');
+	projectImg.setAttribute('src', 'images/native.jpg');
 }
 
 function updateSummaryP3() {
 	title.innerHTML = "MY CODE STORY";
-	subTitle.innerHTML = "PORTFOLIO";
 	lang1.innerHTML = "JAVASCRIPT";
 	lang2.innerHTML = "HTML";
 	lang3.innerHTML = "SASS";
@@ -258,7 +254,7 @@ function updateSummaryP3() {
 	lang4.innerHTML = "PHP";
 	lang5.innerHTML = "";
 	paragraph.innerHTML = "Concept for web project 3 is currently in the making. Check back later for updates!"
-	projectImg.setAttribute('src', 'images/pizza.jpg');
+	projectImg.setAttribute('src', 'images/mycodestory.jpg');
 }
 
 

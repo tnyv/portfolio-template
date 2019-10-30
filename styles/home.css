@@ -1814,6 +1814,12 @@ nav {
   }
 }
 
+@media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
+  .project-buttons {
+    padding-bottom: 8rem;
+  }
+}
+
 .project-buttons button {
   font-family: "Space Mono", monospace;
   font-size: 1.3rem;
@@ -1974,8 +1980,8 @@ nav {
 
 @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
   .p1-image-block {
-    width: 30rem;
-    height: 20rem;
+    width: 39rem;
+    height: 24rem;
   }
 }
 
@@ -1986,6 +1992,12 @@ nav {
 .p1-picture {
   width: 100%;
   height: 100%;
+}
+
+@media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
+  .p1-picture {
+    padding-left: 2rem;
+  }
 }
 
 .p1-summary-frame {
@@ -2065,7 +2077,7 @@ nav {
   .p1-summary-wrapper {
     font-size: 2.5rem;
     width: 90%;
-    height: 55rem;
+    height: 45rem;
     line-height: 3rem;
     margin: 6rem auto 2rem;
   }
@@ -2075,7 +2087,7 @@ nav {
   .p1-summary-wrapper {
     font-size: 2rem;
     width: 90%;
-    height: 40rem;
+    height: 37rem;
     line-height: 3rem;
     margin: 6rem auto 2rem;
   }
@@ -2085,14 +2097,14 @@ nav {
   .p1-summary-wrapper {
     font-size: 1.2rem;
     line-height: 1.5rem;
-    height: 27rem;
+    height: 21rem;
   }
 }
 
 @media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
   .p1-summary-wrapper {
     font-size: 1.2rem;
-    height: 25rem;
+    height: 21rem;
     line-height: 1.5rem;
   }
 }
@@ -2100,91 +2112,16 @@ nav {
 @media only screen and (min-device-width: 1025px) and (max-device-width: 1281px) {
   .p1-summary-wrapper {
     font-size: 1.5rem;
-    height: 28rem;
+    height: 24rem;
   }
 }
 
 @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
   .p1-summary-wrapper {
     font-size: 1.5rem;
-    height: 28rem;
+    height: 24rem;
     line-height: 1.8rem;
-  }
-}
-
-.p1-summary-wrapper .p1-title {
-  font-size: 1.75rem;
-  color: black;
-}
-
-@media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
-  .p1-summary-wrapper .p1-title {
-    font-size: 2rem;
-  }
-}
-
-@media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
-  .p1-summary-wrapper .p1-title {
-    font-size: 1.8rem;
-  }
-}
-
-@media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
-  .p1-summary-wrapper .p1-title {
-    font-size: 1.3rem;
-  }
-}
-
-@media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
-  .p1-summary-wrapper .p1-title {
-    font-size: 1.3rem;
-  }
-}
-
-@media only screen and (min-device-width: 1025px) and (max-device-width: 1281px) {
-  .p1-summary-wrapper .p1-title {
-    font-size: 1.25rem;
-  }
-}
-
-@media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
-  .p1-summary-wrapper .p1-title {
-    font-size: 1.5rem;
-  }
-}
-
-.p1-summary-wrapper .p1-sub-title {
-  font-size: 1.25rem;
-  color: rgba(26, 26, 26, 0.671);
-}
-
-@media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
-  .p1-summary-wrapper .p1-sub-title {
-    font-size: 1.75rem;
-  }
-}
-
-@media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
-  .p1-summary-wrapper .p1-sub-title {
-    font-size: 1.5rem;
-  }
-}
-
-@media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
-  .p1-summary-wrapper .p1-sub-title {
-    font-size: 1rem;
-  }
-}
-
-@media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
-  .p1-summary-wrapper .p1-sub-title {
-    font-size: 1rem;
-  }
-}
-
-@media only screen and (min-device-width: 1025px) and (max-device-width: 1281px) {
-  .p1-summary-wrapper .p1-sub-title {
-    font-size: 1rem;
+    padding-left: 3rem;
   }
 }
 
@@ -2315,6 +2252,47 @@ nav {
 @media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
   .p1-summary-wrapper .p1-languages-wrapper h3 {
     font-size: 1.1rem;
+  }
+}
+
+.p1-summary-wrapper .p1-title {
+  font-size: 1.7rem;
+  color: rgba(26, 26, 26, 0.671);
+}
+
+@media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
+  .p1-summary-wrapper .p1-title {
+    font-size: 2.25rem;
+  }
+}
+
+@media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
+  .p1-summary-wrapper .p1-title {
+    font-size: 2rem;
+  }
+}
+
+@media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
+  .p1-summary-wrapper .p1-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (min-device-width: 961px) and (max-device-width: 1024px) {
+  .p1-summary-wrapper .p1-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (min-device-width: 1025px) and (max-device-width: 1281px) {
+  .p1-summary-wrapper .p1-title {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (min-device-width: 1282px) and (max-device-width: 1860px) {
+  .p1-summary-wrapper .p1-title {
+    font-size: 1.6rem;
   }
 }
 
