@@ -216,19 +216,20 @@ function btn3ChangeColors() {
 }
 
 function updateSummaryP1() {
-	title.innerHTML = "AUTOMIZE";
-	subTitle.innerHTML = "E-COMMERCE";
-	lang1.innerHTML = "TECHNOLOGIES";
-	lang2.innerHTML = "REACT.JS";
-	lang3.innerHTML = "REDUX";
+	title.innerHTML = "UNITY TUTORING";
+	subTitle.innerHTML = "EDUCATION";
+	lang1.innerHTML = "REACT.JS";
+	lang2.innerHTML = "REDUX";
+	lang3.innerHTML = "BOOSTRAP";
 	lang4.style.visibility = "visible";
 	lang5.style.visibility = "visible";
 	lang4.innerHTML = "PHP";
-	lang5.innerHTML = "SASS";
-	paragraph.innerHTML = "This was one of my first web development projects created for an" +
-		" internet application development college course. Orginally, I programmed this website using only HTML," +
-		"  CSS, and JavaScript. Later on I added PHP and SQL to utilize databases for storing vehicle and " +
-		"user account information. SASS was later impelemented for cross-browser consistency.";
+	lang5.innerHTML = "MySQL";
+	paragraph.innerHTML = "I wanted to build a website that allowed English tutors " +
+		"to connect with students globally via webcam. The goal of the website " +
+		"was to make the UI and UX as simple and intuitive as possible for students " +
+		"and tutors. MySQL was utilized to store admin, tutor, and student accounts. " +
+		"I used React Bootsrap in an effort to necessitate scalability.";
 	projectImg.setAttribute('src', 'images/automize.jpg');
 }
 
@@ -247,14 +248,14 @@ function updateSummaryP2() {
 }
 
 function updateSummaryP3() {
-	title.innerHTML = "PROJECT 3";
-	subTitle.innerHTML = "POS SYSTEM";
-	lang1.innerHTML = "TECHNOLOGIES:";
-	lang2.innerHTML = "REACT.JS";
-	lang3.innerHTML = "REDUX";
+	title.innerHTML = "MY CODE STORY";
+	subTitle.innerHTML = "PORTFOLIO";
+	lang1.innerHTML = "JAVASCRIPT";
+	lang2.innerHTML = "HTML";
+	lang3.innerHTML = "SASS";
 	lang4.style.visibility = "visible";
 	lang5.style.visibility = "hidden";
-	lang4.innerHTML = "BOOTSTRAP";
+	lang4.innerHTML = "PHP";
 	lang5.innerHTML = "";
 	paragraph.innerHTML = "Concept for web project 3 is currently in the making. Check back later for updates!"
 	projectImg.setAttribute('src', 'images/pizza.jpg');
@@ -1085,7 +1086,7 @@ demoBtn.onclick = function () {
 	warningSign.style.zIndex = "5";
 	warningSign.style.transitionDuration = "0s";
 
-	setTimeout(function() {
+	setTimeout(function () {
 		revertWarningMsg();
 	}, 100);
 }
@@ -1095,7 +1096,7 @@ codeBtn.onclick = function () {
 	warningSign.style.zIndex = "5";
 	warningSign.style.transitionDuration = "0s";
 
-	setTimeout(function() {
+	setTimeout(function () {
 		revertWarningMsg();
 	}, 100);
 }
