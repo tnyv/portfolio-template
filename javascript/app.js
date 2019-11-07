@@ -27,6 +27,7 @@ typeWriter();
 /***************************************************************************************/
 // Setting up homepage pictures to alternate on click AND media queries for nav clicks
 var imgIndex = 1;
+var phoneImgIndex = 1;
 var leftPicture = document.querySelector('.block-left');
 var leftPictureFrame = document.querySelector('.homepage-block-left');
 var rightPicture = document.querySelector('.block-right');
@@ -233,7 +234,7 @@ function updateSummaryP1() {
 	lang4.innerHTML = "AWS";
 	lang5.innerHTML = "";
 	paragraph.innerHTML = "I wanted to build a website that allowed English tutors " +
-		"to connect with students globally via webcam. The goal of the website" +
+		"to connect with students globally via webcam. The goal of the website " +
 		"was to have the UI and UX as simple and intuitive as possible for students, " +
 		"tutors, and admin. The back-end utilizes express.js and mongodb, while Bootstrap " +
 		"4 was used for front-end. I deployed the website on Amazon Web Services.";
@@ -782,7 +783,7 @@ function runInterval() {
 		var navStateInterval = setInterval(function () {
 			showNavBar(navState);
 
-			// console.log('running');
+			console.log(imgIndex);
 		}, 500);
 	}
 }
@@ -986,7 +987,7 @@ slider.addEventListener('scroll', function (event) {
 		phoneMidPic.style.opacity = "0";
 		phoneRightPic.style.opacity = "0";
 
-		imgIndex = 3;
+		phoneImgIndex = 3;
 	}
 	else if (slider.scrollLeft > 240 && slider.scrollLeft < 1150) {
 		phoneHeader.innerHTML = "PROJECTS";
@@ -994,25 +995,25 @@ slider.addEventListener('scroll', function (event) {
 		phoneLeftPic.style.opacity = "1";
 		phoneRightPic.style.opacity = "1";
 
-		imgIndex = 1;
+		phoneImgIndex = 1;
 	}
 	else if (slider.scrollLeft > 1150) {
 		phoneHeader.innerHTML = "VLOGS";
 		phoneMidPic.style.opacity = "0";
 		phoneLeftPic.style.opacity = "0";
 
-		imgIndex = 2;
+		phoneImgIndex = 2;
 	}
 });
 
 phoneArrow.addEventListener('touchstart', function () {
-	if (imgIndex === 1) {
+	if (phoneImgIndex === 1) {
 		smoothScroll('.projects-container', scrollSpeed);
 	}
-	else if (imgIndex === 2) {
+	else if (phoneImgIndex === 2) {
 		smoothScroll('.vlogs-container', scrollSpeed);
 	}
-	else if (imgIndex === 3) {
+	else if (phoneImgIndex === 3) {
 		smoothScroll('.phone-contact-container', scrollSpeed);
 	}
 })
