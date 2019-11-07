@@ -2,13 +2,21 @@
 /***************************************************************************************/
 // Setting up type-writer animation for loader
 var i = 0;
-var txt = '     devtony';
+var txt = '     TONY VU';
 var speed = 100;
 
 function typeWriter() {
-	document.querySelector('.loadme').innerHTML += txt.charAt(i);
-	i++;
-	setTimeout(typeWriter, speed);
+	if (i === 8) {
+		document.querySelector('.loadme').innerHTML += "Y ";
+		i++;
+		i++;
+		setTimeout(typeWriter, speed);
+	}
+	else if (i < txt.length) {
+		document.querySelector('.loadme').innerHTML += txt.charAt(i);
+		i++;
+		setTimeout(typeWriter, speed);
+	}
 }
 
 typeWriter();
@@ -211,41 +219,42 @@ function btn3ChangeColors() {
 		btn2Project.style.background = "white";
 		btn2Project.style.color = "black";
 		currentBtn = 3;
+		console.log(currentBtn);
 	}
 }
 
 function updateSummaryP1() {
 	title.innerHTML = "UNITY TUTORING";
-	lang1.innerHTML = "REACT.JS";
-	lang2.innerHTML = "REDUX";
-	lang3.innerHTML = "BOOSTRAP";
+	lang1.innerHTML = "EXPRESS.JS";
+	lang2.innerHTML = "BOOTSTRAP";
+	lang3.innerHTML = "MONGODB";
 	lang4.style.visibility = "visible";
-	lang5.style.visibility = "visible";
-	lang4.innerHTML = "PHP";
-	lang5.innerHTML = "MySQL";
+	lang5.style.visibility = "hidden";
+	lang4.innerHTML = "AWS";
+	lang5.innerHTML = "";
 	paragraph.innerHTML = "I wanted to build a website that allowed English tutors " +
-		"to connect with students globally via webcam. The goal of the website " +
-		"was to have the UI and UX as simple and intuitive as possible for students " +
-		"and tutors. MySQL was utilized to store admin, tutor, and student accounts. " +
-		"I used React Bootsrap in an effort to necessitate scalability.";
+		"to connect with students globally via webcam. The goal of the website" +
+		"was to have the UI and UX as simple and intuitive as possible for students, " +
+		"tutors, and admin. The back-end utilizes express.js and mongodb, while Bootstrap " +
+		"4 was used for front-end. I deployed the website on Amazon Web Services.";
 	projectImg.setAttribute('src', 'images/tutor.jpg');
 }
 
 function updateSummaryP2() {
 	title.innerHTML = "PROJECT 2";
-	lang1.innerHTML = "TECHNOLOGIES:";
-	lang2.innerHTML = "JavaScript";
-	lang3.innerHTML = "SQL";
-	lang4.style.visibility = "visible";
-	lang5.style.visibility = "visible";
-	lang4.innerHTML = "PHP";
-	lang5.innerHTML = "SASS";
+	lang1.innerHTML = "REACT.NATIVE";
+	lang2.innerHTML = "MONGODB";
+	lang3.innerHTML = "AWS";
+	lang4.style.visibility = "hidden";
+	lang5.style.visibility = "hidden";
+	lang4.innerHTML = "";
+	lang5.innerHTML = "";
 	paragraph.innerHTML = "Concept for web project 2 is currently in the making. Check back later for updates!"
-	projectImg.setAttribute('src', 'images/native.jpg');
+	projectImg.setAttribute('src', 'images/native.png');
 }
 
 function updateSummaryP3() {
-	title.innerHTML = "MY CODE STORY";
+	title.innerHTML = "TONYVU.IO";
 	lang1.innerHTML = "JAVASCRIPT";
 	lang2.innerHTML = "HTML";
 	lang3.innerHTML = "SASS";
@@ -253,11 +262,14 @@ function updateSummaryP3() {
 	lang5.style.visibility = "hidden";
 	lang4.innerHTML = "PHP";
 	lang5.innerHTML = "";
-	paragraph.innerHTML = "Concept for web project 3 is currently in the making. Check back later for updates!"
-	projectImg.setAttribute('src', 'images/mycodestory.jpg');
+	paragraph.innerHTML = "This is my portfolio website. The idea behind developing "
+		+ "this site was to use raw html, sass, javascript, and php to develop foundational "
+		+ "design and coding skills. The biggest struggle I faced developing this site was making "
+		+ "the site responsive "
+		+ "on multiple devices and screen sizes. I definetely have a much greater appreciation for "
+		+ "Bootstrap after building this site!"
+	projectImg.setAttribute('src', 'images/tonyvuio.png');
 }
-
-
 
 function resetLangAnimate() {
 	lang1.style.opacity = "0";
@@ -1077,7 +1089,7 @@ var demoBtn = document.querySelector('.btn-p1-visit');
 var codeBtn = document.querySelector('.btn-p1-git');
 var warningSign = document.querySelector('.warning-wrapper');
 
-demoBtn.onclick = function () {
+function showUndergoingD() {
 	warningSign.style.opacity = "1";
 	warningSign.style.zIndex = "5";
 	warningSign.style.transitionDuration = "0s";
@@ -1085,17 +1097,31 @@ demoBtn.onclick = function () {
 	setTimeout(function () {
 		revertWarningMsg();
 	}, 100);
+
+	console.log('hey');
+}
+
+demoBtn.onclick = function () {
+	if (currentBtn == 3) {
+		location.href = 'https://tonyvu.io';
+	}
+	else {
+		showUndergoingD();
+	}
+
 }
 
 codeBtn.onclick = function () {
-	warningSign.style.opacity = "1";
-	warningSign.style.zIndex = "5";
-	warningSign.style.transitionDuration = "0s";
-
-	setTimeout(function () {
-		revertWarningMsg();
-	}, 100);
+	if (currentBtn == 3) {
+		location.href = 'https://github.com/tonyvu1/tonyvu.io';
+	}
+	else {
+		showUndergoingD();
+	}
 }
+
+
+
 
 function revertWarningMsg() {
 	warningSign.style.transitionDuration = "1s";

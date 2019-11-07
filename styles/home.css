@@ -72,7 +72,7 @@ html {
 }
 
 .loader {
-  font-family: Helvetica;
+  font-family: "Arimo", sans-serif;
   font-size: 10rem;
   font-weight: 600;
   width: 100%;
@@ -92,15 +92,15 @@ html {
           align-items: center;
   /* animation: load 0.5s linear 0.5s 1 forwards, changez 1s linear 0.5s 1 forwards; */
   /* animation: load 1s linear 1.5s 1 forwards, changez 1s linear 2s 1 forwards; */
-  -webkit-animation: load 0.5s linear 0.5s 1 forwards, changez 1s linear 0.5s 1 forwards;
-          animation: load 0.5s linear 0.5s 1 forwards, changez 1s linear 0.5s 1 forwards;
+  -webkit-animation: load 1s linear 1.5s 1 forwards, changez 1s linear 2s 1 forwards;
+          animation: load 1s linear 1.5s 1 forwards, changez 1s linear 2s 1 forwards;
 }
 
 /********************************************************************************/
 /*                            NAVIGATION BAR                                    */
 /********************************************************************************/
 nav {
-  font-family: Helvetica;
+  font-family: "Arimo", sans-serif;
 }
 
 .home-bar {
@@ -128,7 +128,7 @@ nav {
 .projects-link,
 .vlogs-link,
 .contact-link {
-  font-family: Helvetica;
+  font-family: "Arimo", sans-serif;
   font-size: 1rem;
   font-weight: 600;
   font-style: none;
@@ -171,7 +171,7 @@ nav {
 }
 
 .phone-mvc-link {
-  font-family: Helvetica;
+  font-family: "Arimo", sans-serif;
   font-size: 3rem;
   font-weight: 600;
   font-style: none;
@@ -326,11 +326,11 @@ nav {
 .phone-header {
   visibility: hidden;
   text-align: center;
-  font-family: Helvetica;
+  font-family: "Arimo", sans-serif;
   font-size: 7rem;
   font-weight: 600;
   letter-spacing: 0.5rem;
-  -webkit-text-stroke-width: 0.15rem;
+  -webkit-text-stroke-width: 0.1rem;
   -webkit-text-stroke-color: white;
   color: transparent;
   margin: 5rem 0 0;
@@ -450,9 +450,9 @@ nav {
 }
 
 .logo {
-  font-size: 1.7rem;
+  font-size: 3rem;
   font-weight: 600;
-  font-family: Helvetica;
+  font-family: "Arimo", sans-serif;
   font-style: none;
   letter-spacing: 0.2rem;
   text-decoration: none;
@@ -490,9 +490,9 @@ nav {
 }
 
 .sub-logo {
-  font-size: 1rem;
+  font-size: 1.5rem;
   font-weight: 500;
-  font-family: Helvetica;
+  font-family: "Arimo", sans-serif;
   font-style: none;
   letter-spacing: 0.1rem;
   color: white;
@@ -510,14 +510,14 @@ nav {
 
 @media only screen and (min-device-width: 481px) and (max-device-width: 640px) {
   .sub-logo {
-    font-size: 1.2rem;
+    font-size: 2rem;
     width: 50rem;
   }
 }
 
 @media only screen and (min-device-width: 641px) and (max-device-width: 960px) {
   .sub-logo {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
     width: 50rem;
   }
 }
@@ -545,7 +545,7 @@ nav {
 .homepage-container .middle p {
   font-size: 1rem;
   font-weight: 500;
-  font-family: Helvetica;
+  font-family: "Arimo", sans-serif;
   font-style: none;
   color: white;
   letter-spacing: 0.2rem;
@@ -777,7 +777,7 @@ nav {
 }
 
 .main-header {
-  font-family: Helvetica;
+  font-family: "Arimo", sans-serif;
   font-size: 7rem;
   font-weight: 600;
   letter-spacing: 0.5rem;
@@ -785,7 +785,7 @@ nav {
   position: absolute;
   bottom: -3rem;
   right: -4rem;
-  -webkit-text-stroke-width: 0.15rem;
+  -webkit-text-stroke-width: 0.1rem;
   -webkit-text-stroke-color: white;
 }
 
@@ -1026,7 +1026,7 @@ nav {
   float: left;
   font-size: 1rem;
   font-weight: 500;
-  font-family: Helvetica;
+  font-family: "Arimo", sans-serif;
   font-style: none;
   color: white;
   letter-spacing: 0.2rem;
@@ -2511,7 +2511,7 @@ nav {
 .warning-wrapper .warning-sign {
   position: absolute;
   top: 58rem;
-  font-family: Helvetica;
+  font-family: "Arimo", sans-serif;
   font-size: 4rem;
   font-weight: 600;
   width: 100%;
@@ -2689,7 +2689,7 @@ nav {
 
 @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
   .vlogs-header h1 {
-    margin-top: 5rem;
+    margin-top: 7rem;
     margin-bottom: 2rem;
   }
 }
