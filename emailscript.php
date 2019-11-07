@@ -9,7 +9,7 @@
     $message = "Name: " . $name . "\r\n" . "Email: " . $email . "\r\n" .
         "Subject: " . $subject . "\r\n" . "Message: " . $_POST['message'];
 
-    $to = "info@mycodestory.com";
+    $to = "contact@tonyvu.io";
 
     $headers = "From:user@domain.com";
 
