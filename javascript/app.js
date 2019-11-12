@@ -226,18 +226,19 @@ function btn3ChangeColors() {
 
 function updateSummaryP1() {
 	title.innerHTML = "UNITY TUTORING";
-	lang1.innerHTML = "EXPRESS.JS";
-	lang2.innerHTML = "BOOTSTRAP";
-	lang3.innerHTML = "MONGODB";
+	lang1.innerHTML = "VUE.JS";
+	lang2.innerHTML = "EXPRESS.JS";
+	lang3.innerHTML = "MONGO.DB";
 	lang4.style.visibility = "visible";
-	lang5.style.visibility = "hidden";
-	lang4.innerHTML = "AWS";
-	lang5.innerHTML = "";
+	lang5.style.visibility = "visible";
+	lang4.innerHTML = "BOOTSTRAP";
+	lang5.innerHTML = "HEROKU";
 	paragraph.innerHTML = "I wanted to build a website that allowed English tutors " +
 		"to connect with students globally via webcam. The goal of the website " +
 		"was to have the UI and UX as simple and intuitive as possible for students, " +
-		"tutors, and admin. The back-end utilizes express.js and mongodb, while Bootstrap " +
-		"4 was used for front-end. I deployed the website on Amazon Web Services.";
+		"tutors, and admin. For the backend infrastrucutre, I used express.js and " +
+		"mongoDB. The front-end was built with vue.js and bootstrap. The website is " +
+		"deployed on Heroku."
 	projectImg.setAttribute('src', 'images/tutor.jpg');
 }
 
