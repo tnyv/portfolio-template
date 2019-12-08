@@ -189,7 +189,7 @@ function animateOutPro2() {
 
 function btn1ChangeColors() {
 	if (currentBtn == 2 || currentBtn == 3) {
-		btn1Project.style.background = "rgba(238, 60, 60, 0.808)";
+		btn1Project.style.background = "#c584bc";
 		btn1Project.style.color = "white";
 		btn2Project.style.background = "white";
 		btn2Project.style.color = "black";
@@ -201,7 +201,7 @@ function btn1ChangeColors() {
 
 function btn2ChangeColors() {
 	if (currentBtn == 1 || currentBtn == 3) {
-		btn2Project.style.background = "rgba(238, 60, 60, 0.808)";
+		btn2Project.style.background = "#c584bc";
 		btn2Project.style.color = "white";
 		btn1Project.style.background = "white";
 		btn1Project.style.color = "black";
@@ -213,7 +213,7 @@ function btn2ChangeColors() {
 
 function btn3ChangeColors() {
 	if (currentBtn == 1 || currentBtn == 2) {
-		btn3Project.style.background = "rgba(238, 60, 60, 0.808)";
+		btn3Project.style.background = "#c584bc";
 		btn3Project.style.color = "white";
 		btn1Project.style.background = "white";
 		btn1Project.style.color = "black";

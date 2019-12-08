@@ -6,7 +6,7 @@ function style() {
   return gulp
     .src("./styles/**/*.scss")
     .pipe(sass().on("error", sass.logError))
-    .pipe(gulp.dest("./styles/css"))
+    .pipe(gulp.dest("./styles"))
     .pipe(browserSync.stream());
 }
 
@@ -18,7 +18,7 @@ function watch() {
   });
   gulp.watch("./styles/**/*.scss", style);
   gulp.watch("./*.html").on("change", browserSync.reload);
-  gulp.watch("./javascript/**/.js").on("change", browserSync.reload);
+  gulp.watch("./javascript/app.js").on("change", browserSync.reload);
 }
 exports.style = style;
 exports.watch = watch;

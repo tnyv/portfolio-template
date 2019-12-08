@@ -7,7 +7,6 @@ $purple: #c584bc;
 $imgAnimationSpeed: 0.4s;
 $midLeftAnimateWidth: 60%;
 $midRightAnimateWidth: 40%;
-$icecreamFont: 'Kaushan Script', cursive;
 
 /*******************************/
 /* Defaults */
@@ -198,7 +197,7 @@ nav {
   visibility: hidden;
 
   li {
-    font-family: "Space Mono", monospace;
+    font-family: $defaultFont;
     font-size: 5rem;
     font-weight: 400;
 
@@ -383,7 +382,7 @@ $phoneImgSpeed: 0.7s;
 .logo {
   font-size: 3rem;
   font-weight: 600;
-  font-family: $icecreamFont;
+  font-family: $defaultFont;
   font-style: none;
   letter-spacing: 0.2rem;
   text-decoration: none;
@@ -415,7 +414,7 @@ $phoneImgSpeed: 0.7s;
 .sub-logo {
   font-size: 1.5rem;
   font-weight: 500;
-  font-family: $icecreamFont;
+  font-family: $defaultFont;
   font-style: none;
   letter-spacing: 0.1rem;
 
@@ -870,7 +869,7 @@ $phoneImgSpeed: 0.7s;
   width: 50rem;
   height: 50rem;
 
-  font-family: $icecreamFont;
+  font-family: $defaultFont;
   font-size: 3.5rem;
   font-weight: 400;
 
@@ -973,7 +972,7 @@ $phoneImgSpeed: 0.7s;
 }
 
 .about-me-header {
-  font-family: "Space Mono", monospace;
+  font-family: $defaultFont;
   font-size: 1rem;
 
   @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
@@ -991,7 +990,7 @@ $phoneImgSpeed: 0.7s;
 }
 
 .about-me {
-  font-family: "Space Mono", monospace;
+  font-family: $defaultFont;
   font-size: 1rem;
 
   a {
@@ -1165,7 +1164,7 @@ $phoneImgSpeed: 0.7s;
 }
 
 .projects-header h1 {
-  font-family: "Space Mono", monospace;
+  font-family: $defaultFont;
   font-size: 3rem;
   font-weight: 600;
   letter-spacing: 0.5rem;
@@ -1329,7 +1328,7 @@ $projectFrameHeight: 25rem;
   }
 
   button {
-    font-family: "Space Mono", monospace;
+    font-family: $defaultFont;
     font-size: 1.3rem;
     font-weight: 600;
     white-space: nowrap;
@@ -1348,7 +1347,7 @@ $projectFrameHeight: 25rem;
   }
 
   .btn-one {
-    background: rgba(238, 60, 60, 0.808);
+    background: $purple;
     color: white;
   }
 
@@ -1528,7 +1527,7 @@ $projectFrameHeight: 25rem;
 .p1-summary-wrapper {
   position: relative;
 
-  font-family: "Space Mono", monospace;
+  font-family: $defaultFont;
   font-size: 1.2rem;
   width: 50rem;
   height: $projectFrameHeight;
@@ -1714,7 +1713,7 @@ $projectFrameHeight: 25rem;
 
     padding: 0.25rem 0.5rem;
 
-    font-family: "Space Mono", monospace;
+    font-family: $defaultFont;
     font-size: 1.2rem;
     font-weight: 600;
     text-decoration: none;
@@ -1955,7 +1954,7 @@ $projectFrameHeight: 25rem;
 }
 
 .vlogs-header h1 {
-  font-family: "Space Mono", monospace;
+  font-family: $defaultFont;
   font-size: 3rem;
   font-weight: 600;
   letter-spacing: 0.5rem;
@@ -2001,7 +2000,7 @@ $projectFrameHeight: 25rem;
 }
 
 .vlogs-soon {
-  font-family: "Space Mono", monospace;
+  font-family: $defaultFont;
   font-size: 10rem;
   text-align: center;
   margin-top: 15rem;
@@ -2045,7 +2044,7 @@ $projectFrameHeight: 25rem;
 
 .contact-top {
   position: absolute;
-  font-family: "Space Mono", monospace;
+  font-family: $defaultFont;
   font-size: 2rem;
   text-align: left;
   width: 47rem;
@@ -2108,7 +2107,7 @@ $nameEmailHeight: 2.2rem;
 $borderRadius: 0.2rem;
 
 .form-wrapper {
-  font-family: "Space Mono", monospace;
+  font-family: $defaultFont;
   font-size: $formFontSize;
   color: white;
 
@@ -2147,7 +2146,7 @@ $borderRadius: 0.2rem;
 }
 
 .name-input {
-  font-family: "Space Mono", monospace;
+  font-family: $defaultFont;
   font-size: $formFontSize;
   background: white;
   width: 15rem;
@@ -2181,7 +2180,7 @@ $borderRadius: 0.2rem;
 }
 
 .email-input {
-  font-family: "Space Mono", monospace;
+  font-family: $defaultFont;
   font-size: $formFontSize;
   background: white;
   width: 15rem;
@@ -2230,7 +2229,7 @@ $borderRadius: 0.2rem;
 
   select {
     margin-top: 0.3rem;
-    font-family: "Space Mono", monospace;
+    font-family: $defaultFont;
     font-size: $formFontSize;
     border-radius: $borderRadius;
     background: white;
@@ -2275,7 +2274,7 @@ $borderRadius: 0.2rem;
 }
 
 .message-input {
-  font-family: "Space Mono", monospace;
+  font-family: $defaultFont;
   font-size: $formFontSize;
   background: white;
   border-radius: $borderRadius;
@@ -2315,7 +2314,7 @@ $borderRadius: 0.2rem;
 }
 
 .submit-btn {
-  font-family: "Space Mono", monospace;
+  font-family: $defaultFont;
   font-size: 1.1rem;
 
   height: 2.3rem;
@@ -2391,7 +2390,7 @@ $smHead2Size: 0.8rem;
 .sm-2,
 .sm-3,
 .sm-4 {
-  font-family: "Space Mono", monospace;
+  font-family: $defaultFont;
   font-size: 1.1rem;
   position: absolute;
   height: $smBlockHeight;
@@ -2483,7 +2482,7 @@ $smHead2Size: 0.8rem;
 /********************************************************************************/
 
 .phone-contact-top {
-  font-family: "Space Mono", monospace;
+  font-family: $defaultFont;
   font-size: 2rem;
 
   text-align: center;
@@ -2513,7 +2512,7 @@ $smHead2Size: 0.8rem;
 }
 
 .phone-form-wrapper {
-  font-family: "Space Mono", monospace;
+  font-family: $defaultFont;
   font-size: 2.2rem;
   color: white;
   background: $defaultBackground;
@@ -2562,7 +2561,7 @@ $smHead2Size: 0.8rem;
 }
 
 .phone-name-input {
-  font-family: "Space Mono", monospace;
+  font-family: $defaultFont;
   background: white;
   width: 27rem;
   height: 5rem;
@@ -2586,7 +2585,7 @@ $smHead2Size: 0.8rem;
 }
 
 .phone-email-input {
-  font-family: "Space Mono", monospace;
+  font-family: $defaultFont;
   background: white;
   width: 27rem;
   height: 5rem;
@@ -2613,7 +2612,7 @@ $smHead2Size: 0.8rem;
 
   select {
     margin-top: 0.3rem;
-    font-family: "Space Mono", monospace;
+    font-family: $defaultFont;
     border-radius: $borderRadius;
     background: white;
     width: 100%;
@@ -2650,7 +2649,7 @@ $smHead2Size: 0.8rem;
 }
 
 .phone-message-input {
-  font-family: "Space Mono", monospace;
+  font-family: $defaultFont;
   background: white;
   border-radius: $borderRadius;
   resize: none;
@@ -2677,7 +2676,7 @@ $smHead2Size: 0.8rem;
 }
 
 .phone-submit-btn {
-  font-family: "Space Mono", monospace;
+  font-family: $defaultFont;
   font-size: 2rem;
   font-weight: 600;
   height: 5rem;
@@ -2704,7 +2703,7 @@ $smHead2Size: 0.8rem;
 .phone-sm-2,
 .phone-sm-3,
 .phone-sm-4 {
-  font-family: "Space Mono", monospace;
+  font-family: $defaultFont;
   font-size: 2.5rem;
   height: 10rem;
   width: 100%;

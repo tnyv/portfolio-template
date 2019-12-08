@@ -148,7 +148,7 @@ nav {
   z-index: 5;
   visibility: hidden; }
   .phone-nav li {
-    font-family: "Space Mono", monospace;
+    font-family: "Kaushan Script", cursive;
     font-size: 5rem;
     font-weight: 400;
     text-align: center;
@@ -797,7 +797,7 @@ nav {
       right: 2rem; } }
 
 .about-me-header {
-  font-family: "Space Mono", monospace;
+  font-family: "Kaushan Script", cursive;
   font-size: 1rem; }
   @media only screen and (min-device-width: 0px) and (max-device-width: 480px) {
     .about-me-header {
@@ -813,7 +813,7 @@ nav {
       font-size: 2rem; } }
 
 .about-me {
-  font-family: "Space Mono", monospace;
+  font-family: "Kaushan Script", cursive;
   font-size: 1rem; }
   .about-me a {
     color: black; }
@@ -966,7 +966,7 @@ nav {
   margin-right: -40%; }
 
 .projects-header h1 {
-  font-family: "Space Mono", monospace;
+  font-family: "Kaushan Script", cursive;
   font-size: 3rem;
   font-weight: 600;
   letter-spacing: 0.5rem;
@@ -1100,7 +1100,7 @@ nav {
     .project-buttons {
       padding-bottom: 8rem; } }
   .project-buttons button {
-    font-family: "Space Mono", monospace;
+    font-family: "Kaushan Script", cursive;
     font-size: 1.3rem;
     font-weight: 600;
     white-space: nowrap;
@@ -1112,7 +1112,7 @@ nav {
     color: black;
     text-align: center; }
   .project-buttons .btn-one {
-    background: rgba(238, 60, 60, 0.808);
+    background: #c584bc;
     color: white; }
   .project-buttons button:hover {
     cursor: pointer; }
@@ -1256,7 +1256,7 @@ nav {
 
 .p1-summary-wrapper {
   position: relative;
-  font-family: "Space Mono", monospace;
+  font-family: "Kaushan Script", cursive;
   font-size: 1.2rem;
   width: 50rem;
   height: 25rem;
@@ -1419,7 +1419,7 @@ nav {
   .p1-summary-wrapper .p1-visit-git a {
     display: inline-block;
     padding: 0.25rem 0.5rem;
-    font-family: "Space Mono", monospace;
+    font-family: "Kaushan Script", cursive;
     font-size: 1.2rem;
     font-weight: 600;
     text-decoration: none;
@@ -1624,7 +1624,7 @@ nav {
   margin-right: -40%; }
 
 .vlogs-header h1 {
-  font-family: "Space Mono", monospace;
+  font-family: "Kaushan Script", cursive;
   font-size: 3rem;
   font-weight: 600;
   letter-spacing: 0.5rem;
@@ -1665,7 +1665,7 @@ nav {
       font-size: 2.7rem; } }
 
 .vlogs-soon {
-  font-family: "Space Mono", monospace;
+  font-family: "Kaushan Script", cursive;
   font-size: 10rem;
   text-align: center;
   margin-top: 15rem; }
@@ -1703,7 +1703,7 @@ nav {
 
 .contact-top {
   position: absolute;
-  font-family: "Space Mono", monospace;
+  font-family: "Kaushan Script", cursive;
   font-size: 2rem;
   text-align: left;
   width: 47rem;
@@ -1755,7 +1755,7 @@ nav {
       height: 30rem; } }
 
 .form-wrapper {
-  font-family: "Space Mono", monospace;
+  font-family: "Kaushan Script", cursive;
   font-size: 1rem;
   color: white;
   display: flex;
@@ -1785,7 +1785,7 @@ nav {
   float: left; }
 
 .name-input {
-  font-family: "Space Mono", monospace;
+  font-family: "Kaushan Script", cursive;
   font-size: 1rem;
   background: white;
   width: 15rem;
@@ -1814,7 +1814,7 @@ nav {
   float: right; }
 
 .email-input {
-  font-family: "Space Mono", monospace;
+  font-family: "Kaushan Script", cursive;
   font-size: 1rem;
   background: white;
   width: 15rem;
@@ -1857,7 +1857,7 @@ nav {
       height: 3.5rem; } }
   .subject-section select {
     margin-top: 0.3rem;
-    font-family: "Space Mono", monospace;
+    font-family: "Kaushan Script", cursive;
     font-size: 1rem;
     border-radius: 0.2rem;
     background: white;
@@ -1895,7 +1895,7 @@ nav {
       height: 1.5rem; } }
 
 .message-input {
-  font-family: "Space Mono", monospace;
+  font-family: "Kaushan Script", cursive;
   font-size: 1rem;
   background: white;
   border-radius: 0.2rem;
@@ -1930,7 +1930,7 @@ nav {
       margin-top: 10rem; } }
 
 .submit-btn {
-  font-family: "Space Mono", monospace;
+  font-family: "Kaushan Script", cursive;
   font-size: 1.1rem;
   height: 2.3rem;
   width: 10rem;
@@ -1993,7 +1993,7 @@ nav {
 .sm-2,
 .sm-3,
 .sm-4 {
-  font-family: "Space Mono", monospace;
+  font-family: "Kaushan Script", cursive;
   font-size: 1.1rem;
   position: absolute;
   height: 10rem;
@@ -2086,7 +2086,7 @@ nav {
 /*                           PHONE CONTACT CONTAINER                            */
 /********************************************************************************/
 .phone-contact-top {
-  font-family: "Space Mono", monospace;
+  font-family: "Kaushan Script", cursive;
   font-size: 2rem;
   text-align: center;
   padding: 8rem 1rem 0; }
@@ -2110,7 +2110,7 @@ nav {
       height: fit-content; } }
 
 .phone-form-wrapper {
-  font-family: "Space Mono", monospace;
+  font-family: "Kaushan Script", cursive;
   font-size: 2.2rem;
   color: white;
   background: #1a1a1a;
@@ -2153,7 +2153,7 @@ nav {
   float: left; }
 
 .phone-name-input {
-  font-family: "Space Mono", monospace;
+  font-family: "Kaushan Script", cursive;
   background: white;
   width: 27rem;
   height: 5rem;
@@ -2172,7 +2172,7 @@ nav {
   float: right; }
 
 .phone-email-input {
-  font-family: "Space Mono", monospace;
+  font-family: "Kaushan Script", cursive;
   background: white;
   width: 27rem;
   height: 5rem;
@@ -2193,7 +2193,7 @@ nav {
   height: 10rem; }
   .phone-subject-section select {
     margin-top: 0.3rem;
-    font-family: "Space Mono", monospace;
+    font-family: "Kaushan Script", cursive;
     border-radius: 0.2rem;
     background: white;
     width: 100%;
@@ -2223,7 +2223,7 @@ nav {
       height: 25rem; } }
 
 .phone-message-input {
-  font-family: "Space Mono", monospace;
+  font-family: "Kaushan Script", cursive;
   background: white;
   border-radius: 0.2rem;
   resize: none;
@@ -2245,7 +2245,7 @@ nav {
   text-align: center; }
 
 .phone-submit-btn {
-  font-family: "Space Mono", monospace;
+  font-family: "Kaushan Script", cursive;
   font-size: 2rem;
   font-weight: 600;
   height: 5rem;
@@ -2268,7 +2268,7 @@ nav {
 .phone-sm-2,
 .phone-sm-3,
 .phone-sm-4 {
-  font-family: "Space Mono", monospace;
+  font-family: "Kaushan Script", cursive;
   font-size: 2.5rem;
   height: 10rem;
   width: 100%;
