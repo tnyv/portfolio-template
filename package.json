@@ -1,0 +1,24 @@
+{
+  "name": "icecreamday",
+  "version": "1.0.0",
+  "description": "ice cream day restaurant website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tonyvu1/icecreamday.git"
+  },
+  "author": "Tony Vu",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tonyvu1/icecreamday/issues"
+  },
+  "homepage": "https://github.com/tonyvu1/icecreamday#readme",
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-sass": "^4.0.2"
+  }
+}
