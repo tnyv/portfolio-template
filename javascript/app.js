@@ -2,7 +2,7 @@
 /***************************************************************************************/
 // Setting up type-writer animation for loader
 var i = 0;
-var txt = '     Ice Cream Day';
+var txt = '     TONY VU';
 var speed = 100;
 
 function typeWriter() {
@@ -84,31 +84,31 @@ mainPicture.addEventListener('click', function () {
 
 leftPicture.onclick = function () {
 	if (imgIndex === 1) {
-		leftPicture.style.backgroundImage = 'url(images/strawberry.jpg)';
-		mainPicture.setAttribute('src', 'images/vanilla.jpg');
-		rightPicture.style.backgroundImage = 'url(images/chocolate.jpg)';
+		leftPicture.style.backgroundImage = 'url(images/vlogs2.jpg)';
+		mainPicture.setAttribute('src', 'images/contact3.jpg');
+		rightPicture.style.backgroundImage = 'url(images/projects1.jpg)';
 		imgIndex = 3;
-		mainHeader.innerHTML = "Vanilla";
+		mainHeader.innerHTML = "CONTACT";
 		resetSideAnimations();
 		resetFromRight();
 		resetEnlargeMain();
 	}
 	else if (imgIndex === 3) {
-		leftPicture.style.backgroundImage = 'url(images/chocolate.jpeg)';
-		mainPicture.setAttribute('src', 'images/strawberry.jpg');
-		rightPicture.style.backgroundImage = 'url(images/vanilla.jpg)';
+		leftPicture.style.backgroundImage = 'url(images/projects1.jpg)';
+		mainPicture.setAttribute('src', 'images/vlogs2.jpg');
+		rightPicture.style.backgroundImage = 'url(images/contact3.jpg)';
 		imgIndex = 2;
-		mainHeader.innerHTML = "Strawberry";
+		mainHeader.innerHTML = "VLOGS";
 		resetSideAnimations();
 		resetFromRight();
 		resetEnlargeMain();
 	}
 	else if (imgIndex === 2) {
-		leftPicture.style.backgroundImage = 'url(images/vanilla.jpg)';
-		mainPicture.setAttribute('src', 'images/chocolate.jpeg');
-		rightPicture.style.backgroundImage = 'url(images/strawberry.jpg)';
+		leftPicture.style.backgroundImage = 'url(images/contact3.jpg)';
+		mainPicture.setAttribute('src', 'images/projects1.jpg');
+		rightPicture.style.backgroundImage = 'url(images/vlogs2.jpg)';
 		imgIndex = 1;
-		mainHeader.innerHTML = "Chocolate";
+		mainHeader.innerHTML = "PROJECTS";
 		resetSideAnimations();
 		resetFromRight();
 		resetEnlargeMain();
@@ -117,31 +117,31 @@ leftPicture.onclick = function () {
 
 rightPicture.onclick = function () {
 	if (imgIndex === 1) {
-		leftPicture.style.backgroundImage = 'url(images/chocolate.jpeg)';
-		mainPicture.setAttribute('src', 'images/strawberry.jpg');
-		rightPicture.style.backgroundImage = 'url(images/vanilla.jpg)';
+		leftPicture.style.backgroundImage = 'url(images/projects1.jpg)';
+		mainPicture.setAttribute('src', 'images/vlogs2.jpg');
+		rightPicture.style.backgroundImage = 'url(images/contact3.jpg)';
 		imgIndex = 2;
-		mainHeader.innerHTML = "Strawberry";
+		mainHeader.innerHTML = "VLOGS";
 		resetSideAnimations();
 		resetFromLeft();
 		resetEnlargeMain();
 	}
 	else if (imgIndex === 2) {
-		leftPicture.style.backgroundImage = 'url(images/strawberry.jpg)';
-		mainPicture.setAttribute('src', 'images/vanilla.jpg');
-		rightPicture.style.backgroundImage = 'url(images/chocolate.jpeg)';
+		leftPicture.style.backgroundImage = 'url(images/vlogs2.jpg)';
+		mainPicture.setAttribute('src', 'images/contact3.jpg');
+		rightPicture.style.backgroundImage = 'url(images/projects1.jpg)';
 		imgIndex = 3;
-		mainHeader.innerHTML = "Vanilla";
+		mainHeader.innerHTML = "CONTACT";
 		resetSideAnimations();
 		resetFromLeft();
 		resetEnlargeMain();
 	}
 	else if (imgIndex === 3) {
-		leftPicture.style.backgroundImage = 'url(images/vanilla.jpg)';
-		mainPicture.setAttribute('src', 'images/chocolate.jpeg');
-		rightPicture.style.backgroundImage = 'url(images/strawberry.jpg)';
+		leftPicture.style.backgroundImage = 'url(images/contact3.jpg)';
+		mainPicture.setAttribute('src', 'images/projects1.jpg');
+		rightPicture.style.backgroundImage = 'url(images/vlogs2.jpg)';
 		imgIndex = 1;
-		mainHeader.innerHTML = "Chocolate";
+		mainHeader.innerHTML = "PROJECTS";
 		resetSideAnimations();
 		resetFromLeft();
 		resetEnlargeMain();
@@ -189,7 +189,7 @@ function animateOutPro2() {
 
 function btn1ChangeColors() {
 	if (currentBtn == 2 || currentBtn == 3) {
-		btn1Project.style.background = "#c584bc";
+		btn1Project.style.background = "rgba(238, 60, 60, 0.808)";
 		btn1Project.style.color = "white";
 		btn2Project.style.background = "white";
 		btn2Project.style.color = "black";
@@ -201,7 +201,7 @@ function btn1ChangeColors() {
 
 function btn2ChangeColors() {
 	if (currentBtn == 1 || currentBtn == 3) {
-		btn2Project.style.background = "#c584bc";
+		btn2Project.style.background = "rgba(238, 60, 60, 0.808)";
 		btn2Project.style.color = "white";
 		btn1Project.style.background = "white";
 		btn1Project.style.color = "black";
@@ -213,7 +213,7 @@ function btn2ChangeColors() {
 
 function btn3ChangeColors() {
 	if (currentBtn == 1 || currentBtn == 2) {
-		btn3Project.style.background = "#c584bc";
+		btn3Project.style.background = "rgba(238, 60, 60, 0.808)";
 		btn3Project.style.color = "white";
 		btn1Project.style.background = "white";
 		btn1Project.style.color = "black";
@@ -226,18 +226,19 @@ function btn3ChangeColors() {
 
 function updateSummaryP1() {
 	title.innerHTML = "UNITY TUTORING";
-	lang1.innerHTML = "EXPRESS.JS";
-	lang2.innerHTML = "BOOTSTRAP";
-	lang3.innerHTML = "MONGODB";
+	lang1.innerHTML = "VUE.JS";
+	lang2.innerHTML = "EXPRESS.JS";
+	lang3.innerHTML = "MONGO.DB";
 	lang4.style.visibility = "visible";
-	lang5.style.visibility = "hidden";
-	lang4.innerHTML = "AWS";
-	lang5.innerHTML = "";
+	lang5.style.visibility = "visible";
+	lang4.innerHTML = "BOOTSTRAP";
+	lang5.innerHTML = "HEROKU";
 	paragraph.innerHTML = "I wanted to build a website that allowed English tutors " +
 		"to connect with students globally via webcam. The goal of the website " +
 		"was to have the UI and UX as simple and intuitive as possible for students, " +
-		"tutors, and admin. The back-end utilizes express.js and mongodb, while Bootstrap " +
-		"4 was used for front-end. I deployed the website on Amazon Web Services.";
+		"tutors, and admin. For the backend infrastrucutre, I used express.js and " +
+		"mongoDB. The front-end was built with vue.js and bootstrap. The website is " +
+		"deployed on Heroku."
 	projectImg.setAttribute('src', 'images/tutor.jpg');
 }
 
@@ -337,7 +338,7 @@ btn3Project.onclick = function () {
 
 /***************************************************************************************/
 // Setting up auto-scroll for nav links
-var scrollSpeed = 1000;
+var scrollSpeed = 2000;
 var scrollDash = 400;
 
 function smoothScroll(target, duration) {
