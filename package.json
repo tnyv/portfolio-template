@@ -1,5 +1,5 @@
 {
-  "name": "icecreamday",
+  "name": "pre-portfolio",
   "version": "1.0.0",
   "description": "ice cream day restaurant website",
   "main": "index.js",
@@ -8,14 +8,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tonyvu1/icecreamday.git"
+    "url": "git+https://github.com/tonyvu1/pre-portfolio.git"
   },
   "author": "Tony Vu",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/tonyvu1/icecreamday/issues"
+    "url": "https://github.com/tonyvu1/pre-portfolio/issues"
   },
-  "homepage": "https://github.com/tonyvu1/icecreamday#readme",
+  "homepage": "https://github.com/tonyvu1/pre-portfolio#readme",
   "devDependencies": {
     "browser-sync": "^2.26.7",
     "gulp": "^4.0.2",
