@@ -72,7 +72,7 @@ html {
 }
 
 .loader {
-  font-family: "Arimo", sans-serif;
+  font-family: "Kaushan Script", cursive;
   font-size: 10rem;
   font-weight: 600;
   width: 100%;
@@ -92,15 +92,15 @@ html {
           align-items: center;
   /* animation: load 0.5s linear 0.5s 1 forwards, changez 1s linear 0.5s 1 forwards; */
   /* animation: load 1s linear 1.5s 1 forwards, changez 1s linear 2s 1 forwards; */
-  -webkit-animation: load 1s linear 1.5s 1 forwards, changez 1s linear 2s 1 forwards;
-          animation: load 1s linear 1.5s 1 forwards, changez 1s linear 2s 1 forwards;
+  -webkit-animation: load 0.5s linear 0.5s 1 forwards, changez 1s linear 0.5s 1 forwards;
+          animation: load 0.5s linear 0.5s 1 forwards, changez 1s linear 0.5s 1 forwards;
 }
 
 /********************************************************************************/
 /*                            NAVIGATION BAR                                    */
 /********************************************************************************/
 nav {
-  font-family: "Arimo", sans-serif;
+  font-family: "Kaushan Script", cursive;
 }
 
 .home-bar {
@@ -118,7 +118,7 @@ nav {
   width: 100%;
   -webkit-transition: top 0.5s;
   transition: top 0.5s;
-  background: #1a1a1a;
+  background: #c584bc;
   z-index: 5;
   overflow: hidden;
 }
@@ -128,7 +128,7 @@ nav {
 .projects-link,
 .vlogs-link,
 .contact-link {
-  font-family: "Arimo", sans-serif;
+  font-family: "Kaushan Script", cursive;
   font-size: 1rem;
   font-weight: 600;
   font-style: none;
@@ -171,7 +171,7 @@ nav {
 }
 
 .phone-mvc-link {
-  font-family: "Arimo", sans-serif;
+  font-family: "Kaushan Script", cursive;
   font-size: 3rem;
   font-weight: 600;
   font-style: none;
@@ -326,7 +326,7 @@ nav {
 .phone-header {
   visibility: hidden;
   text-align: center;
-  font-family: "Arimo", sans-serif;
+  font-family: "Kaushan Script", cursive;
   font-size: 7rem;
   font-weight: 600;
   letter-spacing: 0.5rem;
@@ -452,7 +452,7 @@ nav {
 .logo {
   font-size: 3rem;
   font-weight: 600;
-  font-family: "Arimo", sans-serif;
+  font-family: "Kaushan Script", cursive;
   font-style: none;
   letter-spacing: 0.2rem;
   text-decoration: none;
@@ -492,7 +492,7 @@ nav {
 .sub-logo {
   font-size: 1.5rem;
   font-weight: 500;
-  font-family: "Arimo", sans-serif;
+  font-family: "Kaushan Script", cursive;
   font-style: none;
   letter-spacing: 0.1rem;
   color: white;
@@ -545,7 +545,7 @@ nav {
 .homepage-container .middle p {
   font-size: 1rem;
   font-weight: 500;
-  font-family: "Arimo", sans-serif;
+  font-family: "Kaushan Script", cursive;
   font-style: none;
   color: white;
   letter-spacing: 0.2rem;
@@ -777,15 +777,14 @@ nav {
 }
 
 .main-header {
-  font-family: "Arimo", sans-serif;
+  font-family: "Kaushan Script", cursive;
   font-size: 7rem;
   font-weight: 600;
-  letter-spacing: 0.5rem;
   color: transparent;
   position: absolute;
   bottom: -3rem;
   right: -4rem;
-  -webkit-text-stroke-width: 0.1rem;
+  -webkit-text-stroke-width: 0.00000001rem;
   -webkit-text-stroke-color: white;
 }
 
@@ -911,7 +910,7 @@ nav {
 .block-left {
   width: inherit;
   height: inherit;
-  background-image: url("../images/contact3.jpg");
+  background-image: url("../images/vanilla.jpg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -999,7 +998,7 @@ nav {
 .block-right {
   width: inherit;
   height: inherit;
-  background-image: url("../images/vlogs2.jpg");
+  background-image: url("../images/strawberry.jpg");
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
@@ -1026,7 +1025,7 @@ nav {
   float: left;
   font-size: 1rem;
   font-weight: 500;
-  font-family: "Arimo", sans-serif;
+  font-family: "Kaushan Script", cursive;
   font-style: none;
   color: white;
   letter-spacing: 0.2rem;
@@ -1133,7 +1132,7 @@ nav {
   text-align: left;
   width: 50rem;
   height: 50rem;
-  font-family: "Space Mono", monospace;
+  font-family: "Kaushan Script", cursive;
   font-size: 3.5rem;
   font-weight: 400;
   -webkit-transform: translateX(-100rem);
@@ -1344,7 +1343,7 @@ nav {
   top: 25rem;
   height: 0rem;
   width: 30rem;
-  background-image: url("../images/coast.jpg");
+  background-image: url("../images/sf1.jpeg");
   background-attachment: fixed;
   background-position: left;
   background-repeat: no-repeat;
@@ -1394,7 +1393,7 @@ nav {
   top: 45rem;
   height: 0rem;
   width: 30rem;
-  background-image: url("../images/bridge.jpg");
+  background-image: url("../images/sf2.jpeg");
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -1445,7 +1444,7 @@ nav {
   top: 10rem;
   height: 0rem;
   width: 30rem;
-  background-image: url("../images/fall.jpg");
+  background-image: url("../images/sf3.jpeg");
   background-attachment: fixed;
   background-position: right;
   background-repeat: no-repeat;
@@ -2511,7 +2510,7 @@ nav {
 .warning-wrapper .warning-sign {
   position: absolute;
   top: 58rem;
-  font-family: "Arimo", sans-serif;
+  font-family: "Kaushan Script", cursive;
   font-size: 4rem;
   font-weight: 600;
   width: 100%;

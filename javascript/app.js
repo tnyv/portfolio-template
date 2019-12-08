@@ -2,7 +2,7 @@
 /***************************************************************************************/
 // Setting up type-writer animation for loader
 var i = 0;
-var txt = '     TONY VU';
+var txt = '     Ice Cream Day';
 var speed = 100;
 
 function typeWriter() {
@@ -84,31 +84,31 @@ mainPicture.addEventListener('click', function () {
 
 leftPicture.onclick = function () {
 	if (imgIndex === 1) {
-		leftPicture.style.backgroundImage = 'url(images/vlogs2.jpg)';
-		mainPicture.setAttribute('src', 'images/contact3.jpg');
-		rightPicture.style.backgroundImage = 'url(images/projects1.jpg)';
+		leftPicture.style.backgroundImage = 'url(images/strawberry.jpg)';
+		mainPicture.setAttribute('src', 'images/vanilla.jpg');
+		rightPicture.style.backgroundImage = 'url(images/chocolate.jpg)';
 		imgIndex = 3;
-		mainHeader.innerHTML = "CONTACT";
+		mainHeader.innerHTML = "Vanilla";
 		resetSideAnimations();
 		resetFromRight();
 		resetEnlargeMain();
 	}
 	else if (imgIndex === 3) {
-		leftPicture.style.backgroundImage = 'url(images/projects1.jpg)';
-		mainPicture.setAttribute('src', 'images/vlogs2.jpg');
-		rightPicture.style.backgroundImage = 'url(images/contact3.jpg)';
+		leftPicture.style.backgroundImage = 'url(images/chocolate.jpeg)';
+		mainPicture.setAttribute('src', 'images/strawberry.jpg');
+		rightPicture.style.backgroundImage = 'url(images/vanilla.jpg)';
 		imgIndex = 2;
-		mainHeader.innerHTML = "VLOGS";
+		mainHeader.innerHTML = "Strawberry";
 		resetSideAnimations();
 		resetFromRight();
 		resetEnlargeMain();
 	}
 	else if (imgIndex === 2) {
-		leftPicture.style.backgroundImage = 'url(images/contact3.jpg)';
-		mainPicture.setAttribute('src', 'images/projects1.jpg');
-		rightPicture.style.backgroundImage = 'url(images/vlogs2.jpg)';
+		leftPicture.style.backgroundImage = 'url(images/vanilla.jpg)';
+		mainPicture.setAttribute('src', 'images/chocolate.jpeg');
+		rightPicture.style.backgroundImage = 'url(images/strawberry.jpg)';
 		imgIndex = 1;
-		mainHeader.innerHTML = "PROJECTS";
+		mainHeader.innerHTML = "Chocolate";
 		resetSideAnimations();
 		resetFromRight();
 		resetEnlargeMain();
@@ -117,31 +117,31 @@ leftPicture.onclick = function () {
 
 rightPicture.onclick = function () {
 	if (imgIndex === 1) {
-		leftPicture.style.backgroundImage = 'url(images/projects1.jpg)';
-		mainPicture.setAttribute('src', 'images/vlogs2.jpg');
-		rightPicture.style.backgroundImage = 'url(images/contact3.jpg)';
+		leftPicture.style.backgroundImage = 'url(images/chocolate.jpeg)';
+		mainPicture.setAttribute('src', 'images/strawberry.jpg');
+		rightPicture.style.backgroundImage = 'url(images/vanilla.jpg)';
 		imgIndex = 2;
-		mainHeader.innerHTML = "VLOGS";
+		mainHeader.innerHTML = "Strawberry";
 		resetSideAnimations();
 		resetFromLeft();
 		resetEnlargeMain();
 	}
 	else if (imgIndex === 2) {
-		leftPicture.style.backgroundImage = 'url(images/vlogs2.jpg)';
-		mainPicture.setAttribute('src', 'images/contact3.jpg');
-		rightPicture.style.backgroundImage = 'url(images/projects1.jpg)';
+		leftPicture.style.backgroundImage = 'url(images/strawberry.jpg)';
+		mainPicture.setAttribute('src', 'images/vanilla.jpg');
+		rightPicture.style.backgroundImage = 'url(images/chocolate.jpeg)';
 		imgIndex = 3;
-		mainHeader.innerHTML = "CONTACT";
+		mainHeader.innerHTML = "Vanilla";
 		resetSideAnimations();
 		resetFromLeft();
 		resetEnlargeMain();
 	}
 	else if (imgIndex === 3) {
-		leftPicture.style.backgroundImage = 'url(images/contact3.jpg)';
-		mainPicture.setAttribute('src', 'images/projects1.jpg');
-		rightPicture.style.backgroundImage = 'url(images/vlogs2.jpg)';
+		leftPicture.style.backgroundImage = 'url(images/vanilla.jpg)';
+		mainPicture.setAttribute('src', 'images/chocolate.jpeg');
+		rightPicture.style.backgroundImage = 'url(images/strawberry.jpg)';
 		imgIndex = 1;
-		mainHeader.innerHTML = "PROJECTS";
+		mainHeader.innerHTML = "Chocolate";
 		resetSideAnimations();
 		resetFromLeft();
 		resetEnlargeMain();
@@ -338,7 +338,7 @@ btn3Project.onclick = function () {
 
 /***************************************************************************************/
 // Setting up auto-scroll for nav links
-var scrollSpeed = 2000;
+var scrollSpeed = 1000;
 var scrollDash = 400;
 
 function smoothScroll(target, duration) {
